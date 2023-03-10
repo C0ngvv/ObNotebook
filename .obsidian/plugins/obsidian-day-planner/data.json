@@ -1,0 +1,20 @@
+{
+  "customFolder": "Day Planners",
+  "mode": 1,
+  "mermaid": true,
+  "notesToDates": [
+    {
+      "notePath": "日常计划/Planner-2022_07_08.md",
+      "date": "Thu Jul 07 2022"
+    },
+    {
+      "notePath": "日常计划/Planner-2022_07_08.md",
+      "date": "Fri Jul 08 2022"
+    }
+  ],
+  "completePastItems": false,
+  "circularProgress": false,
+  "nowAndNextInStatusBar": false,
+  "showTaskNotification": false,
+  "timelineZoomLevel": 1
+}
