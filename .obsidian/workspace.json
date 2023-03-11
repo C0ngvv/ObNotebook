@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Papeer/Fuzztruction/论文：Fuzztruction.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -147,7 +147,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "187d4ecd31b81bf7",
+  "active": "4fa03a9c0453bb6a",
   "lastOpenFiles": [
     "Fuzzing101/README.md",
     "Papeer/Fuzztruction/论文：Fuzztruction.md",
