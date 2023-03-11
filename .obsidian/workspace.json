@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 269.5,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -146,7 +147,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4fa03a9c0453bb6a",
+  "active": "187d4ecd31b81bf7",
   "lastOpenFiles": [
     "Fuzzing101/README.md",
     "Papeer/Fuzztruction/论文：Fuzztruction.md",
