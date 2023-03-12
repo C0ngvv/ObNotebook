@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 269.5,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -129,11 +130,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 267.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -146,7 +148,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4fa03a9c0453bb6a",
+  "active": "04b4e2e0944c66f2",
   "lastOpenFiles": [
     "Papeer/Fuzztruction/images/Pasted image 20230312103636.png",
     "Papeer/Fuzztruction/images",
