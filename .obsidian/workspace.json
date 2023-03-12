@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5,
-    "collapsed": true
+    "width": 269.5
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -149,6 +148,8 @@
   },
   "active": "4fa03a9c0453bb6a",
   "lastOpenFiles": [
+    "Papeer/Fuzztruction/images/Pasted image 20230312103636.png",
+    "Papeer/Fuzztruction/images",
     "Fuzzing101/README.md",
     "Papeer/Fuzztruction/论文：Fuzztruction.md",
     "Papeer/Fuzztruction",
