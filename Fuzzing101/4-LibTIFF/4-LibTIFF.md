@@ -47,3 +47,33 @@ lcov --capture --initial --directory ./ --output-file app.info
 /home/fuzzing101/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w /home/fuzzing101/fuzzing_tiff/tiff-4.0.4/test/images/palette-1c-1b.tiff
 lcov --no-checksum --directory ./ --capture --output-file app2.info
 ```
+-   `lcov --zerocounters --directory ./` : Reset previous counters
+-   `lcov --capture --initial --directory ./ --output-file app.info` : Return the "baseline" coverage data file that contains zero coverage for every instrumented line
+-   `$HOME/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w $HOME/fuzzing_tiff/tiff-4.0.4/test/images/palette-1c-1b.tiff` : Run the application you want to analyze . You can run it multiple times with different inputs
+-   `lcov --no-checksum --directory ./ --capture --output-file app2.info`: Save the current coverage state into the app2.info file
+生成html输出
+```
+genhtml --highlight --legend -output-directory ./html-coverage/ ./app2.info
+```
+代码覆盖率就保存在对应目录下，然后可以在浏览器中打开index.html文件
+
+![](images/Pasted%20image%2020230313213059.png)
+
+## 模糊测试
+现在开启ASAN编译libtiff
+```
+rm -r /home/fuzzing101/fuzzing_tiff/install
+cd /home/fuzzing101/fuzzing_tiff/tiff-4.0.4/
+make clean
+
+export LLVM_CONFIG="llvm-config-11"
+CC=afl-clang-lto ./configure --prefix="/home/fuzzing101/fuzzing_tiff/install/" --disable-shared
+AFL_USE_ASAN=1 make -j4
+AFL_USE_ASAN=1 make install
+```
+模糊测试
+```
+afl-fuzz -m none -i /home/fuzzing101/fuzzing_tiff/tiff-4.0.4/test/images/ -o /home/fuzzing101/fuzzing_tiff/out/ -s 123 -- /home/fuzzing101/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w @@
+```
+
+
