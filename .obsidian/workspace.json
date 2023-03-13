@@ -4,35 +4,42 @@
     "type": "split",
     "children": [
       {
-        "id": "1863a2a0d35a2a29",
+        "id": "76b7934c2e2f6572",
         "type": "tabs",
+        "dimension": 75.054704595186,
         "children": [
           {
-            "id": "863835e233aabac0",
+            "id": "ac0eb452475772af",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
+                "file": "Paper/AFL++/AFL++.md",
                 "mode": "source",
                 "source": false
               }
-            }
-          },
-          {
-            "id": "d8f11a5754d6bd45",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "挖坑/未命名.md",
-                "mode": "source",
-                "source": false
-              }
-            }
+            },
+            "group": "e70e4350e024b4a3"
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "63d0212e7b18380c",
+        "type": "tabs",
+        "dimension": 24.945295404814004,
+        "children": [
+          {
+            "id": "03261b17e5f71cca",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Paper/AFL++/AFL++.md"
+              }
+            },
+            "group": "e70e4350e024b4a3"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +105,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "挖坑/未命名.md",
+                "file": "Paper/AFL++/AFL++.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +122,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "挖坑/未命名.md",
+                "file": "Paper/AFL++/AFL++.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +145,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "挖坑/未命名.md"
+                "file": "Paper/AFL++/AFL++.md"
               }
             }
           }
@@ -160,10 +167,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "d8f11a5754d6bd45",
+  "active": "ac0eb452475772af",
   "lastOpenFiles": [
+    "挖坑/TODO List.md",
+    "Paper/AFL++/AFL++.md",
     "Paper/Fuzztruction/论文：Fuzztruction.md",
-    "挖坑/未命名.md",
     "挖坑",
     "Paper/Fuzztruction/Fuzztruction.pdf",
     "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
@@ -175,7 +183,6 @@
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313220626.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313220454.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313220324.png",
-    "Paper/AFL++/AFL++.md",
     "Paper/AFL++",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313213059.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313211119.png",
