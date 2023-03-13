@@ -21,10 +21,12 @@ make install
 ./install/bin/tiffinfo -D -j -c -r -s -w ./tiff-4.0.4/test/images/palette-1c-1b.tiff
 ```
 ![](images/Pasted%20image%2020230313211119.png)
+
 使用了`-j -c -r -s -w` 所有这些标志，来增加代码覆盖率从而增加发现bug的机会。
 
 ## 代码覆盖率
 代码覆盖率是一个软件指标，显示每行代码被触发的次数。通过使用代码覆盖率，我们将了解模糊器到达了代码的哪些部分，并可视化模糊处理过程。
+
 首先，我们需要安装 lcov。
 ```
 sudo apt install lcov
@@ -53,10 +55,12 @@ lcov --no-checksum --directory ./ --capture --output-file app2.info
 -   `lcov --capture --initial --directory ./ --output-file app.info` : Return the "baseline" coverage data file that contains zero coverage for every instrumented line
 -   `$HOME/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w $HOME/fuzzing_tiff/tiff-4.0.4/test/images/palette-1c-1b.tiff` : Run the application you want to analyze . You can run it multiple times with different inputs
 -   `lcov --no-checksum --directory ./ --capture --output-file app2.info`: Save the current coverage state into the app2.info file
+
 生成html输出
 ```
 genhtml --highlight --legend -output-directory ./html-coverage/ ./app2.info
 ```
+
 代码覆盖率就保存在对应目录下，然后可以在浏览器中打开index.html文件
 
 ![](images/Pasted%20image%2020230313213059.png)
@@ -78,11 +82,15 @@ AFL_USE_ASAN=1 make install
 afl-fuzz -m none -i /home/fuzzing101/fuzzing_tiff/tiff-4.0.4/test/images/ -o /home/fuzzing101/fuzzing_tiff/out/ -s 123 -- /home/fuzzing101/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w @@
 ```
 运行一段时间后的结果
+
 ![](images/Pasted%20image%2020230313220324.png)
 
 崩溃保存在`out/default/crashes/` 目录下
+
 ![](images/Pasted%20image%2020230313220454.png)
+
 使用保存的崩溃触发程序
+
 ```
 /home/fuzzing101/fuzzing_tiff/install/bin/tiffinfo -D -j -c -r -s -w /home/fuzzing101/fuzzing_tiff/out/default/crashes/id:000000,sig:06,src:000016,time:68088,execs:70933,op:havoc,rep:4
 ```
@@ -166,15 +174,20 @@ cover_report目录就是生成的html信息目录。
 左侧的路径可以点开，详细看每个文件哪些行被覆盖到了，没有覆盖到。
 
 参考链接：
+
 [关于代码覆盖lcov的使用 - 简书 (jianshu.com)](https://www.jianshu.com/p/a42bbd9de1b7)
+
 [使用 Gcov 和 LCOV 度量 C/C++ 项目的代码覆盖率 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/402463278)
 
 相关链接：
+
 [Installing GCC - GNU Project](https://gcc.gnu.org/install/index.html)
+
 [Linux Test Project - Coverage » lcov (sourceforge.net)](https://ltp.sourceforge.net/coverage/lcov.php)
 
 ## ASAN介绍
 #ASAN
+
 Address Sanitizer(ASAN)是clang和gcc支持的功能，用于运行时检查内存访问。开启之后，会在目标代码的关键位置，如mallc(), free()，栈上buffer分配等处添加检查代码，一旦发生内存访问错误，如堆栈溢出、UAF、double free等，就可以SIGABRT中止程序。
 
 由于有些内存访问错误并不一定会造成程序崩溃，如越界读，因此在没有开启ASAN的情况下，许多内存漏洞是无法被AFL发现的。所以，编译目标二进制代码时，开启ASAN，也是推荐的做法。对于使用afl-xxx编译来说，只需要设定环境变量AFL_USE_ASAN=1即可。
@@ -189,3 +202,5 @@ Address Sanitizer(ASAN)是clang和gcc支持的功能，用于运行时检查内�
 ## Questions
 1.afl-fuzz参数`-m` 的用途？
 > -m megs       - memory limit for child process (0 MB, 0 = no limit [default])
+
+2.源文件编译CC等参数指定过程？
