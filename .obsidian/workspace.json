@@ -6,7 +6,6 @@
       {
         "id": "1863a2a0d35a2a29",
         "type": "tabs",
-        "dimension": 79.12317327766179,
         "children": [
           {
             "id": "863835e233aabac0",
@@ -14,32 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
+                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
                 "mode": "source",
                 "source": false
               }
-            },
-            "group": "d8978dfdc266ef1c"
-          }
-        ]
-      },
-      {
-        "id": "e2b1f6dfa24c0c1d",
-        "type": "tabs",
-        "dimension": 20.876826722338205,
-        "children": [
+            }
+          },
           {
-            "id": "f562431c89ed87f4",
+            "id": "d8f11a5754d6bd45",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "markdown",
               "state": {
-                "file": "Fuzzing101/4-LibTIFF/4-LibTIFF.md"
+                "file": "挖坑/未命名.md",
+                "mode": "source",
+                "source": false
               }
-            },
-            "group": "d8978dfdc266ef1c"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -105,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
+                "file": "挖坑/未命名.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
+                "file": "挖坑/未命名.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fuzzing101/4-LibTIFF/4-LibTIFF.md"
+                "file": "挖坑/未命名.md"
               }
             }
           }
@@ -167,8 +160,13 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "863835e233aabac0",
+  "active": "d8f11a5754d6bd45",
   "lastOpenFiles": [
+    "Paper/Fuzztruction/论文：Fuzztruction.md",
+    "挖坑/未命名.md",
+    "挖坑",
+    "Paper/Fuzztruction/Fuzztruction.pdf",
+    "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313224416.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313224407.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313224325.png",
@@ -178,21 +176,16 @@
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313220454.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313220324.png",
     "Paper/AFL++/AFL++.md",
-    "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
     "Paper/AFL++",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313213059.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313211119.png",
-    "Fuzzing101/4-LibTIFF/images/Pasted image 20230313213031.png",
     "Fuzzing101/4-LibTIFF/images",
-    "Paper/Fuzztruction/论文：Fuzztruction.md",
     "Fuzzing101/4-LibTIFF",
-    "Paper/Fuzztruction/Fuzztruction.pdf",
     "Paper/Fuzztruction/images",
     "Fuzzing101/README.md",
     "Paper/Fuzztruction",
     "Paper",
     "Fuzzing101/images",
-    "Fuzzing101/新建 文本文档.txt",
-    "ObNotebook"
+    "Fuzzing101/新建 文本文档.txt"
   ]
 }
