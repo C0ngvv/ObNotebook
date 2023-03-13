@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4b1e445275430e31",
+        "id": "7f2daf177d83025c",
         "type": "tabs",
         "children": [
           {
-            "id": "2592c9dafc6b21ca",
+            "id": "8efef156ad919140",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -81,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Papeer/Fuzztruction/论文：Fuzztruction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Papeer/Fuzztruction/论文：Fuzztruction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Papeer/Fuzztruction/论文：Fuzztruction.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -143,7 +139,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "187d4ecd31b81bf7",
+  "active": "8efef156ad919140",
   "lastOpenFiles": [
     "Papeer/Fuzztruction/Fuzztruction.pdf",
     "Papeer/Fuzztruction/images/Pasted image 20230312103636.png",
