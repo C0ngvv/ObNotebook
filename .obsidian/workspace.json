@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "6f5c95d80838eb91",
+        "id": "4b1e445275430e31",
         "type": "tabs",
         "children": [
           {
-            "id": "4fa03a9c0453bb6a",
+            "id": "2592c9dafc6b21ca",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papeer/Fuzztruction/论文：Fuzztruction.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5,
-    "collapsed": true
+    "width": 269.5
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -148,7 +143,7 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "04b4e2e0944c66f2",
+  "active": "187d4ecd31b81bf7",
   "lastOpenFiles": [
     "Papeer/Fuzztruction/images/Pasted image 20230312103636.png",
     "Papeer/Fuzztruction/images",
