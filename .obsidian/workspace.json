@@ -4,23 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "7f2daf177d83025c",
+        "id": "7874be61f808e87e",
         "type": "tabs",
+        "dimension": 79.16666666666666,
         "children": [
           {
-            "id": "8efef156ad919140",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Papeer/Fuzztruction/论文：Fuzztruction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c4f25834316ab602",
+            "id": "863835e233aabac0",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -29,10 +18,28 @@
                 "mode": "source",
                 "source": false
               }
-            }
+            },
+            "group": "d2b6a0143fbeb5bb"
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "1863a2a0d35a2a29",
+        "type": "tabs",
+        "dimension": 20.833333333333336,
+        "children": [
+          {
+            "id": "834e088039718293",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Fuzzing101/4-LibTIFF/4-LibTIFF.md"
+              }
+            },
+            "group": "d2b6a0143fbeb5bb"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 257.5
+    "width": 259.5
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -160,29 +167,32 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "c4f25834316ab602",
+  "active": "863835e233aabac0",
   "lastOpenFiles": [
+    "Fuzzing101/4-LibTIFF/images/Pasted image 20230313224416.png",
+    "Fuzzing101/4-LibTIFF/images/Pasted image 20230313224407.png",
+    "Fuzzing101/4-LibTIFF/images/Pasted image 20230313224325.png",
+    "Fuzzing101/4-LibTIFF/images/Pasted image 20230313222320.png",
+    "Fuzzing101/4-LibTIFF/images/Pasted image 20230313220948.png",
+    "Fuzzing101/4-LibTIFF/images/Pasted image 20230313220626.png",
+    "Fuzzing101/4-LibTIFF/images/Pasted image 20230313220454.png",
+    "Fuzzing101/4-LibTIFF/images/Pasted image 20230313220324.png",
+    "Papeer/AFL++/AFL++.md",
+    "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
+    "Papeer/AFL++",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313213059.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313211119.png",
-    "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313213031.png",
     "Fuzzing101/4-LibTIFF/images",
     "Papeer/Fuzztruction/论文：Fuzztruction.md",
     "Fuzzing101/4-LibTIFF",
-    "Papeer/Fuzztruction/images/Pasted image 20230313203855.png",
-    "Papeer/Fuzztruction/images/Pasted image 20230313165224.png",
-    "Papeer/Fuzztruction/images/Pasted image 20230313160617.png",
     "Papeer/Fuzztruction/Fuzztruction.pdf",
-    "Papeer/Fuzztruction/images/Pasted image 20230312103636.png",
     "Papeer/Fuzztruction/images",
     "Fuzzing101/README.md",
     "Papeer/Fuzztruction",
     "Papeer",
-    "Fuzzing101/images/Pasted image 20230310212218.png",
     "Fuzzing101/images",
-    "Fuzzing101/images/Pasted image 20230310210837.png",
     "Fuzzing101/新建 文本文档.txt",
-    "ObNotebook",
-    "Fuzzing101"
+    "ObNotebook"
   ]
 }
