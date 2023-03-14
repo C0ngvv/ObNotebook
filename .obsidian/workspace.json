@@ -4,29 +4,8 @@
     "type": "split",
     "children": [
       {
-        "id": "76b7934c2e2f6572",
-        "type": "tabs",
-        "dimension": 75.054704595186,
-        "children": [
-          {
-            "id": "ac0eb452475772af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/AFL++/AFL++.md",
-                "mode": "source",
-                "source": false
-              }
-            },
-            "group": "e70e4350e024b4a3"
-          }
-        ]
-      },
-      {
         "id": "63d0212e7b18380c",
         "type": "tabs",
-        "dimension": 24.945295404814004,
         "children": [
           {
             "id": "03261b17e5f71cca",
@@ -36,8 +15,7 @@
               "state": {
                 "file": "Paper/AFL++/AFL++.md"
               }
-            },
-            "group": "e70e4350e024b4a3"
+            }
           }
         ]
       }
@@ -84,8 +62,21 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "ac0eb452475772af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper/AFL++/AFL++.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
