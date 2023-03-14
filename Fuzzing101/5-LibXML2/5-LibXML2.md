@@ -46,8 +46,20 @@ cd ..
 afl-fuzz -m none -i ./afl_in/ -o afl_out -s 123 -x ./dictionaries/xml.dict -D -M master -- ./libxml2-2.9.4/install/bin/xmllint --memory  --noenc --nocdata --dtdattr --loaddtd --valid --xinclude @@
 ```
 
+
+
 使用下面命令运行另一个从实例:
 ```
+afl-fuzz -m none -i ./afl_in -o afl_out -s 234 -S slave1 -- ./libxml2-2.9.4/install/bin/xmllint --memory --noenc --nocdata --dtdattr --loaddtd --valid --xinclude @@
+```
+
+
+
+漏洞触发
+```
 
 ```
 
+## Questions
+1. What is a master instance? What is a slave instance?
+2. 
