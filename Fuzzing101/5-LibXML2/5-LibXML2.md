@@ -16,6 +16,9 @@ make -j$(nproc)
 make install
 ```
 
-
+测试能否正常使用
+```
+./xmllint --memory ./test/wml.xml
+```
 
 
