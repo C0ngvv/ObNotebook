@@ -196,6 +196,11 @@ Address Sanitizer(ASAN)是clang和gcc支持的功能，用于运行时检查内�
 
 如果使用了ASAN，还需要注意为afl-fuzz通过选项-m 指定可使用的内存上限。一般对于启用了ASAN的32位程序，-m 1024即可。
 
+`fsanitize=address`  编译器选项可启用 AddressSanitizer
+```
+CFLAGS="-fsanitize=address" CXXFLAGS="-fsanitize=address" LDFLAGS="-fsanitize=address"
+```
+
 参考链接：
 [American Fuzzy Lop使用-Galaxy Lab (pingan.com.cn)](http://galaxylab.pingan.com.cn/afl%e4%bd%bf%e7%94%a8101/)
 
