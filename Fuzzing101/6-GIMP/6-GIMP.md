@@ -68,16 +68,103 @@ AFL++尝试通过只执行一次目标二进制文件来优化性能，在执行
 你不需要#ifdef守卫，但是包含它们可以确保程序在使用afl-clang-fast/ afl-clang-lto/afl-gcc-fast以外的工具编译时保持正常工作。最后，使用afl-clang-fast/afl-clang-lto/afl-gcc-fast重新编译程序(afl-gcc或afl-clang将不会生成延迟初始化二进制文件)就可以了!
 
 ### 持久模式
+正常情况下，对于每一个生成的测试文件，都会fork()出一个新的目标进程进行处理，而大量fork()无疑会带来一定开销。为此，llvm-mode支持持久模式。在持久模式下，每次fork()得到的进程，会对一批而非单个测试文件进行处理，从而减少了开销，提高了执行速度。
+
 一些库提供了无状态的api，或者在处理不同输入文件之间可以重置其状态。当执行这样的重置时，可以重用一个长期存在的进程来尝试多个测试用例，从而消除了重复调用的需要和相关的操作系统开销。
 
+程序的基本结构是:
+```
+  while (__AFL_LOOP(1000)) {
 
+    /* Read input data. */
+    /* Call library code to be fuzzed. */
+    /* Reset state. */
 
+  }
 
+  /* Exit normally. */
+```
 
+在循环中指定的数值控制afl++从头开始重新启动进程之前的最大迭代次数。这将最大限度地减少内存泄漏和类似故障的影响。1000是一个很好的起点，如果设置得更高，则会增加出现问题的可能性，而不会带来任何真正的性能好处。
 
+类似于延迟初始化，该特性仅适用于afl-clang-fast;当使用其他编译器时，可以使用守卫来抑制它。注意，与延迟初始化一样，该特性很容易被误用;如果您没有完全重置临界状态，您可能会得到假阳性结果，或者浪费大量CPU功率，做任何有用的事情。要特别注意内存泄漏和文件描述符的状态。
 
+使用持久模式，需要注意在循环中完成环境的重置、资源的释放，以避免初始状态错误或者资源耗尽的问题。
 
+在这种模式下运行时，执行路径会根据输入循环是第一次输入还是再次执行而固有地有所不同。
 
+### 共享内存模糊
+通过共享内存而不是stdin或文件接收模糊数据，可以进一步加快模糊过程。这是一个大约2倍的速度倍增器。设置这个非常简单:
+
+包含设置以下宏后:
+```
+__AFL_FUZZ_INIT();
+```
+
+直接在main的开头或者如果你使用的是延期的forkserver，那么在__AFL_INIT()之后
+```
+unsigned char *buf = __AFL_FUZZ_TESTCASE_BUF;
+```
+
+然后作为while循环后的第一行：`__AFL_LOOP` 
+```
+  int len = __AFL_FUZZ_TESTCASE_LEN;
+```
+
+### 案例
+fuzz_target.c
+```c
+#include "what_you_need_for_your_target.h"
+
+__AFL_FUZZ_INIT();
+
+main() {
+
+  // anything else here, e.g. command line arguments, initialization, etc.
+
+#ifdef __AFL_HAVE_MANUAL_CONTROL
+  __AFL_INIT();
+#endif
+
+  unsigned char *buf = __AFL_FUZZ_TESTCASE_BUF;  // must be after __AFL_INIT
+                                                 // and before __AFL_LOOP!
+
+  while (__AFL_LOOP(10000)) {
+
+    int len = __AFL_FUZZ_TESTCASE_LEN;  // don't use the macro directly in a
+                                        // call!
+
+    if (len < 8) continue;  // check for a required/useful minimum input length
+
+    /* Setup function call, e.g. struct target *tmp = libtarget_init() */
+    /* Call function to be fuzzed, e.g.: */
+    target_function(buf, len);
+    /* Reset state. e.g. libtarget_free(tmp) */
+
+  }
+
+  return 0;
+
+}
+```
+
+然后编译:
+```
+afl-clang-fast -o fuzz_target fuzz_target.c -lwhat_you_need_for_your_target
+```
+
+如果你想在没有afl-clang-fast/lto的情况下编译目标，那么在include后面添加这个:
+```c
+#ifndef __AFL_FUZZ_TESTCASE_LEN
+  ssize_t fuzz_len;
+  #define __AFL_FUZZ_TESTCASE_LEN fuzz_len
+  unsigned char fuzz_buf[1024000];
+  #define __AFL_FUZZ_TESTCASE_BUF fuzz_buf
+  #define __AFL_FUZZ_INIT() void sync(void);
+  #define __AFL_LOOP(x) ((fuzz_len = read(0, fuzz_buf, sizeof(fuzz_buf))) > 0 ? 1 : 0)
+  #define __AFL_INIT() sync()
+#endif
+```
 
 
 参考链接：
