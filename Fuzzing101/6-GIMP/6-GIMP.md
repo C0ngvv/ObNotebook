@@ -22,3 +22,4 @@ sudo apt-get install build-essential libatk1.0-dev libfontconfig1-dev libcairo2-
 
 
 
+`--disable-shared` 选项用来告诉编译器，我们想编译得到静态库而非动态链接库。当然不是一定要编译成为静态库，但是这样做在最后调用库函数时，不需要再去考虑解析的问题了。所以对于库的fuzzing，一般都会添加上`--disable-shared` 选项。
