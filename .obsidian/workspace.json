@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3ee3b4a40e5dd2a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Fuzzing101/6-GIMP/6-GIMP.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -91,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -107,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "挖坑/TODO List.md",
+                "file": "Fuzzing101/6-GIMP/6-GIMP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "挖坑/TODO List.md",
+                "file": "Fuzzing101/6-GIMP/6-GIMP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "挖坑/TODO List.md"
+                "file": "Fuzzing101/6-GIMP/6-GIMP.md"
               }
             }
           }
@@ -169,8 +182,11 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "9b06a7b0dce104d3",
+  "active": "3ee3b4a40e5dd2a2",
   "lastOpenFiles": [
+    "挖坑/TODO List.md",
+    "Fuzzing101/6-GIMP/6-GIMP.md",
+    "Fuzzing101/6-GIMP",
     "Fuzzing101/5-LibXML2/5-LibXML2.md",
     "Fuzzing101/5-LibXML2/images/Pasted image 20230314202559.png",
     "Fuzzing101/5-LibXML2/images/Pasted image 20230314201750.png",
@@ -179,7 +195,6 @@
     "Fuzzing101/5-LibXML2",
     "Paper/Fuzztruction/images/Pasted image 20230314160257.png",
     "Paper/AFL++/AFL++.md",
-    "挖坑/TODO List.md",
     "挖坑",
     "Paper/Fuzztruction/Fuzztruction.pdf",
     "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
@@ -195,7 +210,6 @@
     "Fuzzing101/4-LibTIFF",
     "Paper/Fuzztruction/images",
     "Fuzzing101/README.md",
-    "Paper/Fuzztruction",
-    "Paper"
+    "Paper/Fuzztruction"
   ]
 }

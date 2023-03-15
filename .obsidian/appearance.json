@@ -1,7 +1,7 @@
 {
   "accentColor": "",
-  "theme": "obsidian",
-  "cssTheme": "Atom",
+  "theme": "moonstone",
+  "cssTheme": "Shimmering Focus",
   "nativeMenus": false,
   "showViewHeader": true,
   "baseFontSize": 15
