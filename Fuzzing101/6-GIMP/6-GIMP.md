@@ -11,10 +11,25 @@ cd /home/fuzzing101/
 mkdir fuzzing_gimp && cd fuzzing_gimp
 ```
 
-安装依赖
+按照原教程的内容安装gegl会失败，对于Ubuntu 20.04以上版本可以直接 apt install libgegl-0.4-0 来安装这个0.4版本的库。
 ```
-sudo apt-get install build-essential libatk1.0-dev libfontconfig1-dev libcairo2-dev libgudev-1.0-0 libdbus-1-dev libdbus-glib-1-dev libexif-dev libxfixes-dev libgtk2.0-dev python2.7-dev libpango1.0-dev libglib2.0-dev zlib1g-dev intltool libbabl-dev
+apt install libgegl-0.4-0
 ```
+
+下载解压GIMP 2.8.16
+```
+cd ..
+wget https://mirror.klaus-uwe.me/gimp/pub/gimp/v2.8/gimp-2.8.16.tar.bz2
+tar xvf gimp-2.8.16.tar.bz2 && cd gimp-2.8.16/
+```
+
+使用afl-clang-lto编译
+```
+CC=afl-clang-lto CXX=afl-clang-lto++ PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/home/fuzzing101/fuzzing_gimp/gegl-0.2.0/ CFLAGS="-fsanitize=address" CXXFLAGS="-fsanitize=address" LDFLAGS="-fsanitize=address" ./configure --disable-gtktest --disable-glibtest --disable-alsatest --disable-nls --without-libtiff --without-libjpeg --without-bzip2 --without-gs --without-libpng --without-libmng --without-libexif --without-aa --without-libxpm --without-webkit --without-librsvg --without-print --without-poppler --without-cairo-pdf --without-gvfs --without-libcurl --without-wmf --without-libjasper --without-alsa --without-gudev --disable-python --enable-gimp-console --without-mac-twain --without-script-fu --without-gudev --without-dbus --disable-mp --without-linux-input --without-xvfb-run --with-gif-compression=none --without-xmc --with-shm=none --enable-debug  --prefix="/home/fuzzing101/fuzzing_gimp/gimp-2.8.16-second/install"
+make -j$(nproc)
+make install
+```
+
 
 对`./app/app.c` 进行修改
 ![](images/Pasted%20image%2020230315100422.png)
