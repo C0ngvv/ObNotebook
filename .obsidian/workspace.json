@@ -171,6 +171,8 @@
   },
   "active": "0822b82a56901dd9",
   "lastOpenFiles": [
+    "Fuzzing101/6-GIMP/images/Pasted image 20230315100422.png",
+    "Fuzzing101/6-GIMP/images",
     "Fuzzing101/AFL++/AFL++使用总结.md",
     "Fuzzing101/6-GIMP/6-GIMP.md",
     "Fuzzing101/AFL++",
@@ -197,7 +199,6 @@
     "Paper/AFL++",
     "Fuzzing101/4-LibTIFF/images",
     "Fuzzing101/4-LibTIFF",
-    "Paper/Fuzztruction/images",
     "Fuzzing101/README.md"
   ]
 }

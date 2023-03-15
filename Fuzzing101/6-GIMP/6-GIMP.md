@@ -16,6 +16,9 @@ mkdir fuzzing_gimp && cd fuzzing_gimp
 sudo apt-get install build-essential libatk1.0-dev libfontconfig1-dev libcairo2-dev libgudev-1.0-0 libdbus-1-dev libdbus-glib-1-dev libexif-dev libxfixes-dev libgtk2.0-dev python2.7-dev libpango1.0-dev libglib2.0-dev zlib1g-dev intltool libbabl-dev
 ```
 
+对`./app/app.c` 进行修改
+![](images/Pasted%20image%2020230315100422.png)
+
 
 
 
