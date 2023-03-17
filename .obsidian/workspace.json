@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -108,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LLVM/Pass入门/LLVM Pass入门.md",
+                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LLVM/Pass入门/LLVM Pass入门.md",
+                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LLVM/Pass入门/LLVM Pass入门.md"
+                "file": "Paper/Fuzztruction/论文：Fuzztruction.md"
               }
             }
           }
@@ -170,10 +169,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "4c2ce02eb9b4484a",
+  "active": "6474088cadeab957",
   "lastOpenFiles": [
-    "Paper/Fuzztruction/论文：Fuzztruction.md",
     "LLVM/Pass入门/LLVM Pass入门.md",
+    "Paper/Fuzztruction/论文：Fuzztruction.md",
     "LLVM/Pass入门",
     "LLVM",
     "Fuzzing101/AFL++/AFL++使用总结.md",
