@@ -28,7 +28,48 @@ LLVM Pass 又是什么呢？ Pass就是“遍历一遍IR，可以同时对它做
 
  如果读者还想了解更多，可以去看看官方文档所推荐的[介绍文章](https://link.zhihu.com/?target=https%3A//llvm.org/docs/%23llvm-design-overview)。 其中我看过的是[Intro to LLVM](https://link.zhihu.com/?target=http%3A//www.aosabook.org/en/llvm.html)，讲得挺不错的。
 
+Clang是一个基于LLVM的编译器驱动。它提供了把C/C++/OC等语言翻译成LLVM IR的前端，并使用LLVM的库实现了LLVM IR到目标平台的后端。既然我们的目标是写一个 LLVM Pass，那么我们自然就需要安装 LLVM 提供的库了。 另外，我们也需要用 Clang 编译得到 LLVM IR，所以 Clang 也是必须要安装的。
 
+在Ubuntu上，可以直接通过apt安装llvm和clang：
+```bash
+$ sudo apt install llvm
+$ sudo apt install clang
+```
+
+如果需要安装更高的版本，有两种方法：
+1.  使用`sudo apt install llvm-x.y clang-x.y`来指定安装当前源可获取的版本。一般可以通过在输入完`sudo apt install llvm-`时按下`tab`键查看有哪些版本可以获取。这个方法的局限是：可安装的最高版本一般不会是最新版本。
+2.  想要安装最新版本，可以根据 [apt.llvm.org](https://link.zhihu.com/?target=https%3A//apt.llvm.org/)这个网站列出的方法配置源并安装。
+
+后续我们会用到`clang`、`opt`、`llvm-config`等指令。请记得把它们加进`PATH` 环境变量中。
+
+关于LLVM IR，首先阅读[PowerPoint Presentation (llvm.org)](https://llvm.org/devmtg/2019-04/slides/Tutorial-Bridgers-LLVM_IR_tutorial.pdf)（它是来自于一个会议的presentation，英语好的可以[去Youtube看对应的视频](https://link.zhihu.com/?target=https%3A//youtu.be/m8G_S5LwlTo)）。看完后，读者现在应该对LLVM IR有了基本了解了。
+
+LLVM IR实际上有三种表示：
+1.  .ll 格式：人类可以阅读的文本。
+2.  .bc 格式：适合机器存储的二进制文件。
+3.  内存表示
+
+.ll格式和.bc格式是如何生成并相互转换的呢？下面我列了个常用的简单指令清单：
+-   .c -> .ll：`clang -emit-llvm -S a.c -o a.ll`
+-   .c -> .bc: `clang -emit-llvm -c a.c -o a.bc`
+-   .ll -> .bc: `llvm-as a.ll -o a.bc`
+-   .bc -> .ll: `llvm-dis a.bc -o a.ll`
+-   .bc -> .s: `llc a.bc -o a.s`
+
+`clang`通过`-emit-llvm`参数， 使得原本要生成汇编以及机器码的指令生成了LLVM IR的ll格式和bc格式。 这可以理解为：对于LLVM IR来说，.ll文件就相当于汇编，.bc文件就相当于机器码。 这也是`llvm-as`和`llvm-dis`指令为什么叫`as`和`dis`的缘故。
+
+如果想要更详细地了解llvm的相关工具，请查阅官方文档 [LLVM CommandGuide](https://link.zhihu.com/?target=https%3A//llvm.org/docs/CommandGuide/index.html)。 对于clang，请查阅官方文档 [User Manual](https://link.zhihu.com/?target=https%3A//clang.llvm.org/docs/UsersManual.html)。
+
+其次，LLVM IR的内存表示在写LLVM Pass的时候会用到。读者可以现在阅读官方文档 [ProgrammersManual - The Core LLVM Class Hierarchy Reference](https://link.zhihu.com/?target=https%3A//llvm.org/docs/ProgrammersManual.html%23the-core-llvm-class-hierarchy-reference) 这一小节来学习。
+
+### 编写LLVM PASS
+请读者仔细阅读官方文档
+
+[Writing an LLVM Pass​llvm.org/docs/WritingAnLLVMPass.html](https://link.zhihu.com/?target=https%3A//llvm.org/docs/WritingAnLLVMPass.html)
+
+中 [Introduction](https://link.zhihu.com/?target=https%3A//llvm.org/docs/WritingAnLLVMPass.html%23introduction-what-is-a-pass) 和[Quick Start](https://link.zhihu.com/?target=https%3A//llvm.org/docs/WritingAnLLVMPass.html%23quick-start-writing-hello-world) 这两部分，然后略读 [Pass classes and requirements](https://link.zhihu.com/?target=https%3A//llvm.org/docs/WritingAnLLVMPass.html%23pass-classes-and-requirements) 与[Pass Statistics](https://link.zhihu.com/?target=https%3A//llvm.org/docs/WritingAnLLVMPass.html%23pass-statistics) 这两部分。
+
+在官方文档中，Hello Pass是基于源代码项目构建的。 如果你没有源代码，那么构建Pass的部分可以简单略读。
 
 
 参考：
