@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6474088cadeab957",
+            "id": "43ad0e93470af6c7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
+                "file": "静态分析/Joern/Joern.md",
                 "mode": "source",
                 "source": false
               }
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
+                "file": "静态分析/Joern/Joern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
+                "file": "静态分析/Joern/Joern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Fuzztruction/论文：Fuzztruction.md"
+                "file": "静态分析/Joern/Joern.md"
               }
             }
           }
@@ -157,12 +157,15 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "6474088cadeab957",
+  "active": "43ad0e93470af6c7",
   "lastOpenFiles": [
+    "Paper/Fuzztruction/论文：Fuzztruction.md",
+    "静态分析/Joern/Joern.md",
+    "静态分析/Joern",
+    "静态分析",
     "Paper/Fuzztruction/images/Pasted image 20230319221722.png",
     "Paper/Fuzztruction/images/Pasted image 20230319221503.png",
     "LLVM/Pass入门/LLVM Pass入门.md",
-    "Paper/Fuzztruction/论文：Fuzztruction.md",
     "LLVM/Pass入门",
     "LLVM",
     "Fuzzing101/AFL++/AFL++使用总结.md",
@@ -181,13 +184,10 @@
     "Paper/Fuzztruction/images/Pasted image 20230314160257.png",
     "Paper/AFL++/AFL++.md",
     "挖坑",
-    "Paper/Fuzztruction/Fuzztruction.pdf",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313224416.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313224407.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313224325.png",
     "Fuzzing101/4-LibTIFF/images/Pasted image 20230313222320.png",
-    "Fuzzing101/4-LibTIFF/images/Pasted image 20230313220948.png",
-    "Paper/AFL++",
     "Fuzzing101/README.md"
   ]
 }
