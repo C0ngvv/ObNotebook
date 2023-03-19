@@ -158,7 +158,43 @@
 
 ![](images/Pasted%20image%2020230314160257.png)
 
+**覆盖率计算**。我们使用覆盖率作为评估模糊性能的指标。为此，我们使用DYNAMORIO[38]跟踪框架的drcov子模块。这允许我们在一个未插桩的二进制文件上检索给定输入的执行跟踪(即，所有已执行的基本块的起始地址)。在相同的非插桩二进制文件上运行来自所有模糊器的输入，可以确保本文中报告的覆盖率数字是一致的和可比较的。为了减少跟踪过程中产生的噪音，我们排除了以下标准库:libgcc、libstdc++、libc、libpthread、libm、libdl和ld-linux。
 
+### 5.2 覆盖率实验
+为了评估我们方法的有效性，我们使用表1中显示的十个应用程序(对)将fuzzstruction与afl++、SYMCC和WEIZZ进行比较。对于10个目标中的每一个，我们在52个核心上重复运行每个fuzzer 5次，持续24小时(如果一个fuzzer有多个基线，例如fuzzstruction，我们公平地分割核心，每个核心26个)。
+
+![](images/Pasted%20image%2020230319221503.png)
+
+实验结果如图3所示。首先，我们看一下总体结果，以及我们的方法总体表现如何。在大多数情况下，fuzzstruction涵盖了最基本的块。在readelf和unzip两种情况下，大多数fuzzers表现相同，而fuzzstruction仍然与其他候选程序相当。只有在单一情况下，对于objdump, FUZZTRUCTION的表现比WEIZZ好一点。
+![](images/Pasted%20image%2020230319221722.png)
+
+>fuzzstruction在整体代码覆盖率方面优于最先进的方法。
+
+下面，我们将更详细地分析第5.1节中目标应用程序中描述的每个应用程序组的结果。特别地，我们考虑了两个维度:首先，我们检查fuzzstruction的单独基线，afl++和fuzzstruction - noafl，并分析它们是否以及如何协同。其次，我们比较了fuzzstruction相对于SYMCC和WEIZZ的表现，后者代表了更传统的模糊方法的最先进水平。
+
+**松散结构格式**。这组由readelf和objdump表示，表示通用模糊器通常评估的目标基线。fuzzstruction - noafl，作为fuzzstruction的一个单独基线，比它的另一个基线afl++差。这可以直观地被预料到：传统的模糊器，如afl++，使用简单的位突变，可以有效地探索常见的、基于块的二进制文件格式，因为它们在输入生成中具有高吞吐量。这与本文中引入的基于错误注入的突变形成对比，后者生成输入需要运行生成器应用程序来生成新的输入。测量所有目标每秒的实际执行，FUZZTRUCTIONNOAFL的执行速度比afl++慢3.2倍。除了吞吐量之外，还发现了覆盖率差异的第二个原因:fuzzturing - noafl没有拼接的概念，这对于基于块的格式特别有用——比如objdump处理的ELF文件。
+
+除了fuzzstruction - noafl相当低的单独性能外，我们发现将两个基线(fuzzstruction)结合在一起可以为objdump产生协同作用：fuzzstruction - noafl独特地涵盖了处理复杂格式部分的函数，例如压缩ELF部分或与所提供的种子文件格式完全不同的格式(例如，通用对象文件格式(COFF))。这样，FUZZTRUCTION- noafl为afl++提供了高价值的输入，这样FUZZTRUCTION就可以从两者中获利。
+
+与WEIZZ和SYMCC相比，我们观察到一个类似的直观的整体情况：由于其他fuzzers也针对基于块的二进制目标进行了优化，其他fuzzers表现相对较好，其中WEIZZ在objcopy方面优于FUZZTRUCTION，而所有fuzzers在readelf方面表现相似。
+
+>FUZZTRUCTION基于故障注入的输入生成方法虽然在传统的模糊目标上不足，但在一些情况下，输入可以解锁新的覆盖范围。
+
+**复杂的格式**。下一组在图3的中间行中包含pngtopng、unzip、e2fsck、7zip(?)和pdftotext(?)。这些程序对模糊者来说具有更复杂的挑战，即校验和和转换，如(按块计算)加密或压缩。关于fuzzstruction基线之间的相互作用，我们看到，与前一组应用程序相比，fuzzstruction - noafl在独立性能上比先前更接近afl++。由于两者的组合fuzzstruction比其各自的基线表现更好，我们可以看到fuzzstruction - noafl为复杂格式提供了比松散结构格式更多的高质量输入。
+
+值得注意的是，fuzzinstruction - noafl在不使用加密原语(这里是基于密码的输入文件加密)的目标上的性能比afl++差。相反，如果输入文件是加密的，FUZZTRUCTION-NOAFL可以显示出它的优势，并且表现得和afl++差不多。这意味着我们的方法能够生成有趣的加密输入文件。为了验证这一概念，我们检查了所有fuzzer的唯一覆盖函数，并发现fuzzstruction是唯一覆盖各种加密相关函数的fuzzer。这些输入依次解锁afl++在fuzzstruction中的字节级突变，以找到新的覆盖范围，展示它们的协同效应。有趣的是，fuzzstruction对7zip?与24小时后的中位数显著不同，表明它尚未收敛。有趣的是，在7zip上运行FUZZTRUCTION 72小时?在美国，我们确实发现24小时后仍有新的覆盖率。另一个有趣的目标是e2fsck，其中fuzzstruction和fuzzstruction - noafl的性能几乎相同，这表明afl++无法提供任何有意义的测试用例。查看生成器mke2fs生成的测试用例，我们发现我们的方法性能良好的一个原因是我们的突变成功地生成了不同的文件系统版本，比如ext2、ext3或ext4。
+
+对比FUZZTRUCTION与WEIZZ和SYMCC的覆盖范围，FUZZTRUCTION组件之间的协同效应也变得更加清晰可见。fuzzstruction的表现优于WEIZZ和SYMCC，比上一组目标更显著。
+
+> 结合FUZZTRUCTIONNOAFL和afl++的协同效应对于那些对输入施加复杂转换(如压缩或按块加密)的目标是明显可见的。
+
+**密码格式**。最后一组包含目标rsa?, dsa ?， vfychain?(图3中第一行)。这些目标的特点是它们实现了复杂的加密原语，如非对称加密或操作，如签名，通常应用于证书。这些值是复杂的，因为它们具有由底层数学原语定义的内部结构，如果发生突变，该结构可能会失效。
+
+对于该组中的所有目标，fuzzstruction - noafl和fuzzstruction表现相同。一个有趣的发现是afl++并没有对FUZZTRUCTION的覆盖率做出有意义的贡献，也没有从我们的方法产生的种子中受益。这是因为它通过应用面向位的突变立即破坏了这些输入的内部结构。通过更仔细地检查fuzzstruction在rsa?，我们发现fuzzstruction唯一地涵盖了与不同加密和哈希算法实现相关的298个函数，如sha256, sha512, AES和IDEA;它甚至触发使用不同的密码模式。这一点特别值得注意，因为生成器不消耗此目标的任何种子输入。因此，由我们的方法产生的输出的多样性成功地为复杂结构生成高质量的输入，即使没有种子输入。
+
+其他模糊器在这类目标上比较困难：由于支撑公钥密码学的数学被设计为单向操作，因此符号执行不可能凭空生成有效的密钥对。由于位级突变，afl++和WEIZZ都使加密原语无效，WEIZZ没有从其方法中受益，因为它不能推断有效的签名或加密。因此，FUZZTRUCTION显著优于其他用于加密应用的模糊器。
+
+>我们的方法非常适合于模糊加密应用程序，并且代表了模糊此类应用程序而不依赖于手动控制的唯一方法。
 
 
 
