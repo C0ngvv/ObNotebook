@@ -24,7 +24,9 @@ Joern中的代码分析是使用CPG查询语言完成的，这是一种专门设
 
 最后，组件 2-7 可以组合成复杂步骤，就像编程语言的基本表达式可以组合成复杂表达式一样。
 
-
+| Traversals |               Description               | Example                               |
+| ---------- |:---------------------------------------:| ------------------------------------- |
+| `.callIn`  | Return the call-sites of a given method | cpg.method.name("exit").callIn.code.l |
 
 
 
