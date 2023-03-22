@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "15d82a37a469d2f3",
+        "id": "e4e181c60e37ed63",
         "type": "tabs",
         "children": [
           {
-            "id": "43ad0e93470af6c7",
+            "id": "5d426b504ee70b91",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8f231ae8eea1975a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -107,7 +91,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +107,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,9 +128,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Paper/Fuzztruction/论文：Fuzztruction.md"
-              }
+              "state": {}
             }
           },
           {
@@ -178,14 +158,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "43ad0e93470af6c7",
+  "active": "5d426b504ee70b91",
   "lastOpenFiles": [
     "Paper/EQUAFL/EQUAFL.md",
+    "Paper/Fuzztruction/论文：Fuzztruction.md",
     "Paper/EQUAFL/images/Pasted image 20230321212334.png",
     "Paper/EQUAFL/images/Pasted image 20230321210045.png",
     "Paper/EQUAFL/images",
     "Paper/AFL++/AFL++.md",
-    "Paper/Fuzztruction/论文：Fuzztruction.md",
     "Paper/EQUAFL",
     "Paper/Fuzztruction/images/Pasted image 20230321184934.png",
     "Paper/Fuzztruction/images/Pasted image 20230321184319.png",
