@@ -1,5 +1,16 @@
+`set -u` 如果遇到不存在的变量，Bash 默认忽略它
+
+`set -e` 只要发生错误，就终止执行，不适用于管道命令
+
+所谓管道命令，就是多个子命令通过管道运算符（|）组合成为一个大的命令。Bash 会把最后一个子命令的返回值，作为整个命令的返回值。也就是说，只要最后一个子命令不失败，管道命令总是会执行成功，因此它后面命令依然会执行，set -e就失效了。
+
+`set -o pipefail` 用来解决这种情况，只要一个子命令失败，整个管道命令就失败，脚本就会终止执行
+
+`set -x`用来在运行结果之前，先输出执行的那一行命令
 
 
+
+if判断
 ```shell
 -b file     Checks if file is a block special file; if yes, then the condition becomes true.    [ -b $file ] is false.
 -c file     Checks if file is a character special file; if yes, then the condition becomes true.    [ -c $file ] is false.
