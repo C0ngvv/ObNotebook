@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "e4e181c60e37ed63",
+        "id": "dc3ebbfe5bd0028e",
         "type": "tabs",
         "children": [
           {
-            "id": "00338faabfb469ac",
+            "id": "25682f215928a965",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "网络/shell/shell.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "12625114e3f828f5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "网络/shell/shell.md",
+                "file": "网络/Download网络问题.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "网络/shell/shell.md",
+                "file": "网络/Download网络问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "网络/shell/shell.md",
+                "file": "网络/Download网络问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "网络/shell/shell.md"
+                "file": "网络/Download网络问题.md"
               }
             }
           },
@@ -178,10 +165,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "12625114e3f828f5",
+  "active": "25682f215928a965",
   "lastOpenFiles": [
-    "网络/linux/linux.md",
     "网络/shell/shell.md",
+    "网络/linux/linux.md",
     "网络/linux",
     "网络/Download网络问题.md",
     "网络/shell",
