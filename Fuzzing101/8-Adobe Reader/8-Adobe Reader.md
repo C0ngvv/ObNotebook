@@ -61,4 +61,45 @@ Try 'dirname --help' for more information.
 
 下面介绍一下使用流程。
 
-安装
+### 3.准备种子语料库
+下载语料库
+```
+wget https://corpora.tika.apache.org/base/packaged/pdfs/archive/pdfs_202002/libre_office.zip
+unzip libre_office.zip -d extracted
+```
+
+仅复制小于2kB的文件来提高模糊速度
+```
+mkdir -p /home/fuzzing101/fuzzing_qemu/afl_in
+find ./extracted -type f -size -2k \
+    -exec cp {} /home/fuzzing101/fuzzing_qemu/afl_in \;
+```
+
+### 4.  方法1：直接模糊测试
+最简单的方式是使用afl-fuzz加上`-Q` 参数。
+
+```
+ACRO_INSTALL_DIR=/opt/Adobe/Reader9/Reader ACRO_CONFIG=intellinux LD_LIBRARY_PATH=$LD_LIBRARY_PATH:'/opt/Adobe/Reader9/Reader/intellinux/lib' afl-fuzz -Q -i ./afl_in/ -o ./afl_out/ -t 2000 -- /opt/Adobe/Reader9/Reader/intellinux/bin/acroread -toPostScript @@
+```
+
+因为`/opt/Adobe/Reader9/bin/acroread` 是一个脚本文件，真实的二进制文件在`/opt/Adobe/Reader9/Reader/intellinux/bin/acroread` 。如果尝试直接执行它可能会出现错误：`acroread must be executed from the startup script`，所以设置`ACRO_INSTALL_DIR` 和 `ACRO_CONFIG`变量，设置`LD_LIBRARY_PATH` 指定动态链接库寻找位置。
+
+### 5.方法2：持久模式提高效率
+有源码时可以使用`AFL_LOOP` 来启动持久模式，没有源码时使用`AFL_QEMU_PERSISTENT` 指定持久循环起始点，建议设置该点为函数开头。可以使用IDA或Ghidra分析获取这个点地址：`0x085478AC`。
+
+同样设置`AFL_QEMU_PERSISTENT_GPR=1` 变量，可以保存并在每次持续循环中恢复通用寄存器的原始值。
+
+```
+AFL_QEMU_PERSISTENT_ADDR=0x085478AC AFL_QEMU_PERSISTENT_GPR=1 ACRO_INSTALL_DIR=/opt/Adobe/Reader9/Reader ACRO_CONFIG=intellinux LD_LIBRARY_PATH=$LD_LIBRARY_PATH:'/opt/Adobe/Reader9/Reader/intellinux/lib' afl-fuzz -Q -i ./afl_in/ -o ./afl_out/ -t 2000 -- /opt/Adobe/Reader9/Reader/intellinux/bin/acroread -toPostScript @@
+```
+
+### 6.触发
+使用崩溃文件直接给afl-qemu-trace会直接提示段错误。
+```
+ACRO_INSTALL_DIR=/opt/Adobe/Reader9/Reader ACRO_CONFIG=intellinux LD_LIBRARY_PATH=$LD_LIBRARY_PATH:'/opt/Adobe/Reader9/Reader/intellinux/lib' /usr/local/bin/afl-qemu-trace -- /opt/Adobe/Reader9/Reader/intellinux/bin/acroread -toPostScript [crashFilePath] 
+```
+
+使用QASan获取更多stacktrace信息，设置`AFL_USE_QASAN=1`来启用。
+```
+AFL_USE_QASAN=1 ACRO_INSTALL_DIR=/opt/Adobe/Reader9/Reader ACRO_CONFIG=intellinux LD_LIBRARY_PATH=$LD_LIBRARY_PATH:'/opt/Adobe/Reader9/Reader/intellinux/lib' /usr/local/bin/afl-qemu-trace -- /opt/Adobe/Reader9/Reader/intellinux/bin/acroread -toPostScript [crashFilePath] 
+```
