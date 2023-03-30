@@ -37,6 +37,17 @@ sudo make install
 cd /home/fuzzing101/fuzzing_qemu
 apt-get install libxml2:i386
 wget ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.5.1/enu/AdbeRdr9.5.1-1_i386linux_enu.deb
-sudo dpkg -i AdbeRdr9.5.1-1_i386linux_enu.deb
+dpkg -i AdbeRdr9.5.1-1_i386linux_enu.deb
 
 ```
+
+! amd64上安装i386程序方法
+```
+dpkg --add-architecture i386
+apt-get update
+apt --fix-broken install
+apt-get install libxml2:i386
+```
+
+程序位于`/opt/Adobe/Reader9/Reader/intellinux/bin/acroread` 
+
