@@ -51,3 +51,14 @@ apt-get install libxml2:i386
 
 程序位于`/opt/Adobe/Reader9/Reader/intellinux/bin/acroread` 
 
+环境构建出现了一些问题，运行acroread提示缺少`libgdk_pixbuf_xlib-2.0.so.0` 共享库。
+```
+[afl++ feda81819d2a] /home/fuzzing101/fuzzing_qemu # acroread -help
+dirname: missing operand
+Try 'dirname --help' for more information.
+/opt/Adobe/Reader9/Reader/intellinux/bin/acroread: error while loading shared libraries: libgdk_pixbuf_xlib-2.0.so.0: cannot open shared object file: No such file or directory
+```
+
+下面介绍一下使用流程。
+
+安装
