@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "0af540a2b46ddc3f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md"
+                "file": "Paper/Fuzztruction/论文：Fuzztruction.md"
               }
             }
           },
@@ -165,8 +178,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "25682f215928a965",
+  "active": "0af540a2b46ddc3f",
   "lastOpenFiles": [
+    "Fuzzing101/8-Adobe Reader/8-Adobe Reader.md",
+    "Paper/EQUAFL/EQUAFL.md",
+    "Fuzzing101/8-Adobe Reader",
     "Paper/EQUAFL/images/Pasted image 20230328110001.png",
     "Paper/Fuzztruction/论文：Fuzztruction.md",
     "网络/Download网络问题.md",
@@ -175,7 +191,6 @@
     "网络/linux",
     "网络/shell",
     "网络",
-    "Paper/EQUAFL/EQUAFL.md",
     "Paper/EQUAFL/images/Pasted image 20230321212334.png",
     "Paper/EQUAFL/images/Pasted image 20230321210045.png",
     "Paper/EQUAFL/images",
@@ -195,12 +210,10 @@
     "Fuzzing101/6-GIMP/6-GIMP.md",
     "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
     "Fuzzing101/6-GIMP/images/Pasted image 20230315100422.png",
-    "Fuzzing101/6-GIMP/images",
     "挖坑/TODO List.md",
     "Fuzzing101/5-LibXML2/5-LibXML2.md",
     "Fuzzing101/5-LibXML2/images/Pasted image 20230314202559.png",
     "Fuzzing101/5-LibXML2/images/Pasted image 20230314201750.png",
-    "Paper/Fuzztruction/images/Pasted image 20230314160257.png",
     "Fuzzing101/README.md"
   ]
 }
