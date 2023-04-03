@@ -174,7 +174,56 @@ vanilla:
     
 ```
 
+`fuzztruction` 帮助
+```
+Fuzztruction 1.0
+Moritz Schloegel <moritz.schloegel@rub.de>
 
+USAGE:
+    fuzztruction [OPTIONS] <config> <SUBCOMMAND>
+
+ARGS:
+    <config>    Path to the configuration file specifing the generator and consumer of the
+                fuzzing campaign.
+
+OPTIONS:
+    -h, --help
+            Print help information
+
+        --log-level <trace, debug, info, warn, error, off>
+            Log verbosity (alternative to --verbosity) [default: debug]
+
+        --purge
+            Purge any data from previous runs. Must be provided if the workdir exists
+
+        --show-output
+            Show stdout and stderr of the generator and the consumer. This becomes handy for
+            debugging not working configurations
+
+        --suffix <suffix>
+            Suffix appended to the workdir path provided via the config file
+            (i.e., <WORKDIR>-<SUFFIX>)
+
+    -v, --verbosity
+            Sets the level of verbosity (alternative to --log-level)
+
+    -V, --version
+            Print version information
+
+SUBCOMMANDS:
+    aflpp               Use AFL++ for fuzzing the consumer application. This mode provides 
+					    flags to combine AFL++ with SYMCC or WEIZZ. If Fuzztruction (fuzz 
+					    mode) is running using the same config as for the aflpp mode, AFL++ 
+					    is periodically reseeded with inputs found by Fuzztruction.
+    benchmark
+    dump-stackmap       Dump the LLVM stackmap (e.g., locations and sizes)
+    fuzz
+    help                Print this message or the help of the given subcommand(s)
+    test-patchpoints    Test the patchpoints of the source application (for debugging)
+    tracer              Run DynamoRIO-based tracer to generate basic block traces for each
+                            insteresting input found.
+    valgrind
+```
 
 
 
