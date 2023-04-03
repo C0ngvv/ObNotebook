@@ -93,7 +93,7 @@ sudo ./target/debug/fuzztruction ./fuzztruction-experiments/comparison-with-stat
 
 如果工作目录已经存在，必须将`--purge` 作为参数传递给`fuzztruction`，以允许它重新运行。该标志必须在子命令之前传递，即在`fuzz`或`benchmark`前面。
 
-
+![](images/Pasted%20image%2020230403113430.png)
 
 ### 5. 联合Fuzztruction和AFL++
 为了与 Fuzztruction 同时运行 AFL++，可以使用`aflpp` 子命令来生成 AFL++ 工作器，这些工作器会在运行期间用 Fuzztruction 发现的输入进行补给。假设Fuzztruction是用上面的命令执行的，那么只要执行下面命令就可以生成10个AFL++进程，终止时间是10min。
@@ -102,6 +102,8 @@ sudo ./target/debug/fuzztruction ./fuzztruction-experiments/comparison-with-stat
 ```
 
 Fuzztruction和AFL++发现的输入会定期同步到工作目录中的`interesting` 文件夹中。如果AFL++应该独立执行，但基于相同的`.yml`配置文件，可以使用`--suffix`参数为生成的模糊器的工作目录添加一个后缀。
+
+![](images/Pasted%20image%2020230403113523.png)
 
 ### 6. 计算覆盖率
 在模糊运行结束后，`tracer`子命令允许检索在模糊过程中发现的所有有趣输入的覆盖基本块的列表。这些追踪被存储在工作目录下的`traces` 子目录中。每个追踪都包含一个zlib压缩的JSON对象，其中包含所有在执行过程中行使的基本块的地址（按执行顺序）。此外，还提供了元数据，将地址映射到它们所在的实际ELF文件中。
