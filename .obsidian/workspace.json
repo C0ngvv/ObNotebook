@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
+                "file": "LLVM/Pass入门/LLVM Pass入门.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2db022417ea623dd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
+                "file": "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
+                "file": "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md"
+                "file": "LLVM/写一个llvmPass/Writing an LLVM Pass.md"
               }
             }
           },
@@ -165,14 +178,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "512ed3e77578320e",
+  "active": "2db022417ea623dd",
   "lastOpenFiles": [
+    "LLVM/Pass入门/LLVM Pass入门.md",
+    "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
+    "LLVM/写一个llvmPass",
+    "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "论文工具/Fuzztruction/基本使用/images/Pasted image 20230403113523.png",
     "论文工具/Fuzztruction/基本使用/images/Pasted image 20230403113430.png",
     "论文工具/Fuzztruction/基本使用/images/Pasted image 20230403110557.png",
     "论文工具/Fuzztruction/基本使用/images",
     "Fuzzing101/7-VLC media player/7-VLC media player.md",
-    "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "论文工具/Fuzztruction/基本使用",
     "论文工具/Fuzztruction",
     "未命名",
@@ -188,7 +204,6 @@
     "网络/linux/linux.md",
     "网络/linux",
     "网络/shell",
-    "网络",
     "Paper/EQUAFL/images/Pasted image 20230321212334.png",
     "Paper/EQUAFL/images/Pasted image 20230321210045.png",
     "Paper/AFL++/AFL++.md",
@@ -197,11 +212,9 @@
     "静态分析/Joern/Joern.md",
     "Paper/Fuzztruction/images/Pasted image 20230319221722.png",
     "Paper/Fuzztruction/images/Pasted image 20230319221503.png",
-    "LLVM/Pass入门/LLVM Pass入门.md",
     "Fuzzing101/AFL++/AFL++使用总结.md",
     "Fuzzing101/6-GIMP/6-GIMP.md",
     "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
-    "Fuzzing101/6-GIMP/images/Pasted image 20230315100422.png",
     "挖坑/TODO List.md",
     "Fuzzing101/5-LibXML2/5-LibXML2.md",
     "Fuzzing101/README.md"
