@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "LLVM/Pass入门/LLVM Pass入门.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7bc20fa0dc501ec8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "LLVM/llvm构建和配置/LLVM构建与配置.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -165,11 +178,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b3716ad2c79c5c43",
+  "active": "7bc20fa0dc501ec8",
   "lastOpenFiles": [
-    "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
     "LLVM/Pass入门/LLVM Pass入门.md",
+    "LLVM/LLVM概念/llvm.md",
+    "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
     "LLVM/llvm构建和配置/LLVM构建与配置.md",
+    "LLVM/LLVM概念",
     "网络/Download网络问题.md",
     "网络/shell/shell.md",
     "网络/linux/linux.md",
@@ -191,7 +206,6 @@
     "Paper/Fuzztruction/论文：Fuzztruction.md",
     "Fuzzing101/8-Adobe Reader",
     "Paper/EQUAFL/images/Pasted image 20230328110001.png",
-    "网络/linux",
     "Paper/EQUAFL/images/Pasted image 20230321212334.png",
     "Paper/EQUAFL/images/Pasted image 20230321210045.png",
     "Paper/AFL++/AFL++.md",
