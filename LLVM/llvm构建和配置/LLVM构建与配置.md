@@ -2,10 +2,10 @@
 
 ```
 cd /usr/local
-sudo wget https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.0/clang+llvm-16.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
-sudo tar xvf clang+llvm-16.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
-sudo mv clang+llvm-16.0.0-x86_64-linux-gnu-ubuntu-18.04 llvm-16.0
-export PATH="$PATH:/usr/local/llvm-16.0/bin"
+sudo wget https://github.com/llvm/llvm-project/releases/download/llvmorg-13.0.1/clang+llvm-13.0.1-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+sudo tar xvf clang+llvm-13.0.1-x86_64-linux-gnu-ubuntu-18.04.tar.xz
+sudo mv clang+llvm-13.0.1-x86_64-linux-gnu-ubuntu-18.04.tar.xz llvm-13.0.1
+export PATH="$PATH:/usr/local/llvm-13.0.1/bin"
 ```
 
 然后就可以使用了
