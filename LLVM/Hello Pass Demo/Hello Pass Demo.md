@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-编译为bc格式（bc格式是IR的位码表示）
+编译为bc格式（bc格式是IR的位码bitcode表示）
 ```bash
 clang -c -emit-llvm hello.c -o hello.bc 
 ```
@@ -157,5 +157,12 @@ static llvm::RegisterStandardPasses Y(
     [](const llvm::PassManagerBuilder &Builder,
        llvm::legacy::PassManagerBase &PM) { PM.add(new Hello()); });
 ```
+
+### opt
+可以使用`opt` 命令使用pass运行llvm程序。
+```
+opt -load ./LLVMHello.so -hello -enable-new-pm=0 hello.bc -o /dev/null
+```
+
 
 
