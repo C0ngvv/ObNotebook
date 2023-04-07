@@ -169,5 +169,16 @@ opt -load ./LLVMHello.so -hello -enable-new-pm=0 hello.bc -o /dev/null
 - 这里没有修改程序，所以将opt的输出丢给`/dev/null`即可
 - `-enable-new-pm=0` 这篇文章使用的是legacy pass manager，LLVM使用新的默认pass管理器，所以使用该参数来启用legacy pass manager
 
+opt其他参数
+`-help` 显示帮助
+```
+opt -load ./LLVMHello.so -help
+```
 
+`-time-passes`显示pass的执行时间
+```
+opt -load ./LLVMHello.so -hello -enable-new-pm=0 -time-passes hello.bc -o /dev/null
+```
+
+![](images/Pasted%20image%2020230407150725.png)
 

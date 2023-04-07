@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "3ede1976a2809362",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -91,8 +103,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -108,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "LLVM/Hello Pass Demo/Hello Pass Demo.md",
+                "file": "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "LLVM/Hello Pass Demo/Hello Pass Demo.md",
+                "file": "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "LLVM/Hello Pass Demo/Hello Pass Demo.md"
+                "file": "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md"
               }
             }
           },
@@ -179,14 +190,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "696602cedcda06dd",
+  "active": "3ede1976a2809362",
   "lastOpenFiles": [
+    "LLVM/Hello Pass Demo/Hello Pass Demo.md",
+    "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
+    "LLVM/Demo进阶：Pass类和要求",
+    "LLVM/Hello Pass Demo/images/Pasted image 20230407150725.png",
+    "LLVM/llvm构建和配置/LLVM构建与配置.md",
     "LLVM/Hello Pass Demo/images/Pasted image 20230407101442.png",
     "LLVM/Hello Pass Demo/images/Pasted image 20230407101304.png",
     "LLVM/Hello Pass Demo/images/Pasted image 20230407100625.png",
     "LLVM/Hello Pass Demo/images",
-    "LLVM/llvm构建和配置/LLVM构建与配置.md",
-    "LLVM/Hello Pass Demo/Hello Pass Demo.md",
     "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
     "LLVM/LLVM概念/llvm.md",
     "LLVM/Hello Pass Demo",
@@ -206,7 +220,6 @@
     "论文工具/Fuzztruction/基本使用",
     "论文工具/Fuzztruction",
     "未命名",
-    "论文工具",
     "Fuzzing101/8-Adobe Reader/8-Adobe Reader.md",
     "Paper/EQUAFL/EQUAFL.md",
     "Paper/Fuzztruction/论文：Fuzztruction.md",
@@ -214,8 +227,6 @@
     "Paper/EQUAFL/images/Pasted image 20230321212334.png",
     "Paper/EQUAFL/images/Pasted image 20230321210045.png",
     "Paper/AFL++/AFL++.md",
-    "Paper/Fuzztruction/images/Pasted image 20230321184934.png",
-    "Paper/Fuzztruction/images/Pasted image 20230321184319.png",
     "静态分析/Joern/Joern.md",
     "Fuzzing101/AFL++/AFL++使用总结.md",
     "Fuzzing101/6-GIMP/6-GIMP.md",
