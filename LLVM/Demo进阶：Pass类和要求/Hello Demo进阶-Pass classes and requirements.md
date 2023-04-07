@@ -12,6 +12,7 @@
 
 要编写一个正确的`ModulePass`子类，应从`ModulePass`派生，并以下列签名重载`runOnModule`方法：
 
+### runOnModule method
 ```cpp
 virtual bool runOnModule(Module &M) = 0;
 ```
@@ -19,13 +20,93 @@ virtual bool runOnModule(Module &M) = 0;
 `runOnModule`方法执行了有趣的传递工作。如果模块被转换所修改，它应该返回true，否则返回false。
 
 ## CallGraphSCCPass Class
+CallGraphSCCPass被那些需要在调用图上自下而上地遍历程序的pass所使用（被调用者在调用者前）。从CallGraphSCCPass派生出来，提供了一些构建和遍历CallGraph的机制，也允许系统优化CallGraphSCCPasses的执行。如果你的传递满足下面的要求，并且不符合FunctionPass的要求，你应该派生自CallGraphSCCPass。
 
+明确地说，CallGraphSCCPass的子类是：
+- 不允许检查或修改除当前SCC中的功能以及SCC的直接调用者和直接被调用者之外的任何功能
+- 需要保留当前的CallGraph对象，更新它以反映对程序所做的任何改变
+- 不允许从当前模块中添加或删除SCC，尽管他们可以改变SCC的内容
+- 允许从当前模块中添加或删除全局变量
+- 允许在runOnSCC的调用中保持状态（包括全局数据）
 
+实现CallGraphSCCPass在某些情况下略显棘手，因为它必须处理其中有不止一个节点的SCC。下面描述的所有虚拟方法，如果它们修改了程序，应该返回true，如果没有，则返回false。
 
+### doInitialization(CallGraph &CG) method
+```cpp
+virtual bool doInitialization(CallGraph &CG);
+```
+
+`doInitialization` 方法允许做大部分`CallGraphSCCPasses` 不允许做的事情。他们可以添加和删除函数，获得函数的指针，等等。`doInitialization` 方法被设计用来做简单的初始化类型的事情，不依赖于正在处理的SCC。`doInitialization` 方法的调用并不安排与任何其他传递的执行重叠（因此它应该是非常快的）。
+
+### runOnSCC method
+```cpp
+virtual bool runOnSCC(CallGraphSCC &SCC) = 0;
+```
+
+runOnSCC方法执行有趣的传递工作，如果模块被转换所修改，应该返回true，否则返回false。
+
+### doFinalization(CallGraph &CG) method
+```
+virtual bool doFinalization(CallGraph &CG);
+```
+
+`doFinalization` 方法是一个不经常使用的方法，当传递框架为正在编译的程序中的每一个SCC调用完runOnSCC时，它就会被调用。
 
 ## FunctionPass Class
+与`ModulePass` 子类相比，`FunctionPass` 子类确实有一个可预测的局部行为，可以被系统所期待。所有`FunctionPass` 在程序中的每个函数上执行，独立于程序中的所有其他函数。`FunctionPasses` 不要求以特定的顺序执行，`FunctionPasses` 也不修改外部函数。
+
+明确地说，FunctionPass的子类不允许：
+- 检查或修改当前正在处理的函数以外的函数
+- 从当前模块中添加或删除函数。
+- 从当前模块中添加或删除全局变量
+- 在runOnFunction的调用中保持状态（包括全局数据）
+
+实现一个FunctionPass通常很简单（参见Hello World pass的例子）。FunctionPasses可以重载三个虚拟方法来完成其工作。所有这些方法如果修改了程序就应该返回true，如果没有就应该返回false。
+
+### doInitialization(Module &M) method
+```cpp
+virtual bool doInitialization(Module &M);
+```
+
+doInitialization方法被允许做大多数FunctionPasses不允许做的事情。他们可以添加和删除函数，获得函数的指针，等等。doInitialization方法被设计用来做简单的初始化类型的事情，不依赖于被处理的函数。doInitialization方法的调用不会与任何其他传递的执行重叠（因此它应该是非常快的）。
+
+一个很好的例子是LowerAllocations传递，说明这个方法应该如何使用。这个传递将malloc和free指令转换为与平台相关的malloc()和free()函数调用。它使用doInitialization方法来获取它所需要的malloc和free函数的引用，如果有必要的话，将原型添加到模块中。
+
+### runOnFunction(Function &F) method
+```cpp
+virtual bool runOnFunction(Function &F) = 0;
+```
+
+runOnFunction方法必须由子类实现，以完成你的传递的转换或分析工作。像往常一样，如果函数被修改，应该返回一个真值。
+
+### doFinalization(Module &M) method
+```cpp
+virtual bool doFinalization(Module &M);
+```
+
+doFinalization方法是一个不经常使用的方法，当传递框架为正在编译的程序中的每一个函数调用完runOnFunction后，该方法就会被调用。
 
 ## LoopPass Class
+所有的`LoopPass` 在函数中的每个循环上执行，与函数中的所有其他循环无关。`LoopPass` 按照循环嵌套的顺序处理循环，最外层的循环最后被处理。
+
+`LoopPass` 的子类允许使用`LPPassManager` 接口来更新循环嵌套。实现一个循环pass通常是简单的。LoopPasses 可以重载三个虚方法来完成其工作。所有这些方法如果修改了程序就应该返回true，如果没有就应该返回false。
+
+一个打算作为主循环传递管道的一部分运行的LoopPass子类，需要保留其管道中其他循环传递所需要的所有相同的函数分析。为了使之更容易，LoopUtils.h提供了一个`getLoopAnalysisUsage` 函数，可以在子类的`getAnalysisUsage` 重载中调用，以获得一致和正确的行为。类似地，`INITIALIZE_PASS_DEPENDENCY(LoopPass)` 将初始化这组函数的分析。
+
+### doInitialization(Loop \*, LPPassManager &LPM) method
+```cpp
+virtual bool doInitialization(Loop *, LPPassManager &LPM);
+```
+
+doInitialization方法被设计用来做简单的初始化类型的事情，不依赖于正在处理的函数。doInitialization方法的调用不会与任何其他通行证的执行相重叠（因此它应该是非常快的）。LPPassManager接口应该被用来访问函数或模块级别的分析信息。
+
+### runOnLoop(Loop \*, LPPassManager &LPM) method
+```cpp
+virtual bool runOnLoop(Loop *, LPPassManager &LPM) = 0;
+```
+
+runOnLoop方法必须由你的子类实现，以完成你的传递的转换或分析工作。像往常一样，如果该函数被修改，应该返回一个真值。应使用LPPassManager接口来更新循环巢。
+
 
 ## RegionPass Class
 
