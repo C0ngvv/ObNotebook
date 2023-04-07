@@ -80,10 +80,14 @@ int main() {
 }
 ```
 
-编译为bc格式
+编译为bc格式（bc格式是IR的位码表示）
 ```bash
 clang -c -emit-llvm hello.c -o hello.bc 
 ```
+- `clang [options] file ...`
+- `-c` 仅运行预处理、编译和组装步骤
+- `-emit-llvm` 对汇编程序和目标文件使用LLVM表示
+- `-o <file>` 指定输出文件
 
 ## 4. 运行pass
 结果打印出了定义的函数
@@ -92,3 +96,66 @@ opt -load ./LLVMHello.so -hello -enable-new-pm=0 hello.bc -o /dev/null
 ```
 
 ![](images/Pasted%20image%2020230407101304.png)
+
+## 5. 工作原理
+## Pass编写
+由于我们在写一个Pass，并操作在Function上，还有一些打印操作，所以需要包含下面的包。
+```cpp
+#include "llvm/Pass.h"
+#include "llvm/IR/Function.h"
+#include "llvm/Support/raw_ostream.h"
+```
+
+从include文件导入的functions都在llvm的命名空间内，所以使用llvm命名空间。
+```cpp
+using namespace llvm;
+```
+
+下面这条语句开始一个匿名命名空间。匿名命名空间对于C++来说就像 "静态 "关键字对于C语言一样（在全局范围内）。在匿名命名空间中声明的东西只对当前文件可见。
+```cpp
+namespace {
+```
+
+现在来声明我们的pass。这里声明了一个FunctionPass的子类"Hello"类，FuncionPass一次只对一个函数进行操作。
+```cpp
+struct Hello : public FunctionPass {
+```
+
+这声明了LLVM用来识别pass的标识符。这使得LLVM可以避免使用昂贵的C++运行时信息。
+```cpp
+static char ID;
+Hello() : FunctionPass(ID) {}
+```
+
+这里声明了一个`runOnFunction` 方法，它重写了一个继承自`FunctionPass` 的抽象虚方法。这里面写我们要做的事，这里是打印出"hello: "和每个函数的名称。
+```cpp
+  bool runOnFunction(Function &F) override {
+    errs() << "Hello: ";
+    errs().write_escaped(F.getName()) << '\n';
+    return false;
+  }
+}; // end of struct Hello
+}  // end of anonymous namespace
+```
+
+这里初始化pass ID。LLVM使用ID的地址来识别一个pass，所以初始化的值是不重要的。
+```cpp
+char Hello::ID = 0;
+```
+
+最后，注册我们编写的`Hello` 类，给它一个命令行参数`hello`和名字`Hello World Pass` ，最后两个参数描述它的行为：如果一个pass遍历CFG而不修改的情况下，那么第三个参数被设置为`true` ；如果一个通道是一个分析通道，例如dominator tree pass，那么第四个参数被设置为`true`。
+```cpp
+static RegisterPass<Hello> X("hello", "Hello World Pass",
+                             false /* Only looks at CFG */,
+                             false /* Analysis Pass */);
+```
+
+如果我们想把pass注册为现有管道的一个步骤，一些扩展点可以使用，例如`PassManagerBuilder::EP_EarlyAsPossible` 来在任何优化前应用我们的pass，或使用`PassManagerBuilder::EP_FullLinkTimeOptimizationLast` 来在链接时优化后应有pass。
+```
+static llvm::RegisterStandardPasses Y(
+    llvm::PassManagerBuilder::EP_EarlyAsPossible,
+    [](const llvm::PassManagerBuilder &Builder,
+       llvm::legacy::PassManagerBase &PM) { PM.add(new Hello()); });
+```
+
+
