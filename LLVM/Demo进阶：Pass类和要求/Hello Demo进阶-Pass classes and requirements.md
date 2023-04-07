@@ -105,12 +105,44 @@ doInitialization方法被设计用来做简单的初始化类型的事情，不�
 virtual bool runOnLoop(Loop *, LPPassManager &LPM) = 0;
 ```
 
-runOnLoop方法必须由你的子类实现，以完成你的传递的转换或分析工作。像往常一样，如果该函数被修改，应该返回一个真值。应使用LPPassManager接口来更新循环巢。
+runOnLoop方法必须由子类实现，以完成传递的转换或分析工作。像往常一样，如果该函数被修改，应该返回一个真值。应使用LPPassManager接口来更新循环nest。
 
+### doFinalization() method
+```cpp
+virtual bool doFinalization();
+```
+
+doFinalization方法是一个不经常使用的方法，当传递框架为正在编译的程序中的每一个循环调用完runOnLoop后，该方法就会被调用。
 
 ## RegionPass Class
+RegionPass与LoopPass相似，但在函数中的每个单入单出区域上执行。RegionPass以嵌套的方式处理区域，即最外层的区域被最后处理。
+
+RegionPass的子类被允许通过使用RGPassManager接口来更新区域树。你可以重载 RegionPass 的三个虚拟方法来实现你自己的区域传递。所有这些方法如果修改了程序，应该返回true，如果没有，则返回false。
+
+### doInitialization(Region \*, RGPassManager &RGM) method
+```cpp
+virtual bool doInitialization(Region *, RGPassManager &RGM);
+```
+
+doInitialization方法被设计用来做简单的初始化类型的事情，不依赖于正在处理的函数。doInitialization方法的调用不会与任何其他通行证的执行相重叠（因此它应该是非常快的）。RPPassManager接口应该被用来访问函数或模块级别的分析信息。
+
+### runOnRegion(Region \*, RGPassManager &RGM) method
+```cpp
+virtual bool runOnRegion(Region *, RGPassManager &RGM) = 0;
+```
+
+runOnRegion方法必须由子类实现，以完成你的传递的转换或分析工作。像往常一样，如果区域被修改，应该返回一个真值。RGPassManager接口应该被用来更新区域树。
+
+### doFinalization() method
+```cpp
+virtual bool doFinalization();
+```
+
+doFinalization方法是一个不经常使用的方法，当传递框架为正在编译的程序中的每一个区域调用完runOnRegion后，该方法被调用。
 
 ## MachineFunctionPass Class
+
+
 
 ## Pass registration
 
