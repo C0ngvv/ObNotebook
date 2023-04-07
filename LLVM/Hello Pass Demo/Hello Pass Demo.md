@@ -164,5 +164,10 @@ static llvm::RegisterStandardPasses Y(
 opt -load ./LLVMHello.so -hello -enable-new-pm=0 hello.bc -o /dev/null
 ```
 
+- `-load` 参数指定加载自己的pass作为共享对象
+- `-hello` 是注册的类
+- 这里没有修改程序，所以将opt的输出丢给`/dev/null`即可
+- `-enable-new-pm=0` 这篇文章使用的是legacy pass manager，LLVM使用新的默认pass管理器，所以使用该参数来启用legacy pass manager
+
 
 
