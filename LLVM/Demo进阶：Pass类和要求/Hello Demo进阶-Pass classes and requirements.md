@@ -194,7 +194,7 @@ virtual void getAnalysisUsage(AnalysisUsage &Info) const;
 一些分析与其他分析连锁，以完成它们的工作。例如，一个别名分析AliasAnalysis \<AliasAnalysis\>的实现需要与其他别名分析pass链接。在分析链的情况下，应该使用`addRequiredTransitive`方法而不是`addRequired`方法。这通知PassManager，只要需要的pass是活的，那么过渡性需要的pass就应该是活的。
 
 ### AnalysisUsage::addPreserved<> method
-PassManager的工作之一是优化分析的运行方式和时间。特别是，它试图避免重新计算数据，除非它需要这样做。出于这个原因，允许通行证声明他们保留（即，他们不会使现有的分析无效），如果它是可用的。例如，一个简单的常数折叠传递不会修改CFG，所以它不可能影响dominator分析的结果。默认情况下，所有的传递都被假定为使所有其他的传递无效。
+PassManager的工作之一是优化分析的运行方式和时间。特别是，它试图避免重新计算数据，除非它需要这样做。出于这个原因，允许pass声明他们保留（即，他们不会使现有的分析无效），如果它是可用的。例如，一个简单的常数折叠传递不会修改CFG，所以它不可能影响dominator分析的结果。默认情况下，所有的传递都被假定为使所有其他的传递无效。
 
 AnalysisUsage类提供了几个方法，这些方法在某些情况下很有用，与addPreserved有关。特别是，可以调用setPreservesAll方法来表示该通证完全不修改LLVM程序（这对分析来说是真实的），而setPreservesCFG方法可以被改变程序中的指令但不修改CFG或终止器指令的转换所使用。
 
