@@ -141,12 +141,66 @@ virtual bool doFinalization();
 doFinalization方法是一个不经常使用的方法，当传递框架为正在编译的程序中的每一个区域调用完runOnRegion后，该方法被调用。
 
 ## MachineFunctionPass Class
+MachineFunctionPass是LLVM代码生成器的一部分，它在程序中的每个LLVM函数的机器独立的表示上执行。
 
+代码生成器pass由`TargetMachine::addPassesToEmitFile` 和类似的例程专门注册和初始化，因此它们一般不能从opt或bugpoint命令中运行。
 
+一个MachineFunctionPass也是一个FunctionPass，所以适用于FunctionPass的所有限制也适用于它。MachineFunctionPasses也有额外的限制。特别是，MachineFunctionPasses不允许做以下任何事情：
+
+- 修改或创建任何LLVM IR指令、基本块、参数、函数、GlobalVariables、GlobalAliases或模块。
+- 修改当前正在处理的机器功能以外的机器功能
+- 在runOnMachineFunction的调用中保持状态（包括全局数据）
+
+### runOnMachineFunction(MachineFunction &MF) method
+```cpp
+virtual bool runOnMachineFunction(MachineFunction &MF) = 0;
+```
+
+runOnMachineFunction可以被认为是MachineFunctionPass的主要入口点；也就是说，你应该覆盖这个方法来完成你的MachineFunctionPass的工作。
+
+runOnMachineFunction方法在模块中的每个MachineFunction上被调用，以便MachineFunctionPass可以对函数的机器独立性表示进行优化。如果你想获得你正在处理的MachineFunction的LLVM Function，请使用MachineFunction的getFunction()访问器方法--但记住，你不能从MachineFunctionPass中修改LLVM Function或其内容。
 
 ## Pass registration
+在Hello World例子中，我们说明了pass注册是如何工作的，并讨论了使用pass注册的一些原因和它的作用。这里我们讨论如何以及为什么要注册pass。
+
+正如我们在上面看到的，pass是用`RegisterPass`模板注册的。模板参数是通证的名称，在命令行中用来指定该pass应该被添加到程序中（例如，用opt或bugpoint）。第一个参数是pass的名称，用于程序的-help输出，以及由-debug-pass选项产生的调试输出。
+
+如果你想让你的pass容易转储，你应该实现虚拟打印方法：
+
+### print(llvm::raw_ostream &O, const Module \*M) method
+```cpp
+virtual void print(llvm::raw_ostream &O, const Module *M) const;
+```
+
+打印方法必须由 "分析 "来实现，以便打印出分析结果的人类可读版本。这对调试分析本身很有用，也可以让其他人弄清楚分析的工作原理。使用opt -analyze参数来调用这个方法。
+
+llvm::raw_ostream参数指定了写入结果的流，Module参数给出了一个指向被分析的程序的顶级模块的指针。但是请注意，这个指针在某些情况下可能是空的（比如从调试器中调用Pass::dump()），所以它只应该被用来加强调试输出，不应该被依赖。
 
 ## Specify interactions between passes
+PassManager的主要职责之一是确pass之间正确互动。因为PassManager试图优化pass的执行，它必须知道pass之间如何相互作用，以及各个pass之间存在哪些依赖关系。为了跟踪这一点，每个pass可以声明在当前pass之前需要执行的pass集合，以及被当前pass废止的pass。
+
+通常情况下，这个功能被用来要求在你的pass运行之前计算出分析结果。运行任意的转换pass会使计算的分析结果无效，这就是无效集所指定的。如果一个pass没有实现getAnalysisUsage方法，它默认为没有任何先决条件的传递，并使所有其他传递无效。
+
+### getAnalysisUsage(AnalysisUsage &Info) method
+```cpp
+virtual void getAnalysisUsage(AnalysisUsage &Info) const;
+```
+
+通过实现getAnalysisUsage方法，可以为你的转换指定需要的和无效的集合。实现应该在AnalysisUsage对象中填入关于哪些pass是必需的、哪些pass没有失效的信息。为了做到这一点，pass可以调用AnalysisUsage对象上的以下任何方法：
+
+### AnalysisUsage::addRequired<> and AnalysisUsage::addRequiredTransitive<> methods
+如果你的pass需要执行先前的pass（例如分析），它可以使用这些方法之一来安排它在你的pass之前运行。LLVM有许多不同类型的分析和pass可以被要求，范围包括从`DominatorSet` 到`BreakCriticalEdges` 。例如，要求`BreakCriticalEdges` ，可以保证当你的传递被运行时，CFG中没有临界边缘。
+
+一些分析与其他分析连锁，以完成它们的工作。例如，一个别名分析AliasAnalysis \<AliasAnalysis\>的实现需要与其他别名分析pass链接。在分析链的情况下，应该使用`addRequiredTransitive`方法而不是`addRequired`方法。这通知PassManager，只要需要的pass是活的，那么过渡性需要的pass就应该是活的。
+
+### AnalysisUsage::addPreserved<> method
+PassManager的工作之一是优化分析的运行方式和时间。特别是，它试图避免重新计算数据，除非它需要这样做。出于这个原因，允许通行证声明他们保留（即，他们不会使现有的分析无效），如果它是可用的。例如，一个简单的常数折叠传递不会修改CFG，所以它不可能影响dominator分析的结果。默认情况下，所有的传递都被假定为使所有其他的传递无效。
+
+AnalysisUsage类提供了几个方法，这些方法在某些情况下很有用，与addPreserved有关。特别是，可以调用setPreservesAll方法来表示该通证完全不修改LLVM程序（这对分析来说是真实的），而setPreservesCFG方法可以被改变程序中的指令但不修改CFG或终止器指令的转换所使用。
+
+addPreserved对于像BreakCriticalEdges这样的转换特别有用。这个传递知道如何更新一小部分循环和支配者相关的分析，如果它们存在的话，所以它可以保留它们，尽管它对CFG进行了黑客攻击。
+
+
 
 ## Implementing Analysis Groups
 
