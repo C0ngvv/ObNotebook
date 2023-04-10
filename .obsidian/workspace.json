@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/AFL++/AFL++.md",
+                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/AFL++/AFL++.md",
+                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/AFL++/AFL++.md",
+                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/AFL++/AFL++.md"
+                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md"
               }
             }
           },
@@ -167,6 +167,7 @@
   },
   "active": "3cadc852168a21db",
   "lastOpenFiles": [
+    "Paper/AFL++/AFL++.md",
     "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
     "LLVM/Hello Pass Demo/Hello Pass Demo.md",
     "LLVM/Demo进阶：Pass类和要求",
@@ -201,7 +202,6 @@
     "Paper/EQUAFL/images/Pasted image 20230328110001.png",
     "Paper/EQUAFL/images/Pasted image 20230321212334.png",
     "Paper/EQUAFL/images/Pasted image 20230321210045.png",
-    "Paper/AFL++/AFL++.md",
     "静态分析/Joern/Joern.md",
     "Fuzzing101/AFL++/AFL++使用总结.md",
     "Fuzzing101/6-GIMP/6-GIMP.md",
