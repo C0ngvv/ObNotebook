@@ -1,5 +1,5 @@
 
-## 需求：
+## 关注点：
 1.构建测试目标程序Consumer
 2.构建目标程序输入生成器Generator
 3.编写Fuzztruction配置文件
