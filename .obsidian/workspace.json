@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fc358575228d9a20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
+                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
+                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md"
+                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程.md"
               }
             }
           },
@@ -165,8 +178,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3cadc852168a21db",
+  "active": "fc358575228d9a20",
   "lastOpenFiles": [
+    "论文工具/Fuzztruction/fuzz新程序流程/images/Pasted image 20230410103655.png",
+    "论文工具/Fuzztruction/fuzz新程序流程/images",
+    "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
+    "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程.md",
+    "论文工具/Fuzztruction/fuzz新程序流程",
     "Paper/AFL++/AFL++.md",
     "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
     "LLVM/Hello Pass Demo/Hello Pass Demo.md",
@@ -187,15 +205,12 @@
     "网络/linux/linux.md",
     "LLVM/llvm构建和配置",
     "LLVM/写一个llvmPass",
-    "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "论文工具/Fuzztruction/基本使用/images/Pasted image 20230403113523.png",
     "论文工具/Fuzztruction/基本使用/images/Pasted image 20230403113430.png",
     "论文工具/Fuzztruction/基本使用/images/Pasted image 20230403110557.png",
     "论文工具/Fuzztruction/基本使用/images",
     "Fuzzing101/7-VLC media player/7-VLC media player.md",
     "论文工具/Fuzztruction/基本使用",
-    "论文工具/Fuzztruction",
-    "未命名",
     "Fuzzing101/8-Adobe Reader/8-Adobe Reader.md",
     "Paper/EQUAFL/EQUAFL.md",
     "Paper/Fuzztruction/论文：Fuzztruction.md",
