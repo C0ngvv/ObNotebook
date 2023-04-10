@@ -69,6 +69,32 @@ function build_ft {
 }
 ```
 
+`build_aft` 用于构建afl 测试环境，同时也是fuzztruction的Consumer
+```shell
+function build_afl {
+    mkdir -p afl
+    rm -rf afl/*
+    cp -r src/libpng afl/
+    pushd afl/libpng > /dev/null
+
+    export AFL_LLVM_LAF_SPLIT_SWITCHES=1
+    export AFL_LLVM_LAF_TRANSFORM_COMPARES=1
+    export AFL_LLVM_LAF_SPLIT_COMPARES=1
+    export CC="afl-clang-fast"
+    export CXX="afl-clang-fast++"
+    export CFLAGS="-v -O3 -g -fPIC -ldl"
+    export CXXFLAGS="-v -O3 -g -fPIC"
+
+    ./configure
+    make -j
+    pushd contrib/examples > /dev/null
+    $CC pngtopng.c -Wl,-rpath $(readlink -f ../../.libs) -L $(readlink -f ../../.libs) -lpng16 -o pngtopng
+    popd > /dev/null
+
+    popd > /dev/null
+}
+```
+
 ## fuzztruction配置文件
 配置文件为`yml` 文件
 ### 基本配置信息
