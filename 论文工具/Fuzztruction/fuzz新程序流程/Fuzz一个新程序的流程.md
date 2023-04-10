@@ -107,7 +107,7 @@ sink:
 
 
 ## 完整文件
-build.sh文件
+### build.sh文件
 ```shell
 #!/usr/bin/env bash
 
@@ -193,7 +193,7 @@ case $mode in
 esac
 ```
 
-config.sh源文件
+### config.sh源文件
 ```shell
 #!/usr/bin/env bash
 
@@ -318,7 +318,7 @@ function get_source {
 }
 ```
 
-`pngtopng-pngtopng.yml` 文件内容如下
+### pngtopng-pngtopng.yml 文件
 ```yml
 # Directory where all fuzzing data is stored. It should be located in the /tmp directory
 # since file system operations considerably slow down Fuzztruction.
