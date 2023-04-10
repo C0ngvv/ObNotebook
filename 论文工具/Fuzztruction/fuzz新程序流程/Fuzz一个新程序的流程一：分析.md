@@ -4,8 +4,7 @@
 2.构建目标程序输入生成器Generator
 3.编写Fuzztruction配置文件
 
-
-## 构建目标
+## 配置文件分析
 ### build.sh
 
 ```shell
@@ -129,8 +128,6 @@ sink:
     # Whether to add unstable (inputs with varying coverage) to the queue.
     allow-unstable-sink: true  
 ```
-
-
 
 ## 完整文件
 ### build.sh文件
