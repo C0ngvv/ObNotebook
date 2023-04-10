@@ -6,7 +6,7 @@
 
 ## 配置文件分析
 ### build.sh
-
+检测配置文件是否存在，根据参数构建程序。
 ```shell
 path = $1
 # 判断目录是否存在
@@ -68,7 +68,7 @@ function build_ft {
 }
 ```
 
-`build_aft` 用于构建afl 测试环境，同时也是fuzztruction的Consumer
+`build_aft` 用于构建afl 测试环境，同时也是构建fuzztruction的Consumer
 ```shell
 function build_afl {
     mkdir -p afl
