@@ -17,9 +17,10 @@ source config.sh
 
 check_config_exported_functions  # 检测config.sh配置文件函数是否完整
 
+然后根据参数调用config.sh声明的函数，构建模糊测试所需的程序
 ```
 
-config.sh文件包含函数，用于对各种模糊工具构建环境，有价值的应该只有build_ft
+config.sh文件包含以下函数，用于对各种模糊工具构建环境，有价值的应该只有build_ft
 ```
 build_ft
 build_afl

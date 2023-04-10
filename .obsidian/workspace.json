@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程.md",
+                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程.md",
+                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程.md"
+                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md"
               }
             }
           },
@@ -178,12 +177,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fc358575228d9a20",
+  "active": "3cadc852168a21db",
   "lastOpenFiles": [
+    "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程.md",
+    "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "论文工具/Fuzztruction/fuzz新程序流程/images/Pasted image 20230410103655.png",
     "论文工具/Fuzztruction/fuzz新程序流程/images",
-    "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
-    "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程.md",
     "论文工具/Fuzztruction/fuzz新程序流程",
     "Paper/AFL++/AFL++.md",
     "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
@@ -216,7 +215,6 @@
     "Paper/Fuzztruction/论文：Fuzztruction.md",
     "Paper/EQUAFL/images/Pasted image 20230328110001.png",
     "Paper/EQUAFL/images/Pasted image 20230321212334.png",
-    "Paper/EQUAFL/images/Pasted image 20230321210045.png",
     "静态分析/Joern/Joern.md",
     "Fuzzing101/AFL++/AFL++使用总结.md",
     "Fuzzing101/6-GIMP/6-GIMP.md",
