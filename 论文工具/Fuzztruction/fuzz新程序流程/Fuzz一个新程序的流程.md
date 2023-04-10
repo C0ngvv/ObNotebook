@@ -15,7 +15,7 @@ cfg_path = "$path/config.sh"
 cd $path
 source config.sh
 
-check_config_exported_functions
+check_config_exported_functions  # 检测config.sh配置文件函数是否完整
 
 ```
 
@@ -30,16 +30,45 @@ install_dependencies
 get_source
 ```
 
-`build_ft` 所做的工作
+`get_source` 代码，下载源码到src目录
 ```shell
-创建目录 input
-创建目录 ft ，并清空目录里面内容
-复制 src/libpng 到 ft/
+function get_source {
+    mkdir -p src
+    pushd src > /dev/null
+    git clone https://github.com/glennrp/libpng.git --depth 1 || true
+    pushd libpng > /dev/null
+    git checkout libpng16
+    popd > /dev/null
+    popd > /dev/null
+}
+```
 
+`build_ft` 所做的工作，使用fuzztruction 编译器编译构建源码在ft目录下
+```shell
+function build_ft {
+    mkdir -p inputs    # 创建目录 input
+    mkdir -p ft        # 创建目录 ft ，并清空目录里面内容
+    rm -rf ft/*        
+    cp -r src/libpng ft/  # 递归复制源码 src/libpng 到 ft/
+    pushd ft/libpng > /dev/null
+
+    export FT_HOOK_INS=store,load,select,icmp   # 定义插桩的指令
+    export CC=/home/user/fuzztruction/generator/pass/fuzztruction-source-clang-fast
+    export CXX=/home/user/fuzztruction/generator/pass/fuzztruction-source-clang-fast++
+    export CFLAGS="-v -O3 -fPIC -ldl"
+    export CXXFLAGS="-v -O3 -fPIC"
+    export LDFLAGS="-fPIC -ldl"
+    ./configure
+    make -j
+    pushd contrib/examples > /dev/null
+    $CC pngtopng.c -Wl,-rpath $(readlink -f ../../.libs) -L $(readlink -f ../../.libs) -lpng16 -o pngtopng
+    popd > /dev/null
+    popd > /dev/null
+}
 ```
 
 
-完整文件
+build.sh文件
 ```shell
 #!/usr/bin/env bash
 
