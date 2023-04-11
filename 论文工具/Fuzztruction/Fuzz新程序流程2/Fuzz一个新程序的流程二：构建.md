@@ -14,7 +14,7 @@
 4. Consumer程序的使用方法
 
 ## Generator选择
-这里用fuzztruction论文里用过的
+这里用fuzztruction论文里用过的poppler
 
 config.sh文件
 ```shell
@@ -43,6 +43,10 @@ function build_ft {
 }
 ```
 
+生成的Generator程序位于：`/home/user/fuzzTest/xpdf/ft/poppler-0.86.1/obj-x86_64-linux-gnu/utils/pdfseparate`
+
+输入文件
+
 ## Consumer构建
 
 ```bash
@@ -70,14 +74,45 @@ function build_afl {
     make -j
     popd > /dev/null
 }
-
-
-
 ```
 
 目标位于：`/home/user/fuzzTest/xpdf/afl/xpdf-3.02/xpdf/pdftotext`
 
 ## fuzztruction执行配置文件
+`pdfseparate-pdftotext.yml`
 
+```yml
+work-directory: "/tmp/pdfseparate_pdftotext"
+input-directory: "./inputs/inputs_ft"
+jail-uid: 606400022
+jail-gid: 606400022
+timeout: 50ms
+
+source:
+    env:
+        - LD_LIBRARY_PATH: "/home/user/fuzzTest/xpdf/ft/poppler-0.86.1/obj-x86_64-linux-gnu"
+    bin-path: "/home/user/fuzzTest/xpdf/ft/poppler-0.86.1/obj-x86_64-linux-gnu/utils/pdfseparate"
+    arguments: ["@@", "$$"]
+    input-type: file
+    output-type: file
+    output-suffix: ".pdf"
+    log-stdout: false
+    log-stderr: false
+
+sink:
+    env:
+        - LD_LIBRARY_PATH: "/home/user/fuzztruction/fuzztruction-experiments/comparison-with-state-of-the-art/binaries/poppler_qpdf/afl/poppler-0.86.1/obj-x86_64-linux-gnu/"
+    bin-path: "/home/user/fuzztruction/fuzztruction-experiments/comparison-with-state-of-the-art/binaries/poppler_qpdf/afl/poppler-0.86.1/obj-x86_64-linux-gnu/utils/pdftotext"
+    arguments: ["@@"]
+    input-type: file
+    output-type: none
+    log-stdout: false
+    log-stderr: false
+    allow-unstable-sink: true
+
+afl++:
+    input-dir: "./inputs/inputs_other"
+
+```
 
 
