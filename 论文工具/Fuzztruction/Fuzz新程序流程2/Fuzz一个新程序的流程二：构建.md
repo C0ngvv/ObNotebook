@@ -69,11 +69,25 @@ function build_afl {
     export CXX="afl-clang-fast++"
     export CFLAGS="-v -O3 -g -fPIC -ldl"
     export CXXFLAGS="-v -O3 -g -fPIC"
-
-    ./configure -prefix="/home/user/fuzzTest/xpdf/install"
+    ./configure
     make -j
     popd > /dev/null
 }
+
+function build_vanilla {
+    mkdir -p vanilla
+    rm -rf vanilla/*
+    cp -r src/xpdf-3.02 vanilla/
+    pushd vanilla/xpdf-3.02 > /dev/null
+    export CC="clang"
+    export CXX="clang++"
+    export CFLAGS="-v -O3 -g -fPIC -ldl"
+    export CXXFLAGS="-v -O3 -g -fPIC"
+    ./configure
+    make -j
+    popd > /dev/null
+}
+
 ```
 
 目标位于：`/home/user/fuzzTest/xpdf/afl/xpdf-3.02/xpdf/pdftotext`
@@ -112,7 +126,11 @@ sink:
 
 afl++:
     input-dir: "./inputs/inputs_other"
-
+    
+vanilla:
+    env:
+        - LD_LIBRARY_PATH: "/home/user/fuzzTest/xpdf/vanilla/xpdf-3.02/xpdf"
+    bin-path: "/home/user/fuzzTest/xpdf/vanilla/xpdf-3.02/xpdf/pdftotext"
 ```
 
 
@@ -120,4 +138,8 @@ afl++:
 
 ```
 sudo /home/user/fuzztruction/target/debug/fuzztruction /home/user/fuzzTest/xpdf/pdfseparate-pdftotext.yml fuzz -j 10 -t 10m
+```
+
+```
+sudo /home/user/fuzztruction/target/debug/fuzztruction /home/user/fuzzTest/xpdf/pdfseparate-pdftotext.yml aflpp -j 10 -t 10m
 ```
