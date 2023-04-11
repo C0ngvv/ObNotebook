@@ -17,3 +17,10 @@
 
 
 
+```bash
+wget https://dl.xpdfreader.com/old/xpdf-3.02.tar.gz
+tar -xvzf xpdf-3.02.tar.gz
+```
+
+
+
