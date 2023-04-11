@@ -45,7 +45,7 @@ function build_ft {
 
 生成的Generator程序位于：`/home/user/fuzzTest/xpdf/ft/poppler-0.86.1/obj-x86_64-linux-gnu/utils/pdfseparate`
 
-输入文件
+输入文件位于：`/home/user/fuzzTest/xpdf/inputs/inputs_ft`
 
 ## Consumer构建
 
@@ -133,13 +133,13 @@ vanilla:
     bin-path: "/home/user/fuzzTest/xpdf/vanilla/xpdf-3.02/xpdf/pdftotext"
 ```
 
-
 ## 运行fuzztruction
 
 ```
 sudo /home/user/fuzztruction/target/debug/fuzztruction /home/user/fuzzTest/xpdf/pdfseparate-pdftotext.yml fuzz -j 10 -t 10m
 ```
 
+开另一个终端运行
 ```
 sudo /home/user/fuzztruction/target/debug/fuzztruction /home/user/fuzzTest/xpdf/pdfseparate-pdftotext.yml aflpp -j 10 -t 10m
 ```
