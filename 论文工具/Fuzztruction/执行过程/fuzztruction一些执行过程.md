@@ -14,3 +14,5 @@ Consumer为`pdftotext` 程序\["@@"\]，Generator为`pdfsepqrate` 程序\["@@", 
 
 
 Generator用Fuzztruction的编译工具源码编译，以实现后续对Generator变异。Consumer用AFL++编译工具编译，来获取覆盖率信息。
+
+
