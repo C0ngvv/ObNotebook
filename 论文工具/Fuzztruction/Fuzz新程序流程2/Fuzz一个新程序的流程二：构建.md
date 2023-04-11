@@ -143,3 +143,16 @@ sudo /home/user/fuzztruction/target/debug/fuzztruction /home/user/fuzzTest/xpdf/
 ```
 sudo /home/user/fuzztruction/target/debug/fuzztruction /home/user/fuzzTest/xpdf/pdfseparate-pdftotext.yml aflpp -j 10 -t 10m
 ```
+
+id:000001,sig:11,src:000000,time:107316,execs:25970,op:havoc,rep:2-304be63b33c4ab9a8e7c9c50242aada7cc6cea9fd3e6f4aa40f51f0b912c7c8e
+```
+gdb --args /home/user/fuzzTest/xpdf/vanilla/xpdf-3.02/xpdf/pdftotext ./crashing/id:000001,sig:11,src:000000,time:107316,execs:25970,op:havoc,rep:2-304be63b33c4ab9a8e7c9c50242aada7cc6cea9fd3e6f4aa40f51f0b912c7c8e output/
+```
+
+![](images/Pasted%20image%2020230411201944.png)
+
+
+
+
+
+
