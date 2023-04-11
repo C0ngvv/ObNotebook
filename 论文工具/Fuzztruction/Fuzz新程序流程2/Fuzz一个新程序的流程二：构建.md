@@ -101,8 +101,8 @@ source:
 
 sink:
     env:
-        - LD_LIBRARY_PATH: "/home/user/fuzztruction/fuzztruction-experiments/comparison-with-state-of-the-art/binaries/poppler_qpdf/afl/poppler-0.86.1/obj-x86_64-linux-gnu/"
-    bin-path: "/home/user/fuzztruction/fuzztruction-experiments/comparison-with-state-of-the-art/binaries/poppler_qpdf/afl/poppler-0.86.1/obj-x86_64-linux-gnu/utils/pdftotext"
+        - LD_LIBRARY_PATH: "/home/user/fuzzTest/xpdf/afl/xpdf-3.02/xpdf"
+    bin-path: "/home/user/fuzzTest/xpdf/afl/xpdf-3.02/xpdf/pdftotext"
     arguments: ["@@"]
     input-type: file
     output-type: none
@@ -116,3 +116,8 @@ afl++:
 ```
 
 
+## 运行fuzztruction
+
+```
+sudo /home/user/fuzztruction/target/debug/fuzztruction /home/user/fuzzTest/xpdf/pdfseparate-pdftotext.yml fuzz -j 10 -t 10m
+```

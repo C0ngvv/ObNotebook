@@ -68,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -143,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "论文工具/Fuzztruction/执行过程/fuzztruction一些执行过程.md",
+                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "论文工具/Fuzztruction/执行过程/fuzztruction一些执行过程.md",
+                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "论文工具/Fuzztruction/执行过程/fuzztruction一些执行过程.md"
+                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md"
               }
             }
           },
@@ -213,13 +213,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2c99ee6e3558b9e9",
+  "active": "fc358575228d9a20",
   "lastOpenFiles": [
-    "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
     "论文工具/Fuzztruction/Fuzz新程序流程2/Fuzz一个新程序的流程二：构建.md",
-    "论文工具/Fuzztruction/执行过程/fuzztruction一些执行过程.md",
     "Paper/Fuzztruction/论文：Fuzztruction.md",
+    "论文工具/Fuzztruction/执行过程/fuzztruction一些执行过程.md",
     "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
+    "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
     "论文工具/Fuzztruction/执行过程",
     "论文工具/Fuzztruction/Fuzz新程序流程2",
     "论文工具/Fuzztruction/fuzz新程序流程/images/Pasted image 20230410103655.png",
