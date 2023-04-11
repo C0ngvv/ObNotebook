@@ -20,13 +20,12 @@ config.sh文件
 ```shell
 function build_ft {
     mkdir -p ft
-    mkdir -p qpdf-ft
     mkdir -p inputs
     rm -rf ft/*
-    cp -r src/* ft/
+    cp -r src/poppler-0.86.1 ft/
 
     # build poppler
-    pushd ft/poppler-* > /dev/null
+    pushd ft/poppler-0.86.1 > /dev/null
 
     export FT_HOOK_INS=store,load,select,icmp
     export CC=/home/user/fuzztruction/generator/pass/fuzztruction-source-clang-fast
@@ -40,22 +39,6 @@ function build_ft {
     export DEB_BUILD_OPTIONS="nodocs nostrip nocheck nomult nocross nohppa"
     dpkg-buildpackage --no-sign -jauto -b
 
-    popd > /dev/null
-
-    # build qpdf
-    pushd ft/qpdf-* > /dev/null
-
-    export FT_HOOK_INS=store,load,select,icmp
-    export CC=/home/user/fuzztruction/generator/pass/fuzztruction-source-clang-fast
-    sed -i "s@^\s*CC.*@CC=$CC@g" debian/rules
-    export CXX=/home/user/fuzztruction/generator/pass/fuzztruction-source-clang-fast++
-    sed -i "s@^\s*CXX.*@CXX=$CXX@g" debian/rules || true
-    export DEB_CFLAGS_SET="-v -O3 -g -fPIC -ldl"
-    export DEB_CXXFLAGS_SET="-v -O3 -g -fPIC"
-    export DEB_LDFLAGS_SET="-fPIC -ldl"
-
-    export DEB_BUILD_OPTIONS="nodocs nostrip nocheck nomult nocross nohppa"
-    dpkg-buildpackage --no-sign -jauto -b
     popd > /dev/null
 }
 ```
