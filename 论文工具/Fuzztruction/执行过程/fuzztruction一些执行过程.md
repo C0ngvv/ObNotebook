@@ -16,7 +16,6 @@ Generator程序的处理逻辑没有改变，所以生成文件的结构的各�
 
 对于有些结构可能需要特定的值，变动就会出错。作者在选择插桩点前先对它们进行了评估，
 
-
 ## 生成端与消费端
 消费端Consumer是我们要测试的目标程序，使用Fuzztruction进行测试时需要提供一个生成端Generator用来生成Consumer的输入。
 
@@ -114,6 +113,54 @@ objcopy [选项]... 输入文件 [输出文件]
 ```
 
 输入文件：文本和二进制程序
+
+### 7zip-7zip
+#### 7z 消费端
+```
+    arguments: ["e", "-so", "-y", "@@"]
+    input-type: file
+    output-type: None
+```
+- `e` 命令解压，不会保持目录结构，会把所有的文件都解压到目的目录下
+
+#### 7z 生成端
+```
+    arguments: ["a", "-t7z", "-mx=1", "-ms=off", "-m0=LZMA", "-mhe=off", "-si", "-y", "$$"]
+    input-type: stdin
+    output-type: file
+```
+- `a` 添加文件到压缩包中
+
+### 7zip-enc_7zip-dec
+#### 7z 消费端
+```
+    arguments: ["e", "-so", "-y", "-pPASSWORD", "@@"]
+    input-type: file
+    output-type: None
+```
+
+#### 7z 生成端
+```
+    arguments: ["a", "-pPASSWORD", "-si", "-y", "$$"]
+    input-type: stdin
+    output-type: file
+```
+
+### sign-vfychain
+#### vfychain
+验证工具vfychain可以验证证书链。
+```
+    arguments: ["-a", "@@"]
+    input-type: file
+    output-type: None
+```
+
+#### openssl
+```
+    arguments: ["req", "-x509", "-new", "-key", "/home/user/fuzztruction/fuzztruction-experiments/comparison-with-state-of-the-art/configurations/sign_vfychain/sigkey.key", "-subj", "/CN=ABC", "-sha256", "-outform", "der", "-out", $$]
+    input-type: none
+    output-type: file
+```
 
 ### gendsa-dsa
 #### openssl消费端
