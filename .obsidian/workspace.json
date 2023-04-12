@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "论文工具/EQUAFL/工具README/工具README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "论文工具/EQUAFL/工具README/工具README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md"
+                "file": "论文工具/EQUAFL/工具README/工具README.md"
               }
             }
           },
@@ -177,11 +176,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6fee6a3bc86ca826",
+  "active": "fc358575228d9a20",
   "lastOpenFiles": [
+    "论文工具/EQUAFL/工具README/images/Pasted image 20230412213427.png",
+    "论文工具/EQUAFL/工具README/images/Pasted image 20230412213216.png",
+    "论文工具/EQUAFL/工具README/images/Pasted image 20230412213157.png",
+    "网络/终端C终止/鼠标选中后终端总是C终止.md",
     "论文工具/EQUAFL/工具README/工具README.md",
-    "网络/Download网络问题.md",
+    "网络/终端C终止",
+    "论文工具/EQUAFL/工具README/images/Pasted image 20230412212334.png",
+    "论文工具/EQUAFL/工具README/images",
     "Paper/EQUAFL/EQUAFL.md",
+    "网络/Download网络问题.md",
     "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
     "论文工具/Fuzztruction/Fuzz新程序流程2/Fuzz一个新程序的流程二：构建.md",
@@ -201,10 +207,8 @@
     "论文工具/Fuzztruction/Fuzz新程序流程2",
     "论文工具/Fuzztruction/fuzz新程序流程/images/Pasted image 20230410103655.png",
     "论文工具/Fuzztruction/fuzz新程序流程/images",
-    "论文工具/Fuzztruction/fuzz新程序流程",
     "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
     "LLVM/Hello Pass Demo/Hello Pass Demo.md",
-    "LLVM/Demo进阶：Pass类和要求",
     "LLVM/Hello Pass Demo/images/Pasted image 20230407150725.png",
     "LLVM/llvm构建和配置/LLVM构建与配置.md",
     "LLVM/Hello Pass Demo/images/Pasted image 20230407101442.png",
@@ -214,16 +218,11 @@
     "LLVM/LLVM概念/llvm.md",
     "LLVM/Pass入门/LLVM Pass入门.md",
     "网络/linux/linux.md",
-    "论文工具/Fuzztruction/基本使用/images/Pasted image 20230403113523.png",
-    "论文工具/Fuzztruction/基本使用/images/Pasted image 20230403113430.png",
-    "论文工具/Fuzztruction/基本使用/images/Pasted image 20230403110557.png",
     "Fuzzing101/7-VLC media player/7-VLC media player.md",
     "Fuzzing101/8-Adobe Reader/8-Adobe Reader.md",
     "静态分析/Joern/Joern.md",
     "Fuzzing101/AFL++/AFL++使用总结.md",
     "Fuzzing101/6-GIMP/6-GIMP.md",
-    "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
-    "挖坑/TODO List.md",
-    "Fuzzing101/5-LibXML2/5-LibXML2.md"
+    "Fuzzing101/4-LibTIFF/4-LibTIFF.md"
   ]
 }
