@@ -183,7 +183,7 @@ Start the fuzzing process for the image
 python vul_run.py 18627
 ```
 
-
+![](images/Pasted%20image%2020230412221340.png)
 
 Run the command (out of docker）to stop the fuzzing process at any time
 

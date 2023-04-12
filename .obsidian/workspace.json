@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fc358575228d9a20",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "论文工具/EQUAFL/工具README/工具README.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "6fee6a3bc86ca826",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "论文工具/EQUAFL/工具README/工具README.md",
                 "mode": "source",
                 "source": false
               }
@@ -176,13 +164,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fc358575228d9a20",
+  "active": "6fee6a3bc86ca826",
   "lastOpenFiles": [
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412213427.png",
+    "论文工具/EQUAFL/工具README/images/Pasted image 20230412221340.png",
+    "论文工具/EQUAFL/工具README/images/Pasted image 20230412221258.png",
+    "论文工具/EQUAFL/工具README/工具README.md",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412213216.png",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412213157.png",
     "网络/终端C终止/鼠标选中后终端总是C终止.md",
-    "论文工具/EQUAFL/工具README/工具README.md",
     "网络/终端C终止",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412212334.png",
     "论文工具/EQUAFL/工具README/images",
@@ -211,9 +201,6 @@
     "LLVM/Hello Pass Demo/Hello Pass Demo.md",
     "LLVM/Hello Pass Demo/images/Pasted image 20230407150725.png",
     "LLVM/llvm构建和配置/LLVM构建与配置.md",
-    "LLVM/Hello Pass Demo/images/Pasted image 20230407101442.png",
-    "LLVM/Hello Pass Demo/images/Pasted image 20230407101304.png",
-    "LLVM/Hello Pass Demo/images/Pasted image 20230407100625.png",
     "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
     "LLVM/LLVM概念/llvm.md",
     "LLVM/Pass入门/LLVM Pass入门.md",
