@@ -60,6 +60,8 @@ python collect_efficiency.py
 
 Expected Output: the execution speed (test cases/s) of EQUAFL is higher than that of  Firm-AFL and AFL-FULL.
 
+预期输出:EQUAFL的执行速度(测试用例/s)高于Firm-AFL和AFL-FULL。
+
 #### Compatibility evaluation
 
 ```
@@ -68,9 +70,12 @@ python collect_compat.py
 
 Expected Output: the system call similarity is 100%
 
+预期输出:系统调用相似度为100%
 
 #### Vulnerability discovery
 Run the command to configure the specific image (image_id = 18627)
+
+运行命令配置特定映像(image_id = 18627)
 
 ```
 python EQUAFL_setup.py 18627
@@ -79,6 +84,8 @@ python EQUAFL_setup.py 18627
 Expected Output: no alert of **kpartx failed, no loop device to mount, maybe you can re-try by restarting the docker**
 
 Sometimes, the typed input cannot be shown, please use the command
+
+有时，键入的输入不能显示，请使用命令
 
 ```
 stty echo
@@ -91,6 +98,8 @@ python vul_run.py 18627
 ```
 
 Run the command (out of docker）to stop the fuzzing process at any time
+
+运行命令(out of docker)随时停止fuzzing进程
 
 ```
 ps -aux | grep qemu |awk '{print $2}'| xargs kill -9
@@ -105,6 +114,8 @@ For compatibility and efficiency evaluation, we can evaluate it on all firmware 
 
 For the vulnerability discovery evaluation on six firmware samples,  we can run following commands to start fuzzing of EQUAFL and baselines (AFL-Full, and Firm-AFL).
 
+对于六个固件样本上的漏洞发现评估，我们可以运行以下命令来启动EQUAFL和基线(AFL-Full和Firm-AFL)的模糊化。
+
 ```
 python vul_run.py 18627
 python vul_run_firmafl.py 18627
@@ -112,6 +123,8 @@ python vul_run_aflfull.py 18627
 ```
 
 The image shown in our paper is (image id: 16385, 2563, 109080, 18627, 7023, 106869)
+
+本文中显示的镜像是(镜像id: 16385, 2563, 109080, 18627, 7023, 106869)
 
 ## Extension
 If the user obtain another firmware, which is not involved in our dataset, you can follow the instructions to attemp to run it in EQUAFL.
