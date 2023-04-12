@@ -83,6 +83,8 @@ python EQUAFL_setup.py 18627
 
 Expected Output: no alert of **kpartx failed, no loop device to mount, maybe you can re-try by restarting the docker**
 
+期望输出:没有警报**kpartx失败，没有循环设备挂载，也许你可以重新启动docker**重试
+
 Sometimes, the typed input cannot be shown, please use the command
 
 有时，键入的输入不能显示，请使用命令
@@ -92,6 +94,8 @@ stty echo
 ```
 
 Start the fuzzing process for the image
+
+开始镜像的模糊处理过程
 
 ```
 python vul_run.py 18627
@@ -111,6 +115,8 @@ Expected Output: the fuzzing process can find  unique crashes in 5min.
 In Getting Started section, we only evaluate the EQUAFL and baselines on one image.
 In Detailed Descriptions, we describe the evaluation of all claims as follows.
 For compatibility and efficiency evaluation, we can evaluate it on all firmware images by replacing the item in **EQUAFL_bench_test** with that of **EQUAFL_bench_compat**, which contains all images (66 images successfully emulated by EQUAFL）
+
+在入门部分中，我们只评估一张镜像上的EQUAFL和基线。在“详细描述”中，我们对所有权利要求的评估如下。为了兼容性和效率评估，我们可以通过将**EQUAFL_bench_test**中的项替换为**EQUAFL_bench_compat**中的项来评估所有固件映像，其中包含所有映像(EQUAFL成功模拟了66个映像)
 
 For the vulnerability discovery evaluation on six firmware samples,  we can run following commands to start fuzzing of EQUAFL and baselines (AFL-Full, and Firm-AFL).
 
