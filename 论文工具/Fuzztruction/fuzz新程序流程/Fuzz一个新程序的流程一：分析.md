@@ -89,7 +89,6 @@ function build_afl {
     pushd contrib/examples > /dev/null
     $CC pngtopng.c -Wl,-rpath $(readlink -f ../../.libs) -L $(readlink -f ../../.libs) -lpng16 -o pngtopng
     popd > /dev/null
-
     popd > /dev/null
 }
 ```
