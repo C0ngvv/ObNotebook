@@ -47,7 +47,7 @@ python time_firmafl_bench.py 0
 ```
 
 Expected Output: 	
-The average time per seed (5 times) results are saved in **time_equafl, time_firmafl, time_full** dirs respectively.	
+The average time per seed (5 times) results are saved in **time_equafl, time_firmafl, time_full** dirs respectively.
 The system call traces results are saved in **syscall_trace_aflfull** and **syscall_trace_equafl**
 
 预期输出:每个种子平均时间(5次)的结果分别保存在**time_equafl, time_firmafl, time_full** 目录中。系统调用跟踪结果保存在“**syscall_trace_aflfull**”和“**syscall_trace_equafl**”目录下
