@@ -25,19 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3cff8ad8cd1abfec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "论文工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
                 "mode": "source",
                 "source": false
               }
@@ -54,21 +42,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "d56a3b3ff2b20432",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/AFL++/AFL++.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -215,13 +191,13 @@
   },
   "active": "83c770d6c67a636a",
   "lastOpenFiles": [
+    "论文工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
     "Paper/EQUAFL/EQUAFL.md",
-    "Paper/Fuzztruction/论文：Fuzztruction.md",
-    "论文工具/Fuzztruction/执行过程/fuzztruction一些执行过程.md",
-    "论文工具/Fuzztruction/Fuzz新程序流程2/Fuzz一个新程序的流程二：构建.md",
-    "Paper/AFL++/AFL++.md",
-    "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
     "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
+    "Paper/Fuzztruction/论文：Fuzztruction.md",
+    "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
+    "Paper/AFL++/AFL++.md",
+    "论文工具/Fuzztruction/Fuzz新程序流程2/Fuzz一个新程序的流程二：构建.md",
     "Paper/AFL++/images/Pasted image 20230411213102.png",
     "Paper/AFL++/images",
     "论文工具/Fuzztruction/Fuzz新程序流程2/images/Pasted image 20230411201944.png",
