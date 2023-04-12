@@ -105,7 +105,43 @@ objcopy [选项]... 输入文件 [输出文件]
     output-suffix: ".zip"
 ```
 
+输入文件：文本和二进制程序
 
+### gendsa-dsa
+#### openssl消费端
+```
+    arguments: ["dsa", "-in", "@@", "-passin", "pass:xxxx"]
+    input-type: file
+    output-type: None
+```
+
+#### openssl生成端
+```
+    arguments: ["gendsa", "-passout", "pass:xxxx", "-des", "-out", "$$", "/home/user/fuzztruction/fuzztruction-experiments/comparison-with-state-of-the-art/configurations/gendsa_dsa/dsaparm_8bit"]
+    input-type: none
+    output-type: file
+```
+
+### genrsa_rsa
+#### openssl消费端
+```
+    arguments: ["rsa", "-check", "-in", "@@", "-passin", "pass:xxxx"]
+    input-type: file
+    output-type: None
+```
+- `rsa` RSA密钥管理
+
+#### openssl生成端
+```
+    arguments: ["genrsa", "-passout", "pass:xxxx", "-aes128", "-out", "$$", "512"]
+    input-type: none
+    output-type: file
+```
+- `genrsa` 生成RSA私钥
+- `-passout pass:xxxx` 指定output密码
+
+
+传递
 
 Generator用Fuzztruction的编译工具源码编译，以实现后续对Generator变异。Consumer用AFL++编译工具编译，来获取覆盖率信息。
 
