@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "论文工具/EQUAFL/工具README/工具README.md",
+                "file": "Paper/Fuzztruction/论文：Fuzztruction.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "208f849277851788",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "论文工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "论文工具/EQUAFL/工具README/工具README.md",
+                "file": "论文工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "论文工具/EQUAFL/工具README/工具README.md",
+                "file": "论文工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "论文工具/EQUAFL/工具README/工具README.md"
+                "file": "论文工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md"
               }
             }
           },
@@ -164,12 +177,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6fee6a3bc86ca826",
+  "active": "208f849277851788",
   "lastOpenFiles": [
+    "Paper/Fuzztruction/论文：Fuzztruction.md",
+    "论文工具/EQUAFL/工具README/工具README.md",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412213427.png",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412221340.png",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412221258.png",
-    "论文工具/EQUAFL/工具README/工具README.md",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412213216.png",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412213157.png",
     "网络/终端C终止/鼠标选中后终端总是C终止.md",
@@ -188,7 +202,6 @@
     "论文工具/EQUAFL",
     "Paper/AFL++/AFL++.md",
     "论文工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
-    "Paper/Fuzztruction/论文：Fuzztruction.md",
     "Paper/AFL++/images/Pasted image 20230411213102.png",
     "Paper/AFL++/images",
     "论文工具/Fuzztruction/Fuzz新程序流程2/images/Pasted image 20230411201944.png",
