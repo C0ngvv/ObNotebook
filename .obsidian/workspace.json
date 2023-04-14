@@ -54,6 +54,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "41c9d180bd3c69c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "论文工具/Firmadyne/postgres/postgres.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 3
@@ -204,11 +216,13 @@
   },
   "active": "0d8861eabed74879",
   "lastOpenFiles": [
+    "论文工具/Firmadyne/postgres/postgres.md",
+    "论文工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
+    "论文工具/Firmadyne/postgres",
     "论文工具/Firmadyne/docker镜像/images/Pasted image 20230414103402.png",
     "论文工具/Firmadyne/docker镜像/images/Pasted image 20230414090140.png",
     "论文工具/Firmadyne/docker镜像/images",
     "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
-    "论文工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "论文工具/Firmadyne/docker镜像",
     "论文工具/Firmadyne",
     "Paper/EQUAFL/EQUAFL.md",
@@ -235,7 +249,6 @@
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412213157.png",
     "网络/终端C终止/鼠标选中后终端总是C终止.md",
     "网络/终端C终止",
-    "论文工具/EQUAFL/工具README/images/Pasted image 20230412212334.png",
     "论文工具/EQUAFL/工具README/images",
     "网络/Download网络问题.md",
     "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
@@ -245,7 +258,6 @@
     "网络/更换镜像源",
     "论文工具/EQUAFL/工具README",
     "论文工具/EQUAFL",
-    "Paper/AFL++/images",
     "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
     "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
     "网络/linux/linux.md",
