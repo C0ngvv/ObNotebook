@@ -120,6 +120,8 @@ sudo mknod -m 0660 /dev/loopX b 7 X
 
 ![](images/Pasted%20image%2020230414211010.png)
 
+![](images/Pasted%20image%2020230414212122.png)
+
 9. 系统应该可以通过网络使用，并准备好进行分析。内核信息被镜像到`./scratch/1/qemu.final.serial.log`。固件1的文件系统可以用.`/scripts/mount.sh 1`和`./scripts/umount.sh 1`从`scratch/1/image`挂载和卸载。
 ```
 ./analyses/snmpwalk.sh 192.168.0.100
@@ -128,7 +130,7 @@ mkdir exploits; ./analyses/runExploits.py -t 192.168.0.100 -o exploits/exploit -
 sudo nmap -O -sV 192.168.0.100
 ```
 
+![](images/Pasted%20image%2020230414212158.png)
+
 10. 默认的控制台应该会自动连接到终端。你也可以用`root`和`password`登录。注意，`Ctrl-c`会被发送到客户机；使用QEMU监控命令`Ctrl-a + x`来终止仿真。
-
-
 

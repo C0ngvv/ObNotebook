@@ -3,3 +3,8 @@
 sudo visudo
 ```
 
+显示系统信息
+```
+cat /etc/issue
+```
+
