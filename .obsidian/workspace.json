@@ -30,9 +30,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6657cb84613cb0fc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0d8861eabed74879",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "论文工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -107,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "论文工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "论文工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md"
+                "file": "论文工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md"
               }
             }
           },
@@ -177,10 +201,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "021f094485701dd0",
+  "active": "0d8861eabed74879",
   "lastOpenFiles": [
-    "Paper/AFL++/AFL++.md",
+    "论文工具/Firmadyne/docker镜像/images/Pasted image 20230414090140.png",
+    "论文工具/Firmadyne/docker镜像/images",
+    "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
+    "论文工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
+    "论文工具/Firmadyne/docker镜像",
+    "论文工具/Firmadyne",
     "Paper/EQUAFL/EQUAFL.md",
+    "Paper/AFL++/AFL++.md",
     "Paper/Fuzztruction/论文：Fuzztruction.md",
     "Paper/Fuzztruction/Fuzztruction.pdf",
     "LLVM/Hello Pass Demo/Hello Pass Demo.md",
@@ -206,7 +236,6 @@
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412212334.png",
     "论文工具/EQUAFL/工具README/images",
     "网络/Download网络问题.md",
-    "论文工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "论文工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
     "论文工具/Fuzztruction/Fuzz新程序流程2/Fuzz一个新程序的流程二：构建.md",
     "网络/更换镜像源/更换镜像源.md",
@@ -216,13 +245,9 @@
     "论文工具/EQUAFL",
     "Paper/AFL++/images/Pasted image 20230411213102.png",
     "Paper/AFL++/images",
-    "论文工具/Fuzztruction/Fuzz新程序流程2/images",
-    "论文工具/Fuzztruction/执行过程",
-    "论文工具/Fuzztruction/Fuzz新程序流程2",
     "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
     "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
     "网络/linux/linux.md",
-    "Fuzzing101/7-VLC media player/7-VLC media player.md",
-    "Fuzzing101/8-Adobe Reader/8-Adobe Reader.md"
+    "Fuzzing101/7-VLC media player/7-VLC media player.md"
   ]
 }
