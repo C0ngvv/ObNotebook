@@ -90,6 +90,8 @@ firmadyne@4b955c5cb46d:/firmadyne$
 ```
 ./scripts/tar2db.py -i 1 -f ./images/1.tar.gz
 ```
+- `-i 1` 指定固件索引
+- `-f`  指定打包的固件文件系统
 
 6. 为固件1创建QEMU磁盘镜像
 ```
