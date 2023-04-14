@@ -2,11 +2,11 @@
 使用的是该镜像
 ```bash
 sudo docker pull mborgerson/firmadyne:auto
-sudo docker run -it -v /home/cxw/firmadyne:/share mborgerson/firmadyne:auto /bin/bash
+sudo docker run -it --privileged -v /home/cxw/firmadyne:/share mborgerson/firmadyne:auto /bin/bash
 # sudo chown -R firmadyne:firmadyne /share
 ```
 
-![](images/Pasted%20image%2020230414114546.png)
+![](images/Pasted%20image%2020230414194739.png)
 
 退出后再进入命令
 ```
@@ -21,18 +21,19 @@ firmadyne目录下内容
 1. 设置`firmadyne.config` 文件中的`FIRMWARE_DIR` 指向firmadyne库的根目录。
 2. 下载固件镜像，如Netgear WNAP320 v2.0.3
 ```
+cd /share
 wget http://www.downloads.netgear.com/files/GDC/WNAP320/WNAP320%20Firmware%20Version%202.0.3.zip
 ```
 
 3. 使用extractor来仅仅恢复文件系统，没有内核(`-nk`)，没有并行操作(`-np`)，在127.0.0.1的SQL服务器（-sql）中用Netgear品牌（-b）填充`image`表，并将打包文件存储在`images` 中。
 ```
-./sources/extractor/extractor.py -b Netgear -sql 127.0.0.1 -np -nk "WNAP320 Firmware Version 2.0.3.zip" images
+cd /firmadyne
+python3 sources/extractor/extractor.py -b Netgear -sql 127.0.0.1 -np -nk /share/"WNAP320 Firmware Version 2.0.3.zip" images
 ```
 
 执行结果
 ```
-firmadyne@4b955c5cb46d:/firmadyne$ python3 ./sources/extractor/extractor.py -b Netgear -sql 127.0.0.1 -np -nk /share/"WN
-AP320 Firmware Version 2.0.3.zip" images
+firmadyne@4b955c5cb46d:/firmadyne$ python3 ./sources/extractor/extractor.py -b Netgear -sql 127.0.0.1 -np -nk /share/"WNAP320 Firmware Version 2.0.3.zip" images
 >> Database Image ID: 1
 
 /share/WNAP320 Firmware Version 2.0.3.zip
