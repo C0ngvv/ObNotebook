@@ -67,8 +67,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -143,7 +142,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
+                "file": "网络/linux/linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +159,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
+                "file": "网络/linux/linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +182,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md"
+                "file": "网络/linux/linux.md"
               }
             }
           },
@@ -214,8 +213,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c117ffa73146abee",
+  "active": "3503270b7d49efa5",
   "lastOpenFiles": [
+    "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "工具/Firmadyne/docker镜像/images/Pasted image 20230414212158.png",
     "工具/Firmadyne/docker镜像/images/Pasted image 20230414212122.png",
     "工具/QEMU/QEMU/QEMU.md",
@@ -223,7 +223,6 @@
     "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "工具/Firmadyne/postgres/postgres.md",
     "网络/linux/linux.md",
-    "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "工具/Firmadyne/docker镜像/images/Pasted image 20230414211010.png",
     "工具/Firmadyne/docker镜像/images/Pasted image 20230414210537.png",
     "工具/Firmadyne/docker镜像/images/Pasted image 20230414210326.png",
@@ -252,7 +251,6 @@
     "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
     "工具/EQUAFL/工具README/工具README.md",
     "工具/EQUAFL/工具README/images/Pasted image 20230412221340.png",
-    "工具/EQUAFL/工具README/images/Pasted image 20230412213427.png",
     "工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
     "网络/终端C终止/鼠标选中后终端总是C终止.md",
     "网络/终端C终止",
