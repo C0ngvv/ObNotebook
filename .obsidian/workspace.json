@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "论文工具/EQUAFL/工具README/工具README.md",
+                "file": "Paper/AFL++/AFL++.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "论文工具/EQUAFL/工具README/工具README.md",
+                "file": "Paper/EQUAFL/EQUAFL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "论文工具/EQUAFL/工具README/工具README.md",
+                "file": "Paper/EQUAFL/EQUAFL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "论文工具/EQUAFL/工具README/工具README.md"
+                "file": "Paper/EQUAFL/EQUAFL.md"
               }
             }
           },
@@ -176,17 +177,27 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3503270b7d49efa5",
+  "active": "021f094485701dd0",
   "lastOpenFiles": [
+    "Paper/AFL++/AFL++.md",
     "Paper/EQUAFL/EQUAFL.md",
+    "Paper/Fuzztruction/论文：Fuzztruction.md",
+    "Paper/Fuzztruction/Fuzztruction.pdf",
+    "LLVM/Hello Pass Demo/Hello Pass Demo.md",
+    "LLVM/LLVM概念/llvm.md",
+    "LLVM/llvm构建和配置/LLVM构建与配置.md",
+    "LLVM/Pass入门/LLVM Pass入门.md",
+    "Fuzzing101/README.md",
+    "Fuzzing101/AFL++/AFL++使用总结.md",
+    "Fuzzing101/5-LibXML2/5-LibXML2.md",
+    "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
+    "论文工具/EQUAFL/工具README/工具README.md",
+    "论文工具/EQUAFL/工具README/images/Pasted image 20230412221340.png",
+    "论文工具/EQUAFL/工具README/images/Pasted image 20230412213427.png",
     "Paper/EQUAFL/images/Pasted image 20230413210137.png",
     "Paper/EQUAFL/images/Pasted image 20230413205523.png",
     "Paper/EQUAFL/images/Pasted image 20230413205105.png",
-    "论文工具/EQUAFL/工具README/工具README.md",
     "论文工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
-    "Paper/Fuzztruction/论文：Fuzztruction.md",
-    "论文工具/EQUAFL/工具README/images/Pasted image 20230412213427.png",
-    "论文工具/EQUAFL/工具README/images/Pasted image 20230412221340.png",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412221258.png",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412213216.png",
     "论文工具/EQUAFL/工具README/images/Pasted image 20230412213157.png",
@@ -203,25 +214,15 @@
     "网络/更换镜像源",
     "论文工具/EQUAFL/工具README",
     "论文工具/EQUAFL",
-    "Paper/AFL++/AFL++.md",
     "Paper/AFL++/images/Pasted image 20230411213102.png",
     "Paper/AFL++/images",
     "论文工具/Fuzztruction/Fuzz新程序流程2/images",
     "论文工具/Fuzztruction/执行过程",
     "论文工具/Fuzztruction/Fuzz新程序流程2",
-    "论文工具/Fuzztruction/fuzz新程序流程/images",
     "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
-    "LLVM/Hello Pass Demo/Hello Pass Demo.md",
-    "LLVM/llvm构建和配置/LLVM构建与配置.md",
     "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
-    "LLVM/LLVM概念/llvm.md",
-    "LLVM/Pass入门/LLVM Pass入门.md",
     "网络/linux/linux.md",
     "Fuzzing101/7-VLC media player/7-VLC media player.md",
-    "Fuzzing101/8-Adobe Reader/8-Adobe Reader.md",
-    "静态分析/Joern/Joern.md",
-    "Fuzzing101/AFL++/AFL++使用总结.md",
-    "Fuzzing101/6-GIMP/6-GIMP.md",
-    "Fuzzing101/4-LibTIFF/4-LibTIFF.md"
+    "Fuzzing101/8-Adobe Reader/8-Adobe Reader.md"
   ]
 }
