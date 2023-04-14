@@ -75,15 +75,21 @@ AP320 Firmware Version 2.0.3.zip" images
 firmadyne@4b955c5cb46d:/firmadyne$
 ```
 
+执行后在images目录下增加一个打包文件，里面内容是固件中的文件系统。
+
 4. 识别固件1的架构，并将结果存储在数据库的`image` 表中
 ```
 ./scripts/getArch.sh ./images/1.tar.gz
 ```
 
+![](images/Pasted%20image%2020230414103402.png)
+
 5. 将固件1的文件系统内容加载到数据库中，填充`object` 和`object_to_image` 表。
 ```
 ./scripts/tar2db.py -i 1 -f ./images/1.tar.gz
 ```
+
+
 
 6. 为固件1创建QEMU磁盘镜像
 ```
