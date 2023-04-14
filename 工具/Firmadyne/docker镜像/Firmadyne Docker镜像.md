@@ -99,15 +99,26 @@ firmadyne@4b955c5cb46d:/firmadyne$
 sudo ./scripts/makeImage.sh 1
 ```
 
+若提示“could not find any free loop deviceBad address”，运行下面命令创建新/dev/loopX，X代表数字，如17
+```
+sudo mknod -m 0660 /dev/loopX b 7 X
+```
+
+![](images/Pasted%20image%2020230414210326.png)
+
 7. 推断出固件1的网络配置。内核信息被记录到`./scratch/1/qemu.initial.serial.log`。
 ```
 ./scripts/inferNetwork.sh 1
 ```
 
+![](images/Pasted%20image%2020230414210537.png)
+
 8. 用推断出的网络配置模拟固件1。这将通过创建一个TAP设备和添加一个路由来修改主机系统的配置。
 ```
 ./scratch/1/run.sh
 ```
+
+![](images/Pasted%20image%2020230414211010.png)
 
 9. 系统应该可以通过网络使用，并准备好进行分析。内核信息被镜像到`./scratch/1/qemu.final.serial.log`。固件1的文件系统可以用.`/scripts/mount.sh 1`和`./scripts/umount.sh 1`从`scratch/1/image`挂载和卸载。
 ```
