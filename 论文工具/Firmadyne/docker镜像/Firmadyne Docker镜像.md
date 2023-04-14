@@ -27,6 +27,54 @@ wget http://www.downloads.netgear.com/files/GDC/WNAP320/WNAP320%20Firmware%20Ver
 ./sources/extractor/extractor.py -b Netgear -sql 127.0.0.1 -np -nk "WNAP320 Firmware Version 2.0.3.zip" images
 ```
 
+执行结果
+```
+firmadyne@4b955c5cb46d:/firmadyne$ python3 ./sources/extractor/extractor.py -b Netgear -sql 127.0.0.1 -np -nk /share/"WN
+AP320 Firmware Version 2.0.3.zip" images
+>> Database Image ID: 1
+
+/share/WNAP320 Firmware Version 2.0.3.zip
+>> MD5: 51eddc7046d77a752ca4b39fbda50aff
+>> Tag: 1
+>> Temp: /tmp/tmpsn906xqv
+>> Status: Kernel: True, Rootfs: False, Do_Kernel: False,                 Do_Rootfs: True
+>>>> Zip archive data, at least v2.0 to extract, compressed size: 1197, uncompressed size: 2667, name: ReleaseNotes_WNAP320_fw_2.0.3.HTML
+>> Recursing into archive ...
+
+/tmp/tmpsn906xqv/_WNAP320 Firmware Version 2.0.3.zip.extracted/WNAP320_V2.0.3_firmware.tar
+        >> MD5: 6b66d0c845ea6f086e0424158d8e5f26
+        >> Tag: 1
+        >> Temp: /tmp/tmpv20q9nui
+        >> Status: Kernel: True, Rootfs: False, Do_Kernel: False,                 Do_Rootfs: True
+        >>>> POSIX tar archive (GNU), owner user name: "gz.uImage"
+        >> Recursing into archive ...
+
+/tmp/tmpv20q9nui/_WNAP320_V2.0.3_firmware.tar.extracted/kernel.md5
+                >> MD5: 0e15e5398024c854756d3e5f7bc78877
+                >> Skipping: text/plain...
+
+/tmp/tmpv20q9nui/_WNAP320_V2.0.3_firmware.tar.extracted/root_fs.md5
+                >> MD5: b43dc86ce23660652d37d97651ba1c77
+                >> Skipping: text/plain...
+
+/tmp/tmpv20q9nui/_WNAP320_V2.0.3_firmware.tar.extracted/rootfs.squashfs
+                >> MD5: 7ce95b252346d2486d55866a1a9782be
+                >> Tag: 1
+                >> Temp: /tmp/tmph3j0tm9c
+                >> Status: Kernel: True, Rootfs: False, Do_Kernel: False,                 Do_Rootfs: True
+                >>>> XAR archive, version: -6057, header size: 2664, TOC compressed: 18154158142782153979, TOC uncompressed: 10765983841730652167
+                >> Recursing into archive ...
+                >>>> Squashfs filesystem, big endian, lzma signature, version 3.1, size: 4433988 bytes, 1247 inodes, blocksize: 65536 bytes, created: 2011-06-23 10:46:19
+                >>>> Found Linux filesystem in /tmp/tmph3j0tm9c/_rootfs.squashfs.extracted/squashfs-root!
+                >> Skipping: completed!
+                >> Cleaning up /tmp/tmph3j0tm9c...
+        >> Skipping: completed!
+        >> Cleaning up /tmp/tmpv20q9nui...
+>> Skipping: completed!
+>> Cleaning up /tmp/tmpsn906xqv...
+firmadyne@4b955c5cb46d:/firmadyne$
+```
+
 4. 识别固件1的架构，并将结果存储在数据库的`image` 表中
 ```
 ./scripts/getArch.sh ./images/1.tar.gz
