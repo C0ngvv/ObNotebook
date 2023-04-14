@@ -216,6 +216,7 @@
   },
   "active": "0d8861eabed74879",
   "lastOpenFiles": [
+    "论文工具/Firmadyne/docker镜像/images/Pasted image 20230414114546.png",
     "论文工具/Firmadyne/postgres/postgres.md",
     "论文工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "论文工具/Firmadyne/postgres",
@@ -260,7 +261,6 @@
     "论文工具/EQUAFL",
     "LLVM/Demo进阶：Pass类和要求/Hello Demo进阶-Pass classes and requirements.md",
     "LLVM/写一个llvmPass/Writing an LLVM Pass.md",
-    "网络/linux/linux.md",
-    "Fuzzing101/7-VLC media player/7-VLC media player.md"
+    "网络/linux/linux.md"
   ]
 }

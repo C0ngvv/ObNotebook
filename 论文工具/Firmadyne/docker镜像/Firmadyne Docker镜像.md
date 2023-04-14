@@ -1,10 +1,12 @@
 ## 环境
 使用的是该镜像
-```
+```bash
 sudo docker pull mborgerson/firmadyne:auto
 sudo docker run -it -v /home/cxw/firmadyne:/share mborgerson/firmadyne:auto /bin/bash
-sudo chown -R firmadyne:firmadyne /share
+# sudo chown -R firmadyne:firmadyne /share
 ```
+
+![](images/Pasted%20image%2020230414114546.png)
 
 退出后再进入命令
 ```
@@ -88,8 +90,6 @@ firmadyne@4b955c5cb46d:/firmadyne$
 ```
 ./scripts/tar2db.py -i 1 -f ./images/1.tar.gz
 ```
-
-
 
 6. 为固件1创建QEMU磁盘镜像
 ```
