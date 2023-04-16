@@ -55,8 +55,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -132,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
+                "file": "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
+                "file": "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md"
+                "file": "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md"
               }
             }
           },
@@ -203,13 +202,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3e87447be51fcd10",
+  "active": "c117ffa73146abee",
   "lastOpenFiles": [
+    "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415113345.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415113240.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112510.png",
     "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
-    "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112227.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112200.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415111852.png",
@@ -224,7 +223,6 @@
     "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "工具/Firmadyne/postgres/postgres.md",
     "工具/Firmadyne/docker镜像/images/Pasted image 20230414211010.png",
-    "工具/Firmadyne/docker镜像/images/Pasted image 20230414210537.png",
     "工具/QEMU/QEMU",
     "工具/QEMU",
     "images/Pasted image 20230414114546.png.md",
