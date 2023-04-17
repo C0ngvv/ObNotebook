@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "网络/Download网络问题.md",
+                "file": "Paper/AFL++/AFL++.md",
                 "mode": "source",
                 "source": false
               }
@@ -55,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -130,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "网络/Download网络问题.md",
+                "file": "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +148,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "网络/Download网络问题.md",
+                "file": "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -170,7 +171,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "网络/Download网络问题.md"
+                "file": "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md"
               }
             }
           },
@@ -201,10 +202,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c117ffa73146abee",
+  "active": "3e87447be51fcd10",
   "lastOpenFiles": [
-    "网络/shell/shell.md",
+    "Paper/AFL++/AFL++.md",
     "网络/Download网络问题.md",
+    "网络/shell/shell.md",
     "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415113345.png",
@@ -232,7 +234,6 @@
     "工具/Firmadyne/docker镜像/images",
     "工具/Firmadyne/docker镜像",
     "工具/Firmadyne",
-    "Paper/AFL++/AFL++.md",
     "Paper/Fuzztruction/论文：Fuzztruction.md",
     "Paper/Fuzztruction/Fuzztruction.pdf",
     "LLVM/Hello Pass Demo/Hello Pass Demo.md",

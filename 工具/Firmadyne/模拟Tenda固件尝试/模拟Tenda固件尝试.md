@@ -60,4 +60,10 @@ sudo ./scripts/makeImage.sh 3
 模拟失败
 ![](images/Pasted%20image%2020230415113345.png)
 
+## 尝试使用FirmAE模拟
+
+Tenda AC6
+```
+sudo ./run.sh -r Tenda ~/Desktop/firmadyne/US_AC6V1.0BR_V15.03.05.19_multi_TD01.bin
+```
 
