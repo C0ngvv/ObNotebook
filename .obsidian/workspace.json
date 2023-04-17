@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
+                "file": "网络/Download网络问题.md",
                 "mode": "source",
                 "source": false
               }
@@ -114,8 +114,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -131,7 +130,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
+                "file": "网络/Download网络问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +147,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
+                "file": "网络/Download网络问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +170,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md"
+                "file": "网络/Download网络问题.md"
               }
             }
           },
@@ -204,11 +203,13 @@
   },
   "active": "c117ffa73146abee",
   "lastOpenFiles": [
+    "网络/shell/shell.md",
+    "网络/Download网络问题.md",
+    "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415113345.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415113240.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112510.png",
-    "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112227.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112200.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415111852.png",
@@ -245,7 +246,6 @@
     "工具/EQUAFL/工具README/工具README.md",
     "工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
     "网络/终端C终止/鼠标选中后终端总是C终止.md",
-    "网络/Download网络问题.md",
     "工具/Fuzztruction/fuzz新程序流程/Fuzz一个新程序的流程一：分析.md",
     "工具/Fuzztruction/Fuzz新程序流程2/Fuzz一个新程序的流程二：构建.md",
     "网络/更换镜像源/更换镜像源.md"
