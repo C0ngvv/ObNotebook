@@ -207,6 +207,9 @@
     "Paper/firmadyne与firmae总结/firmware.md",
     "Paper/firmae/FirmAE.md",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
+    "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230419104230.png",
+    "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230419104218.png",
+    "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230419104137.png",
     "Paper/firmadyne/firmadyne.md",
     "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "Paper/AFL++/AFL++.md",
@@ -225,10 +228,7 @@
     "工具/Firmadyne/模拟Tenda固件尝试",
     "Paper/EQUAFL/EQUAFL.md",
     "网络/linux/linux.md",
-    "工具/Firmadyne/docker镜像/images/Pasted image 20230414212158.png",
-    "工具/Firmadyne/docker镜像/images/Pasted image 20230414212122.png",
     "工具/QEMU/QEMU/QEMU.md",
-    "工具/Firmadyne/docker镜像/images/Pasted image 20230414211010.png",
     "工具/QEMU/QEMU",
     "工具/QEMU",
     "images/Pasted image 20230414114546.png.md",
@@ -248,7 +248,6 @@
     "Fuzzing101/5-LibXML2/5-LibXML2.md",
     "Fuzzing101/4-LibTIFF/4-LibTIFF.md",
     "工具/EQUAFL/工具README/工具README.md",
-    "工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
-    "网络/终端C终止/鼠标选中后终端总是C终止.md"
+    "工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md"
   ]
 }

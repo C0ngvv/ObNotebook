@@ -74,3 +74,10 @@ Netgear R8300
 sudo ./run.sh -r Netgear ~/Desktop/firmadyne/R8300-V1.0.2.130_1.0.99.chk
 ```
 
+模拟成功
+![](images/Pasted%20image%2020230419104137.png)
+
+但网页内容为空
+![](images/Pasted%20image%2020230419104218.png)
+
+![](images/Pasted%20image%2020230419104230.png)
