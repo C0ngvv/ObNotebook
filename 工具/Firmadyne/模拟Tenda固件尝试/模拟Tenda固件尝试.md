@@ -67,4 +67,10 @@ Tenda AC6
 sudo ./run.sh -r Tenda ~/Desktop/firmadyne/US_AC6V1.0BR_V15.03.05.19_multi_TD01.bin
 ```
 
+失败
+
+Netgear R8300
+```
+sudo ./run.sh -r Netgear ~/Desktop/firmadyne/R8300-V1.0.2.130_1.0.99.chk
+```
 
