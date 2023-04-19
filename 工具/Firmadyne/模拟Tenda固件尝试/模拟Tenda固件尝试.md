@@ -68,6 +68,7 @@ sudo ./run.sh -r Tenda ~/Desktop/firmadyne/US_AC6V1.0BR_V15.03.05.19_multi_TD01.
 ```
 
 失败
+![](images/Pasted%20image%2020230419111605.png)
 
 Netgear R8300
 ```

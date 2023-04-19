@@ -32,18 +32,6 @@
             }
           },
           {
-            "id": "dde049090d49ef03",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "6657cb84613cb0fc",
             "type": "leaf",
             "state": {
@@ -115,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -204,13 +193,14 @@
   },
   "active": "607b05ecd2b03d06",
   "lastOpenFiles": [
-    "Paper/firmadyne与firmae总结/firmware.md",
+    "Paper/firmadyne/firmadyne.md",
     "Paper/firmae/FirmAE.md",
+    "Paper/firmadyne与firmae总结/firmware.md",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
+    "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230419111605.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230419104230.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230419104218.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230419104137.png",
-    "Paper/firmadyne/firmadyne.md",
     "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "Paper/AFL++/AFL++.md",
     "工具/Firmadyne/postgres/postgres.md",
@@ -223,7 +213,6 @@
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112227.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112200.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415111852.png",
-    "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415111751.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images",
     "工具/Firmadyne/模拟Tenda固件尝试",
     "Paper/EQUAFL/EQUAFL.md",
