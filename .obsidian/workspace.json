@@ -56,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -115,7 +115,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -131,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "Paper/firmae/FirmAE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,7 +149,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "Paper/firmae/FirmAE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -171,7 +172,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md"
+                "file": "Paper/firmae/FirmAE.md"
               }
             }
           },
@@ -202,16 +203,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ee8cb5371b2cefd4",
+  "active": "607b05ecd2b03d06",
   "lastOpenFiles": [
+    "Paper/firmadyne与firmae总结/firmware.md",
+    "Paper/firmae/FirmAE.md",
+    "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
     "挖坑/华硕RT-AC68U/images/Pasted image 20230419122751.png",
     "挖坑/华硕RT-AC68U/images/Pasted image 20230419122456.png",
     "挖坑/华硕RT-AC68U/images",
     "Paper/firmadyne/firmadyne.md",
-    "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
     "挖坑/华硕RT-AC68U",
-    "Paper/firmadyne与firmae总结/firmware.md",
-    "Paper/firmae/FirmAE.md",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230419111605.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230419104230.png",
@@ -227,7 +228,6 @@
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415113240.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112510.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112227.png",
-    "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112200.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images",
     "工具/Firmadyne/模拟Tenda固件尝试",
     "Paper/EQUAFL/EQUAFL.md",
