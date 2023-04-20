@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "Paper/firmadyne/firmadyne.md",
                 "mode": "source",
                 "source": false
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "Paper/firmadyne/firmadyne.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "Paper/firmadyne/firmadyne.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md"
+                "file": "Paper/firmadyne/firmadyne.md"
               }
             }
           },
@@ -216,6 +216,7 @@
   },
   "active": "aea36739fad65a40",
   "lastOpenFiles": [
+    "Paper/EQUAFL/EQUAFL.md",
     "Paper/EQUAFL/images/Pasted image 20230420093326.png",
     "Paper/EQUAFL/images/Pasted image 20230420092822.png",
     "Paper/firmadyne/firmadyne.md",
@@ -239,10 +240,8 @@
     "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415113345.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415113240.png",
-    "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230415112510.png",
     "工具/Firmadyne/模拟Tenda固件尝试/images",
     "工具/Firmadyne/模拟Tenda固件尝试",
-    "Paper/EQUAFL/EQUAFL.md",
     "网络/linux/linux.md",
     "工具/QEMU/QEMU/QEMU.md",
     "工具/QEMU/QEMU",
