@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
                 "mode": "source",
                 "source": false
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
+                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md"
+                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md"
               }
             }
           },
@@ -215,9 +215,9 @@
   },
   "active": "aea36739fad65a40",
   "lastOpenFiles": [
+    "Paper/EQUAFL/EQUAFL.md",
     "Paper/firmae/FirmAE.md",
     "Paper/firmadyne/firmadyne.md",
-    "Paper/EQUAFL/EQUAFL.md",
     "Paper/EQUAFL/images/Pasted image 20230420093326.png",
     "Paper/EQUAFL/images/Pasted image 20230420092822.png",
     "Paper/firmadyne与firmae总结/firmware.md",
