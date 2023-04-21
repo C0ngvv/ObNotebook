@@ -26,7 +26,14 @@ python3 -c 'open("/firmadyne/libnvram/HTTPD_DBG", "w").writ
 e("0")'
 ```
 
-
+```
+GET /demo HTTP/1.1
+Upgrade: WebSocket
+Connection: Upgrade
+Host: example.com
+Origin: http://example.com
+WebSocket-Protocol: sample
+```
 
 跑
 ```
