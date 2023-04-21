@@ -15,3 +15,10 @@ export LD_LIBRARY_PATH="/home/ubuntu/Desktop/am-toolchains/brcm-arm-sdk/hndtools
 ```
 qemu-arm -L ./squashfs-root -E LD_PRELOAD=./squashfs-root/firmadyne/libnvram.so ./squashfs-root/usr/sbin/httpd
 ```
+
+
+
+### qemu-arm与qemu-arm-static
+qemu-arm-static是静态编译的，不需要库就能运行。qemu-arm运行还得需要库环境。
+
+![](images/Pasted%20image%2020230421180422.png)
