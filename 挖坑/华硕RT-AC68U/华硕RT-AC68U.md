@@ -56,8 +56,11 @@ export "AFL_NO_FORKSRV=1"
 ../AFLplusplus/afl-fuzz -Q -m none -i corpus/ -o output/ ./squashfs-root/usr/sbin/httpd @@
 ```
 
-![](images/Pasted%20image%2020230422004835.png)
+![](images/Pasted%20image%2020230422005832.png)
 
+
+### 总结
+没有从刚开始就模拟起httpd程序，而是里面的一个处理函数。并且将网络数据流转化为文件流，一切通过Hook代码来实现。利用http-phaser的test.c生成语料库，从而利用AFL++ 的Qemu模式来进行模糊测试。
 
 ### 迷途
 运行出错
