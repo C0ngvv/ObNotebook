@@ -200,7 +200,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5
+    "width": 267.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -213,7 +214,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "aea36739fad65a40",
+  "active": "04b4e2e0944c66f2",
   "lastOpenFiles": [
     "挖坑/华硕RT-AC68U/images/Pasted image 20230421180422.png",
     "Paper/EQUAFL/EQUAFL.md",
