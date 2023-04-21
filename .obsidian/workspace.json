@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md",
+                "file": "Paper/EQUAFL/EQUAFL.md",
                 "mode": "source",
                 "source": false
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md",
+                "file": "Paper/EQUAFL/EQUAFL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -160,7 +160,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md",
+                "file": "Paper/EQUAFL/EQUAFL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md"
+                "file": "Paper/EQUAFL/EQUAFL.md"
               }
             }
           },
@@ -200,8 +200,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5,
-    "collapsed": true
+    "width": 267.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -216,11 +215,11 @@
   },
   "active": "aea36739fad65a40",
   "lastOpenFiles": [
+    "Paper/firmae/FirmAE.md",
+    "Paper/firmadyne/firmadyne.md",
     "Paper/EQUAFL/EQUAFL.md",
     "Paper/EQUAFL/images/Pasted image 20230420093326.png",
     "Paper/EQUAFL/images/Pasted image 20230420092822.png",
-    "Paper/firmadyne/firmadyne.md",
-    "Paper/firmae/FirmAE.md",
     "Paper/firmadyne与firmae总结/firmware.md",
     "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
     "挖坑/华硕RT-AC68U/images/Pasted image 20230419122751.png",
