@@ -1,16 +1,22 @@
 
+## 复现
+### 文件系统提取
 binwalk分析
 ![](images/Pasted%20image%2020230419122456.png)
 
 使用`-Me` 提取固件文件系统
 ![](images/Pasted%20image%2020230419122751.png)
 
-
+### 交叉编译链工具
+下载使用：[RMerl/am-toolchains: Asuswrt-Merlin toolchains (github.com)](https://github.com/RMerl/am-toolchains)
 ```
 export LD_LIBRARY_PATH="/home/ubuntu/Desktop/am-toolchains/brcm-arm-sdk/hndtools-arm-linux-2.6.36-uclibc-4.5.3/lib"
 /home/ubuntu/Desktop/am-toolchains/brcm-arm-sdk/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/arm-uclibc-gcc
 ```
 
+### libnvram配置
+
+libnvram配置
 挂载
 ```bash
 sudo mount -t tmpfs -o size=10M tmpfs /fimadyne/libnvram
@@ -26,6 +32,7 @@ python3 -c 'open("/firmadyne/libnvram/HTTPD_DBG", "w").writ
 e("0")'
 ```
 
+创建./test.txt文件，里面是网络数据包数据
 ```
 GET /demo HTTP/1.1
 Upgrade: WebSocket
@@ -35,15 +42,24 @@ Origin: http://example.com
 WebSocket-Protocol: sample
 ```
 
-跑
+模拟运行
 ```
-qemu-arm -L ./squashfs-root -E LD_PRELOAD=./squashfs-root/firmadyne/libnvram.so:./main_hook.so ./squashfs-root/usr/sbin/httpd
-```
-
-```
-sudo chroot . ./qemu-arm-static -E LD_PRELOAD=/firmadyne/libnvram.so usr/sbin/httpd
+qemu-arm -L ./squashfs-root -E LD_PRELOAD=./libnvram.so:./main_hook.so ./squashfs-root/usr/sbin/httpd ./test.txt
 ```
 
+运行模糊测试
+```bash
+export "QEMU_SET_ENV=LD_PRELOAD=./libnvram.so:./main_hook.so" 
+export "QEMU_LD_PREFIX=./squashfs-root" 
+export "AFL_INST_LIBS=1" 
+export "AFL_NO_FORKSRV=1"
+../AFLplusplus/afl-fuzz -Q -m none -i corpus/ -o output/ ./squashfs-root/usr/sbin/httpd @@
+```
+
+![](images/Pasted%20image%2020230422004835.png)
+
+
+### 迷途
 运行出错
 
 ```
@@ -190,9 +206,6 @@ github上给出了Hook main的方法：[Hook main() using LD_PRELOAD (github.com
 
 钩取`__libc_start_main`函数，然后获取真实的`__libc_start_main`函数地址，编写`main_hook` 函数执行我们的代码，其中要调用原始的`main`方法。然后在钩取的`__libc_start_main` 中调用原始的`__libc_start_main`方法，传递参数将`main`函数换为`main_hook`地址。即原始`__libc_start_main->main` 变为`__libc_start_main-> main_hook-> main`。
 
-
-
-
 ### qemu-arm与qemu-arm-static
 qemu-arm-static是静态编译的，不需要库就能运行。qemu-arm运行还得需要库环境。
 
@@ -224,4 +237,29 @@ cp /usr/bin/qemu-arm-static /buildroot-2018.08.2/output/target/usr/bin/
 sudo chroot /buildroot-2018.08.2/output/target/ /bin/sh
 ```
 
-好了， 现在你可以为所欲为， 就像在嵌入式系统一样，执行任何busybox 命令了:
+好了， 现在你可以为所欲为， 就像在嵌入式系统一样，执行任何busybox 命令了
+
+### AFL++安装
+
+```
+sudo apt-get update
+sudo apt-get install -y build-essential python3-dev automake cmake git flex bison libglib2.0-dev libpixman-1-dev python3-setuptools cargo libgtk-3-dev
+# try to install llvm 12 and install the distro default if that fails
+sudo apt-get install -y lld-12 llvm-12 llvm-12-dev clang-12 || sudo apt-get install -y lld llvm llvm-dev clang
+sudo apt-get install -y gcc-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-plugin-dev libstdc++-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-dev
+sudo apt-get install -y ninja-build # for QEMU mode
+git clone https://github.com/AFLplusplus/AFLplusplus
+cd AFLplusplus
+make distrib
+sudo make install
+```
+
+> Note that `make distrib` also builds FRIDA mode, QEMU mode, unicorn_mode, and more. If you just want plain AFL++, then do `make all`.
+
+安装Qemu模式
+```
+cd qemu_mode
+CPU_TARGET=arm ./build_qemu_support.sh
+```
+
+![](images/Pasted%20image%2020230422004523.png)
