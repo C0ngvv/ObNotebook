@@ -30,7 +30,7 @@ e("0")'
 
 跑
 ```
-qemu-arm -L ./squashfs-root -E LD_PRELOAD=./squashfs-root/firmadyne/libnvram.so ./squashfs-root/usr/sbin/httpd
+qemu-arm -L ./squashfs-root -E LD_PRELOAD=./squashfs-root/firmadyne/libnvram.so:./main_hook.so ./squashfs-root/usr/sbin/httpd
 ```
 
 ```
