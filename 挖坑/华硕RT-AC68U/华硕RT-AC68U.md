@@ -33,6 +33,10 @@ e("0")'
 qemu-arm -L ./squashfs-root -E LD_PRELOAD=./squashfs-root/firmadyne/libnvram.so ./squashfs-root/usr/sbin/httpd
 ```
 
+```
+sudo chroot . ./qemu-arm-static -E LD_PRELOAD=/firmadyne/libnvram.so usr/sbin/httpd
+```
+
 运行出错
 
 ```
