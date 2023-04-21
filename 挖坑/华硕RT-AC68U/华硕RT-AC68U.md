@@ -200,3 +200,21 @@ executable file可执行文件保存着准备执行的程序。该文件指定ex
 
 shared object file一个共享的对象文件保存着适合在两个上下文中链接的代码和数据。首先，链接编辑器可以将此文件与其他可重定位和共享的目标文件一起处理，以创建其他目标文件。其次，运行时链接器将该文件与一个动态可执行文件和其他共享对象组合在一起，以创建一个进程映像。
 
+### 运行arm busybox
+1. 准备工作:
+```
+sudo apt install qemu-user-static -y
+```
+
+2. 编译buildroot， 或单独编译 busybox 等。
+
+3. 找到buidlroot的target目录, 复制qemu-user-static到target目录
+```
+cp /usr/bin/qemu-arm-static /buildroot-2018.08.2/output/target/usr/bin/
+```
+4. chroot:
+```
+sudo chroot /buildroot-2018.08.2/output/target/ /bin/sh
+```
+
+好了， 现在你可以为所欲为， 就像在嵌入式系统一样，执行任何busybox 命令了:
