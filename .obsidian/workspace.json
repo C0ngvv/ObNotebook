@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "网络/Download网络问题.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9e0e2f6c26334c6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e706e22793a709c4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -94,7 +119,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +136,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +159,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "挖坑/华硕RT-AC68U/华硕RT-AC68U.md"
+                "file": "课程/强化学习/Texi-v2/Texi-v2.md"
               }
             }
           },
@@ -165,11 +190,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0cd9de88cc0eeee2",
+  "active": "e706e22793a709c4",
   "lastOpenFiles": [
+    "课程/强化学习/实验环境配置/实验环境配置.md",
+    "课程/强化学习/Texi-v2/Texi-v2.md",
+    "课程/强化学习/Texi-v2/images/Pasted image 20230422233422.png",
+    "课程/强化学习/Texi-v2/images",
+    "网络/Download网络问题.md",
+    "课程/强化学习/Texi-v2",
+    "课程/强化学习/实验环境配置",
+    "课程/强化学习",
+    "课程",
+    "网络/linux/linux.md",
+    "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
     "挖坑/华硕RT-AC68U/images/Pasted image 20230422005832.png",
     "挖坑/华硕RT-AC68U/images/Pasted image 20230422005526.png",
-    "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
     "images/Pasted image 20230422004835.png.md",
     "挖坑/华硕RT-AC68U/images/Pasted image 20230422004835.png",
     "挖坑/华硕RT-AC68U/images/Pasted image 20230422004523.png",
@@ -182,28 +217,19 @@
     "Paper/EQUAFL/images/Pasted image 20230420092822.png",
     "Paper/firmadyne与firmae总结/firmware.md",
     "挖坑/华硕RT-AC68U/images/Pasted image 20230419122751.png",
-    "挖坑/华硕RT-AC68U/images/Pasted image 20230419122456.png",
     "挖坑/华硕RT-AC68U/images",
     "挖坑/华硕RT-AC68U",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
-    "工具/Firmadyne/模拟Tenda固件尝试/images/Pasted image 20230419111605.png",
     "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "Paper/AFL++/AFL++.md",
     "工具/Firmadyne/postgres/postgres.md",
-    "网络/Download网络问题.md",
     "网络/shell/shell.md",
     "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "工具/Firmadyne/模拟Tenda固件尝试/images",
     "工具/Firmadyne/模拟Tenda固件尝试",
-    "网络/linux/linux.md",
     "工具/QEMU/QEMU/QEMU.md",
     "工具/QEMU/QEMU",
-    "工具/QEMU",
     "images/Pasted image 20230414114546.png.md",
-    "images",
-    "工具/Firmadyne/postgres",
-    "工具/Firmadyne/docker镜像/images",
-    "工具/Firmadyne/docker镜像",
     "Paper/Fuzztruction/论文：Fuzztruction.md",
     "LLVM/Hello Pass Demo/Hello Pass Demo.md",
     "LLVM/LLVM概念/llvm.md",
@@ -211,7 +237,6 @@
     "LLVM/Pass入门/LLVM Pass入门.md",
     "Fuzzing101/README.md",
     "Fuzzing101/AFL++/AFL++使用总结.md",
-    "Fuzzing101/5-LibXML2/5-LibXML2.md",
-    "Fuzzing101/4-LibTIFF/4-LibTIFF.md"
+    "Fuzzing101/5-LibXML2/5-LibXML2.md"
   ]
 }
