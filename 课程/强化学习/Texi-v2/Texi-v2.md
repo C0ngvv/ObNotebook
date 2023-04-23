@@ -30,3 +30,16 @@ Q[state][action] = Q[state][action] + alpha * (reward + gamma * np.max(Q[next_st
 
 其中，alpha是学习率，gamma是折扣因子，state是当前状态，action是当前动作，reward是当前奖励，next_state是下一个状态。
 
+
+
+一个强化学习算法应该包含以下组件：  
+  
+1. 环境（Environment）：强化学习算法需要在一个环境中运行，环境定义了智能体可以感知和操作的状态以及智能体可以采取的动作。在OpenAI Gym中，环境被实现为一个Python类，它提供了reset和step方法，分别用于重置环境状态和执行一个动作并返回下一个状态、奖励和是否终止的信息。  
+  
+2. 智能体（Agent）：智能体是强化学习算法的核心组件，它负责在环境中选择动作并根据采样的经验更新内部状态。智能体通常包含一个策略（Policy）和一个价值函数（Value Function），策略用于选择动作，价值函数用于评估状态或状态-动作对的价值。  
+  
+3. 奖励（Reward）：奖励是环境提供给智能体的反馈信号，它用于指导智能体的行为。在OpenAI Gym中，奖励是一个标量值，智能体的目标是最大化累积奖励。  
+  
+4. 学习算法（Learning Algorithm）：学习算法是强化学习算法的核心，它负责根据采样的经验更新智能体的内部状态。常见的学习算法包括Q-learning、SARSA、Actor-Critic等。  
+  
+在这个文件中，环境是OpenAI Gym的Taxi-v2环境，智能体是Agent类，奖励是环境提供的奖励信号，学习算法是Q-learning。
