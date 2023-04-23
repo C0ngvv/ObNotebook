@@ -20,18 +20,6 @@
             }
           },
           {
-            "id": "9e0e2f6c26334c6f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "e706e22793a709c4",
             "type": "leaf",
             "state": {
@@ -44,7 +32,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -192,11 +180,11 @@
   },
   "active": "e706e22793a709c4",
   "lastOpenFiles": [
-    "课程/强化学习/实验环境配置/实验环境配置.md",
+    "网络/Download网络问题.md",
     "课程/强化学习/Texi-v2/Texi-v2.md",
+    "课程/强化学习/实验环境配置/实验环境配置.md",
     "课程/强化学习/Texi-v2/images/Pasted image 20230422233422.png",
     "课程/强化学习/Texi-v2/images",
-    "网络/Download网络问题.md",
     "课程/强化学习/Texi-v2",
     "课程/强化学习/实验环境配置",
     "课程/强化学习",
