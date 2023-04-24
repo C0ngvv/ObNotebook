@@ -264,7 +264,6 @@ Broadcast message from systemd-journald@ubuntu (Fri 2023-04-21 19:33:32 CST):
 httpd[4372]: Unable to start in SSL mode, exiting! 80
 ```
 
-
 `usr/sbin/gencert.sh` 文件内容
 ```bash
 #!/bin/sh
