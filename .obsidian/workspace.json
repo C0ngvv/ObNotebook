@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f754184ea23fc9b1",
+        "id": "e5b13ac4eaac7f38",
         "type": "tabs",
         "children": [
           {
-            "id": "0cd9de88cc0eeee2",
+            "id": "15ed174e6cf1320d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "网络/Download网络问题.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e706e22793a709c4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "课程/强化学习/实验环境配置/实验环境配置.md",
+                "file": "其他/华硕RT-AC68U/华硕RT-AC68U.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -106,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "网络/Download网络问题.md",
+                "file": "其他/华硕RT-AC68U/华硕RT-AC68U.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "网络/Download网络问题.md",
+                "file": "其他/华硕RT-AC68U/华硕RT-AC68U.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "网络/Download网络问题.md"
+                "file": "其他/华硕RT-AC68U/华硕RT-AC68U.md"
               }
             }
           },
@@ -177,11 +166,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0cd9de88cc0eeee2",
+  "active": "15ed174e6cf1320d",
   "lastOpenFiles": [
+    "其他/华硕RT-AC68U/images/Pasted image 20230424202014.png",
+    "其他/TODO List.md",
     "课程/强化学习/实验环境配置/实验环境配置.md",
-    "课程/强化学习/Texi-v2/Texi-v2.md",
     "网络/Download网络问题.md",
+    "课程/强化学习/Texi-v2/Texi-v2.md",
     "课程/强化学习/Texi-v2/images/Pasted image 20230422233422.png",
     "课程/强化学习/Texi-v2/images",
     "课程/强化学习/Texi-v2",
@@ -189,23 +180,23 @@
     "课程/强化学习",
     "课程",
     "网络/linux/linux.md",
-    "挖坑/华硕RT-AC68U/华硕RT-AC68U.md",
-    "挖坑/华硕RT-AC68U/images/Pasted image 20230422005832.png",
+    "其他/华硕RT-AC68U/华硕RT-AC68U.md",
+    "其他/华硕RT-AC68U/images/Pasted image 20230422005832.png",
     "挖坑/华硕RT-AC68U/images/Pasted image 20230422005526.png",
     "images/Pasted image 20230422004835.png.md",
     "挖坑/华硕RT-AC68U/images/Pasted image 20230422004835.png",
-    "挖坑/华硕RT-AC68U/images/Pasted image 20230422004523.png",
-    "挖坑/华硕RT-AC68U/images/Pasted image 20230421193040.png",
-    "挖坑/华硕RT-AC68U/images/Pasted image 20230421180422.png",
+    "其他/华硕RT-AC68U/images/Pasted image 20230422004523.png",
+    "其他/华硕RT-AC68U/images/Pasted image 20230421193040.png",
+    "其他/华硕RT-AC68U/images/Pasted image 20230421180422.png",
     "Paper/EQUAFL/EQUAFL.md",
     "Paper/firmae/FirmAE.md",
     "Paper/firmadyne/firmadyne.md",
     "Paper/EQUAFL/images/Pasted image 20230420093326.png",
     "Paper/EQUAFL/images/Pasted image 20230420092822.png",
     "Paper/firmadyne与firmae总结/firmware.md",
-    "挖坑/华硕RT-AC68U/images/Pasted image 20230419122751.png",
-    "挖坑/华硕RT-AC68U/images",
-    "挖坑/华硕RT-AC68U",
+    "其他/华硕RT-AC68U/images/Pasted image 20230419122751.png",
+    "其他/华硕RT-AC68U/images",
+    "其他/华硕RT-AC68U",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
     "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "Paper/AFL++/AFL++.md",
@@ -222,8 +213,6 @@
     "LLVM/LLVM概念/llvm.md",
     "LLVM/llvm构建和配置/LLVM构建与配置.md",
     "LLVM/Pass入门/LLVM Pass入门.md",
-    "Fuzzing101/README.md",
-    "Fuzzing101/AFL++/AFL++使用总结.md",
-    "Fuzzing101/5-LibXML2/5-LibXML2.md"
+    "Fuzzing101/README.md"
   ]
 }

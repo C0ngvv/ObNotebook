@@ -7,16 +7,83 @@ binwalk分析
 使用`-Me` 提取固件文件系统
 ![](images/Pasted%20image%2020230419122751.png)
 
-### 交叉编译链工具
-下载使用：[RMerl/am-toolchains: Asuswrt-Merlin toolchains (github.com)](https://github.com/RMerl/am-toolchains)
+### 编译main_hook.so
+交叉编译链工具，下载使用：[RMerl/am-toolchains: Asuswrt-Merlin toolchains (github.com)](https://github.com/RMerl/am-toolchains)
 ```
 export LD_LIBRARY_PATH="/home/ubuntu/Desktop/am-toolchains/brcm-arm-sdk/hndtools-arm-linux-2.6.36-uclibc-4.5.3/lib"
 /home/ubuntu/Desktop/am-toolchains/brcm-arm-sdk/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/arm-uclibc-gcc
 ```
 
+main_hook.c代码
+```c
+// RTLD_NEXT is a GNU Extension
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <dlfcn.h>
+
+/* Trampoline for the real main() */
+static int (*main_orig)(int, char **, char **);
+
+/* Our fake main() that gets called by __libc_start_main() */
+int main_hook(int argc, char **argv, char **envp)
+{
+    // Override origin conn_fp
+    FILE **fp = 0x07D600;
+    if (argc < 2)
+    {
+        fprintf(stderr, "Please input filename\n");
+        return 1;
+    }
+    *fp = fopen(argv[1], "r+");
+    if (*fp == NULL)
+    {
+        fprintf(stderr, "Can't open file\n");
+        return 2;
+    }
+    // Get handle_request function's address and run
+    int (*do_thing_ptr)() = 0xEEB0;
+    int ret_val = (*do_thing_ptr)();
+    printf("Ret val %d\n", ret_val);
+    return 0;
+}
+
+/*
+ * Wrapper for __libc_start_main() that replaces the real main
+ * function with our hooked version.
+ */
+int __uClibc_main(
+    int (*main)(int, char **, char **),
+    int argc,
+    char **argv,
+    int (*init)(int, char **, char **),
+    void (*fini)(void),
+    void (*rtld_fini)(void),
+    void *stack_end)
+{
+    /* Save the real main function address */
+    main_orig = main;
+
+    /* Find the real __libc_start_main()... */
+    typeof(&__uClibc_main) orig = dlsym(RTLD_NEXT, "__uClibc_main");
+
+    /* ... and call it with our custom main function */
+    return orig(main_hook, argc, argv, init, fini, rtld_fini, stack_end);
+}
+```
+
+编译
+```
+/home/ubuntu/Desktop/am-toolchains/brcm-arm-sdk/hndtools-arm-linux-2.6.36-uclibc-4.5.3/bin/arm-uclibc-gcc main_hook.c -o main_hook.so -fPIC -shared -ldl
+```
+
 ### libnvram配置
 
-libnvram配置
+根据[firmadyne/libnvram: NVRAM emulator (github.com)](https://github.com/firmadyne/libnvram) 中Usage的描述，将`libnvram.so`放到`/firmadyne/libnvram.so`，创建目录
+```
+mkdir -p /firmadyne/libnvram/
+mkdir -p /firmadyne/libnvram.override/
+```
+
 挂载
 ```bash
 sudo mount -t tmpfs -o size=10M tmpfs /fimadyne/libnvram
@@ -28,8 +95,7 @@ sudo mount -t tmpfs -o size=10M tmpfs /fimadyne/libnvram
 
 添加新的nvram_get_buf值
 ```
-python3 -c 'open("/firmadyne/libnvram/HTTPD_DBG", "w").writ
-e("0")'
+python3 -c 'open("/firmadyne/libnvram/HTTPD_DBG", "w").write("0")'
 ```
 
 创建./test.txt文件，里面是网络数据包数据
@@ -47,7 +113,42 @@ WebSocket-Protocol: sample
 qemu-arm -L ./squashfs-root -E LD_PRELOAD=./libnvram.so:./main_hook.so ./squashfs-root/usr/sbin/httpd ./test.txt
 ```
 
-运行模糊测试
+![](images/Pasted%20image%2020230424202014.png)
+
+## 输入数据
+使用下面代码对[nodejs/http-parser: http request/response parser for c (github.com)](https://github.com/nodejs/http-parser)中的test.c文件处理生成corpus
+```python
+from re import compile
+
+with open('./http-parser/test.c', 'r') as f:
+    text = f.read()
+
+start_re = compile('raw= "(.+)"')
+middle_re = compile('"(.+)"')
+end_re = compile('should_keep_alive')
+temp_lst = []
+begin_record = False
+count = 0
+
+for line in text.split('\n'):
+    if matched := start_re.findall(line):
+        temp_lst += matched
+        begin_record = True
+    elif matched := middle_re.findall(line):
+        if begin_record:
+            temp_lst += matched
+    elif end_re.findall(line) and len(temp_lst):
+        content = ''.join(temp_lst).replace('\\r\\n', '\r\n')
+        with open(f'corpus/http_{count}.txt', 'w') as f:
+            f.write(content)
+        count += 1
+        temp_lst.clear()
+        begin_record = False
+
+```
+
+## 模糊测试
+安装AFL++，然后运行模糊测试
 ```bash
 export "QEMU_SET_ENV=LD_PRELOAD=./libnvram.so:./main_hook.so" 
 export "QEMU_LD_PREFIX=./squashfs-root" 
@@ -58,6 +159,17 @@ export "AFL_NO_FORKSRV=1"
 
 ![](images/Pasted%20image%2020230422005832.png)
 
+## 调试
+
+```
+qemu-arm -g 1234 -L ./squashfs-root -E LD_PRELOAD=./libnvram.so:./main_hook.so ./squashfs-root/usr/sbin/httpd ./output/default/crashes/id\:000000\,sig\:11\,src\:000071\,time\:38730\,execs\:1143\,op\:havoc\,rep\:4
+```
+
+gdb
+```
+gdb-multiarch ./squashfs-root/usr/sbin/httpd
+target remote :1234
+```
 
 ### 总结
 没有从刚开始就模拟起httpd程序，而是里面的一个处理函数。并且将网络数据流转化为文件流，一切通过Hook代码来实现。利用http-phaser的test.c生成语料库，从而利用AFL++ 的Qemu模式来进行模糊测试。
