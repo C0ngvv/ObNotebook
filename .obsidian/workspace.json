@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
+                "file": "Paper/firmadyne与firmae总结/firmware.md",
                 "mode": "source",
                 "source": false
               }
@@ -91,8 +91,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -108,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
+                "file": "Paper/firmadyne与firmae总结/firmware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
+                "file": "Paper/firmadyne与firmae总结/firmware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md"
+                "file": "Paper/firmadyne与firmae总结/firmware.md"
               }
             }
           },
@@ -181,8 +180,11 @@
   },
   "active": "4128b6aa43bd93cd",
   "lastOpenFiles": [
-    "其他/华硕RT-AC68U/华硕RT-AC68U.md",
     "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
+    "其他/现代嵌入式系统漏洞研究技术文章/images/Pasted image 20230425151736.png",
+    "其他/现代嵌入式系统漏洞研究技术文章/images/Pasted image 20230425151626.png",
+    "其他/现代嵌入式系统漏洞研究技术文章/images",
+    "其他/华硕RT-AC68U/华硕RT-AC68U.md",
     "其他/现代嵌入式系统漏洞研究技术文章",
     "其他/华硕RT-AC68U/images/Pasted image 20230424220808.png",
     "其他/华硕RT-AC68U/images/Pasted image 20230424202014.png",
@@ -203,11 +205,9 @@
     "挖坑/华硕RT-AC68U/images/Pasted image 20230422004835.png",
     "其他/华硕RT-AC68U/images/Pasted image 20230422004523.png",
     "其他/华硕RT-AC68U/images/Pasted image 20230421193040.png",
-    "其他/华硕RT-AC68U/images/Pasted image 20230421180422.png",
     "Paper/EQUAFL/EQUAFL.md",
     "Paper/firmae/FirmAE.md",
     "Paper/firmadyne/firmadyne.md",
-    "Paper/EQUAFL/images/Pasted image 20230420093326.png",
     "Paper/firmadyne与firmae总结/firmware.md",
     "其他/华硕RT-AC68U/images",
     "其他/华硕RT-AC68U",
@@ -218,14 +218,12 @@
     "网络/shell/shell.md",
     "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "工具/Firmadyne/模拟Tenda固件尝试/images",
-    "工具/Firmadyne/模拟Tenda固件尝试",
     "工具/QEMU/QEMU/QEMU.md",
     "images/Pasted image 20230414114546.png.md",
     "Paper/Fuzztruction/论文：Fuzztruction.md",
     "LLVM/Hello Pass Demo/Hello Pass Demo.md",
     "LLVM/LLVM概念/llvm.md",
     "LLVM/llvm构建和配置/LLVM构建与配置.md",
-    "LLVM/Pass入门/LLVM Pass入门.md",
-    "Fuzzing101/README.md"
+    "LLVM/Pass入门/LLVM Pass入门.md"
   ]
 }
