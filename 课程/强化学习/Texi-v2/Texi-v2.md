@@ -1,5 +1,19 @@
 问题描述见3.1：[arXiv:cs/9905014v1 [cs.LG] 21 May 1999](https://arxiv.org/pdf/cs/9905014.pdf)
 
+```
+import numpy as np
+import gym
+import random
+```
+
+
+
+
+
+
+`env.render()`是用来渲染环境的，它可以让您在屏幕上看到环境的可视化表示。这样您就可以观察智能体在环境中的行为。
+
+
 进入`deep-reinforcement-learning/lab-taxi` 目录，运行
 ```
 python3 main.py
@@ -29,8 +43,6 @@ Q[state][action] = Q[state][action] + alpha * (reward + gamma * np.max(Q[next_st
 ```
 
 其中，alpha是学习率，gamma是折扣因子，state是当前状态，action是当前动作，reward是当前奖励，next_state是下一个状态。
-
-
 
 一个强化学习算法应该包含以下组件：  
   

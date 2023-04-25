@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
+                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
+                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
+                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md"
+                "file": "课程/强化学习/Texi-v2/Texi-v2.md"
               }
             }
           },
@@ -167,10 +167,12 @@
   },
   "active": "15ed174e6cf1320d",
   "lastOpenFiles": [
+    "课程/强化学习/实验环境配置/实验环境配置.md",
+    "课程/强化学习/Texi-v2/Texi-v2.md",
+    "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "其他/华硕RT-AC68U/华硕RT-AC68U.md",
     "其他/华硕RT-AC68U.zip",
     "Paper/firmadyne与firmae总结/firmware.md",
-    "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "其他/现代嵌入式系统漏洞研究技术文章/images/Pasted image 20230425151736.png",
     "其他/现代嵌入式系统漏洞研究技术文章/images/Pasted image 20230425151626.png",
     "其他/现代嵌入式系统漏洞研究技术文章/images",
@@ -178,9 +180,7 @@
     "其他/华硕RT-AC68U/images/Pasted image 20230424220808.png",
     "其他/华硕RT-AC68U/images/Pasted image 20230424202014.png",
     "其他/TODO List.md",
-    "课程/强化学习/实验环境配置/实验环境配置.md",
     "网络/Download网络问题.md",
-    "课程/强化学习/Texi-v2/Texi-v2.md",
     "课程/强化学习/Texi-v2/images/Pasted image 20230422233422.png",
     "课程/强化学习/Texi-v2/images",
     "课程/强化学习/Texi-v2",
