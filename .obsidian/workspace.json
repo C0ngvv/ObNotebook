@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "其他/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
                 "mode": "source",
                 "source": false
               }
@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -94,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "其他/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "其他/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "其他/华硕RT-AC68U/华硕RT-AC68U.md"
+                "file": "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md"
               }
             }
           },
@@ -165,15 +166,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "15ed174e6cf1320d",
+  "active": "187d4ecd31b81bf7",
   "lastOpenFiles": [
+    "其他/华硕RT-AC68U/华硕RT-AC68U.md",
     "其他/华硕RT-AC68U.zip",
     "Paper/firmadyne与firmae总结/firmware.md",
     "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "其他/现代嵌入式系统漏洞研究技术文章/images/Pasted image 20230425151736.png",
     "其他/现代嵌入式系统漏洞研究技术文章/images/Pasted image 20230425151626.png",
     "其他/现代嵌入式系统漏洞研究技术文章/images",
-    "其他/华硕RT-AC68U/华硕RT-AC68U.md",
     "其他/现代嵌入式系统漏洞研究技术文章",
     "其他/华硕RT-AC68U/images/Pasted image 20230424220808.png",
     "其他/华硕RT-AC68U/images/Pasted image 20230424202014.png",
@@ -205,7 +206,6 @@
     "工具/Firmadyne/postgres/postgres.md",
     "网络/shell/shell.md",
     "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
-    "工具/Firmadyne/模拟Tenda固件尝试/images",
     "工具/QEMU/QEMU/QEMU.md",
     "images/Pasted image 20230414114546.png.md",
     "Paper/Fuzztruction/论文：Fuzztruction.md",
