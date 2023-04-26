@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "课程/强化学习/实验环境配置/实验环境配置.md",
+                "file": "网络/linux/linux.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "课程/强化学习/实验环境配置/实验环境配置.md",
+                "file": "网络/linux/linux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "课程/强化学习/实验环境配置/实验环境配置.md",
+                "file": "网络/linux/linux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "课程/强化学习/实验环境配置/实验环境配置.md"
+                "file": "网络/linux/linux.md"
               }
             }
           },
@@ -167,8 +167,8 @@
   },
   "active": "15ed174e6cf1320d",
   "lastOpenFiles": [
-    "课程/强化学习/Texi-v2/Texi-v2.md",
     "课程/强化学习/实验环境配置/实验环境配置.md",
+    "课程/强化学习/Texi-v2/Texi-v2.md",
     "其他/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "其他/华硕RT-AC68U/华硕RT-AC68U.md",
     "其他/华硕RT-AC68U.zip",

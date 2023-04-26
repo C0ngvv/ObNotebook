@@ -8,3 +8,10 @@ sudo visudo
 cat /etc/issue
 ```
 
+## 磁盘空间扩容
+使用Gparted工具
+```
+sudo apt install gparted
+```
+
+
