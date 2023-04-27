@@ -51,6 +51,7 @@ https://dlcdnets.asus.com/pub/ASUS/wireless/RT-AX55/FW_RT_AX55_300438645375.zip?
 scp -r admin@192.168.50.1:/bin ./
 ```
 
+![](images/Pasted%20image%2020230427220703.png)
 
 
 
