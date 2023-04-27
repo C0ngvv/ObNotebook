@@ -28,6 +28,10 @@ find . -name "http*"
 ![](images/Pasted%20image%2020230427115635.png)
 
 尝试模拟，需要先加执行权限，然后尝试使用`qemu-arm-static` 模拟，报错。
+```
+sudo chroot . ./qemu-arm-static ./usr/sbin/httpd
+```
+
 ![](images/Pasted%20image%2020230427115818.png)
 
 ![](images/Pasted%20image%2020230427115905.png)
