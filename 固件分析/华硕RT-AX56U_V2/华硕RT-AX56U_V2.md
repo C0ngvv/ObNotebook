@@ -45,6 +45,13 @@ https://dlcdnets.asus.com/pub/ASUS/wireless/RT-AX55/FW_RT_AX55_300438645375.zip?
 
 总之，路由器版本的文件系统没有办法从固件解包得到。
 
+## 文件系统获取
+发现路由器可以打开telnet和ssh服务，就使用`scp`命令将文件系统从路由器传到主机上来。如
+```
+scp -r admin@192.168.50.1:/bin ./
+```
+
+
 
 
 
