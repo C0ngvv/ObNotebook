@@ -13,3 +13,8 @@ char *strsep(char **stringp, const char *delim)
 ```
 int strncasecmp(const char *s1, const char *s2, size_t n);
 ```
+
+`strcat` 把 **src** 所指向的字符串追加到 **dest** 所指向的字符串的结尾。
+```
+char *strcat(char *dest, const char *src)
+```

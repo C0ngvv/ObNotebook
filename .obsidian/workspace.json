@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -107,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
+                "file": "语法/C/零散知识/C零散知识.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
+                "file": "语法/C/零散知识/C零散知识.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md"
+                "file": "语法/C/零散知识/C零散知识.md"
               }
             }
           },
@@ -178,10 +177,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "148657e66961806a",
+  "active": "586a0f4bec3623a2",
   "lastOpenFiles": [
-    "语法/C/零散知识/C零散知识.md",
     "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
+    "语法/C/零散知识/C零散知识.md",
     "固件分析/asuswrt-merlin httpd分析",
     "语法/C/C.md",
     "语法/C/零散知识",
