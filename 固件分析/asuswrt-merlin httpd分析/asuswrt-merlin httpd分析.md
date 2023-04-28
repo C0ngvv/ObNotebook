@@ -29,6 +29,19 @@ struct mime_handler {
 };
 ```
 
+案例如下
+```c
+struct mime_handler mime_handlers[] = {
+	{ "Main_Login.asp", "text/html", no_cache_IE7, do_html_post_and_get, do_ej, NULL },
+	{ "Nologin.asp", "text/html", no_cache_IE7, do_html_post_and_get, do_ej, NULL },
+	{ "error_page.htm*", "text/html", no_cache_IE7, do_html_post_and_get, do_ej, NULL },
+	{ "blocking.asp", "text/html", no_cache_IE7, do_html_post_and_get, do_ej, NULL },
+	{ "gotoHomePage.htm", "text/html", no_cache_IE7, do_html_post_and_get, do_ej, NULL },
+	{ "ure_success.htm", "text/html", no_cache_IE7, do_html_post_and_get, do_ej, NULL },
+	{ "ureip.asp", "text/html", no_cache_IE7, do_html_post_and_get, do_ej, NULL },
+}
+```
+
 依次将mine_handlers中元素的pattern和url对比，若匹配就执行相关操作，若不匹配，则根据情况返回200或404 Not Found。
 ```c
 	for (handler = &mime_handlers[0]; handler->pattern; handler++) {
