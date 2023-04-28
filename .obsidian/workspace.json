@@ -30,6 +30,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "6d5639ef3fc3b830",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
         "currentTab": 1
@@ -180,16 +192,18 @@
   },
   "active": "148657e66961806a",
   "lastOpenFiles": [
-    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
+    "固件分析/华硕RT-AX56U/images/Pasted image 20230428114205.png",
+    "固件分析/华硕RT-AX56U/images/Pasted image 20230428114048.png",
+    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+    "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
     "语法/C/零散知识/C零散知识.md",
+    "固件分析/华硕RT-AX56U_V2/华硕RT-AX56U_V2.md",
+    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
     "固件分析/asuswrt-merlin httpd分析",
     "语法/C/C.md",
     "语法/C/零散知识",
-    "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
     "语法/C",
     "语法",
-    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
-    "固件分析/华硕RT-AX56U_V2/华硕RT-AX56U_V2.md",
     "固件分析/华硕RT-AX56U_V2/images/Pasted image 20230427220703.png",
     "固件分析/华硕RT-AX56U_V2/images/Pasted image 20230427213006.png",
     "固件分析/华硕RT-AX56U_V2/images/Pasted image 20230427212131.png",
@@ -208,7 +222,6 @@
     "固件分析/华硕RT-AX56U_V2/images",
     "固件分析/华硕RT-AX56U_V2",
     "工具/FirmAFL/FirmAFL分析/FirmAFL分析.md",
-    "固件分析/华硕RT-AX56U/images/Pasted image 20230427115905.png",
     "固件分析/华硕RT-AX56U/images",
     "课程/强化学习/Windows虚拟环境/Windows虚拟环境.md",
     "固件分析/华硕RT-AX56U",
@@ -224,7 +237,6 @@
     "images/Pasted image 20230422004835.png.md",
     "Paper/EQUAFL/EQUAFL.md",
     "Paper/firmae/FirmAE.md",
-    "Paper/firmadyne/firmadyne.md",
-    "Paper/AFL++/AFL++.md"
+    "Paper/firmadyne/firmadyne.md"
   ]
 }
