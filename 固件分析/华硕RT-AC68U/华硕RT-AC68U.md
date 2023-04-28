@@ -86,7 +86,7 @@ mkdir -p /firmadyne/libnvram.override/
 
 挂载
 ```bash
-sudo mount -t tmpfs -o size=10M tmpfs /fimadyne/libnvram
+sudo mount -t tmpfs -o size=10M tmpfs /firmadyne/libnvram
 ```
 
 查看系统分区 `df -hT` 
