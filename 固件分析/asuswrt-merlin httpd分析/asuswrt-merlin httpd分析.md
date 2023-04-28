@@ -16,6 +16,19 @@
 
 
 ### mine_handler
+`mime_handler` 结构体
+```c
+/* Generic MIME type handler */
+struct mime_handler {
+	char *pattern;
+	char *mime_type;
+	char *extra_header;
+	void (*input)(char *path, FILE *stream, int len, char *boundary);
+	void (*output)(char *path, FILE *stream);
+	void (*auth)(char *userid, char *passwd, char *realm);
+};
+```
+
 依次将mine_handlers中元素的pattern和url对比，若匹配就执行相关操作，若不匹配，则根据情况返回200或404 Not Found。
 ```c
 	for (handler = &mime_handlers[0]; handler->pattern; handler++) {
@@ -23,6 +36,13 @@
 	}
 	if (!handler->pattern){...}
 ```
+
+经过一系列认证等验证操作后，调用`handler->input()`执行相关操作。
+
+
+
+
+
 
 
 nvram取消设置
