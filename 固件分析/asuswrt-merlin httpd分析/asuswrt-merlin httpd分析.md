@@ -20,12 +20,12 @@
 ```c
 /* Generic MIME type handler */
 struct mime_handler {
-	char *pattern;
-	char *mime_type;
-	char *extra_header;
-	void (*input)(char *path, FILE *stream, int len, char *boundary);
-	void (*output)(char *path, FILE *stream);
-	void (*auth)(char *userid, char *passwd, char *realm);
+	char *pattern;    //接口名称
+	char *mime_type;    //Accept格式
+	char *extra_header;    //Cache-Control
+	void (*input)(char *path, FILE *stream, int len, char *boundary);  //获取data中内容
+	void (*output)(char *path, FILE *stream);    //处理函数
+	void (*auth)(char *userid, char *passwd, char *realm);    //校验权限
 };
 ```
 
