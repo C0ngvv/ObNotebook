@@ -18,3 +18,7 @@ int strncasecmp(const char *s1, const char *s2, size_t n);
 ```
 char *strcat(char *dest, const char *src)
 ```
+
+
+## 问题记录
+1. IDA无法对`mime_handler` 结构体数组解析，导致交叉引用不到对应的函数等内容
