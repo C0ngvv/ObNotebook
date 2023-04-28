@@ -81,7 +81,7 @@ int main_hook(int argc, char **argv, char **envp)
  * Wrapper for __libc_start_main() that replaces the real main
  * function with our hooked version.
  */
-int __uClibc_main(
+int __libc_start_main(
     int (*main)(int, char **, char **),
     int argc,
     char **argv,
@@ -94,7 +94,7 @@ int __uClibc_main(
     main_orig = main;
 
     /* Find the real __libc_start_main()... */
-    typeof(&__uClibc_main) orig = dlsym(RTLD_NEXT, "__uClibc_main");
+    typeof(&__libc_start_main) orig = dlsym(RTLD_NEXT, "__libc_start_main");
 
     /* ... and call it with our custom main function */
     return orig(main_hook, argc, argv, init, fini, rtld_fini, stack_end);
@@ -109,14 +109,23 @@ export LD_LIBRARY_PATH="/home/ubuntu/Desktop/am-toolchains/brcm-arm-sdk/hndtools
 
 将libnvram.so拷到当前目录
 
-创建./test.txt文件，里面是网络数据包数据
+创建test文件，里面是网络数据包数据
 ```
-GET /demo HTTP/1.1
-Upgrade: WebSocket
-Connection: Upgrade
-Host: example.com
-Origin: http://example.com
-WebSocket-Protocol: sample
+POST /caupload.cgi HTTP/1.1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:56.0) Gecko/20100101 Firefox/56.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://192.168.50.1/Advanced_VPNClient_Content.asp
+Content-Type: application/x-www-form-urlencoded; boundary=---------------------------90665545817618071411188093951
+Content-Length: 96
+Cookie: clickedItem_tab=0; hwaddr=A8:5E:45:DD:96:08; apps_last=; maxBandwidth=100; bw_rtab=INTERNET; 
+Connection: close
+Upgrade-Insecure-Requests: 1
+
+Content-Disposition: form-data; name="file_ca"; filename=aaa
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 ```
 
 仿真运行
@@ -130,11 +139,14 @@ qemu-arm -L ./rootfs_ubifs -E LD_PRELOAD=./libnvram.so:./main_hook.so ./rootfs_u
 
 再运行就仿真起来了
 
-![](images/Pasted%20image%2020230428114205.png)
+![](images/Pasted%20image%2020230428121438.png)
 
+段错误因为没有x_Setting值，添加进去。
+```
+python3 -c 'open("/firmadyne/libnvram/x_Setting", "w").write("0")'
+```
 
-
-
+![](images/Pasted%20image%2020230428121740.png)
 
 
 
