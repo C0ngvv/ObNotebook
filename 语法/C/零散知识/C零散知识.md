@@ -8,3 +8,8 @@ char *fgets(char *str, int n, FILE *stream)
 ```
 char *strsep(char **stringp, const char *delim)
 ```
+
+`strncasecmp` 比较参数s1 和s2 字符串前n个字符，比较时会自动忽略大小写的差异。
+```
+int strncasecmp(const char *s1, const char *s2, size_t n);
+```
