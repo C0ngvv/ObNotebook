@@ -46,4 +46,5 @@ sudo chroot . ./qemu-arm-static ./usr/sbin/httpd
 查看文件系统，发现里面存在`etc/init.d/*` 内容，因此先研究一下正常linux启动过程。
 
 
-
+文章
+[Asus 路由器栈溢出漏洞分析](https://www.ctfiot.com/31802.html)

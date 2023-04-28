@@ -50,13 +50,7 @@ struct mime_handler mime_handlers[] = {
 	if (!handler->pattern){...}
 ```
 
-经过一系列认证等验证操作后，调用`handler->input()`执行相关操作。
-
-
-
-
-
-
+经过一系列认证等验证操作后，调用`handler->output()`执行相关操作。
 
 nvram取消设置
 ```c
@@ -74,3 +68,5 @@ nvram_set_int("httpd_handle_request_fromapp", fromapp);
 
 
 
+## 问题记录
+1. IDA无法对`mime_handler` 结构体数组解析，导致交叉引用不到对应的函数等内容

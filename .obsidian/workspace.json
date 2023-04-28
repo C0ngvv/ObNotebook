@@ -25,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
+                "file": "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "语法/C/零散知识/C零散知识.md",
+                "file": "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "语法/C/零散知识/C零散知识.md",
+                "file": "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "语法/C/零散知识/C零散知识.md"
+                "file": "固件分析/华硕RT-AX56U/华硕RT-AX56U.md"
               }
             }
           },
@@ -177,7 +178,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "586a0f4bec3623a2",
+  "active": "148657e66961806a",
   "lastOpenFiles": [
     "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
     "语法/C/零散知识/C零散知识.md",
