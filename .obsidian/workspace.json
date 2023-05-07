@@ -4,57 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "e5b13ac4eaac7f38",
+        "id": "950359be37385e72",
         "type": "tabs",
         "children": [
           {
-            "id": "586a0f4bec3623a2",
+            "id": "55c8b0edfaed0c19",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "语法/C/零散知识/C零散知识.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6d5639ef3fc3b830",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d68052b51e2200ab",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.2.7"
-              }
-            }
-          },
-          {
-            "id": "59f68eed0089431a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -137,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "课程/强化学习/Texi-v2/Texi-v2.md",
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "课程/强化学习/Texi-v2/Texi-v2.md"
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md"
               }
             }
           },
@@ -208,12 +174,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d68052b51e2200ab",
+  "active": "55c8b0edfaed0c19",
   "lastOpenFiles": [
+    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230507223855.png",
+    "固件分析/用AFL++模糊iot二进制/images",
+    "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+    "固件分析/用AFL++模糊iot二进制",
+    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "课程/强化学习/实验环境配置/实验环境配置.md",
     "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
     "固件分析/华硕RT-AX56U/images/Pasted image 20230428121740.png",
-    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "固件分析/华硕RT-AX56U/images/Pasted image 20230428121438.png",
     "固件分析/华硕RT-AX56U/images/Pasted image 20230428114205.png",
     "固件分析/华硕RT-AX56U/images/Pasted image 20230428114048.png",
@@ -244,8 +214,6 @@
     "课程/强化学习/Windows虚拟环境/Windows虚拟环境.md",
     "固件分析/华硕RT-AX56U",
     "课程/强化学习/Texi-v2/Texi-v2.md",
-    "工具/FirmAFL/FirmAFL分析",
-    "工具/FirmAFL",
     "网络/linux/linux.md",
     "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "Paper/firmadyne与firmae总结/firmware.md",
@@ -253,7 +221,6 @@
     "网络/Download网络问题.md",
     "images/Pasted image 20230422004835.png.md",
     "Paper/EQUAFL/EQUAFL.md",
-    "Paper/firmae/FirmAE.md",
-    "Paper/firmadyne/firmadyne.md"
+    "Paper/firmae/FirmAE.md"
   ]
 }
