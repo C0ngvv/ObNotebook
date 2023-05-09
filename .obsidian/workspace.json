@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+                "file": "Paper/Snipfuzz/Snipfuzz.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+                "file": "Paper/Snipfuzz/Snipfuzz.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+                "file": "Paper/Snipfuzz/Snipfuzz.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md"
+                "file": "Paper/Snipfuzz/Snipfuzz.md"
               }
             }
           },
@@ -176,9 +176,14 @@
   },
   "active": "55c8b0edfaed0c19",
   "lastOpenFiles": [
+    "Paper/Snipfuzz/images/Pasted image 20230509231957.png",
+    "Paper/Snipfuzz/images/Pasted image 20230509231008.png",
+    "Paper/Snipfuzz/images",
+    "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+    "Paper/Snipfuzz/Snipfuzz.md",
+    "Paper/Snipfuzz",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230507223855.png",
     "固件分析/用AFL++模糊iot二进制/images",
-    "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
     "固件分析/用AFL++模糊iot二进制",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "课程/强化学习/实验环境配置/实验环境配置.md",
@@ -199,20 +204,16 @@
     "固件分析/华硕RT-AX56U_V2/images/Pasted image 20230427213006.png",
     "固件分析/华硕RT-AX56U_V2/images/Pasted image 20230427212131.png",
     "固件分析/华硕RT-AX56U_V2/images/Pasted image 20230427211545.png",
-    "固件分析/华硕RT-AX56U_V2/images/Pasted image 20230427211433.png",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
     "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "工具/EQUAFL/工具README/工具README.md",
     "工具/Fuzztruction/Fuzz新程序流程2/Fuzz一个新程序的流程二：构建.md",
     "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
-    "固件分析/华硕RT-AX56U_V2/images/Pasted image 20230427192255.png",
     "固件分析/华硕RT-AX56U_V2/images",
     "固件分析/华硕RT-AX56U_V2",
     "工具/FirmAFL/FirmAFL分析/FirmAFL分析.md",
-    "固件分析/华硕RT-AX56U/images",
     "课程/强化学习/Windows虚拟环境/Windows虚拟环境.md",
-    "固件分析/华硕RT-AX56U",
     "课程/强化学习/Texi-v2/Texi-v2.md",
     "网络/linux/linux.md",
     "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
@@ -220,7 +221,6 @@
     "固件分析/TODO List.md",
     "网络/Download网络问题.md",
     "images/Pasted image 20230422004835.png.md",
-    "Paper/EQUAFL/EQUAFL.md",
-    "Paper/firmae/FirmAE.md"
+    "Paper/EQUAFL/EQUAFL.md"
   ]
 }
