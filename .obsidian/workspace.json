@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "c6b4d043553ce4cc",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.2.8"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -184,7 +173,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c6b4d043553ce4cc",
+  "active": "55c8b0edfaed0c19",
   "lastOpenFiles": [
     "Paper/Snipfuzz/images/Pasted image 20230510111725.png",
     "Paper/Snipfuzz/images/Pasted image 20230510111233.png",
