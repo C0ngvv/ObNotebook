@@ -175,6 +175,9 @@
   },
   "active": "55c8b0edfaed0c19",
   "lastOpenFiles": [
+    "固件分析/Fortigate漏洞分析/images/Pasted image 20230513110255.png",
+    "固件分析/Fortigate漏洞分析/images/Pasted image 20230513105818.png",
+    "固件分析/Fortigate漏洞分析/images/Pasted image 20230513105735.png",
     "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "conflict-files-obsidian-git.md",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230512214421.png",
@@ -196,8 +199,6 @@
     "Paper/Snipfuzz/images/Pasted image 20230510111020.png",
     "Paper/Snipfuzz/images/Pasted image 20230510111004.png",
     "Paper/Snipfuzz/images/Pasted image 20230510103421.png",
-    "Paper/Snipfuzz/images/Pasted image 20230510102048.png",
-    "Paper/Snipfuzz/images/Pasted image 20230510101256.png",
     "Paper/Snipfuzz/images",
     "Paper/Snipfuzz",
     "固件分析/用AFL++模糊iot二进制/images",
@@ -219,7 +220,6 @@
     "网络/linux/linux.md",
     "Paper/firmadyne与firmae总结/firmware.md",
     "固件分析/TODO List.md",
-    "网络/Download网络问题.md",
-    "images/Pasted image 20230422004835.png.md"
+    "网络/Download网络问题.md"
   ]
 }

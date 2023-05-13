@@ -19,7 +19,9 @@ show system interface
 config system interface
 edit port1
 set mode static
-set ip 192.168.65.99/24
+set ip 192.168.219.99/24
+set allowaccess ping http https fgfm snmp ssh telnet
+end
 ```
 
 通过`fnsysctl`命令可以执行一些linux基本命令。
@@ -28,9 +30,22 @@ fnsysctl ls
 ```
 
 ## 漏洞分析
+资源下载：
 
+[Fortigate Firewalls - 'EGREGIOUSBLUNDER' Remote Code Execution - Hardware webapps Exploit (exploit-db.com)](https://www.exploit-db.com/exploits/40276)
 
+[AlphabugX/nopen: NOPEN Tool 又名“morerats” 莫雷斯特，是方程式工具包里的工具。 (github.com)](https://github.com/AlphabugX/nopen/tree/main)
 
+获取一个cookie num
+```
+curl -X HEAD -v http://192.168.219.99/login 2>&1 | grep 'APSCOOKIE'
+```
 
+![](images/Pasted%20image%2020230513110255.png)
 
+使用 `egregiousblunder` 测试该漏洞，如下：
+![](images/Pasted%20image%2020230513105735.png)
+
+此时在 fortigate 的 CLI 中我们便可以看到 httpsd 服务的崩溃信息及栈回溯
+![](images/Pasted%20image%2020230513105818.png)
 
