@@ -4,7 +4,21 @@
 这里以思科_RV130X_FW_1.0.3.55.bin固件为例，下载地址：
 https://software.cisco.com/download/home/285026142/type/282465789/release/1.0.3.55
 
-下载完后用binwalk解压得到文件系统，用qemu-arm-static模拟`usr/sbin/httpd`，
+下载完后用binwalk解压得到文件系统，进入www目录，用qemu-arm-static模拟`usr/sbin/httpd`.
+```
+sudo qemu-arm-static -L .. ../usr/sbin/httpd
+sudo netstat -alnp | grep qemu
+```
+
+![](images/Pasted%20image%2020230514104837.png)
+
+打开浏览器访问`http://127.0.0.1` 
+
+![](images/Pasted%20image%2020230514104923.png)
+
+使用Burp Suite用`admin:123456` 登录抓包
+
+
 
 配置好afl++和Qemu模式。
 
