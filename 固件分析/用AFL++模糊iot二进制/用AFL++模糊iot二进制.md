@@ -58,6 +58,13 @@ submit_button=login&submit_type=&gui_action=&wait_time=0&change_action=&enc=1&co
 
 要关闭一个socket，`httpd`调用`close`函数。有三个地方调用close。
 
+![](images/Pasted%20image%2020230514202235.png)
+
+在它们之间，我们需要修改在`0x231c0` 位置的调用`exit(0)` 而不是`close` 。
+
+
+
+
 
 
 
