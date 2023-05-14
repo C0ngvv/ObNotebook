@@ -1,5 +1,18 @@
 这篇文章介绍使用AFL++模糊套接字的二进制文件。
 
+## 准备工作
+这里以思科_RV130X_FW_1.0.3.55.bin固件为例，下载地址：
+https://software.cisco.com/download/home/285026142/type/282465789/release/1.0.3.55
+
+下载完后用binwalk解压得到文件系统，用qemu-arm-static模拟`usr/sbin/httpd`，
+
+配置好afl++和Qemu模式。
+
+
+
+
+## 开始
+
 为使用AFL++进行模糊测试，程序必须接收来自文件的输入。因此我们需要进行二进制水平的修改，通过patch汇编指令和`LD_PRELOAD` 技巧。Github上的[desockmulti](https://github.com/zyingp/desockmulti?ref=blog.attify.com)项目可以用于这个目的。
 
 在使用这个[desockmulti](https://github.com/zyingp/desockmulti?ref=blog.attify.com) 前，我们需
@@ -25,4 +38,3 @@
 [Fuzzing IoT binaries with AFL++ - Part I (attify.com)](https://blog.attify.com/fuzzing-iot-devices-part-1/)
 
 [Fuzzing IoT binaries with AFL++ - Part II (attify.com)](https://blog.attify.com/fuzzing-iot-binaries-with-afl-part-ii/)
-
