@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "950359be37385e72",
+        "id": "4f4d5ddaf9c17724",
         "type": "tabs",
         "children": [
           {
-            "id": "55c8b0edfaed0c19",
+            "id": "2bc11ad93e45de1f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -102,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md"
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md"
               }
             }
           },
@@ -173,8 +174,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "55c8b0edfaed0c19",
+  "active": "2bc11ad93e45de1f",
   "lastOpenFiles": [
+    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230513113918.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230513113828.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230513110255.png",
@@ -185,7 +187,6 @@
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230512214421.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230512214210.png",
     "固件分析/Fortigate漏洞分析/images",
-    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "固件分析/Fortigate漏洞分析",
     "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
     "固件分析/华硕RT-AX56U_V2/华硕RT-AX56U_V2.md",
@@ -198,7 +199,6 @@
     "Paper/Snipfuzz/Snipuzz.md",
     "Paper/Snipfuzz/images/Pasted image 20230510111725.png",
     "Paper/Snipfuzz/images/Pasted image 20230510111233.png",
-    "Paper/Snipfuzz/images/Pasted image 20230510111020.png",
     "Paper/Snipfuzz/images",
     "Paper/Snipfuzz",
     "固件分析/用AFL++模糊iot二进制/images",
