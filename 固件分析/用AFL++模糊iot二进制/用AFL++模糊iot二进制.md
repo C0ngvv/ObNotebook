@@ -1,6 +1,6 @@
 这篇文章介绍使用AFL++模糊套接字的二进制文件。
 
-## 准备工作
+## 固件下载与仿真
 这里以思科_RV130X_FW_1.0.3.55.bin固件为例，下载地址：
 https://software.cisco.com/download/home/285026142/type/282465789/release/1.0.3.55
 
@@ -18,11 +18,30 @@ sudo netstat -alnp | grep qemu
 
 使用Burp Suite用`admin:123456` 登录抓包
 
+![](images/Pasted%20image%2020230514105830.png)
 
+```
+POST /login.cgi HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 139
+Origin: http://127.0.0.1
+Connection: close
+Referer: http://127.0.0.1/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+
+submit_button=login&submit_type=&gui_action=&wait_time=0&change_action=&enc=1&continue_key=&user=admin&pwd=3ff83912fdb4176a21cd5c93e2094554
+```
 
 配置好afl++和Qemu模式。
-
-
 
 
 ## 开始
@@ -45,6 +64,8 @@ sudo netstat -alnp | grep qemu
 
 
 
+## 其他问题
+Burp Suite抓不到127.0.0.1的包：[(169条消息) 设置burpsuite抓取localhost、127.0.0.1数据,解决无法抓取拦截本机数据包_burpsuite怎么查localhost_陌兮_的博客-CSDN博客](https://blog.csdn.net/m0_47470899/article/details/119298514)
 
 
 
