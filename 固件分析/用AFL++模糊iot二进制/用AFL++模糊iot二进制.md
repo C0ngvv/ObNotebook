@@ -62,7 +62,16 @@ submit_button=login&submit_type=&gui_action=&wait_time=0&change_action=&enc=1&co
 
 在它们之间，我们需要修改在`0x231c0` 位置的调用`exit(0)` 而不是`close` 。
 
+根据文章上的内容进行hook。
 
+## 出现的问题
+使用`desockmulti`后，响应返回值变成了400，而不是200。
+
+调试，不使用`desockmulti` ·
+```
+# squashfs-root/www/
+sudo qemu-arm-static -g 5555 -L .. -E USE_RAW_FORMAT=1 -E LD_PRELOAD=../desockmulti.so ../usr/sbin/httpd_patched -p 8081 < ../../base-login-request.txt
+```
 
 
 
