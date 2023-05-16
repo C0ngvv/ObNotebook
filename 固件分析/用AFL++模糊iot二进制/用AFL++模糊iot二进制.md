@@ -67,7 +67,7 @@ submit_button=login&submit_type=&gui_action=&wait_time=0&change_action=&enc=1&co
 ## 出现的问题
 使用`desockmulti`后，响应返回值变成了400，而不是200。
 
-调试，不使用`desockmulti` ·
+调试，使用`desockmulti` ·
 ```
 # squashfs-root/www/
 sudo qemu-arm-static -g 5555 -L .. -E USE_RAW_FORMAT=1 -E LD_PRELOAD=../desockmulti.so ../usr/sbin/httpd_patched -p 8081 < ../../base-login-request.txt
