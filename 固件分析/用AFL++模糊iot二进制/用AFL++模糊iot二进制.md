@@ -70,7 +70,7 @@ submit_button=login&submit_type=&gui_action=&wait_time=0&change_action=&enc=1&co
 调试，使用`desockmulti` ·
 ```
 # squashfs-root/www/
-sudo qemu-arm-static -g 5555 -L .. -E USE_RAW_FORMAT=1 -E LD_PRELOAD=../desockmulti.so ../usr/sbin/httpd_patched -p 8081 < ../../base-login-request.txt
+sudo qemu-arm-static -g 5556 -L .. -E USE_RAW_FORMAT=1 -E LD_PRELOAD=../desockmulti.so ../usr/sbin/httpd_patched -p 8081 < ../../base-login-request.txt
 ```
 
 调试，不使用`desockmulti` 
