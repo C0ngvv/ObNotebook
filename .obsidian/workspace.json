@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -102,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md"
+                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md"
               }
             }
           },
@@ -159,8 +160,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5,
-    "collapsed": true
+    "width": 267.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -175,6 +175,7 @@
   },
   "active": "3fc4540656ded176",
   "lastOpenFiles": [
+    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517112124.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517112037.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517110442.png",
@@ -185,8 +186,6 @@
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517105501.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517105312.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517102637.png",
-    "固件分析/Fortigate漏洞分析/images/Pasted image 20230517102230.png",
-    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
     "Paper/MultiFuzz/MultiFuzz.md",
     "Paper/Snipfuzz.zip",
