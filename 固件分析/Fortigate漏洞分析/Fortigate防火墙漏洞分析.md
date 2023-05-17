@@ -69,13 +69,44 @@ sudo mount /dev/nbd1p1 /mnt/fortios
 
 解压 `rootfs.gz`
 
+![](images/Pasted%20image%2020230517101246.png)
 
+## 启动过程分析
+### init
+Linux 内核载入后会启动第一个进程 `init`，程序二进制文件通常是 `/sbin/init`，将其拖入 IDA 进行分析：
 
+![](images/Pasted%20image%2020230517101510.png)
 
+故 init 进程分析如下：
+-   检查 `/bin.tar.xz` 是否存在，若是则创建子进程执行 `/sbin/xz --check=sha256 -d /bin.tar.xz`，父进程等待子进程结束后删除`/bin.tar.xz`，之后检查 `/bin.tar` 是否存在，若是则创建子进程执行 `/sbin/ftar -xf /bin.tar`，父进程等待子进程结束后删除`/bin.tar`
+-   上一步成功后检查 `/migadmin.tar.xz` 是否存在，若是则创建子进程执行 `/sbin/xz --check=sha256 -d /migadmin.tar.xz`，父进程等待子进程结束后删除`/migadmin.tar.xz`，之后检查 `/migadmin.tar` 是否存在，若是则创建子进程执行 `/sbin/ftar -xf /migadmin.tar`，父进程等待子进程结束后删除`/migadmin.tar`
+-   删除 `/sbin/xz`
+-   删除 `/sbin/ftar`
+-   执行 `/bin/init`
 
+切换目录进行解压
+```
+sudo chroot . /sbin/xz --check=sha256 -d /bin.tar.xz 
+sudo chroot . /sbin/ftar -xf /bin.tar 
+sudo chroot . /sbin/xz --check=sha256 -d /migadmin.tar.xz 
+sudo chroot . /sbin/ftar -xf /migadmin.tar
+```
 
+### bin目录
+`bin.tar.xz` 解压出来的文件基本上都是指向 `/bin/init` 与 `/bin/sysctl` 的软链接。其中诸如 `httpsd` 等网络服务都是前者的软链接，可知前者应当为该防火墙提供的基本的网络服务；而诸如 `chmod` 等常用命令都是后者的软链接，可知后者应当为类似 busybox 一样的工具库，不过更为精简。
 
+![](images/Pasted%20image%2020230517101950.png)
 
+![](images/Pasted%20image%2020230517102041.png)
+
+### bin/init分析
+首先会执行 `/bin/initXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` 替换自身，该文件其实是 `/bin/init` 的软链接，故这里本质上只是更改了 pid 与 argv[0]，随后会关闭三个标准文件描述符并改变当前工作目录为 `/`，打开 `/dev/null` 并创建三个指向其的文件描述符（0、1、2）。
+
+![](images/Pasted%20image%2020230517102230.png)
+
+启动后的界面如下：
+
+![](images/Pasted%20image%2020230517102637.png)
 
 ## PoC
 工具下载：
@@ -141,6 +172,11 @@ print(r.text)
 print(r.headers)
 ```
 
+## 溢出点定位
+
+
+
+## 漏洞利用
 
 
 
