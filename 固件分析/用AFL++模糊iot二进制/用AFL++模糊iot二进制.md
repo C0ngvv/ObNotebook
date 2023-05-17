@@ -79,7 +79,12 @@ sudo qemu-arm-static -g 5555 -L .. -E USE_RAW_FORMAT=1 -E LD_PRELOAD=../desockmu
 sudo qemu-arm-static -g 5555 -L .. ../usr/sbin/httpd_patched -p 8081
 ```
 
-
+gdb调试
+```
+gdb-multiarch -q ./usr/sbin/httpd_patched
+b fprintf
+target remote :5555
+```
 
 
 
