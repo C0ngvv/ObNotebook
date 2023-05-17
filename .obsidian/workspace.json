@@ -86,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -176,18 +175,19 @@
   },
   "active": "3fc4540656ded176",
   "lastOpenFiles": [
+    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517170351.png",
+    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517170233.png",
+    "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517170005.png",
+    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517165723.png",
+    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517165722.png",
+    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517165523.png",
     "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517112124.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517112037.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517110442.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517110238.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517110206.png",
-    "固件分析/Fortigate漏洞分析/images/Pasted image 20230517110121.png",
-    "固件分析/Fortigate漏洞分析/images/Pasted image 20230517105821.png",
-    "固件分析/Fortigate漏洞分析/images/Pasted image 20230517105501.png",
-    "固件分析/Fortigate漏洞分析/images/Pasted image 20230517105312.png",
-    "固件分析/Fortigate漏洞分析/images/Pasted image 20230517102637.png",
-    "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
     "Paper/MultiFuzz/MultiFuzz.md",
     "Paper/Snipfuzz.zip",
     "Paper/MultiFuzz/images",

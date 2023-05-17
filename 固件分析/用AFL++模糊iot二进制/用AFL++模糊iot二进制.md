@@ -86,12 +86,27 @@ b fprintf
 target remote :5555
 ```
 
+复现结果与文章不太相同，文章使用`desockmulti` 后使用文件请求后返回值为200，而我的返回值为400，经过调试后发现因为`sub_1EEAC(v45)`返回值不同，正常与不正常响应分别进入了不同的分支。
+
+![](images/Pasted%20image%2020230517165523.png)
+
+进一步调试发现是因为该函数中的调用`nvram_match("http_from", "lan")` 返回值不同。
+
+![](images/Pasted%20image%2020230517165722.png)
+
+继续调试发现主函数`sub_228AC()`中，会根据`dword_A9984` 的值执行不同的关于`http_from`的nvram设置，正常响应会执行第一个if。所以`dword_A9984`值的不同导致了不同的响应。
+
+![](images/Pasted%20image%2020230517170005.png)
+
+该值由函数`sub_1E6E8()` 赋值，且该函数被调用很多次。
+
+![](images/Pasted%20image%2020230517170351.png)
+
 
 
 
 ## 其他问题
 Burp Suite抓不到127.0.0.1的包：[(169条消息) 设置burpsuite抓取localhost、127.0.0.1数据,解决无法抓取拦截本机数据包_burpsuite怎么查localhost_陌兮_的博客-CSDN博客](https://blog.csdn.net/m0_47470899/article/details/119298514)
-
 
 
 ## 参考链接
