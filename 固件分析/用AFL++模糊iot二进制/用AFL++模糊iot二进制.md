@@ -125,7 +125,9 @@ b *0x1E6FC
 
 总结，问题是因为patch后将套接字类型将`sa_family`的值给改变了，改成了`AF_UNIX` (1)，程序在对这个值进行判断时没有相应的解析就会出错。此外还发现`desockmulti.so`实现时没有实现`setsockopt()` 函数，而是直接返回0，这个也可能导致会程序不一致现象发生。
 
+终于，fuzz起来了！！
 
+![](images/Pasted%20image%2020230519220259.png)
 
 ## 其他问题
 Burp Suite抓不到127.0.0.1的包：[(169条消息) 设置burpsuite抓取localhost、127.0.0.1数据,解决无法抓取拦截本机数据包_burpsuite怎么查localhost_陌兮_的博客-CSDN博客](https://blog.csdn.net/m0_47470899/article/details/119298514)
