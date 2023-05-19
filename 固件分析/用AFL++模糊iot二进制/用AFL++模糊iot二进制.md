@@ -102,6 +102,16 @@ target remote :5555
 
 ![](images/Pasted%20image%2020230517170351.png)
 
+给sub_1E6E8()下断点
+```
+b *0x23634
+b *0x23618
+b *0x23600
+b *0x23598
+b *0x23658
+
+b *0x1E6FC
+```
 
 
 
