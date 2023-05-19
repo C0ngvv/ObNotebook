@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "bc5465e4d92ad088",
+        "id": "6a4701d9f278347e",
         "type": "tabs",
         "children": [
           {
-            "id": "3fc4540656ded176",
+            "id": "7045e366c012c71c",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/MultiFuzz/MultiFuzz.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -102,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/MultiFuzz/MultiFuzz.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/MultiFuzz/MultiFuzz.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Paper/MultiFuzz/MultiFuzz.md"
-              }
+              "state": {}
             }
           },
           {
@@ -159,8 +151,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5,
-    "collapsed": true
+    "width": 267.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,21 +164,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3fc4540656ded176",
+  "active": "7045e366c012c71c",
   "lastOpenFiles": [
     "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+    "Paper/MultiFuzz/MultiFuzz.md",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517170351.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517170233.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517170005.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517165723.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517165722.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230517165523.png",
-    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517112124.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517112037.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517110442.png",
     "固件分析/Fortigate漏洞分析/images/Pasted image 20230517110238.png",
-    "Paper/MultiFuzz/MultiFuzz.md",
     "Paper/Snipfuzz.zip",
     "Paper/MultiFuzz/images",
     "Paper/MultiFuzz",
