@@ -112,34 +112,76 @@ submit_button=login&submit_type=&gui_action=&wait_time=0&change_action=&enc=1&co
 ![](images/Pasted%20image%2020230520110050.png)
 
 最后保存：文件->提交更改，如果设置模式是写入模式的话原始应该已经修改好了，我们将修改后的程序命名为`httpd_patched` ，下面我们对patch过的程序进行测试。
+```shell
+# 启动服务
+sudo ./qemu-arm-static -L .. ../usr/sbin/httpd_patched -p 8081
+# 在另一个终端用curl访问
+curl http://127.0.0.1:8081 | head
 ```
 
+可以看到，当我们使用curl进行访问后，程序就自动关闭了。
+
+![](images/Pasted%20image%2020230520111113.png)
+
+## 配置desockmulti
+工具地址：[zyingp/desockmulti](https://github.com/zyingp/desockmulti?ref=blog.attify.com)
+
+这个工具是论文[MultiFuzz](https://www.mdpi.com/1424-8220/20/18/5194/pdf)提供的一个工具，它利用LD_PRELOAD对程序与socket相关的函数进行hook，从而将网络数据流转变为标准输入输出，进而可以使用AFL++进行模糊测试。
+
+### 编译
+我们需要使用一个ARM交叉编译器来编译desockmulti。来自bootlin的[armv7-eabihf-uclibc](https://toolchains.bootlin.com/?ref=blog.attify.com)工具链对这一目的非常有效。我们需要使用一个基于uclibc的工具链，因为固件的二进制文件也使用相同的工具链。在/usr/bin/httpd上运行文件命令，指出二进制文件是动态链接到ld-uClibc的。我下载的工具链接为：[armv7-eabihf--uclibc--stable-2020.08-1](https://toolchains.bootlin.com/downloads/releases/toolchains/armv7-eabihf/tarballs/armv7-eabihf--uclibc--stable-2020.08-1.tar.bz2)
+
+![](images/Pasted%20image%2020230520112034.png)
+
+在对desockmulti进行编译前，需要对它的源码进行轻微改变：将453行对`setup_timer()` 函数的调用注释掉。
+
+![](images/Pasted%20image%2020230520112518.png)
+
+然后在desockmulti目录下运行命令进行编译，然后将`desockmulti.so` 复制到squashfs-root目录下。
+```shell
+make CC=~/Desktop/armv7-eabihf--uclibc--stable-2020.08-1/bin/arm-linux-gcc
 ```
 
+### 测试desockmulti
+为了测试desockmulti是否真的如预期那样工作，我们可以用gdb-multiarch调试httpd。因为desockmulti使用线程，而httpd默认不链接libpthread，因此我们需要用`patchelf` 添加一个到libpthread.so.0库的依赖项。`patchelf` 可以用apt安装。
+```shell
+patchelf --add-needed ./lib/libpthread.so.0 ./usr/sbin/httpd_patched
+```
 
+在终端1输入下面命令，使用desockmulti.so启动http_patched并将base-login-request.txt文件内容传递给程序。
+```
+sudo ./qemu-arm-static -g 5555 -L .. -E USE_RAW_FORMAT=1 -E LD_PRELOAD=../desockmulti.so ../usr/sbin/httpd_patched -p 8081 < ../../base-login-request.txt
+```
 
+然后在另一个终端启动`gdb-multiarch`调试
+```shell
+gdb-multiarch -q ./usr/sbin/httpd_patched
+(gdb)
+b fprintf
+target remote :5555
+```
+
+给`fprintf`下断点，然后按`c` 运行，每次到断点时检测寄存器`r2`的值。按照参考的文章介绍，`r2`寄存器会出现`HTTP/1.1 200 Ok\r\n`的情况，即HTTP响应的第一行，可以证明desockmulti在起作用。但我在调试的时候没有出现200，而是得到了400：`HTTP/1.1 400 Bad Request (10)\r\n'`。
+
+![](images/Pasted%20image%2020230520114124.png)
+
+出现这种不一致的原因我后面会进行分析，但在这里出现这个字符串也可以证明`desockmulti` 起作用了。
+
+## 进一步改进：权限问题
+目前运行程序需要管理员权限，不然的话会提示`/var/run/httpd.pid` 没有权限。
+```shell
+./qemu-arm-static -L .. -E USE_RAW_FORMAT=1 -E LD_PRELOAD=../desockmulti.so ../usr/sbin/httpd_patched -p 8081 < ../../base-login-request.txt
+```
+
+![](images/Pasted%20image%2020230520115043.png)
 
 
 
 ## 用AFL++进行模糊测试
 
-为使用AFL++进行模糊测试，程序必须接收来自文件的输入。因此我们需要进行二进制水平的修改，通过patch汇编指令和`LD_PRELOAD` 技巧。Github上的[desockmulti](https://github.com/zyingp/desockmulti?ref=blog.attify.com)项目可以用于这个目的。
 
-在使用这个[desockmulti](https://github.com/zyingp/desockmulti?ref=blog.attify.com) 前，我们需要进行一下修改。`httpd`二进制程序目前使用daemon函数fork到后台，在模糊测试期间，我们并不需要这个fork行为。
 
-![](images/Pasted%20image%2020230507223855.png)
-
-我们需要覆写`daemon`，使其在不fork 的情况下实际返回0。这可以通过LD_PRELOAD或patch汇编指令来实现。
-
-我们需要做的另一个改变是让httpd在退出前只处理一个请求（不像一般的网络服务器那样无限期地处理请求）。这样，我们就可以知道哪个请求（如果有的话）会使网络服务器崩溃。
-
-要关闭一个socket，`httpd`调用`close`函数。有三个地方调用close。
-
-![](images/Pasted%20image%2020230514202235.png)
-
-在它们之间，我们需要修改在`0x231c0` 位置的调用`exit(0)` 而不是`close` 。
-
-根据文章上的内容进行hook。
+## 不一致的原因分析
 
 ## 出现的问题
 使用`desockmulti`后，响应返回值变成了400，而不是200。
