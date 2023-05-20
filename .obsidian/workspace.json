@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -102,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md"
+                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md"
               }
             }
           },
@@ -177,7 +178,7 @@
   "lastOpenFiles": [
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230519220907.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230519220259.png",
-    "固件分析/用AFL++模糊iot二进制/用AFL++模糊iot二进制.md",
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230519215836.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230519211711.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230519211556.png",

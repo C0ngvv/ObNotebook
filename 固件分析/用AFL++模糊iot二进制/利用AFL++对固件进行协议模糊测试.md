@@ -1,4 +1,10 @@
-这篇文章介绍使用AFL++模糊套接字的二进制文件。
+AFL++可以用于对基于文件输入输出的二进制的模糊测试，而其本身无法对网络协议进行测试。这篇文章介绍了一种使用AFL++对固件网络程序进行模糊测试的方法。
+
+本文参考于：[Fuzzing IoT binaries with AFL++ - Part II (attify.com)](https://blog.attify.com/fuzzing-iot-binaries-with-afl-part-ii/)
+
+## 基本思路
+由于固件源码常常不被公开，针对固件进行协议模糊测试的常常只有黑盒和灰盒测试，
+
 
 ## 固件下载与仿真
 这里以思科_RV130X_FW_1.0.3.55.bin固件为例，下载地址：
