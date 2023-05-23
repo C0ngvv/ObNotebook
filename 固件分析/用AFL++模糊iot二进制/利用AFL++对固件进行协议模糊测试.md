@@ -190,19 +190,17 @@ target remote :5555
 ## 不一致的原因分析
 到此，还有一个问题没有解决，就是原文使用`desockmulti.so` 后执行结果是200，而我的执行结果是400，和正常通过网络执行结果200不一致，这是怎么回事？起初怀疑是自己哪一步少操作了或是环境问题，仔细研究原文与改变环境后发现不是这个问题，后来经过两天的调试分析，终于找到了问题所在。
 
-## 出现的问题
-使用`desockmulti`后，响应返回值变成了400，而不是200。
+调试的命令，使用`desockmulti` 
 
-调试，使用`desockmulti` ·
 ```
 # squashfs-root/www/
-sudo qemu-arm-static -g 5556 -L .. -E USE_RAW_FORMAT=1 -E LD_PRELOAD=../desockmulti.so ../usr/sbin/httpd_patched -p 8081 < ../../base-login-request.txt
+sudo ./qemu-arm-static -g 5556 -L .. -E USE_RAW_FORMAT=1 -E LD_PRELOAD=../desockmulti.so ../usr/sbin/httpd_patched -p 8081 < ../../base-login-request.txt
 ```
 
 调试，不使用`desockmulti` 
 ```
 # squashfs-root/www/
-sudo qemu-arm-static -g 5555 -L .. ../usr/sbin/httpd_patched -p 8081
+sudo ./qemu-arm-static -g 5555 -L .. ../usr/sbin/httpd_patched -p 8081
 ```
 
 gdb调试
@@ -212,32 +210,145 @@ b fprintf
 target remote :5555
 ```
 
-复现结果与文章不太相同，文章使用`desockmulti` 后使用文件请求后返回值为200，而我的返回值为400，经过调试后发现因为`sub_1EEAC(v45)`返回值不同，正常与不正常响应分别进入了不同的分支。
+最初经过调试后发现因为`sub_1EEAC(v45)`返回值不同，正常与不正常响应分别进入了不同的分支。
 
 ![](images/Pasted%20image%2020230517165523.png)
 
-进一步调试发现是因为该函数中的调用`nvram_match("http_from", "lan")` 返回值不同。
+进入该函数进一步调试发现是因为该函数中的调用`nvram_match("http_from", "lan")` 返回值不同：网络方式的返回为0，而使用`desockmulti`后返回不为0，从而会执行if中语句返回负值，进而上层返回400错误。
 
 ![](images/Pasted%20image%2020230517165722.png)
 
-继续调试发现主函数`sub_228AC()`中，会根据`dword_A9984` 的值执行不同的关于`http_from`的nvram设置，正常响应会执行第一个if。所以`dword_A9984`值的不同导致了不同的响应。
+后来就寻找给`http_from` 赋值的地方，调试发现主函数`sub_228AC()`中，会根据`dword_A9984` 等变量值执行不同的关于`http_from`的nvram设置，正常响应会执行第一个if。
 
 ![](images/Pasted%20image%2020230517170005.png)
 
-该值由函数`sub_1E6E8()` 赋值，且该函数被调用很多次。
+刚开始以为是这个变量值的问题，于是去找到给这些变量赋值的地方，它们由函数`sub_1E6E8()` 赋值，且该函数被调用很多次。
 
 ![](images/Pasted%20image%2020230517170351.png)
 
-给sub_1E6E8()下断点
-```
-b *0x23634
-b *0x23618
-b *0x23600
-b *0x23598
-b *0x23658
+这个函数是用来建立套接字、绑定监听的，
 
-b *0x1E6FC
+```c
+int __fastcall sub_1E6E8(const struct sockaddr *a1)
+{
+  int sa_family; // r0
+  FILE *v3; // r0
+  FILE *v4; // r4
+  int v5; // r5
+  int v7; // r0
+  int v8; // r2
+  int v9; // r2
+  socklen_t v10; // r2
+  int optval[7]; // [sp+Ch] [bp-1Ch] BYREF
+
+  sa_family = a1->sa_family;
+  if ( sa_family == 2 || sa_family == 10 )
+  {
+    v7 = socket(sa_family, 1, 0);
+    v5 = v7;
+    if ( v7 < 0 )
+    {
+      v5 = -1;
+      perror("socket");
+    }
+    else
+    {
+      fcntl(v7, 2, 1);
+      v8 = a1->sa_family;
+      optval[0] = 1;
+      if ( v8 == 10 && setsockopt(v5, 41, 26, optval, 4u) < 0 )
+      {
+        v5 = -1;
+        perror("setsockopt IPV6_V6ONLY");
+      }
+      else if ( setsockopt(v5, 1, 2, optval, 4u) < 0 )
+      {
+        v5 = -1;
+        perror("setsockopt SO_REUSEADDR");
+      }
+      else
+      {
+        v9 = a1->sa_family;
+        if ( v9 == 2 )
+        {
+          v10 = 16;
+        }
+        else if ( v9 == 10 )
+        {
+          v10 = 28;
+        }
+        else
+        {
+          v10 = 0;
+        }
+        if ( bind(v5, a1, v10) < 0 )
+        {
+          v5 = -1;
+          perror("bind");
+        }
+        else if ( listen(v5, 1024) < 0 )
+        {
+          v5 = -1;
+          perror("listen");
+        }
+      }
+    }
+  }
+  else
+  {
+    v3 = fopen("/dev/console", "w");
+    v4 = v3;
+    if ( v3 )
+    {
+      fprintf(v3, "unknown sockaddr family on listen socket - %d\n", a1->sa_family);
+      fclose(v4);
+    }
+    return -1;
+  }
+  return v5;
+}
 ```
+
+调试后发现分配的`dword_A9984` 变量的值确实不一样，但后来感觉可能不是变量值不同的问题，因为我发现两种情况调用时给函数`sub_1E6E8()`传入的参数是一样的。我觉得不是`dword_A9984`变量值的问题，莫非与后面`__fds_bits`有关？
+
+![](images/Pasted%20image%2020230523204709.png)
+
+最初我不知道这个东西是干嘛的，就去找资料，发现它原来是一种I/O多路复用技术。当用到`select`时，就会用到`fd_set`结构体 ,里面包含一个`fds_bits` long型数组，里面的每一位代表一个文件描述符。
+
+```c
+typedef long int __fd_mask;  //在sys/select.h中
+#define __FD_SETSIZE        1024  //在typesizes.h中
+#define __NFDBITS   (8 * (int) sizeof (__fd_mask))  //sys/select.h中
+
+typedef struct
+{
+    __fd_mask fds_bits[__FD_SETSIZE / __NFDBITS];
+    #define __FDS_BITS(set) ((set)->fds_bits)
+}fd_set;
+```
+
+正常情况下如使用`accept`就会发生阻塞，而如果使用`select`它可以继续向下运行，后续通过fd_set判断是否有新消息。对于fd_set涉及四种方法：
+
+```
+void FD_CLR(int fd, fd_set *set);  从set集合中把fd清除，将第fd位置0
+int FD_ISSET(int fd, fd_set *set);  判断set中fd是否响应，测试set的第fd位是否为1
+void FD_SET(int fd, fd_set *set);  把fd添加到set集合中，将set的第fd位置1
+void FD_ZERO(fd_set *set);  把集合set清空，将set的所有位置0
+```
+
+`select`的原型方法：
+
+```
+int select(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struct timeval *timeout);
+```
+
+简单来说，最初创建一个fd_set变量，然后使用`FD_CLR()` 清空，将想要监听的套接字描述符利用`FD_SET()`方法加进去，然后调用`select()`方法并把fd_set变量作为参数传进去，之后`select()`会修改fd_set变量，若要观察的套接字有消息则对应位置会置1，否则置0，所以就可以通过`FD_ISSET()`遍历所有位来判断是否有新消息。详细过程可以参考文章[网络编程：select多路复用监听accept和write函数解除阻塞_select](https://blog.csdn.net/qq_42343682/article/details/115354021)。
+
+知道了`__fds_bits` 的作用后，就感觉可能也不是这里的问题了。于是我又猜测是使用了`desockmulti.so`进行hook后，会不会本该从某个口如lan或wan口传来的，变成了另一个口，总之因为对`socket`等函数的hook，错误的识别了数据的来源。
+
+为了验证这一想法，首先我去看了一下`desockmulti`的源码[desockmulti.c](https://github.com/zyingp/desockmulti/blob/master/desockmulti.c)，发现它是在创建socket的时候，将变成了`AF_UNIX` 
+
+
 
 后来调试发现不是前面的问题，而是后面这个函数里面的问题。它第二个参数传进了`&addr.sa_family` ，而这个值是前面`v19 = accept(dword_A9988, &addr, &addr_len);` 获取得到的，即客户端的地址结构，因为经过了hook，所以它的`sa_family`的值为`AFF_UNIX`即为1，而非正常判断的`AF_NAT` (2)和`AF_NAT6`(10)。所以后面会跳到错误的分支去。
 
@@ -269,3 +380,7 @@ Burp Suite抓不到127.0.0.1的包：[(169条消息) 设置burpsuite抓取localh
 [Fuzzing IoT binaries with AFL++ - Part I (attify.com)](https://blog.attify.com/fuzzing-iot-devices-part-1/)
 
 [Fuzzing IoT binaries with AFL++ - Part II (attify.com)](https://blog.attify.com/fuzzing-iot-binaries-with-afl-part-ii/)
+
+[网络编程：select多路复用监听accept和write函数解除阻塞_select](https://blog.csdn.net/qq_42343682/article/details/115354021)
+
+
