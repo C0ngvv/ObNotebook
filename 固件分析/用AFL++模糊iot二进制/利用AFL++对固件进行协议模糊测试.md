@@ -178,6 +178,10 @@ target remote :5555
 利用hex编辑器，将`/var/run/httpd.pip` 修改为不需要管理员权限访问的`/home/ubuntu/h.pid` ，需要注意的是替换的字符串的长度必须小于或等于原始字符串。
 
 
+修改后的结果如下：
+
+![](images/Pasted%20image%2020230523165541.png)
+
 
 
 
