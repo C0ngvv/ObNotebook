@@ -517,10 +517,10 @@ int setsockopt(int sockfd, int level, int optname, const void* optval, socklen_t
 
 ![](images/Pasted%20image%2020230523222233.png)
 
-然而，后来不一致的根本原因也不是这里的问题（但却是是`http_from`的问题），而是后面这个函数`sub_1EB1C()`里面的问题。它第二个参数传进了`&addr.sa_family` ，而这个值是前面`v19 = accept(dword_A9988, &addr, &addr_len);` 获取得到的，即客户端的地址结构。
+然而！！后来发现不一致的根本原因也不是这里的问题（但确实是`http_from`的问题），而是后面这个函数`sub_1EB1C()`里面的问题。它的第二个参数传进了`&addr.sa_family` ，而这个值是前面`v19 = accept(dword_A9988, &addr, &addr_len);` 获取得到的，即客户端的地址结构，因为经过了hook，所以它的`sa_family`的值为`AFF_UNIX`即为1。
 ![](images/Pasted%20image%2020230519211228.png)
 
-进入到函数中后，v3即代表`sa_family` 的值，因为经过了hook，所以它的`sa_family`的值为`AFF_UNIX`即为1，而非正常的`AF_NET` (2)和`AF_NET6`(10)。这个程序只能识别`AF_NET`和`AF_NET6` ，无法识别hook后的`AF_UNIX`，所以后面会跳到错误的分支去。如下面代码，两个if判断不等于2和10就会跳到错误分支，而不会正常处理，从而导致后续出错。于是后来将22行给v3赋值处进行了patch，将2直接赋值给v3，就解决了这个问题。
+我们进入该函数中，v3由`*a2` 传给它，即代表`sa_family` 的值，因为经过了hook，所以它的值为`AFF_UNIX`即为1，而非正常的`AF_NET` (2)和`AF_NET6`(10)。但这个程序只能识别`AF_NET`和`AF_NET6` ，无法识别hook后的`AF_UNIX`，所以后面会跳到错误的分支去。如下面代码，两个if判断不等于2和10就会跳到错误分支，而不会正常处理，从而导致后续出错。于是后来将22行给v3赋值处进行了patch，将2直接赋值给v3，就解决了这个问题。
 
 ![](images/Pasted%20image%2020230519211711.png)
 
