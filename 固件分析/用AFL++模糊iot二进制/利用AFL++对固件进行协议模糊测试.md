@@ -372,7 +372,7 @@ int socket(int domain, int type, int protocol)
 进入该函数`sub_1E21C`查看,看到里面包含`http_wanport`, `getaddrinfo`等字符串，猜测它应该是用来获取端口地址的。通过最后两个参数的设置，获取不同的端口地址。
 
 首先看第一次调用，第168行：`sub_1E21C(v55, 0x80u, v61, v54, 0x80u, (int)&v60, 0, -1);`
-它的工作流大致如下，首先通过`server_port`调用`getaddrinfo`获取地址，然后while对获取的地址链遍历，若是IPv4(AF_INET=2)则保存在`v14`中，若是IPv6(AF_INET6=10)类型则保存在`v16`中，后续再分别赋值给第和第四个参数。
+它的工作流大致如下，首先通过`server_port`调用`getaddrinfo`获取地址，然后while对获取的地址链遍历，若是IPv4(AF_INET=2)则保存在`v14`中，若是IPv6(AF_INET6=10)类型则保存在`v16`中，后续再分别赋值给第1个和第四个参数。
 
 ```c
 req.ai_family = 0;                            // AF_UNSPEC
@@ -426,18 +426,16 @@ if ( v16 )
 	...
 }
 ...
-LABEL_35:
-	if ( a3 )
-	  *a3 = v14;     
-	goto LABEL_29;
-	
+LABEL_24:
+	...
 if ( a1 && a3 )
 {
 	memset(a1, 0, a2);
 	memmove(a1, *(const void **)(v14 + 20), *(_DWORD *)(v14 + 16));
 	*a3 = 1;
 }
-freeaddrinfo(pai);
+LABEL_29:
+	freeaddrinfo(pai);
 ```
 
 然后第二次调用，第169行：`sub_1E21C(0, 0, 0, v53, 0x80u, (int)&v59, 1, -1);`，它的作用应该是获取`http_wanport` 端口，然后获取这个口的地址，通过`memmove`将该地址复制给第4个参数。它的流程大致如下：
@@ -496,18 +494,39 @@ LABEL_29:
 	freeaddrinfo(pai);
 ```
 
+也就是说`v54`, `v53`, `v55`代表了不同口的地址，然后传入`sub_1E6EB()`函数中建立套接字绑定监听。这时候突然想到`desockmulti`把所有socket和bind的地址都固定了，即每次调用`sub_1E6E8()`绑定监听的地址都是一样的，这样应该会冲突。
 
-后来调试发现不是前面的问题，而是后面这个函数里面的问题。它第二个参数传进了`&addr.sa_family` ，而这个值是前面`v19 = accept(dword_A9988, &addr, &addr_len);` 获取得到的，即客户端的地址结构，因为经过了hook，所以它的`sa_family`的值为`AFF_UNIX`即为1，而非正常判断的`AF_NAT` (2)和`AF_NAT6`(10)。所以后面会跳到错误的分支去。
+此外，`sub_1E6E8()`函数里调用了`setsockopt()`函数，然后`desockmulti`里没有实现这个函数，只是返回了一个0。看来，响应码400与200不一致的问题还是与`desockmulti`的实现有关。
 
+```c
+int setsockopt(int sockfd, int level, int optname, const void* optval, socklen_t optlen)
+{
+	if (preeny_socket_hooked[sockfd])
+	{
+		return 0;
+	}
+	...
+}
+```
+
+在下面的函数调用时，正常程序运行时，传入的参数本是不同的，但是由于使用了`desockmulti`进行了hook，虽然传入的参数不同，但实际上hook执行的却是一样的，我猜测它会冲突，于是进行了验证。
+
+![](images/Pasted%20image%2020230523222033.png)
+
+由于之前调试的时候发现正常执行流程会跳到下图第一个分支，而hook后if判断时跳到了第二个分支，即`dword_A9988`所在的分支，也即上面第一个调用`sub_1E6E8()`的变量，我猜测谁先调用`sub_1E6E8()`数据就传递给哪个分支，于是我调试的时候将上图178的调用跳过，发现下图果然跳到了第3个分支（包含`dword_A998C`），即上图第182行调试中首次调用`sub_1e6e8()`的位置。后来将178行和第182行的都跳过函数调用，结果下图果然跳到了第一个分支（包含`dword_A9984`，调试时第一次调用`sub_1E6E8()`的变量），由于第一个分支没有设置`http_from`的值，因此不会出现最开始的不一致的问题，成功返回200。
+
+![](images/Pasted%20image%2020230523222233.png)
+
+然而，后来不一致的根本原因也不是这里的问题（但却是是`http_from`的问题），而是后面这个函数`sub_1EB1C()`里面的问题。它第二个参数传进了`&addr.sa_family` ，而这个值是前面`v19 = accept(dword_A9988, &addr, &addr_len);` 获取得到的，即客户端的地址结构。
 ![](images/Pasted%20image%2020230519211228.png)
 
-![](images/Pasted%20image%2020230519211556.png)
-
-进入到函数中后，v3即代表`sa_family` 的值(1)，不满足2和10就会跳到错误分支，而不会正常处理，从而导致后续出错。后来将22行给v3赋值处进行了patch，将2直接赋值给v3，就解决了这个问题。
+进入到函数中后，v3即代表`sa_family` 的值，因为经过了hook，所以它的`sa_family`的值为`AFF_UNIX`即为1，而非正常的`AF_NET` (2)和`AF_NET6`(10)。这个程序只能识别`AF_NET`和`AF_NET6` ，无法识别hook后的`AF_UNIX`，所以后面会跳到错误的分支去。如下面代码，两个if判断不等于2和10就会跳到错误分支，而不会正常处理，从而导致后续出错。于是后来将22行给v3赋值处进行了patch，将2直接赋值给v3，就解决了这个问题。
 
 ![](images/Pasted%20image%2020230519211711.png)
 
-总结，问题是因为patch后将套接字类型将`sa_family`的值给改变了，改成了`AF_UNIX` (1)，程序在对这个值进行判断时没有相应的解析就会出错。此外还发现`desockmulti.so`实现时没有实现`setsockopt()` 函数，而是直接返回0，这个也可能导致会程序不一致现象发生。
+![](images/Pasted%20image%2020230523224222.png)
+
+总结，问题是因为patch后将套接字类型将`sa_family`的值给改变了，改成了`AF_UNIX` (1)，程序在对这个值进行判断时没有相应的解析就会出错。此外还发现`desockmulti.so`实现时没有实现`setsockopt()` 函数，而是直接返回0，这个也可能导致会程序不一致现象发生。说明要想直接使用`desockmulti` 对固件httpd进行模糊测试还是有一定问题的。
 
 ## 用AFL++进行模糊测试
 
@@ -519,9 +538,6 @@ QEMU_LD_PREFIX=.. QEMU_SET_ENV=USE_RAW_FORMAT=1,LD_PRELOAD=../desockmulti.so ~/D
 ![](images/Pasted%20image%2020230519220907.png)
 
 
-## 其他问题
-Burp Suite抓不到127.0.0.1的包：[(169条消息) 设置burpsuite抓取localhost、127.0.0.1数据,解决无法抓取拦截本机数据包_burpsuite怎么查localhost_陌兮_的博客-CSDN博客](https://blog.csdn.net/m0_47470899/article/details/119298514)
-
 
 ## 参考链接
 [Fuzzing IoT binaries with AFL++ - Part I (attify.com)](https://blog.attify.com/fuzzing-iot-devices-part-1/)
@@ -530,4 +546,4 @@ Burp Suite抓不到127.0.0.1的包：[(169条消息) 设置burpsuite抓取localh
 
 [网络编程：select多路复用监听accept和write函数解除阻塞_select](https://blog.csdn.net/qq_42343682/article/details/115354021)
 
-
+[desockmulti/desockmulti.c at master · zyingp/desockmulti · GitHub](https://github.com/zyingp/desockmulti/blob/master/desockmulti.c)
