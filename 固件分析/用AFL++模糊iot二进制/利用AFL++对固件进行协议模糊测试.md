@@ -346,8 +346,155 @@ int select(int nfds, fd_set *readfds, fd_set *writefds, fd_set *exceptfds, struc
 
 知道了`__fds_bits` 的作用后，就感觉可能也不是这里的问题了。于是我又猜测是使用了`desockmulti.so`进行hook后，会不会本该从某个口如lan或wan口传来的，变成了另一个口，总之因为对`socket`等函数的hook，错误的识别了数据的来源。
 
-为了验证这一想法，首先我去看了一下`desockmulti`的源码[desockmulti.c](https://github.com/zyingp/desockmulti/blob/master/desockmulti.c)，发现它是在创建socket的时候，将变成了`AF_UNIX` 
+为了验证这一想法，首先我去看了一下`desockmulti`的源码[desockmulti.c](https://github.com/zyingp/desockmulti/blob/master/desockmulti.c)，发现它是在创建socket的时候，
+将地址族由`AF_INET`(2)与`AF_INET6`(10)将变成了`AF_UNIX`(1)，其中`AF_UNIX` 用于同一台机器上的进程间通信。
 
+```c
+int socket(int domain, int type, int protocol)
+{
+	int fd;
+	...
+	if ((fd = original_socket(AF_UNIX, SOCK_STREAM, 0)) < 0) {
+		...
+	}
+	...
+	return fd;
+	
+}
+```
+
+那么程序是怎么识别数据是从哪个口传来的呢？又是怎么判断传来的是IPv4还是IPv6的数据呢？
+
+然后我去研究了一下传入上面的函数`sub_1E6E8()`的参数的由来，因为这些参数代表了地址。发现它们全部与函数`sub_1E21C()` 有关。
+
+![](images/Pasted%20image%2020230523213202.png)
+
+进入该函数`sub_1E21C`查看,看到里面包含`http_wanport`, `getaddrinfo`等字符串，猜测它应该是用来获取端口地址的。通过最后两个参数的设置，获取不同的端口地址。
+
+首先看第一次调用，第168行：`sub_1E21C(v55, 0x80u, v61, v54, 0x80u, (int)&v60, 0, -1);`
+它的工作流大致如下，首先通过`server_port`调用`getaddrinfo`获取地址，然后while对获取的地址链遍历，若是IPv4(AF_INET=2)则保存在`v14`中，若是IPv6(AF_INET6=10)类型则保存在`v16`中，后续再分别赋值给第和第四个参数。
+
+```c
+req.ai_family = 0;                            // AF_UNSPEC
+req.ai_socktype = 1;                          // SOCK_STREAM
+memset(&req.ai_protocol, 0, 20);
+req.ai_flags = 1;
+if ( !a7 )  //0
+  {
+    if ( a8 == -1 )  //-1
+      snprintf(s, 0xAu, "%d", server_port);
+    ...
+    goto LABEL_9;
+}
+...
+LABEL_9:
+v14 = getaddrinfo((const char *)dword_A9980, s, &req, &pai);
+...
+v15 = pai;
+...
+v16 = 0;
+  do
+{
+	while ( 1 )
+	{
+	  ai_family = v15->ai_family;
+	  if ( ai_family != 2 )
+		break;
+	  if ( !v14 )
+		v14 = (int)v15;
+	  v15 = v15->ai_next;
+	  if ( !v15 )
+		goto LABEL_21;
+	}
+	if ( ai_family == 10 && !v16 )
+	  v16 = v15;
+	v15 = v15->ai_next;
+}
+while ( v15 );
+LABEL_21:
+if ( v16 )
+	{
+	if ( v16->ai_addrlen <= n )
+	{
+	  memset(a4, (int)v15, n);
+	  memmove(a4, v16->ai_addr, v16->ai_addrlen);
+	  *(_DWORD *)a6 = 1;
+	  if ( !v14 )
+		goto LABEL_35;
+	  goto LABEL_24;
+	}
+	...
+}
+...
+LABEL_35:
+	if ( a3 )
+	  *a3 = v14;     
+	goto LABEL_29;
+	
+if ( a1 && a3 )
+{
+	memset(a1, 0, a2);
+	memmove(a1, *(const void **)(v14 + 20), *(_DWORD *)(v14 + 16));
+	*a3 = 1;
+}
+freeaddrinfo(pai);
+```
+
+然后第二次调用，第169行：`sub_1E21C(0, 0, 0, v53, 0x80u, (int)&v59, 1, -1);`，它的作用应该是获取`http_wanport` 端口，然后获取这个口的地址，通过`memmove`将该地址复制给第4个参数。它的流程大致如下：
+
+```c
+req.ai_family = 0;                            // AF_UNSPEC
+req.ai_socktype = 1;                          // SOCK_STREAM
+memset(&req.ai_protocol, 0, 20);
+req.ai_flags = 1;
+...
+v12 = (const char *)nvram_get((int)"http_wanport");
+if ( !v12 )
+	v12 = "";
+v13 = atoi(v12);
+snprintf(s, 0xAu, "%d", v13);
+v14 = getaddrinfo((const char *)dword_A9980, s, &req, &pai);
+...
+v15 = pai;
+v16 = 0;
+do
+{
+	while ( 1 )
+	{
+	  ai_family = v15->ai_family;
+	  if ( ai_family != 2 )
+		break;
+	  if ( !v14 )
+		v14 = (int)v15;
+	  v15 = v15->ai_next;
+	  if ( !v15 )
+		goto LABEL_21;
+	}
+	if ( ai_family == 10 && !v16 )
+	  v16 = v15;
+	v15 = v15->ai_next;
+}
+while ( v15 );
+LABEL_21:
+if ( v16 )
+	{
+	if ( v16->ai_addrlen <= n )
+	{
+	  memset(a4, (int)v15, n);
+	  memmove(a4, v16->ai_addr, v16->ai_addrlen);
+	  *(_DWORD *)a6 = 1;
+	  if ( !v14 )
+		goto LABEL_35;
+	  goto LABEL_24;
+	}
+	...
+}
+LABEL_24:
+	if ( !a2 )
+		goto LABEL_29;
+LABEL_29:
+	freeaddrinfo(pai);
+```
 
 
 后来调试发现不是前面的问题，而是后面这个函数里面的问题。它第二个参数传进了`&addr.sa_family` ，而这个值是前面`v19 = accept(dword_A9988, &addr, &addr_len);` 获取得到的，即客户端的地址结构，因为经过了hook，所以它的`sa_family`的值为`AFF_UNIX`即为1，而非正常判断的`AF_NAT` (2)和`AF_NAT6`(10)。所以后面会跳到错误的分支去。
