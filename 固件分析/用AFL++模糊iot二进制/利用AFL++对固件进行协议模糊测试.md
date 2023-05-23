@@ -177,20 +177,18 @@ target remote :5555
 
 利用hex编辑器，将`/var/run/httpd.pip` 修改为不需要管理员权限访问的`/home/ubuntu/h.pid` ，需要注意的是替换的字符串的长度必须小于或等于原始字符串。
 
+![](images/Pasted%20image%2020230523170210.png)
 
 修改后的结果如下：
 
-![](images/Pasted%20image%2020230523165541.png)
+![](images/Pasted%20image%2020230523170301.png)
 
+此时再运行程序就不会提示权限问题了。
 
-
-
-
-## 用AFL++进行模糊测试
-
-
+![](images/Pasted%20image%2020230523170425.png)
 
 ## 不一致的原因分析
+到此，还有一个问题没有解决，就是原文使用`desockmulti.so` 后执行结果是200，而我的执行结果是400，和正常通过网络执行结果200不一致，这是怎么回事？起初怀疑是自己哪一步少操作了或是环境问题，仔细研究原文与改变环境后发现不是这个问题，后来经过两天的调试分析，终于找到了问题所在。
 
 ## 出现的问题
 使用`desockmulti`后，响应返回值变成了400，而不是200。
@@ -253,7 +251,9 @@ b *0x1E6FC
 
 总结，问题是因为patch后将套接字类型将`sa_family`的值给改变了，改成了`AF_UNIX` (1)，程序在对这个值进行判断时没有相应的解析就会出错。此外还发现`desockmulti.so`实现时没有实现`setsockopt()` 函数，而是直接返回0，这个也可能导致会程序不一致现象发生。
 
-终于，fuzz起来了！！
+## 用AFL++进行模糊测试
+
+在上面所有工作做完后运行下面命令，终于，fuzz起来了！！
 ```
 QEMU_LD_PREFIX=.. QEMU_SET_ENV=USE_RAW_FORMAT=1,LD_PRELOAD=../desockmulti.so ~/Desktop/AFLplusplus/afl-fuzz -Q -i ../../input -o ../../output -- ../usr/sbin/httpd_patched2 -p 8081
 ```
