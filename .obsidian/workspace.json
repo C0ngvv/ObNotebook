@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md"
+                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md"
               }
             }
           },
