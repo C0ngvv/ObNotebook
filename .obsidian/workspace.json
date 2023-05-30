@@ -23,9 +23,11 @@
             "id": "9a48fd88dc260359",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.3.4"
+                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -186,6 +188,7 @@
   },
   "active": "9a48fd88dc260359",
   "lastOpenFiles": [
+    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523224222.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523222233.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523222033.png",
@@ -198,8 +201,6 @@
     "Paper/MultiFuzz/MultiFuzz.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230520115043.png",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230520114124.png",
-    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "Paper/Snipfuzz.zip",
     "Paper/MultiFuzz/images",
     "Paper/MultiFuzz",
