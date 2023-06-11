@@ -1,9 +1,9 @@
 {
-  "accentColor": "#dfcdc8",
-  "theme": "moonstone",
-  "cssTheme": "",
+  "accentColor": "#ffffff",
+  "theme": "obsidian",
+  "cssTheme": "Blue Topaz",
   "nativeMenus": false,
   "showViewHeader": true,
-  "baseFontSize": 16,
-  "textFontFamily": "黑体"
+  "baseFontSize": 17,
+  "textFontFamily": "宋体,Cascadia Code,华文楷体"
 }
