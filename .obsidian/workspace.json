@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6a4701d9f278347e",
+        "id": "a4f2a26cdf75d577",
         "type": "tabs",
         "children": [
           {
-            "id": "9a48fd88dc260359",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "628dd0ac2b1d8d97",
+            "id": "dc521154d4ead90c",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -172,7 +159,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5
+    "width": 267.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,15 +173,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "628dd0ac2b1d8d97",
+  "active": "dc521154d4ead90c",
   "lastOpenFiles": [
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230611105304.png",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images",
-    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+    "Paper/MultiFuzz/MultiFuzz.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee",
-    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523224222.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523222233.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523222033.png",
@@ -202,12 +185,16 @@
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523170425.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523170301.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523170210.png",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523165541.png",
-    "Paper/MultiFuzz/MultiFuzz.md",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230611105304.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230520115043.png",
+    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "Paper/Snipfuzz.zip",
     "Paper/MultiFuzz/images",
     "Paper/MultiFuzz",
+    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
     "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "固件分析/华硕RT-AX56U_V2/华硕RT-AX56U_V2.md",
     "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
