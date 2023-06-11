@@ -1,8 +1,9 @@
 {
-  "accentColor": "",
+  "accentColor": "#dfcdc8",
   "theme": "moonstone",
-  "cssTheme": "Atom",
+  "cssTheme": "",
   "nativeMenus": false,
   "showViewHeader": true,
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "textFontFamily": "黑体"
 }
