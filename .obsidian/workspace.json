@@ -187,6 +187,8 @@
   },
   "active": "628dd0ac2b1d8d97",
   "lastOpenFiles": [
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230611105304.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images",
     "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
@@ -219,7 +221,6 @@
     "Paper/Snipfuzz/images",
     "Paper/Snipfuzz",
     "固件分析/用AFL++模糊iot二进制/images",
-    "固件分析/用AFL++模糊iot二进制",
     "课程/强化学习/实验环境配置/实验环境配置.md",
     "语法/C/零散知识/C零散知识.md",
     "语法/C/C.md",
@@ -231,7 +232,6 @@
     "课程/强化学习/Windows虚拟环境/Windows虚拟环境.md",
     "课程/强化学习/Texi-v2/Texi-v2.md",
     "网络/linux/linux.md",
-    "Paper/firmadyne与firmae总结/firmware.md",
-    "固件分析/TODO List.md"
+    "Paper/firmadyne与firmae总结/firmware.md"
   ]
 }
