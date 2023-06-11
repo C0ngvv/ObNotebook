@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
                 "mode": "source",
                 "source": false
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md"
+                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md"
               }
             }
           },
@@ -187,9 +187,11 @@
   },
   "active": "628dd0ac2b1d8d97",
   "lastOpenFiles": [
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
-    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
     "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee",
+    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523224222.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523222233.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523222033.png",
@@ -220,7 +222,6 @@
     "固件分析/用AFL++模糊iot二进制",
     "课程/强化学习/实验环境配置/实验环境配置.md",
     "语法/C/零散知识/C零散知识.md",
-    "固件分析/asuswrt-merlin httpd分析",
     "语法/C/C.md",
     "工具/EQUAFL/工具README/工具README.md",
     "工具/Fuzztruction/Fuzz新程序流程2/Fuzz一个新程序的流程二：构建.md",
