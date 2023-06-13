@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "a4f2a26cdf75d577",
+        "id": "6a4701d9f278347e",
         "type": "tabs",
         "children": [
           {
-            "id": "dc521154d4ead90c",
+            "id": "9a48fd88dc260359",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "53478caccd2e521e",
+            "id": "628dd0ac2b1d8d97",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "mode": "source",
                 "source": false
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "conflict-files-obsidian-git.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "conflict-files-obsidian-git.md"
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md"
               }
             }
           },
@@ -172,8 +172,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5,
-    "collapsed": true
+    "width": 267.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,33 +185,38 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "53478caccd2e521e",
+  "active": "628dd0ac2b1d8d97",
   "lastOpenFiles": [
+    "环境配置/shell/shell.md",
+    "环境配置/软件安装/ubuntu常用软件安装.md",
+    "环境配置/软件安装",
+    "环境配置/linux/linux.md",
+    "环境配置/更换镜像源/更换镜像源.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
-    "conflict-files-obsidian-git.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612214603.png",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612214326.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612213814.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612213658.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612213243.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612210620.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612210129.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612203747.png",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612203554.png",
-    "Paper/MultiFuzz/MultiFuzz.md",
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523224222.png",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523222233.png",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523222033.png",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523213202.png",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523204709.png",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523170425.png",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523170301.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230611105304.png",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee",
     "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee",
+    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
+    "Paper/MultiFuzz/MultiFuzz.md",
     "Paper/Snipfuzz.zip",
     "Paper/MultiFuzz/images",
     "Paper/MultiFuzz",
-    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
     "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "固件分析/华硕RT-AX56U_V2/华硕RT-AX56U_V2.md",
     "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+    "conflict-files-obsidian-git.md",
     "固件分析/Fortigate漏洞分析/images",
     "固件分析/Fortigate漏洞分析",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
@@ -220,7 +224,6 @@
     "Paper/Snipfuzz/Snipuzz.md",
     "Paper/Snipfuzz/images",
     "Paper/Snipfuzz",
-    "固件分析/用AFL++模糊iot二进制/images",
     "课程/强化学习/实验环境配置/实验环境配置.md",
     "语法/C/零散知识/C零散知识.md",
     "语法/C/C.md",
@@ -229,9 +232,6 @@
     "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "工具/Fuzztruction/执行过程/Fuzztruction一些执行过程.md",
     "工具/FirmAFL/FirmAFL分析/FirmAFL分析.md",
-    "课程/强化学习/Windows虚拟环境/Windows虚拟环境.md",
-    "课程/强化学习/Texi-v2/Texi-v2.md",
-    "网络/linux/linux.md",
-    "Paper/firmadyne与firmae总结/firmware.md"
+    "课程/强化学习/Windows虚拟环境/Windows虚拟环境.md"
   ]
 }
