@@ -11,8 +11,12 @@
             "id": "d0f8b3b3cfb79fda",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/Tenda固件分析/Tenda.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -98,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "固件分析/Tenda固件分析/Tenda.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "固件分析/Tenda固件分析/Tenda.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +141,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "固件分析/Tenda固件分析/Tenda.md"
+              }
             }
           },
           {
@@ -167,6 +175,8 @@
   },
   "active": "d0f8b3b3cfb79fda",
   "lastOpenFiles": [
+    "固件分析/Tenda固件分析/Tenda.md",
+    "固件分析/Tenda固件分析",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
@@ -203,7 +213,6 @@
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
     "工具/Firmadyne/docker镜像/Firmadyne Docker镜像.md",
     "Paper/Snipfuzz/Snipuzz.md",
-    "Paper/Snipfuzz/images",
     "课程/强化学习/实验环境配置/实验环境配置.md",
     "语法/C/零散知识/C零散知识.md",
     "语法/C/C.md",
