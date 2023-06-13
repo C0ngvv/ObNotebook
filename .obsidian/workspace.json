@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "53478caccd2e521e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           },
@@ -173,8 +186,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dc521154d4ead90c",
+  "active": "53478caccd2e521e",
   "lastOpenFiles": [
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+    "conflict-files-obsidian-git.md",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612214603.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612214326.png",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230612203554.png",
     "Paper/MultiFuzz/MultiFuzz.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523224222.png",
@@ -184,12 +202,8 @@
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523204709.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523170425.png",
     "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523170301.png",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230523170210.png",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230611105304.png",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee",
-    "固件分析/用AFL++模糊iot二进制/images/Pasted image 20230520115043.png",
     "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "Paper/Snipfuzz.zip",
     "Paper/MultiFuzz/images",
@@ -199,7 +213,6 @@
     "固件分析/华硕RT-AX56U_V2/华硕RT-AX56U_V2.md",
     "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
-    "conflict-files-obsidian-git.md",
     "固件分析/Fortigate漏洞分析/images",
     "固件分析/Fortigate漏洞分析",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
