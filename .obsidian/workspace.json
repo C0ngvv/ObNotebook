@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "6a4701d9f278347e",
+        "id": "17438a4aab4120ac",
         "type": "tabs",
         "children": [
           {
-            "id": "628dd0ac2b1d8d97",
+            "id": "d0f8b3b3cfb79fda",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -102,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "环境配置/软件安装/ubuntu常用软件安装.md"
-              }
+              "state": {}
             }
           },
           {
@@ -173,10 +165,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "628dd0ac2b1d8d97",
+  "active": "d0f8b3b3cfb79fda",
   "lastOpenFiles": [
-    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+    "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
+    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "环境配置/软件安装/images/Pasted image 20230613101218.png",
     "环境配置/软件安装/images/Pasted image 20230613101104.png",
     "环境配置/软件安装/images/Pasted image 20230613100913.png",
@@ -203,8 +197,6 @@
     "Paper/MultiFuzz",
     "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "固件分析/华硕RT-AX56U_V2/华硕RT-AX56U_V2.md",
-    "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
-    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "conflict-files-obsidian-git.md",
     "固件分析/Fortigate漏洞分析/images",
     "固件分析/Fortigate漏洞分析",
