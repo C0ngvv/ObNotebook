@@ -50,6 +50,8 @@ export PATH=.:$JAVA_HOME/bin:$JAVA_HOME/lib:$PATH
 2. 下载注册机(v1.15)：[Releases · h3110w0r1d-y/BurpLoaderKeygen (github.com)](https://github.com/h3110w0r1d-y/BurpLoaderKeygen/releases)
 3. 下载BrupSuite JAR(2023.6):[Burp Suite Release Notes (portswigger.net)](https://portswigger.net/burp/releases)
 
+> 推荐放在/opt/ 目录下
+
 运行注册机BurpLoaderKeygen.jar文件
 ```
 java -jar BurpLoaderKeygen.jar
@@ -75,10 +77,27 @@ java -jar BurpLoaderKeygen.jar
 
 将此内容创建写入文件burpsuite中，添加+x可执行权限，然后执行就可运行
 ```
-./burpsuit
+./burpsuite
+```
+
+创建软连接使能够直接运行
+```
+sudo cp burpsuite /usr/bin/burpsuite
 ```
 
 参考链接：[Burpsuite Pro 2023.3.2破解 - yxchun - 博客园 (cnblogs.com)](https://www.cnblogs.com/ychun/p/17391122.html)
 
+## wireshark
 
+```
+sudo apt install wireshark
+```
 
+安装过程中选择Yes允许非超级用户捕获数据包。
+
+![](images/Pasted%20image%2020230614164122.png)
+
+安装完后运行命令`wireshark`即可运行，但需要`sudo`才能捕获ens33等接口。
+```
+sudo wireshark
+```
