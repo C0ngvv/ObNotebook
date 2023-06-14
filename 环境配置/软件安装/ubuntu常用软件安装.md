@@ -12,6 +12,7 @@ sudo apt-get install vim
 sudo apt-get install git
 sudo apt-get install bridge-utils
 sudo apt install net-tools
+sudo apt install python3-pip
 
 # QEMU
 sudo apt-get install qemu
@@ -20,6 +21,25 @@ sudo apt-get install qemu-user
 sudo apt-get install qemu-user-static
 ```
 
+## 镜像源
+## apt
+[ubuntu | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)
+
+### pip
+```
+# vim  ~/.pip/pip.conf
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host = https://pypi.tuna.tsinghua.edu.cn
+```
+
+## ssh
+开启ssh远程登录
+```
+sudo apt install openssh-server
+sudo systemctl status ssh
+```
 
 ## jdk 17
 下载jdk17，我下载的版本为17.0.7:[Java Downloads | Oracle](https://www.oracle.com/java/technologies/downloads/#java17)
