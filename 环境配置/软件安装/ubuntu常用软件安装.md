@@ -1,8 +1,23 @@
+## 环境配置
+### 取消sudo密码
+```bash
+sudo visudo
+# 改为`%sudo ALL=(ALL) NOPASSWD: ALL`
+# 该行含义为 用户 组=(用户:组) NOPASSWD: 允许执行无需密码的程序
+```
+
 
 ```bash
+sudo apt-get install vim
 sudo apt-get install git
 sudo apt-get install bridge-utils
 sudo apt install net-tools
+
+# QEMU
+sudo apt-get install qemu
+sudo apt-get install qemu-system
+sudo apt-get install qemu-user
+sudo apt-get install qemu-user-static
 ```
 
 
@@ -19,6 +34,7 @@ sudo cp -r jdk-17.0.7/ /usr/local/
 编辑`/etc/profile` 配置环境变量
 
 ```sh
+# sudo vim /etc/profile
 export JAVA_HOME=/usr/local/jdk-17.0.7
 export CLASSPATH=.:$JAVA_HOME/lib
 export PATH=.:$JAVA_HOME/bin:$JAVA_HOME/lib:$PATH
