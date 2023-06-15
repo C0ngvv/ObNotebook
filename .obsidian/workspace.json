@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md"
+                "file": "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md"
               }
             }
           },
@@ -176,9 +176,9 @@
   },
   "active": "dc521154d4ead90c",
   "lastOpenFiles": [
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "环境配置/软件安装/images/Pasted image 20230614164122.png",
     "conflict-files-obsidian-git.md",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160509.png",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160337.png",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160315.png",
@@ -191,7 +191,6 @@
     "环境配置/软件安装/images/Pasted image 20230613100826.png",
     "环境配置/软件安装/images/Pasted image 20230613101104.png",
     "环境配置/软件安装/images/Pasted image 20230613100913.png",
-    "环境配置/软件安装/images/Pasted image 20230613101218.png",
     "环境配置/终端C终止/鼠标选中后终端总是C终止.md",
     "环境配置/软件安装/images",
     "环境配置/shell/shell.md",
