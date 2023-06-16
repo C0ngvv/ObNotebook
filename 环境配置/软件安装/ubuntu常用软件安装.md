@@ -42,7 +42,14 @@ sudo apt install openssh-server
 sudo systemctl status ssh
 ```
 
-## pwngdb
+## pwngdb/pwngdb
+[GitHub - pwndbg/pwndbg: Exploit Development and Reverse Engineering with GDB Made Easy](https://github.com/pwndbg/pwndbg)
+
+```
+git clone https://github.com/pwndbg/pwndbg
+cd pwndbg
+./setup.sh
+```
 
 
 ## jdk 17
