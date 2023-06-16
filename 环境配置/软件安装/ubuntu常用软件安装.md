@@ -13,6 +13,7 @@ sudo apt-get install git
 sudo apt-get install bridge-utils
 sudo apt install net-tools
 sudo apt install python3-pip
+sudo apt install curl
 
 # QEMU
 sudo apt-get install qemu
