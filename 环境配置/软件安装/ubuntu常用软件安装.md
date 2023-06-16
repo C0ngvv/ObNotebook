@@ -52,7 +52,23 @@ cd pwndbg
 ./setup.sh
 ```
 
+[GitHub - scwuaptx/Pwngdb: gdb for pwn](https://github.com/scwuaptx/Pwngdb)
 
+```
+cd ~/
+git clone https://github.com/scwuaptx/Pwngdb.git 
+cp ~/Pwngdb/.gdbinit ~/
+```
+
+将pwngdb/pwngdb路径加入.gdbinit中，加在最前面
+
+```
+source /home/ubuntu/pwndgb/gdbinit.py
+```
+
+![](images/Pasted%20image%2020230616153731.png)
+
+[(176条消息) gdb调试 | pwndbg+pwndbg联合使用_fmtarg__n19hT的博客-CSDN博客](https://blog.csdn.net/weixin_43092232/article/details/105648769)
 ## jdk 17
 下载jdk17，我下载的版本为17.0.7:[Java Downloads | Oracle](https://www.oracle.com/java/technologies/downloads/#java17)
 
