@@ -19,6 +19,7 @@ sudo apt-get install qemu
 sudo apt-get install qemu-system
 sudo apt-get install qemu-user
 sudo apt-get install qemu-user-static
+sudo apt install gdb-multiarch
 ```
 
 ## 镜像源
@@ -40,6 +41,9 @@ trusted-host = https://pypi.tuna.tsinghua.edu.cn
 sudo apt install openssh-server
 sudo systemctl status ssh
 ```
+
+## pwngdb
+
 
 ## jdk 17
 下载jdk17，我下载的版本为17.0.7:[Java Downloads | Oracle](https://www.oracle.com/java/technologies/downloads/#java17)
