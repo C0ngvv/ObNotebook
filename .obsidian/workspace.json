@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -103,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md"
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md"
               }
             }
           },
@@ -155,8 +154,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -175,6 +173,9 @@
   },
   "active": "dc521154d4ead90c",
   "lastOpenFiles": [
+    "环境配置/linux/linux.md",
+    "环境配置/软件安装/ubuntu常用软件安装.md",
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "环境配置/软件安装/images/Pasted image 20230614164122.png",
@@ -185,8 +186,6 @@
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160159.png",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160141.png",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614155947.png",
-    "环境配置/软件安装/ubuntu常用软件安装.md",
-    "环境配置/linux/linux.md",
     "网络/linux/linux.md",
     "环境配置/软件安装/images/Pasted image 20230613100826.png",
     "环境配置/软件安装/images/Pasted image 20230613101104.png",
@@ -205,7 +204,6 @@
     "固件分析/Tenda固件分析/Tenda.md",
     "固件分析/Tenda固件分析",
     "Paper/MultiFuzz/MultiFuzz.md",
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee",
     "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
