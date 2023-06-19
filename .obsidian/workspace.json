@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -103,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md"
+                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md"
               }
             }
           },
@@ -160,7 +159,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5
+    "width": 267.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,10 +173,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9709b7d8dbc600db",
+  "active": "04b4e2e0944c66f2",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+    "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
+    "固件分析/漏洞信息爬取",
+    "conflict-files-obsidian-git.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "Python/json/json.md",
     "环境配置/软件安装/images/Pasted image 20230616153731.png",
@@ -207,7 +209,6 @@
     "环境配置/Download网络问题.md",
     "环境配置",
     "固件分析/Tenda固件分析/Tenda.md",
-    "固件分析/Tenda固件分析",
     "Paper/MultiFuzz/MultiFuzz.md",
     "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
     "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
