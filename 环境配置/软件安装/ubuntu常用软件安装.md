@@ -13,12 +13,14 @@ sudo apt-get install git
 sudo apt-get install bridge-utils
 sudo apt install net-tools
 sudo apt install python3-pip
+sudo apt install curl
 
 # QEMU
 sudo apt-get install qemu
 sudo apt-get install qemu-system
 sudo apt-get install qemu-user
 sudo apt-get install qemu-user-static
+sudo apt install gdb-multiarch
 ```
 
 ## 镜像源
@@ -41,6 +43,32 @@ sudo apt install openssh-server
 sudo systemctl status ssh
 ```
 
+## pwngdb/pwngdb
+[GitHub - pwndbg/pwndbg: Exploit Development and Reverse Engineering with GDB Made Easy](https://github.com/pwndbg/pwndbg)
+
+```
+git clone https://github.com/pwndbg/pwndbg
+cd pwndbg
+./setup.sh
+```
+
+[GitHub - scwuaptx/Pwngdb: gdb for pwn](https://github.com/scwuaptx/Pwngdb)
+
+```
+cd ~/
+git clone https://github.com/scwuaptx/Pwngdb.git 
+cp ~/Pwngdb/.gdbinit ~/
+```
+
+将pwngdb/pwngdb路径加入.gdbinit中，加在最前面
+
+```
+source /home/ubuntu/pwndgb/gdbinit.py
+```
+
+![](images/Pasted%20image%2020230616153731.png)
+
+[(176条消息) gdb调试 | pwndbg+pwndbg联合使用_fmtarg__n19hT的博客-CSDN博客](https://blog.csdn.net/weixin_43092232/article/details/105648769)
 ## jdk 17
 下载jdk17，我下载的版本为17.0.7:[Java Downloads | Oracle](https://www.oracle.com/java/technologies/downloads/#java17)
 
