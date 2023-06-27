@@ -1,7 +1,7 @@
 ## Scrapy安装与使用
 ```shell
 pip install --upgrade pip
-pip install Scrapy
+pip install scrapy
 ```
 
 创建项目
@@ -9,6 +9,7 @@ pip install Scrapy
 scrapy startproject tendaVuls
 ```
 
+## 漏洞信息爬取
 打开项目下`tendaVuls/items.py`文件，定义结构化数据字段，用来保存爬取到的数据。
 ```python
 import scrapy
@@ -57,5 +58,23 @@ class TendacveSpider(scrapy.Spider):
 scrapy crawl tendaCVE -o tendaCVE.json
 ```
 
+## PoC爬取
+下面爬取固件web漏洞PoC，简单起见，只爬取链接为github的。
+
+在目录下输入命令，创建名为tendaPoC的爬虫
+```
+scrapy genspider tendaPoC "github.com"
+```
+
+为了从文件中读取URL，需要重写start_requests()方法
+```
+
+```
+
+
+
+
 ## 参考链接
 [(178条消息) Python Scrapy多层爬取收集数据_kocor的博客-CSDN博客](https://blog.csdn.net/ygc123189/article/details/79160146)
+
+[(179条消息) scrapy起始地址是从文件读取的解决办法_scrapy重写start_urls_苍穹之跃的博客-CSDN博客](https://blog.csdn.net/wenxingchen/article/details/119705336)
