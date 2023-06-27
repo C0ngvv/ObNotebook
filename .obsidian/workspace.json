@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "17438a4aab4120ac",
+        "id": "16ef5da8044a5371",
         "type": "tabs",
         "children": [
           {
-            "id": "d0f8b3b3cfb79fda",
+            "id": "51326ad92acab97a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ae842cb0600d8bbc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Python/json/json.md",
+                "file": "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -114,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
+                "file": "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
+                "file": "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md"
+                "file": "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md"
               }
             }
           },
@@ -184,8 +173,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d0f8b3b3cfb79fda",
+  "active": "51326ad92acab97a",
   "lastOpenFiles": [
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627204825.png",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627204127.png",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627204100.png",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627203758.png",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627203447.png",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627202915.png",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627202636.png",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis",
     "Python/json/json.md",
     "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
     "conflict-files-obsidian-git.md",
@@ -202,15 +201,9 @@
     "环境配置/linux/linux.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160509.png",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160337.png",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160315.png",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160159.png",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160141.png",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614155947.png",
     "固件分析/Tenda固件分析",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
-    "环境配置/软件安装/images/Pasted image 20230613101218.png",
-    "环境配置/软件安装/images/Pasted image 20230613101104.png",
     "环境配置/软件安装/images",
     "环境配置/shell/shell.md",
     "环境配置/软件安装",
@@ -219,8 +212,6 @@
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee",
     "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
     "Paper/MultiFuzz/MultiFuzz.md",
-    "Paper/Snipfuzz.zip",
-    "Paper/MultiFuzz/images",
     "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "固件分析/华硕RT-AX56U_V2/华硕RT-AX56U_V2.md",
     "工具/Firmadyne/模拟Tenda固件尝试/模拟Tenda固件尝试.md",
@@ -229,8 +220,6 @@
     "课程/强化学习/实验环境配置/实验环境配置.md",
     "语法/C/零散知识/C零散知识.md",
     "语法/C/C.md",
-    "工具/EQUAFL/工具README/工具README.md",
-    "工具/Fuzztruction/Fuzz新程序流程2/Fuzz一个新程序的流程二：构建.md",
-    "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md"
+    "工具/EQUAFL/工具README/工具README.md"
   ]
 }
