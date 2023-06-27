@@ -78,3 +78,5 @@ scrapy genspider tendaPoC "github.com"
 [(178条消息) Python Scrapy多层爬取收集数据_kocor的博客-CSDN博客](https://blog.csdn.net/ygc123189/article/details/79160146)
 
 [(179条消息) scrapy起始地址是从文件读取的解决办法_scrapy重写start_urls_苍穹之跃的博客-CSDN博客](https://blog.csdn.net/wenxingchen/article/details/119705336)
+
+[(179条消息) Python Scrapy 爬虫 - 爬取多级别的页面_网络爬虫常用多级爬取吗_sigmarising的博客-CSDN博客](https://blog.csdn.net/sigmarising/article/details/83444106)
