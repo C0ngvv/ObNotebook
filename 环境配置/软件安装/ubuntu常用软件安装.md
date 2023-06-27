@@ -14,6 +14,7 @@ sudo apt-get install bridge-utils
 sudo apt install net-tools
 sudo apt install python3-pip
 sudo apt install curl
+sudo apt install binwalk
 
 # QEMU
 sudo apt-get install qemu

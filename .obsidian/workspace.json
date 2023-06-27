@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -103,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md"
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md"
               }
             }
           },
@@ -173,8 +172,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "51326ad92acab97a",
+  "active": "187d4ecd31b81bf7",
   "lastOpenFiles": [
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627204825.png",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627204127.png",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627204100.png",
@@ -183,7 +183,6 @@
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627202915.png",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627202636.png",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images",
-    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis",
     "Python/json/json.md",
     "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
@@ -200,7 +199,6 @@
     "环境配置/软件安装/images/Pasted image 20230614164122.png",
     "环境配置/linux/linux.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160509.png",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/images/Pasted image 20230614160337.png",
     "固件分析/Tenda固件分析",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
