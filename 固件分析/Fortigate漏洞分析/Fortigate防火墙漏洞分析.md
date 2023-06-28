@@ -302,3 +302,10 @@ cookie += '1\xc0Ph//rmh/binT[PhflagTYPQSTY\x89\xc2@@@@@@@@@@@\xcd\x80' # 'xor ea
 
 ![](images/Pasted%20image%2020230517112124.png)
 
+## 参考链接
+[(179条消息) 【高级篇 / FortiGate-VM】(6.4) ❀ 02. 安装并启用 FortiGate VM ❀ FortiGate 防火墙_fortigate虚拟机_飞塔老梅子的博客-CSDN博客](https://blog.csdn.net/meigang2012/article/details/105246640)
+
+[(179条消息) （FortiGate）飞塔防火墙查看设备基本信息命令_weixin_33681778的博客-CSDN博客](https://blog.csdn.net/weixin_33681778/article/details/92487611)
+
+[Fortinet SSO](https://customersso1.fortinet.com/saml-idp/jrx0g5n1etn0aoy9/login/?SAMLRequest=hZJJb9swEIX%2FisA7tTnxQtgGnBhFDWQRIreHXoIJObJZSKTKIVPn35eSuyQXF%2BBpMDPve2%2B4JOjaXmyCP5on%2FBGQfLLbrtjzQjYK1aLkRaMKfgVyymECUz57mTZXeaHmkM9Y8hUdaWtWrExzluyIAu4MeTA%2BlvJywvMpL%2Bf7fC7iu56k5az4xpJtVNEG%2FDh59L4nkWUykLdd3Ee2SBvrYgf6VNouGxC5Vn323Z3yw7Up0Jsc7Nsia%2B1Bm4wln6yTOHpYsQZawoGlAiL9in8rlbPeStveaKO0OaxYcEZYIE3CQIckvBT15v5ORC%2Fi5dxE4vN%2BX%2FHqsd6zZEOEboC%2BtYZCRK3RvWqJX57u%2Ftmg0PcR%2FqODun48s6ZAxxNLTl1rSIzRX8bofzOz9XLoFmPC7t385XH4Q8zW%2F%2BXr0IMCDyPiMnsnd9buxUPcv9tWttXybYi8A39ZfqhoxZuxVQRDPUrdaFQxy7a1P28dgo8H8i7E%2B2Trs%2BrH37j%2BBQ%3D%3D&RelayState=UmV0dXJuVXJsPUwwUnZkMjVzYjJGa0wwWnBjbTEzWVhKbFNXMWhaMlZ6TG1GemNIZz0maGtleT0%3D)
+
