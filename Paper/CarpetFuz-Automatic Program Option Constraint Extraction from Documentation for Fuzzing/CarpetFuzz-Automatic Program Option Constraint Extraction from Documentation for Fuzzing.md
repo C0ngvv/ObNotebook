@@ -59,3 +59,9 @@
 
 ## 7.结论
 我们设计并实现了CarpetFuzz，这是一种基于nlp的模糊辅助技术，用于提取程序选项约束。CarpetFuzz受益于主动学习、机器学习和自然语言处理技术，可以准确地从文档中提取选项之间的关系，并过滤掉67.91%的选项组合。通过修剪有效组合，CarpetFuzz帮助AFL在20个流行程序中发现了45.97%的路径，而其他fuzzers无法发现，并发现了57个独特的崩溃，其中30个被分配了CVE id。此外，CarpetFuzz在前一项研究的基准上发现了94次独特的崩溃，是前一项研究的1.71倍。
+
+# 复现
+```
+sudo docker build -t carpetfuzz:latest . --network host --build-arg HTTP_PROXY=http://192.168.65.1:7890 --build-arg HTTPS_PROXY=http://192.168.65.1:7890
+```
+
