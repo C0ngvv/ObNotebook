@@ -71,7 +71,18 @@ scrapy genspider tendaPoC "github.com"
 
 ```
 
+## github页面分析
 
+```python
+import requests
+from lxml import etree
+url = r"https://github.com/tianhui999/myCVE/blob/main/TX3/TX3-5.md"
+res = requests.get(url)
+element = etree.HTML(res.text)
+nodes = element.xpath('//a[@class="link"]')
+
+
+```
 
 
 ## 参考链接

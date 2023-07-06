@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
+                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -102,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
+                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
+                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md"
+                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md"
               }
             }
           },
@@ -159,7 +160,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5
+    "width": 267.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -174,6 +176,7 @@
   },
   "active": "f7dc7926a6de129a",
   "lastOpenFiles": [
+    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images/Pasted image 20230704230114.png",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images/Pasted image 20230704225639.png",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images/Pasted image 20230704225155.png",
@@ -181,7 +184,6 @@
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
-    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images/Pasted image 20230704222832.png",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images/Pasted image 20230704222755.png",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images/Pasted image 20230704222248.png",
@@ -199,7 +201,6 @@
     "Paper/Snipfuzz/Snipuzz.md",
     "固件分析/Tenda固件分析/Tenda.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
-    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images/Pasted image 20230627204825.png",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis",
     "Python/json/json.md",
