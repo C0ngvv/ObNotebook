@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
+                "file": "Python/re/re.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -103,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
+                "file": "Python/re/re.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
+                "file": "Python/re/re.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md"
+                "file": "Python/re/re.md"
               }
             }
           },
@@ -176,6 +175,9 @@
   },
   "active": "f7dc7926a6de129a",
   "lastOpenFiles": [
+    "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
+    "Python/re/re.md",
+    "Python/re",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images/Pasted image 20230704230114.png",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images/Pasted image 20230704225639.png",
@@ -204,12 +206,10 @@
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/images",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis",
     "Python/json/json.md",
-    "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
     "conflict-files-obsidian-git.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "固件分析/漏洞信息爬取",
     "Python/json",
-    "Python",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "环境配置/linux/linux.md",
     "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
