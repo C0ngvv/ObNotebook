@@ -22,3 +22,9 @@
 
 将`sbin/acos_service`拖进IDA进行分析，找到解析`start`参数的位置
 
+![](images/Pasted%20image%2020230712010302.png)
+
+通过对httpd字符串交叉引用，发现httpd启动在sub_147B8中的sub_1226C函数中。
+
+![](images/Pasted%20image%2020230712010422.png)
+
