@@ -1,5 +1,7 @@
 从官网下载R6250固件，版本为1.0.4.48。
 
+## httpd程序启动
+
 使用binwalk解包，然后利用strings查看init程序为`sbin/preinit`。
 
 ![](images/Pasted%20image%2020230712001824.png)
@@ -28,6 +30,7 @@
 
 ![](images/Pasted%20image%2020230712010422.png)
 
+## http请求解析
 Netgear前端点击按钮后会发送cgi请求
 
 ![](images/Pasted%20image%2020230712114307.png)
