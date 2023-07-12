@@ -12,4 +12,4 @@ sudo dhclient br0
 sudo chroot . ./qemu-mipsel-static ./bin/httpd
 ```
 
-22.04启动模拟，启动Burpsuit，启动浏览器，一访问页面系统就崩溃。
+22.04启动模拟，启动Burpsuit，启动浏览器，一访问页面系统就崩溃。应该是系统版本问题，换成20.04就好了。
