@@ -57,3 +57,13 @@ acosNvramConfig_set->j_nvram_set->nvram_set->nvram_set_0,这几个函数都是�
 
 ### acosNvramConfig_get
 acosNvramConfig_get->j_nvram_get->nvram_get
+
+![](images/Pasted%20image%2020230712222414.png)
+
+### acosNvramConfig_match
+获取key相应的value，然后和第二个参数比较是否一致。
+
+![](images/Pasted%20image%2020230712222533.png)
+
+
+
