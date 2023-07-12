@@ -44,3 +44,16 @@ Netgear前端点击按钮后会发送cgi请求
 
 ![](images/Pasted%20image%2020230712114507.png)
 
+## NVRAM分析
+### nvram_init
+将`usr/lib/libnvram.so` 拖进IDA进行分析，首先看`nvram_init()`函数。它的操作是通过open打开`/dev/nvram` 并将文件描述符赋给`dword_1349C`，打开成功后采用mmap分配空间，然后使用fcntl()进行设置。
+
+![](images/Pasted%20image%2020230712220730.png)
+
+### acosNvramConfig_set
+acosNvramConfig_set->j_nvram_set->nvram_set->nvram_set_0,这几个函数都是相同的。在nvram_set_0中，首先调用j_nvram_init()进行初始化（j_nvram_init->nvram_init，已进行过初始化会直接返回0），然后分配一段缓冲区来临时存储设置的key value值，如果value存在则存储形式为"key=value"，否则只保存"key"，最后将缓冲区内容写入nvram文件描述符。
+
+![](images/Pasted%20image%2020230712221602.png)
+
+### acosNvramConfig_get
+acosNvramConfig_get->j_nvram_get->nvram_get
