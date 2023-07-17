@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5a7652dbb4f9775f",
+        "id": "a4f2a26cdf75d577",
         "type": "tabs",
         "children": [
           {
-            "id": "338fac9b4326615d",
+            "id": "9709b7d8dbc600db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/串口连接/串口连接.md",
+                "file": "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,8 +102,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/串口连接/串口连接.md",
-                "collapseAll": false,
+                "file": "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/串口连接/串口连接.md",
+                "file": "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/串口连接/串口连接.md"
+                "file": "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md"
               }
             }
           },
@@ -159,7 +159,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5
+    "width": 267.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -172,7 +173,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "338fac9b4326615d",
+  "active": "9709b7d8dbc600db",
   "lastOpenFiles": [
     "固件分析/串口连接/images/Pasted image 20230714111502.png",
     "固件分析/串口连接/images/Pasted image 20230714111453.png",
@@ -183,42 +184,42 @@
     "固件分析/串口连接/images/Pasted image 20230714104851.png",
     "固件分析/串口连接/images/Pasted image 20230714104552.png",
     "固件分析/串口连接/images/Pasted image 20230714104519.png",
-    "固件分析/串口连接/images",
-    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "固件分析/串口连接/串口连接.md",
+    "固件分析/串口连接/images",
     "固件分析/串口连接",
-    "固件分析/Tenda固件分析/Tenda.md",
     "固件分析/Netgear R6250固件分析/images/Pasted image 20230712222533.png",
     "固件分析/Netgear R6250固件分析/images/Pasted image 20230712222414.png",
-    "conflict-files-obsidian-git.md",
-    "Python/json/json.md",
     "固件分析/Netgear R6250固件分析/images",
+    "固件分析/TODO List.md",
+    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "固件分析/Netgear R6250固件分析",
-    "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
+    "Python/json/json.md",
+    "conflict-files-obsidian-git.md",
     "Python/re/re.md",
     "Python/re",
-    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
-    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
-    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
-    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images",
-    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/images",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports",
+    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images",
+    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
+    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing",
+    "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "环境配置/疑难杂症/疑难杂症.md",
     "环境配置/疑难杂症",
-    "Paper/MultiFuzz/MultiFuzz.md",
-    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
-    "Paper/Snipfuzz/Snipuzz.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "环境配置/linux/linux.md",
-    "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
+    "网络/linux/linux.md",
+    "环境配置/终端C终止/鼠标选中后终端总是C终止.md",
     "环境配置/shell/shell.md",
     "环境配置/更换镜像源/更换镜像源.md",
+    "环境配置/Download网络问题.md",
+    "固件分析/Tenda固件分析/Tenda.md",
+    "Paper/MultiFuzz/MultiFuzz.md",
     "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
-    "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
-    "固件分析/华硕RT-AX56U_V2/华硕RT-AX56U_V2.md"
+    "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md"
   ]
 }
