@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
+                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -102,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
+                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
+                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md"
+                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md"
               }
             }
           },
@@ -175,6 +176,11 @@
   },
   "active": "9709b7d8dbc600db",
   "lastOpenFiles": [
+    "Paper/Forming Faster Firmware Fuzzers/images/Pasted image 20230721163118.png",
+    "Paper/Forming Faster Firmware Fuzzers/images",
+    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
+    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
+    "Paper/Forming Faster Firmware Fuzzers",
     "固件分析/串口连接/images/Pasted image 20230714111502.png",
     "固件分析/串口连接/images/Pasted image 20230714111453.png",
     "固件分析/串口连接/images/Pasted image 20230714110146.png",
@@ -188,10 +194,8 @@
     "固件分析/串口连接/images",
     "固件分析/串口连接",
     "固件分析/Netgear R6250固件分析/images/Pasted image 20230712222533.png",
-    "固件分析/Netgear R6250固件分析/images/Pasted image 20230712222414.png",
     "固件分析/Netgear R6250固件分析/images",
     "固件分析/TODO List.md",
-    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "固件分析/Netgear R6250固件分析",
     "Python/json/json.md",
     "conflict-files-obsidian-git.md",
@@ -202,12 +206,10 @@
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
-    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing",
     "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "环境配置/疑难杂症/疑难杂症.md",
-    "环境配置/疑难杂症",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "环境配置/linux/linux.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
@@ -219,7 +221,6 @@
     "环境配置/Download网络问题.md",
     "固件分析/Tenda固件分析/Tenda.md",
     "Paper/MultiFuzz/MultiFuzz.md",
-    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md",
-    "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md"
+    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md"
   ]
 }
