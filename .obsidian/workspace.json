@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a4f2a26cdf75d577",
+        "id": "68addda1eb64cc7c",
         "type": "tabs",
         "children": [
           {
-            "id": "9709b7d8dbc600db",
+            "id": "32e72bc4abe877c2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -103,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md"
-              }
+              "state": {}
             }
           },
           {
@@ -174,14 +165,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9709b7d8dbc600db",
+  "active": "32e72bc4abe877c2",
   "lastOpenFiles": [
+    "固件分析/串口连接/串口连接.md",
+    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
+    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
     "Paper/Forming Faster Firmware Fuzzers/images/Pasted image 20230725171630.png",
     "Paper/Forming Faster Firmware Fuzzers/images/Pasted image 20230725170732.png",
     "Paper/Forming Faster Firmware Fuzzers/images/Pasted image 20230721163118.png",
     "Paper/Forming Faster Firmware Fuzzers/images",
-    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
-    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
     "Paper/Forming Faster Firmware Fuzzers",
     "固件分析/串口连接/images/Pasted image 20230714111502.png",
     "固件分析/串口连接/images/Pasted image 20230714111453.png",
@@ -190,8 +182,6 @@
     "固件分析/串口连接/images/Pasted image 20230714105506.png",
     "固件分析/串口连接/images/Pasted image 20230714105043.png",
     "固件分析/串口连接/images/Pasted image 20230714104851.png",
-    "固件分析/串口连接/images/Pasted image 20230714104552.png",
-    "固件分析/串口连接/串口连接.md",
     "固件分析/串口连接/images",
     "固件分析/串口连接",
     "固件分析/Netgear R6250固件分析/images",
