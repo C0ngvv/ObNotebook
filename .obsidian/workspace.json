@@ -11,8 +11,12 @@
             "id": "32e72bc4abe877c2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -98,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +141,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md"
+              }
             }
           },
           {
@@ -167,6 +175,7 @@
   },
   "active": "32e72bc4abe877c2",
   "lastOpenFiles": [
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "固件分析/串口连接/串口连接.md",
     "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
@@ -197,7 +206,6 @@
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
     "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
-    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "环境配置/疑难杂症/疑难杂症.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",

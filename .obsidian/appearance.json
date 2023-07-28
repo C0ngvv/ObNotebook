@@ -4,6 +4,6 @@
   "cssTheme": "Blue Topaz",
   "nativeMenus": false,
   "showViewHeader": true,
-  "baseFontSize": 10,
+  "baseFontSize": 16,
   "textFontFamily": "宋体,Cascadia Code,华文楷体"
 }
