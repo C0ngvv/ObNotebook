@@ -175,6 +175,9 @@
   },
   "active": "32e72bc4abe877c2",
   "lastOpenFiles": [
+    "漏洞分析/Netgear R6220 认证绕过漏洞分析/images/1690642525243.png",
+    "漏洞分析/Netgear R6220 认证绕过漏洞分析/images/1690642440109.png",
+    "漏洞分析/Netgear R6220 认证绕过漏洞分析/images",
     "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
     "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
     "漏洞分析/Netgear R6220 认证绕过漏洞分析",
@@ -193,7 +196,6 @@
     "固件分析/串口连接/images/Pasted image 20230714105725.png",
     "固件分析/串口连接/images/Pasted image 20230714105506.png",
     "固件分析/串口连接/images/Pasted image 20230714105043.png",
-    "固件分析/串口连接/images/Pasted image 20230714104851.png",
     "固件分析/串口连接/images",
     "固件分析/串口连接",
     "固件分析/Netgear R6250固件分析/images",
@@ -204,7 +206,6 @@
     "Python/re/re.md",
     "Python/re",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
-    "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/images",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
     "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
@@ -219,7 +220,6 @@
     "环境配置/更换镜像源/更换镜像源.md",
     "环境配置/Download网络问题.md",
     "固件分析/Tenda固件分析/Tenda.md",
-    "Paper/MultiFuzz/MultiFuzz.md",
-    "固件分析/asuswrt-merlin httpd分析/asuswrt-merlin httpd分析.md"
+    "Paper/MultiFuzz/MultiFuzz.md"
   ]
 }
