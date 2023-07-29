@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
+                "file": "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
+                "file": "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
+                "file": "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md"
+                "file": "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md"
               }
             }
           },
@@ -175,10 +175,13 @@
   },
   "active": "32e72bc4abe877c2",
   "lastOpenFiles": [
+    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
+    "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
+    "漏洞分析/Netgear R6220 认证绕过漏洞分析",
+    "漏洞分析",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "固件分析/串口连接/串口连接.md",
     "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
-    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
     "Paper/Forming Faster Firmware Fuzzers/images/Pasted image 20230725171630.png",
     "Paper/Forming Faster Firmware Fuzzers/images/Pasted image 20230725170732.png",
     "Paper/Forming Faster Firmware Fuzzers/images/Pasted image 20230721163118.png",
@@ -202,8 +205,6 @@
     "Python/re",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/images",
-    "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports",
-    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/images",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
     "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
