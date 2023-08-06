@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "68addda1eb64cc7c",
+        "id": "5a7652dbb4f9775f",
         "type": "tabs",
         "children": [
           {
-            "id": "32e72bc4abe877c2",
+            "id": "338fac9b4326615d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -103,7 +103,7 @@
               "type": "backlink",
               "state": {
                 "file": "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -159,8 +159,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5,
-    "collapsed": true
+    "width": 267.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -173,53 +172,52 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "32e72bc4abe877c2",
+  "active": "338fac9b4326615d",
   "lastOpenFiles": [
+    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
+    "固件分析/串口连接/串口连接.md",
+    "漏洞分析/Netgear R6220 认证绕过漏洞分析/images/1690642525243.png",
+    "漏洞分析/Netgear R6220 认证绕过漏洞分析/images/1690642440109.png",
+    "漏洞分析/Netgear R6220 认证绕过漏洞分析/images",
+    "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
+    "漏洞分析/Netgear R6220 认证绕过漏洞分析",
+    "漏洞分析",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/images/Pasted image 20230803092805.png",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/images/Pasted image 20230803092601.png",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/images/Pasted image 20230803092516.png",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/images/Pasted image 20230803085948.png",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/images/Pasted image 20230803085823.png",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/images",
-    "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation",
-    "漏洞分析/Netgear R6220 认证绕过漏洞分析/images/1690642525243.png",
-    "漏洞分析/Netgear R6220 认证绕过漏洞分析/images/1690642440109.png",
-    "漏洞分析/Netgear R6220 认证绕过漏洞分析/images",
-    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
-    "漏洞分析/Netgear R6220 认证绕过漏洞分析",
-    "漏洞分析",
-    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
-    "固件分析/串口连接/串口连接.md",
-    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "Paper/Forming Faster Firmware Fuzzers/images/Pasted image 20230725171630.png",
     "Paper/Forming Faster Firmware Fuzzers/images/Pasted image 20230725170732.png",
     "Paper/Forming Faster Firmware Fuzzers/images/Pasted image 20230721163118.png",
     "Paper/Forming Faster Firmware Fuzzers/images",
     "Paper/Forming Faster Firmware Fuzzers",
-    "固件分析/串口连接/images/Pasted image 20230714111502.png",
     "固件分析/串口连接/images",
+    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "固件分析/串口连接",
-    "固件分析/Netgear R6250固件分析/images",
-    "固件分析/TODO List.md",
-    "Python/json/json.md",
+    "固件分析/Tenda固件分析/Tenda.md",
     "conflict-files-obsidian-git.md",
-    "Python/re/re.md",
-    "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
-    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
+    "Python/json/json.md",
+    "固件分析/Netgear R6250固件分析/images",
     "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
-    "环境配置/疑难杂症/疑难杂症.md",
-    "环境配置/软件安装/ubuntu常用软件安装.md",
-    "环境配置/linux/linux.md",
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+    "Python/re/re.md",
+    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
+    "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
-    "网络/linux/linux.md",
-    "环境配置/终端C终止/鼠标选中后终端总是C终止.md",
+    "环境配置/疑难杂症/疑难杂症.md",
+    "Paper/MultiFuzz/MultiFuzz.md",
+    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+    "Paper/Snipfuzz/Snipuzz.md",
+    "环境配置/软件安装/ubuntu常用软件安装.md",
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+    "环境配置/linux/linux.md",
+    "固件分析/华硕RT-AX56U/华硕RT-AX56U.md",
     "环境配置/shell/shell.md",
-    "环境配置/更换镜像源/更换镜像源.md",
-    "环境配置/Download网络问题.md",
-    "固件分析/Tenda固件分析/Tenda.md"
+    "环境配置/更换镜像源/更换镜像源.md"
   ]
 }
