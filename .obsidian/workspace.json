@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
+                "file": "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
+                "file": "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
+                "file": "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md"
+                "file": "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md"
               }
             }
           },
@@ -174,6 +174,9 @@
   },
   "active": "a067a56da50dace3",
   "lastOpenFiles": [
+    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
+    "Paper/Avatar2-A Multi-target Orchestration Platform",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807170255.png",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807165834.png",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807165255.png",
@@ -184,8 +187,6 @@
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807162455.png",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807162142.png",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807161707.png",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807160254.png",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images",
     "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
@@ -205,7 +206,6 @@
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation",
     "Paper/Forming Faster Firmware Fuzzers/images",
     "Paper/Forming Faster Firmware Fuzzers",
-    "固件分析/串口连接/images",
     "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "固件分析/Tenda固件分析/Tenda.md",
     "conflict-files-obsidian-git.md",
