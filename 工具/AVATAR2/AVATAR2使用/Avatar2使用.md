@@ -89,6 +89,9 @@ avatar.targets['qemu1'] == qemu
 
 avatar2提供了5中Target:`GDBTarget`, `OpenOCDTarget`, `JLinkTarget`, `QemuTarget`, `PandaTarget`。不同Target支持的参数配置信息详看[avatar2/handbook/0x02_targets.md](https://github.com/avatartwo/avatar2/blob/main/handbook/0x02_targets.md)
 
+## Memory配置
+第二个需要提供给avatar的信息是指定内存布局，avatar会跟踪所有内存范围，并将产生的内存映射结合所有范围推送到各个目标。
+
 
 
 
