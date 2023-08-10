@@ -174,6 +174,10 @@
   },
   "active": "cb766f9dc054dd8c",
   "lastOpenFiles": [
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230810171207.png",
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230810164018.png",
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230810163655.png",
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation",
     "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
@@ -194,8 +198,6 @@
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "Paper/Avatar2-A Multi-target Orchestration Platform",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807170255.png",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807165834.png",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807165255.png",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
@@ -207,7 +209,6 @@
     "固件分析/串口连接/串口连接.md",
     "漏洞分析/Netgear R6220 认证绕过漏洞分析/images",
     "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
-    "漏洞分析/Netgear R6220 认证绕过漏洞分析",
     "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "固件分析/Tenda固件分析/Tenda.md",
     "conflict-files-obsidian-git.md",
@@ -218,7 +219,6 @@
     "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
     "环境配置/疑难杂症/疑难杂症.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
-    "环境配置/软件安装/ubuntu常用软件安装.md",
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md"
+    "环境配置/软件安装/ubuntu常用软件安装.md"
   ]
 }
