@@ -84,4 +84,30 @@ systemctl show docker --property Environment
 sudo docker pull '镜像'
 ```
 
+### 4. Dockerfile build走代理
+虽然 `docker build` 的本质，也是启动一个容器，但是环境会略有不同，用户级配置无效。在构建时，需要注入 `http_proxy` 等参数。
+
+```bash
+docker build . \ --build-arg "HTTP_PROXY=http://proxy.example.com:8080/" \ --build-arg "HTTPS_PROXY=http://proxy.example.com:8080/" \ --build-arg "NO_PROXY=localhost,127.0.0.1,.example.com" \ -t your/image:tag
+```
+
+**注意**：无论是 `docker run` 还是 `docker build`，默认是网络隔绝的。如果代理使用的是 `localhost:3128` 这类，则会无效。这类仅限本地的代理，必须加上 `--network host` 才能正常使用。而一般则需要配置代理的外部IP，而且代理本身要开启 Gateway 模式。
+
+重启生效
+
+```
+sudo systemctl daemon-reload 
+sudo systemctl restart docker
+```
+
+参考：[如何优雅的给 Docker 配置网络代理](https://cloud.tencent.com/developer/article/1806455)
+
+### 5.Dockerfile apt改国内源
+在里面加上
+```
+RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
+```
+
+参考：[如何在dockerfile中将apt-get源更换为中国国内源](https://www.cnblogs.com/chentiao/p/17352748.html)
 
