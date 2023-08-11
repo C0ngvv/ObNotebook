@@ -86,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -174,6 +175,11 @@
   },
   "active": "cb766f9dc054dd8c",
   "lastOpenFiles": [
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230811113325.png",
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230811113137.png",
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230811112846.png",
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230811112549.png",
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230811112424.png",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230810171207.png",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230810164018.png",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230810163655.png",
@@ -190,14 +196,9 @@
     "工具/AVATAR2/AVATAR2使用",
     "工具/AVATAR2",
     "Paper/Avatar2-A Multi-target Orchestration Platform/images/Pasted image 20230808113812.png",
-    "Paper/Avatar2-A Multi-target Orchestration Platform/images/Pasted image 20230808111942.png",
-    "Paper/Avatar2-A Multi-target Orchestration Platform/images/Pasted image 20230808101131.png",
-    "Paper/Avatar2-A Multi-target Orchestration Platform/images/Pasted image 20230808100804.png",
-    "Paper/Avatar2-A Multi-target Orchestration Platform/images/Pasted image 20230808093200.png",
     "Paper/Avatar2-A Multi-target Orchestration Platform/images",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "Paper/Avatar2-A Multi-target Orchestration Platform",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images/Pasted image 20230807170255.png",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
