@@ -86,6 +86,10 @@ CFG 图的节点是类 CFGNode 的实例。由于上下文的敏感性，一个�
 >>> print("Successors (and type of jump) of the entry point:", [ jumpkind + " to " + str(node.addr) for node,jumpkind in cfg.get_successors_and_jumpkind(entry_node) ])
 ```
 
+CFG 分析不区分来自不同二进制对象的代码。这意味着在默认情况下，它将尝试分析通过加载共享库的控制流。这几乎不是我们想要的行为，因为这可能会将分析时间延长至数天。要加载不含共享库的二进制文件，需要在 Project 构造函数中添加以下关键字参数：load_options={'auto_load_libs'：False}
+
+
+
 
 
 
