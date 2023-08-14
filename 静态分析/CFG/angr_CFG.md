@@ -33,3 +33,14 @@ gcc test.c -o test
 objdump -d test
 ```
 
+angr生成CFG
+
+```python
+import angr
+from angrutils import *
+p = angr.Project('./test', load_options = {'auto_load_libs': False})
+cfg = p.analyses.CFG()
+plot_cfg(cfg, "ais3_cfg", asminst=True, remove_imports=True, remove_path_terminator=True)
+```
+
+![](images/Pasted%20image%2020230814114115.png)
