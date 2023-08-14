@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
+                "file": "工具/Greenhouse/Greenhouse测试.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
+                "file": "工具/Greenhouse/Greenhouse测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
+                "file": "工具/Greenhouse/Greenhouse测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md"
+                "file": "工具/Greenhouse/Greenhouse测试.md"
               }
             }
           },
@@ -174,10 +174,15 @@
   },
   "active": "cb766f9dc054dd8c",
   "lastOpenFiles": [
+    "工具/Greenhouse/images/Pasted image 20230814205915.png",
+    "工具/Greenhouse/images/Pasted image 20230814205757.png",
+    "工具/Greenhouse/images",
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
+    "工具/Greenhouse/Greenhouse测试.md",
+    "工具/Greenhouse",
     "静态分析/CFG/angr_CFG.md",
     "静态分析/CFG/images/Pasted image 20230814114115.png",
     "静态分析/CFG/images",
-    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "静态分析/CFG",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230814094955.png",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230814094933.png",
@@ -188,7 +193,6 @@
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230811113325.png",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230811113137.png",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230811112846.png",
-    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230811112549.png",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation",
     "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
@@ -200,8 +204,6 @@
     "工具/AVATAR2",
     "Paper/Avatar2-A Multi-target Orchestration Platform/images",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
-    "Paper/Avatar2-A Multi-target Orchestration Platform",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/images",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "Paper/Snipfuzz/Snipuzz.md",
@@ -217,7 +219,6 @@
     "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
     "Python/re/re.md",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
-    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md",
-    "环境配置/疑难杂症/疑难杂症.md"
+    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md"
   ]
 }
