@@ -455,10 +455,6 @@ FIRMADYNE的其他限制包括使用定制的预构建内核，这些内核目�
 
 ## 疑问
 
-instrumented kernels 是什么？
-
-NVRAM
-
 out-of-tree kernel modules 
 
 内核动态探测(kprobes)框架
