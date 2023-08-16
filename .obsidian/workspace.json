@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
+                "file": "语法/SQL/SQL基本用法.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
+                "file": "语法/SQL/SQL基本用法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
+                "file": "语法/SQL/SQL基本用法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md"
+                "file": "语法/SQL/SQL基本用法.md"
               }
             }
           },
@@ -175,6 +175,8 @@
   "active": "8e5e7d15dfbf77ff",
   "lastOpenFiles": [
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
+    "语法/SQL/SQL基本用法.md",
+    "语法/SQL",
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs",
     "工具/Greenhouse/Greenhouse测试.md",
     "工具/Greenhouse/images/Pasted image 20230814205915.png",
@@ -202,7 +204,6 @@
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
     "工具/AVATAR2/AVATAR2使用/images",
     "工具/AVATAR2/AVATAR2使用",
-    "工具/AVATAR2",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
@@ -218,7 +219,6 @@
     "Python/json/json.md",
     "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
     "Python/re/re.md",
-    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
-    "固件分析/Fortigate漏洞分析/Fortigate防火墙漏洞分析.md"
+    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md"
   ]
 }
