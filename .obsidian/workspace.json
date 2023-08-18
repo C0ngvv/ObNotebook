@@ -11,8 +11,12 @@
             "id": "3ecd5ff95c97a007",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "安卓逆向分析/安卓应用格式/安卓应用格式.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -98,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "安卓逆向分析/安卓应用格式/安卓应用格式.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "安卓逆向分析/安卓应用格式/安卓应用格式.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +141,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "安卓逆向分析/安卓应用格式/安卓应用格式.md"
+              }
             }
           },
           {
@@ -166,6 +174,9 @@
   },
   "active": "3ecd5ff95c97a007",
   "lastOpenFiles": [
+    "安卓逆向分析/安卓应用格式/安卓应用格式.md",
+    "安卓逆向分析/安卓应用格式",
+    "安卓逆向分析",
     "Paper/firmadyne/firmadyne.md",
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/images/Pasted image 20230816154206.png",
@@ -191,12 +202,10 @@
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images/Pasted image 20230814092328.png",
     "环境配置/Download网络问题.md",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/images",
-    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation",
     "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
     "工具/AVATAR2/AVATAR2使用/Avatar2使用.md",
     "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
-    "工具/AVATAR2/AVATAR2使用/images",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
@@ -210,7 +219,6 @@
     "固件分析/Tenda固件分析/Tenda.md",
     "conflict-files-obsidian-git.md",
     "Python/json/json.md",
-    "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md",
-    "Python/re/re.md"
+    "固件分析/漏洞信息爬取/Scrapy与Tenda漏洞信息爬取.md"
   ]
 }
