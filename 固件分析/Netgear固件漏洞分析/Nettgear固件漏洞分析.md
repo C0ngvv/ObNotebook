@@ -7,7 +7,7 @@
 ![](images/Pasted%20image%2020230821094354.png)
 
 
-
+basic_wait.htm->basic_home.htm->basic.js->funjsq.htm
 
 
 
