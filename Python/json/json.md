@@ -25,7 +25,6 @@ print(type(data))
 
 json写入文件中
 ```python
-
 with open('countries_exported.json', 'w') as f:
 	json.dump(country, f, indent=4, ensure_ascii=False)
 ```
