@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "安卓逆向分析/IDA调试/IDA远程调试.md",
+                "file": "安卓逆向分析/工具安装/工具安装.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "安卓逆向分析/IDA调试/IDA远程调试.md",
+                "file": "安卓逆向分析/工具安装/工具安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "安卓逆向分析/IDA调试/IDA远程调试.md",
+                "file": "安卓逆向分析/工具安装/工具安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "安卓逆向分析/IDA调试/IDA远程调试.md"
+                "file": "安卓逆向分析/工具安装/工具安装.md"
               }
             }
           },
@@ -174,12 +174,18 @@
   },
   "active": "3ecd5ff95c97a007",
   "lastOpenFiles": [
+    "安卓逆向分析/工具安装/images/Pasted image 20230829110114.png",
+    "安卓逆向分析/工具安装/images/Pasted image 20230829105922.png",
+    "安卓逆向分析/工具安装/images/Pasted image 20230829105540.png",
+    "安卓逆向分析/工具安装/images",
+    "安卓逆向分析/IDA调试/IDA远程调试.md",
+    "安卓逆向分析/工具安装/工具安装.md",
+    "安卓逆向分析/工具安装",
     "安卓逆向分析/IDA调试/images/Pasted image 20230829103521.png",
     "安卓逆向分析/IDA调试/images/Pasted image 20230829103424.png",
     "安卓逆向分析/IDA调试/images/Pasted image 20230829103342.png",
     "安卓逆向分析/IDA调试/images",
     "固件分析/Qemu/Qemu基本用法.md",
-    "安卓逆向分析/IDA调试/IDA远程调试.md",
     "安卓逆向分析/IDA调试",
     "安卓逆向分析/安卓应用格式/安卓应用格式.md",
     "漏洞分析/未命名/TOTOLINK CVE-2022-37083.md",
@@ -188,9 +194,6 @@
     "漏洞分析/未命名/images/Pasted image 20230823111231.png",
     "漏洞分析/未命名/images/Pasted image 20230823110557.png",
     "漏洞分析/未命名/images/Pasted image 20230823110320.png",
-    "漏洞分析/未命名/images/Pasted image 20230823105940.png",
-    "漏洞分析/未命名/images/Pasted image 20230823105904.png",
-    "漏洞分析/未命名/images/Pasted image 20230823105817.png",
     "漏洞分析/未命名/images",
     "漏洞分析/未命名",
     "Python/json/json.md",
@@ -200,10 +203,8 @@
     "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "固件分析/Netgear固件漏洞分析",
     "安卓逆向分析/安卓应用格式",
-    "安卓逆向分析",
     "Paper/firmadyne/firmadyne.md",
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
-    "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/images",
     "语法/SQL/SQL基本用法.md",
     "工具/Greenhouse/Greenhouse测试.md",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
@@ -218,7 +219,6 @@
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "Paper/Snipfuzz/Snipuzz.md",
     "Paper/MultiFuzz/MultiFuzz.md",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
-    "Paper/EQUAFL/EQUAFL.md"
+    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md"
   ]
 }
