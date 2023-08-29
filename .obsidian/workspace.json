@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "漏洞分析/未命名/TOTOLINK CVE-2022-37083.md",
+                "file": "固件分析/Qemu/Qemu基本用法.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "漏洞分析/未命名/TOTOLINK CVE-2022-37083.md",
+                "file": "固件分析/Qemu/Qemu基本用法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "漏洞分析/未命名/TOTOLINK CVE-2022-37083.md",
+                "file": "固件分析/Qemu/Qemu基本用法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "漏洞分析/未命名/TOTOLINK CVE-2022-37083.md"
+                "file": "固件分析/Qemu/Qemu基本用法.md"
               }
             }
           },
@@ -174,6 +174,7 @@
   },
   "active": "3ecd5ff95c97a007",
   "lastOpenFiles": [
+    "漏洞分析/未命名/TOTOLINK CVE-2022-37083.md",
     "漏洞分析/未命名/images/Pasted image 20230823112000.png",
     "漏洞分析/未命名/images/Pasted image 20230823111811.png",
     "漏洞分析/未命名/images/Pasted image 20230823111231.png",
@@ -184,10 +185,8 @@
     "漏洞分析/未命名/images/Pasted image 20230823105817.png",
     "漏洞分析/未命名/images/Pasted image 20230823104959.png",
     "漏洞分析/未命名/images/Pasted image 20230823104729.png",
-    "漏洞分析/未命名/images/Pasted image 20230823104639.png",
     "漏洞分析/未命名/images",
     "固件分析/Qemu/Qemu基本用法.md",
-    "漏洞分析/未命名/TOTOLINK CVE-2022-37083.md",
     "漏洞分析/未命名",
     "Python/json/json.md",
     "固件分析/Qemu",
