@@ -8,7 +8,7 @@ setup_signal_handlers(); 设置信号处理器;
 
 check_asan_opts();  检查ASAN选项（通过获取环境变量`ASAN_OPTIONS`和`MSAN_OPTIONS`的内容）;
 
-
+主要的是设置输出和同步目录setup_dirs_fds()，然后读取测试用例并添加到队列里read_testcases(),
 
 
 
