@@ -22,7 +22,8 @@ check_asan_opts();  检查ASAN选项（通过获取环境变量`ASAN_OPTIONS`和
 
 ### P5. AFL是如何将输入数据送到程序的？Qemu模式是如何送的？
 
-
+### P6.如何fork的?
+fork server仅插桩模式可用。
 
 
 
