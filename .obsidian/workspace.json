@@ -18,19 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "3d221ff4a9368832",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.5"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -183,7 +172,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3d221ff4a9368832",
+  "active": "3ecd5ff95c97a007",
   "lastOpenFiles": [
     "固件分析/Tenda固件分析/Tenda.md",
     "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md",
