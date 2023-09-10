@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
+                "file": "Paper/firmadyne/firmadyne.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
+                "file": "Paper/firmadyne/firmadyne.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
+                "file": "Paper/firmadyne/firmadyne.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md"
+                "file": "Paper/firmadyne/firmadyne.md"
               }
             }
           },
@@ -174,8 +174,10 @@
   },
   "active": "3ecd5ff95c97a007",
   "lastOpenFiles": [
-    "工具/Greenhouse/Greenhouse测试.md",
+    "Paper/firmadyne与firmae总结/firmware.md",
+    "Paper/firmadyne/firmadyne.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
+    "工具/Greenhouse/Greenhouse测试.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230908090151.png",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230908085838.png",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230908085731.png",
@@ -208,7 +210,6 @@
     "漏洞分析/TOTOLINK CVE-2022-37083漏洞分析/images",
     "漏洞分析/TOTOLINK CVE-2022-37083漏洞分析",
     "Python/json/json.md",
-    "Paper/firmadyne/firmadyne.md",
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
     "语法/SQL/SQL基本用法.md",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
