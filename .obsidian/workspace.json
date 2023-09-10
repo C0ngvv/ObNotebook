@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md",
+                "file": "Paper/firmadyne与firmae总结/firmware.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md",
+                "file": "Paper/firmadyne与firmae总结/firmware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md",
+                "file": "Paper/firmadyne与firmae总结/firmware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md"
+                "file": "Paper/firmadyne与firmae总结/firmware.md"
               }
             }
           },
@@ -174,6 +174,7 @@
   },
   "active": "3ecd5ff95c97a007",
   "lastOpenFiles": [
+    "Paper/firmae/FirmAE.md",
     "Paper/firmadyne与firmae总结/firmware.md",
     "Paper/firmadyne/firmadyne.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
@@ -218,7 +219,6 @@
     "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
     "工具/AVATAR2/AVATAR2使用/Avatar2使用.md",
     "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
-    "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md"
+    "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md"
   ]
 }
