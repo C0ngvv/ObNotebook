@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2fce559ada6b0c19",
+        "id": "077d5054ec94a8f1",
         "type": "tabs",
         "children": [
           {
-            "id": "3ecd5ff95c97a007",
+            "id": "d9ab1450d5bf6f75",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/firmadyne与firmae总结/firmware.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -81,8 +77,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -102,7 +97,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/firmadyne与firmae总结/firmware.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +113,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/firmadyne与firmae总结/firmware.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +134,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Paper/firmadyne与firmae总结/firmware.md"
-              }
+              "state": {}
             }
           },
           {
@@ -172,12 +163,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3ecd5ff95c97a007",
+  "active": "d9ab1450d5bf6f75",
   "lastOpenFiles": [
-    "Paper/firmae/FirmAE.md",
-    "Paper/firmadyne与firmae总结/firmware.md",
-    "Paper/firmadyne/firmadyne.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
+    "Paper/EQUAFL/EQUAFL.md",
+    "Paper/firmadyne与firmae总结/firmware.md",
+    "Paper/firmae/FirmAE.md",
+    "Paper/firmadyne/firmadyne.md",
     "工具/Greenhouse/Greenhouse测试.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230908090151.png",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230908085838.png",
@@ -218,7 +210,6 @@
     "环境配置/Download网络问题.md",
     "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
     "工具/AVATAR2/AVATAR2使用/Avatar2使用.md",
-    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
-    "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md"
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md"
   ]
 }
