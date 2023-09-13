@@ -200,11 +200,13 @@ SFuzz在20个不同设备的固件样本中发现了77个新Bug，包括路由�
 ### 5.3 与符号执行比较
 我们进行了全面的实验来比较SFuzz与传统的符号执行(SE)技术。由于没有现有的SE工具可以直接测试RTOS，我们基于Angr[36]自己实现了一个原型，Angr是一个流行且维护良好的SE工具。我们在表4中列出了结果。结果表明，切片方法显著提高了bug发现效率。我们还将SFuzz的控制流节点处理程序添加到SE工具中。结果表明，该处理程序可以提高SE在bug发现和路径探索方面的性能。
 
-Bug数量。SFuzz可以在5个供应商的样本中找到34个bug。符号执行(SE)只显示了8个bug。在控制流节点处理程序的帮助下，SE+Handler可以发现19个错误。
+**Bug数量**。SFuzz可以在5个供应商的样本中找到34个bug。符号执行(SE)只显示了8个bug。在控制流节点处理程序的帮助下，SE+Handler可以发现19个错误。
 
-暴露时间。与其他方法相比，SFuzz可以在更短的时间内发现bug。对于Tenda样本，SFuzz在33分钟内发现一个bug, SE+Handler需要52分钟，SE需要72分钟;对于TPLink, SFuzz发现一个bug用时27分钟，SE+Handler用时204分钟，SE没有发现任何bug;对于RICOH样品，SFuzz在16分钟内发现一个错误，SE+Handler需要97分钟，SE需要178分钟;对于FAST, SFuzz发现一个bug需要27分钟，SE+Handler需要79分钟，SE需要213分钟;对于MERCURY，SFuzz在38分钟内找到一个bug, SE+Handler需要47分钟，SE需要226分钟。
+**暴露时间**。与其他方法相比，SFuzz可以在更短的时间内发现bug。对于Tenda样本，SFuzz在33分钟内发现一个bug, SE+Handler需要52分钟，SE需要72分钟;对于TPLink, SFuzz发现一个bug用时27分钟，SE+Handler用时204分钟，SE没有发现任何bug;对于RICOH样品，SFuzz在16分钟内发现一个错误，SE+Handler需要97分钟，SE需要178分钟;对于FAST, SFuzz发现一个bug需要27分钟，SE+Handler需要79分钟，SE需要213分钟;对于MERCURY，SFuzz在38分钟内找到一个bug, SE+Handler需要47分钟，SE需要226分钟。
 
-路径探索。我们的切片方法有助于获取比其他方法更多的路径，并且更适合于模糊场景而不是符号执行。对于Tenda示例，SFuzz可以探索2,484条路径，SE+Handler执行389条路径，SE运行491条路径;对于TP-Link, SFuzz可以浏览235条路径，SE+Handler可以浏览83条路径，SE只能浏览40条路径;对于RICOH，SFuzz可以探索122,SE+Handler可以探索38,SE可以探索95;对于Fast, SFuzz可以探索815,SE+Handler运行411，而SE只执行143;对于MERCURY, SFuzz可以探索53,SE+Handler运行72,SE运行107。在这些示例中，SFuzz总共探索了3709条路径，SE+Handler执行了993条路径，SE只运行了876条路径。应该注意的是，SFuzz在MERCURY中运行的路径更少，因为它比其他程序在更短的时间内找到bug。
+**路径探索**。我们的切片方法有助于获取比其他方法更多的路径，并且更适合于模糊场景而不是符号执行。对于Tenda示例，SFuzz可以探索2,484条路径，SE+Handler执行389条路径，SE运行491条路径;对于TP-Link, SFuzz可以浏览235条路径，SE+Handler可以浏览83条路径，SE只能浏览40条路径;对于RICOH，SFuzz可以探索122,SE+Handler可以探索38,SE可以探索95;对于Fast, SFuzz可以探索815,SE+Handler运行411，而SE只执行143;对于MERCURY, SFuzz可以探索53,SE+Handler运行72,SE运行107。在这些示例中，SFuzz总共探索了3709条路径，SE+Handler执行了993条路径，SE只运行了876条路径。应该注意的是，SFuzz在MERCURY中运行的路径更少，因为它比其他程序在更短的时间内找到bug。
+
+![](images/Pasted%20image%2020230913165416.png)
 
 ### 5.4 准确率和效率
 在本节中，我们评估了SFuzz的每个部分的准确性和效率，包括前向切片器(即语义重构和前向切片)，微模糊和Concolic Analyzer。
