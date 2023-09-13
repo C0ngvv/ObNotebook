@@ -174,6 +174,7 @@
   },
   "active": "d9ab1450d5bf6f75",
   "lastOpenFiles": [
+    "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230913154655.png",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/EQUAFL/EQUAFL.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
@@ -218,7 +219,6 @@
     "静态分析/CFG/angr_CFG.md",
     "环境配置/Download网络问题.md",
     "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
-    "工具/AVATAR2/AVATAR2使用/Avatar2使用.md",
-    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md"
+    "工具/AVATAR2/AVATAR2使用/Avatar2使用.md"
   ]
 }
