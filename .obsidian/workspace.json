@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
+                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "d580525495afa33e",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.4.12"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
+                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
+                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -153,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md"
+                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md"
               }
             }
           },
@@ -193,13 +182,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d580525495afa33e",
+  "active": "d9ab1450d5bf6f75",
   "lastOpenFiles": [
+    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
+    "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
+    "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
+    "Paper/Fuzztruction/论文：Fuzztruction.md",
+    "Paper/Fuzztruction/Fuzztruction.pdf",
+    "Paper/MultiFuzz/MultiFuzz.md",
+    "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230913165416.png",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230913154655.png",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/EQUAFL/EQUAFL.md",
-    "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
     "Paper/firmadyne与firmae总结/firmware.md",
     "Paper/firmae/FirmAE.md",
     "Paper/firmadyne/firmadyne.md",
@@ -212,7 +208,6 @@
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230907150600.png",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230907145459.png",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230906155306.png",
-    "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230906153611.png",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images",
     "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems",
@@ -233,13 +228,7 @@
     "安卓逆向分析/IDA调试",
     "安卓逆向分析/安卓应用格式/安卓应用格式.md",
     "漏洞分析/TOTOLINK CVE-2022-37083漏洞分析/images",
-    "漏洞分析/TOTOLINK CVE-2022-37083漏洞分析",
     "Python/json/json.md",
-    "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
-    "语法/SQL/SQL基本用法.md",
-    "静态分析/CFG/angr_CFG.md",
-    "环境配置/Download网络问题.md",
-    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
-    "工具/AVATAR2/AVATAR2使用/Avatar2使用.md"
+    "语法/SQL/SQL基本用法.md"
   ]
 }
