@@ -14,7 +14,7 @@
 
 > 1.黑盒模糊测试。Boofuzz (Sulley)和Peach
 > 2.灰盒模糊测试。
-> 2.1Hook套接字。使用desock钩取套接字函数，将数据发送转移到标准IO
+> 2.1Hook套接字。使用desock钩取套接字函数，将数据发送转移到标准IO|将network socket换为文件socket
 > 2.2修改AFL。AFLNET普通套接字发送数据
 > 2.3修改程序源码。使从缓冲区读取数据包
 
