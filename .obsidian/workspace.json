@@ -13,19 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "随笔/20230918/20230918.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "827aa679bf402ab6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -114,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "随笔/20230918/20230918.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "随笔/20230918/20230918.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "随笔/20230918/20230918.md"
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md"
               }
             }
           },
@@ -196,11 +184,15 @@
   },
   "active": "9de121a33a545508",
   "lastOpenFiles": [
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+    "漏洞分析/Netgear R7000漏洞分析/images/Pasted image 20230918224258.png",
+    "漏洞分析/Netgear R7000漏洞分析/images",
+    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "随笔/20230918/20230918.md",
+    "漏洞分析/Netgear R7000漏洞分析",
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "随笔/20230918",
     "随笔",
-    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "Paper/MultiFuzz/MultiFuzz.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
@@ -237,10 +229,6 @@
     "工具/AFL",
     "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "漏洞分析/TOTOLINK CVE-2022-37083漏洞分析/TOTOLINK CVE-2022-37083.md",
-    "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
-    "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
-    "安卓逆向分析/工具安装/images",
-    "安卓逆向分析/工具安装",
-    "安卓逆向分析/IDA调试/images"
+    "安卓逆向分析/工具安装/images"
   ]
 }
