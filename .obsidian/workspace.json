@@ -25,7 +25,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "随笔/20230918/20230918.md",
+                "file": "随笔/20230918/20230919.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "61b81b19a7b05c2e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper/MultiFuzz/MultiFuzz.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fdc0082f1a55f673",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
                 "mode": "source",
                 "source": false
               }
@@ -115,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "随笔/20230918/20230918.md",
+                "file": "随笔/20230918/20230919.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "随笔/20230918/20230918.md",
+                "file": "随笔/20230918/20230919.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "随笔/20230918/20230918.md"
+                "file": "随笔/20230918/20230919.md"
               }
             }
           },
@@ -195,19 +219,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "187d4ecd31b81bf7",
+  "active": "ada7a8a8321decf3",
   "lastOpenFiles": [
-    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+    "Paper/MultiFuzz/MultiFuzz.md",
+    "随笔/20230918/20230919.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "漏洞分析/Netgear R7000漏洞分析/images/Pasted image 20230919113506.png",
     "漏洞分析/Netgear R7000漏洞分析/images/Pasted image 20230918224258.png",
     "漏洞分析/Netgear R7000漏洞分析/images",
-    "随笔/20230918/20230918.md",
     "漏洞分析/Netgear R7000漏洞分析",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "随笔/20230918",
     "随笔",
-    "Paper/MultiFuzz/MultiFuzz.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
