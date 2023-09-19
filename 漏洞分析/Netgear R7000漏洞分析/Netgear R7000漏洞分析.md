@@ -96,4 +96,14 @@ tftp -l /tmp/media/nand/bitdefender/patches/base/lib/libbdbroker.so -r libbdbrok
 这次就开始报`/dev/nvram: No such file or directory`，这是因为没有配置nvram，可以安装firmadyne项目中提供的方法进行配置。
 
 ## nvram配置
+根据[firmadyne/libnvram: NVRAM emulator (github.com)](https://github.com/firmadyne/libnvram) 中Usage的描述，下载arm版本的release，将`libnvram.so`覆盖原来的文件`usr/sbin/libnvram.so`，在文件系统根目录创建目录
+```
+mkdir -p firmadyne/libnvram/
+mkdir -p firmadyne/libnvram.override/
+```
 
+然后重新启动httpd程序，nvram问题解决了，但是又崩了。。
+
+![](images/Pasted%20image%2020230919113506.png)
+
+没找出原因在哪儿，放弃。ps.尝试通过greenhouse工具跑该固件，但是跑完后没有结果。
