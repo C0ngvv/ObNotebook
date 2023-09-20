@@ -71,6 +71,18 @@ source /home/ubuntu/pwndgb/gdbinit.py
 
 [(176条消息) gdb调试 | pwndbg+pwndbg联合使用_fmtarg__n19hT的博客-CSDN博客](https://blog.csdn.net/weixin_43092232/article/details/105648769)
 ## jdk 17
+### apt安装
+```
+sudo apt install openjdk-8-jdk   # 安装 Java 1.8
+sudo apt install openjdk-11-jdk  # 安装 Java 11
+```
+
+使用`update-alternatives`管理多个java版本
+```
+update-alternatives --config java
+```
+
+### 压缩包安装
 下载jdk17，我下载的版本为17.0.7:[Java Downloads | Oracle](https://www.oracle.com/java/technologies/downloads/#java17)
 
 然后解压，复制到`/usr/local/`目录下
