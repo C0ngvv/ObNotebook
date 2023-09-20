@@ -70,7 +70,7 @@ source /home/ubuntu/pwndgb/gdbinit.py
 ![](images/Pasted%20image%2020230616153731.png)
 
 [(176条消息) gdb调试 | pwndbg+pwndbg联合使用_fmtarg__n19hT的博客-CSDN博客](https://blog.csdn.net/weixin_43092232/article/details/105648769)
-## jdk 17
+## java jdk
 ### apt安装
 ```
 sudo apt install openjdk-8-jdk   # 安装 Java 1.8
@@ -162,3 +162,14 @@ sudo apt install wireshark
 ```
 sudo wireshark
 ```
+
+## maven
+### apt安装
+```
+sudo apt install maven
+```
+
+在ubuntu20.04上安装的版本为3.6.3，不支持Java17。
+
+修改镜像源，在`~/.m2/`目录下创建`settings.xml`文件，将文件内容[settings.xml](https://files-cdn.cnblogs.com/files/chenyanbin/settings.xml)写入或覆盖。
+
