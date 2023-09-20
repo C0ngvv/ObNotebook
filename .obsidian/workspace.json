@@ -185,6 +185,10 @@
   },
   "active": "ada7a8a8321decf3",
   "lastOpenFiles": [
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920202559.png",
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920202057.png",
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920200434.png",
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols",
@@ -222,14 +226,10 @@
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230908085838.png",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230908085731.png",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230908085709.png",
-    "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230908082749.png",
-    "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images/Pasted image 20230907150600.png",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images",
     "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems",
     "固件分析/Tenda固件分析/Tenda.md",
-    "工具/AFL/AFL源码阅读",
-    "工具/AFL",
-    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md"
+    "工具/AFL/AFL源码阅读"
   ]
 }
