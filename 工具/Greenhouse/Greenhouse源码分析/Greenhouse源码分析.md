@@ -23,7 +23,13 @@ patch_loop()包含了修补的主要过程。
 #### run_firmae()
 1. 构建firmae执行脚本firmae_cmd，执行
 2. 获取IID，获取fileList和bgcmds
-3. 
+3. 测试连接和telnet
+4. 连接telnet，执行获取相应信息
+
+创建缓存路径，调用mount_and_cache_fs()
+
+#### mount_and_cache_fs()
+
 
 
 
