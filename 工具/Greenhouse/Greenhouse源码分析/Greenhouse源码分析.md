@@ -32,7 +32,7 @@ patch_loop()包含了修补的主要过程。
 
 nvram值。复制qemu.final.serial.log到缓存路径，根据需要清除FirmAE仿真环境。
 
-更新ps和cwd。
+更新ps和cwd，更新nvram的值。
 
 
 
