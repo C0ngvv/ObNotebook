@@ -36,7 +36,7 @@ nvram值。复制qemu.final.serial.log到缓存路径，根据需要清除FirmAE
 
 \##### PATCH LOOP ######
 
-
+运行qemu，收集trace信息。
 
 
 
