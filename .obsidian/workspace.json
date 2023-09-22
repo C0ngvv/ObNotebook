@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+                "file": "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 313.5,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -102,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+                "file": "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+                "file": "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md"
+                "file": "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md"
               }
             }
           },
@@ -184,11 +185,18 @@
   },
   "active": "dddd5e4323e59af9",
   "lastOpenFiles": [
+    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+    "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
+    "工具/Greenhouse/Greenhouse源码分析",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20230814205757.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20230814205915.png",
+    "工具/Greenhouse/Greenhouse测试",
+    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+    "工具/G",
     "环境配置/更换镜像源/更换镜像源.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "images/Pasted image 20230414114546.png.md",
     "images/Pasted image 20230422004835.png.md",
-    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "随笔/20230918/20230919.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920215612.png",
@@ -199,8 +207,6 @@
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920212942.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920203709.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920202559.png",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920202057.png",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920200434.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols",
@@ -224,11 +230,6 @@
     "Paper/Fuzztruction/Fuzztruction.pdf",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/firmadyne与firmae总结/firmware.md",
-    "Paper/firmae/FirmAE.md",
-    "Paper/firmadyne/firmadyne.md",
-    "工具/Greenhouse/Greenhouse测试.md",
-    "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images",
-    "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems",
-    "工具/AFL/AFL源码阅读"
+    "Paper/firmae/FirmAE.md"
   ]
 }

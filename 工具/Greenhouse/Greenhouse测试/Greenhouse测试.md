@@ -1,5 +1,5 @@
 之前测试了几个（）都不行，后来试了RT_AC51U_3.0.0.4_380_8497_g179ec32这个可以，但可以显示web登录路由器初始设置页面，点击Apply后没反应，没有达到模糊测试的标准。
 
-![](images/Pasted%20image%2020230814205757.png)
+![](Greenhouse测试/images/Pasted%20image%2020230814205757.png)
 
-![](images/Pasted%20image%2020230814205915.png)
+![](Greenhouse测试/images/Pasted%20image%2020230814205915.png)
