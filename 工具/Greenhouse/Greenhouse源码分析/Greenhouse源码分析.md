@@ -18,6 +18,16 @@ patch_loop()包含了修补的主要过程。
 首先获取ip和port信息，获取bg脚本。刚开始启动一次FirmAE全系统仿真。
 
 ### apply_fullsystem_rehost()
+设置运行缓存路径，然后run_firmae()运行firmae。
+
+#### run_firmae()
+1. 构建firmae执行脚本firmae_cmd，执行
+2. 获取IID，获取fileList和bgcmds
+3. 
+
+
+
+
 
 
 
