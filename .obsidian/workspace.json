@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "b3b9f3b092bb01c6",
+        "id": "f4ef976f1d619d13",
         "type": "tabs",
         "children": [
           {
-            "id": "ada7a8a8321decf3",
+            "id": "dddd5e4323e59af9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 313.5
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -103,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md"
-              }
+              "state": {}
             }
           },
           {
@@ -183,8 +174,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ada7a8a8321decf3",
+  "active": "dddd5e4323e59af9",
   "lastOpenFiles": [
+    "环境配置/更换镜像源/更换镜像源.md",
+    "环境配置/软件安装/ubuntu常用软件安装.md",
+    "images/Pasted image 20230414114546.png.md",
+    "images/Pasted image 20230422004835.png.md",
+    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+    "随笔/20230918/20230919.md",
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920215612.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920214610.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920214441.png",
@@ -197,14 +195,9 @@
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920200434.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols",
-    "环境配置/软件安装/ubuntu常用软件安装.md",
     "Paper/MultiFuzz/MultiFuzz.md",
-    "随笔/20230918/20230919.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
-    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
-    "漏洞分析/Netgear R7000漏洞分析/images/Pasted image 20230919113506.png",
     "漏洞分析/Netgear R7000漏洞分析/images",
     "漏洞分析/Netgear R7000漏洞分析",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
@@ -227,9 +220,7 @@
     "Paper/firmadyne/firmadyne.md",
     "工具/Greenhouse/Greenhouse测试.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/images",
-    "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems",
-    "固件分析/Tenda固件分析/Tenda.md",
     "工具/AFL/AFL源码阅读"
   ]
 }
