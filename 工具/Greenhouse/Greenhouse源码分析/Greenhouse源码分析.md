@@ -26,9 +26,11 @@ patch_loop()包含了修补的主要过程。
 3. 测试连接和telnet
 4. 连接telnet，执行获取相应信息
 
-创建缓存路径，调用mount_and_cache_fs()
+创建缓存路径，调用firmae.mount_and_cache_fs()：挂在文件系统raw，并将内容复制到缓存目录，然后删除受保护的目标。
 
-#### mount_and_cache_fs()
+调用gh.clean_fs()，处理可能被创建的特殊文件（块或字符等设备文件，移除.conf文件Interface信息）。
+
+nvram值。复制qemu.final.serial.log到缓存路径，根据需要清除FirmAE仿真环境。
 
 
 
