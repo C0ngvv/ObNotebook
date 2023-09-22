@@ -107,3 +107,12 @@ mkdir -p firmadyne/libnvram.override/
 ![](images/Pasted%20image%2020230919113506.png)
 
 没找出原因在哪儿，放弃。ps.尝试通过greenhouse工具跑该固件，但是跑完后没有结果。
+
+## 全系统仿真
+前面没跑通，后来又尝试全系统模式仿真，测试发现上面的问题是因为NVRAM的值（`gui_region`）没有设置，需要设置它的值才能继续跑下去，但是后面还有很多NVRAM的值需要设置，暂时还是没跑起来，记录一下全系统仿真时的脚本。
+
+```
+qemu-system-arm -M vexpress-a9 -kernel vmlinuz-3.2.0-4-vexpress -initrd initrd.img-3.2.0-4-vexpress -drive if=sd,file=debian_wheezy_armhf_standard.qcow2 -append "root=/dev/mmcblk0p2" -net nic -net tap,ifname=tap0,script=no,downscript=no -nographic
+
+./gdbserver-7.7.1-armel-v1 192.168.2.2:1234 usr/sbin/httpd -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+```
