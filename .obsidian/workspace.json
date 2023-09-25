@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pwn/x64栈溢出/x64栈溢出.md",
+                "file": "Pwn/ROP实验/ROP实验.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pwn/x64栈溢出/x64栈溢出.md",
+                "file": "Pwn/ROP实验/ROP实验.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pwn/x64栈溢出/x64栈溢出.md",
+                "file": "Pwn/ROP实验/ROP实验.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pwn/x64栈溢出/x64栈溢出.md"
+                "file": "Pwn/ROP实验/ROP实验.md"
               }
             }
           },
@@ -184,8 +184,10 @@
   },
   "active": "43e2e456282a339b",
   "lastOpenFiles": [
-    "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "Pwn/x64栈溢出/x64栈溢出.md",
+    "Pwn/ROP实验/ROP实验.md",
+    "Pwn/ROP实验",
+    "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "Pwn/x64栈溢出",
     "Pwn",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
@@ -218,7 +220,6 @@
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols",
     "Paper/MultiFuzz/MultiFuzz.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
-    "漏洞分析/Netgear R7000漏洞分析/images",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
@@ -228,7 +229,6 @@
     "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
     "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
-    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
-    "Paper/Fuzztruction/论文：Fuzztruction.md"
+    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md"
   ]
 }
