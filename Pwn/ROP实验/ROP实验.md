@@ -3,9 +3,9 @@
 
 需要寻找往内存中写入数据的gadget（mov）
 ```
-ROPgadget --binary dhcpd.bin --only "mov|ret"
-ROPgadget --binary dhcpd.bin --only "mov|pop|ret"
-ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "mov qword"
+ROPgadget --binary vmd.bin --only "mov|ret"
+ROPgadget --binary vmd.bin --only "mov|pop|ret"
+ROPgadget --binary vmd.bin | grep -v "jmp" | grep "mov qword"
 
 ----------------------
 mov, stos, movs, movzx
