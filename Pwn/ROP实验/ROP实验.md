@@ -3,10 +3,10 @@
 
 需要寻找往内存中写入数据的gadget（mov）
 ```
-ROPgadget --binary sudo.bin --only "pop|ret" | grep "rdi"
-ROPgadget --binary sudo.bin --only "mov|ret"
-ROPgadget --binary sudo.bin --only "mov|pop|ret"
-ROPgadget --binary sudo.bin | grep -v "jmp" | grep "mov qword"
+ROPgadget --binary proftpd.bin --only "pop|ret" | grep "rdi"
+ROPgadget --binary proftpd.bin --only "mov|ret"
+ROPgadget --binary proftpd.bin --only "mov|pop|ret"
+ROPgadget --binary proftpd.bin | grep -v "jmp" | grep "mov qword"
 
 ----------------------
 mov, stos, movs, movzx
