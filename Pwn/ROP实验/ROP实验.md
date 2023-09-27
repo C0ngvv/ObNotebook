@@ -23,6 +23,14 @@ pop rdi, ret
 mov qword ptr [rsi], rdi
 pop rdi, ret
 sys_addr
+---------------------------
+mov qword ptr [rbx], rax ; add rsp, 0x18 ; pop rbx ; pop rbp ; ret
+
+mov byte ptr [rbp], 0 ; pop rbx ; pop rbp ; pop r12 ; ret
+add dword ptr [rbp - 0x3d], ebx ; nop ; ret
+
+
+
 ```
 
 调用sys（设置参数rdi）
@@ -56,7 +64,9 @@ syscall_addr
 设置rdx|edx -> 0
 shl edx
 xor
-
+mov rdx, qword ptr [rbp - 8] ; mov qword ptr [rax], rdx ; pop rbp ; ret
+xor edx, edx ; mov eax, edx ; pop rbx ; ret
+shl edx, 4 ; add eax, edx ; ret  *8 time
 
 ```
 
