@@ -3,10 +3,10 @@
 
 需要寻找往内存中写入数据的gadget（mov）
 ```
-ROPgadget --binary nullhttpd.bin --only "pop|ret" | grep "rdi"
-ROPgadget --binary nullhttpd.bin --only "mov|ret"
-ROPgadget --binary nullhttpd.bin --only "mov|pop|ret"
-ROPgadget --binary nullhttpd.bin | grep -v "jmp" | grep "mov qword"
+ROPgadget --binary mpathpersist.bin --only "pop|ret" | grep "rdi"
+ROPgadget --binary mpathpersist.bin --only "mov|ret"
+ROPgadget --binary mpathpersist.bin --only "mov|pop|ret"
+ROPgadget --binary mpathpersist.bin | grep -v "jmp" | grep "mov qword"
 
 ----------------------
 mov, stos, movs, movzx
@@ -35,7 +35,7 @@ add dword ptr [rbp - 0x3d], ebx ; nop ; ret
 
 调用sys（设置参数rdi）
 ```
-ROPgadget --binary nullhttpd.bin --only "pop|ret" | grep "rdi"
+ROPgadget --binary mpathpersist.bin --only "pop|ret" | grep "rdi"
 ```
 
 ## evecve调用
