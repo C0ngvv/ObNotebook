@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d8147f6eff27b29b",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.14"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -184,7 +195,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "43e2e456282a339b",
+  "active": "d8147f6eff27b29b",
   "lastOpenFiles": [
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "Pwn/ROP实验/ROP实验.md",
