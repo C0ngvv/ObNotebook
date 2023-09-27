@@ -51,6 +51,12 @@ pop rsi, ret
 pop rdx, ret
 pop eax, ret  | mov eax, 0x3b
 syscall_addr
+-------------------
+设置rdx|edx -> 0
+mov edx | shl edx
+
+
+
 ```
 
 
