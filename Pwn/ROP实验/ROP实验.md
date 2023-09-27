@@ -46,6 +46,7 @@ ROPgadget --binary nullhttpd.bin | grep "syscall"
 
 -------------------
 基于1写入/bin/sh，（binsh_addr, 0, 0）
+设置0然后add或sub
 pop rdi, ret
 pop rsi, ret
 pop rdx, ret
@@ -53,8 +54,8 @@ pop eax, ret  | mov eax, 0x3b
 syscall_addr
 -------------------
 设置rdx|edx -> 0
-mov edx | shl edx
-
+shl edx
+xor
 
 
 ```
