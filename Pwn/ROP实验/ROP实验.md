@@ -62,7 +62,7 @@ pop eax, ret  | mov eax, 0x3b
 syscall_addr
 -------------------
 设置rdx|edx -> 0
-ROPgadget --binary wuftpd.bin | grep -v "retf" | grep "ret" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
+ROPgadget --binary mpathpersist.bin | grep -v "retf" | grep "ret"|grep -v "leave" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
 
 shl edx
 xor
