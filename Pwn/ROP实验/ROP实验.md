@@ -62,7 +62,6 @@ pop eax, ret  | mov eax, 0x3b
 syscall_addr
 -------------------
 设置rdx|edx -> 0
-ROPgadget --binary mpathpersist.bin | grep -v "retf" | grep "ret"|grep -v "leave" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
 
 shl edx
 xor
@@ -74,7 +73,16 @@ shl edx, 4 ; add eax, edx ; ret  *8 time
 
 ```
 
+```
+ROPgadget --binary mount_nfs.bin --only "pop|ret" | grep "rdi"
+ROPgadget --binary mount_nfs.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
 
+ROPgadget --binary mount_nfs.bin | grep -v "jmp" | grep "mov qword"
+ROPgadget --binary mount_nfs.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep "mov qword"
+
+ROPgadget --binary mount_nfs.bin | grep "syscall"
+
+```
 ## 可控参数检查
 rdi, rsi, rdx, rcx, r8, r9 或ecx
 ```
