@@ -3,10 +3,10 @@
 
 需要寻找往内存中写入数据的gadget（mov）
 ```
-ROPgadget --binary proftpd.bin --only "pop|ret" | grep "rdi"
-ROPgadget --binary proftpd.bin --only "mov|ret"
-ROPgadget --binary proftpd.bin --only "mov|pop|ret"
-ROPgadget --binary proftpd.bin | grep -v "jmp" | grep "mov qword"
+ROPgadget --binary nullhttpd.bin --only "pop|ret" | grep "rdi"
+ROPgadget --binary nullhttpd.bin --only "mov|ret"
+ROPgadget --binary nullhttpd.bin --only "mov|pop|ret"
+ROPgadget --binary nullhttpd.bin | grep -v "jmp" | grep "mov qword"
 
 ----------------------
 mov, stos, movs, movzx
@@ -16,7 +16,7 @@ mov, stos, movs, movzx
 
 然后寻找可写入地址(.data 和.bss)，和写入 p64(0x68732f6e69622f) （"/bin/sh"）
 ```
-readelf -S dhcpd.bin
+readelf -S nullhttpd.bin
 ---------------------------
 pop rsi, ret
 pop rdi, ret
@@ -27,7 +27,7 @@ sys_addr
 
 调用sys（设置参数rdi）
 ```
-ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rdi"
+ROPgadget --binary nullhttpd.bin --only "pop|ret" | grep "rdi"
 ```
 
 ## evecve调用
@@ -39,10 +39,10 @@ ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rdi"
 寻找syscall指令地址
 
 ```
-ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rsi"
-ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rdx"
-ROPgadget --binary dhcpd.bin --only "mov|pop|ret" | grep "eax"
-ROPgadget --binary dhcpd.bin | grep "syscall"
+ROPgadget --binary nullhttpd.bin --only "pop|ret" | grep "rsi"
+ROPgadget --binary nullhttpd.bin --only "pop|ret" | grep "rdx"
+ROPgadget --binary nullhttpd.bin --only "mov|pop|ret" | grep "eax"
+ROPgadget --binary nullhttpd.bin | grep "syscall"
 
 -------------------
 基于1写入/bin/sh，（binsh_addr, 0, 0）
@@ -57,10 +57,10 @@ syscall_addr
 ## 可控参数检查
 rdi, rsi, rdx, rcx, r8, r9 或ecx
 ```
-ROPgadget --binary dhcpd.bin --only "pop|ret" | grep "rcx"
-ROPgadget --binary dhcpd.bin --only "mov|pop|ret" | grep "rcx"
-ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "ret" | grep "r8"
-ROPgadget --binary dhcpd.bin | grep -v "jmp" | grep "ret" | grep "xchg" | grep "r8"
+ROPgadget --binary nullhttpd.bin --only "pop|ret" | grep "rcx"
+ROPgadget --binary nullhttpd.bin --only "mov|pop|ret" | grep "rcx"
+ROPgadget --binary nullhttpd.bin | grep -v "jmp" | grep "ret" | grep "r8"
+ROPgadget --binary nullhttpd.bin | grep -v "jmp" | grep "ret" | grep "xchg" | grep "r8"
 
 -------------------
 pop, mov，xchg, xor
