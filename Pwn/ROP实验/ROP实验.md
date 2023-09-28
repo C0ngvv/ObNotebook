@@ -79,7 +79,7 @@ ROPgadget --binary vmd.bin | grep -v "retf" | grep "ret" | grep -v "leave" | gre
 ROPgadget --binary vmd.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep -v "ret 0x"  | grep "\["
 ROPgadget --binary vmd.bin | grep -v "retf" | grep -v "ret" | grep -v "leave" | grep -v "ret 0x"  | grep "\["
 
-ROPgadget --binary install-info.bin | grep "syscall"
+ROPgadget --binary vmd.bin | grep "syscall"
 
 ```
 ## 可控参数检查
