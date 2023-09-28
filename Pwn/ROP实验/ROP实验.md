@@ -75,7 +75,7 @@ ROPgadget --binary install-info.bin --only "pop|ret" | grep "rdi"
 ROPgadget --binary sudo.bin | grep -v "retf" | grep "ret" | grep -v "ret 0x" | grep -v "leave" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
 
 ROPgadget --binary vmd.bin | grep -v "jmp" | grep "mov qword"
-ROPgadget --binary vmd.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep -v "ret 0x"  | grep "mov qword"
+ROPgadget --binary sudo.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep -v "ret 0x"  | grep "mov qword"
 ROPgadget --binary vmd.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep -v "ret 0x"  | grep "\["
 ROPgadget --binary vmd.bin | grep -v "retf" | grep -v "ret" | grep -v "leave" | grep -v "ret 0x"  | grep "\["
 
