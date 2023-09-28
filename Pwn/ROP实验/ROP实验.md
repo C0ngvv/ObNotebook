@@ -72,7 +72,7 @@ shl edx, 4 ; add eax, edx ; ret  *8 time
 
 ```
 ROPgadget --binary install-info.bin --only "pop|ret" | grep "rdi"
-ROPgadget --binary vmd.bin | grep -v "retf" | grep "ret" | grep -v "ret 0x" | grep -v "leave" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
+ROPgadget --binary sudo.bin | grep -v "retf" | grep "ret" | grep -v "ret 0x" | grep -v "leave" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
 
 ROPgadget --binary vmd.bin | grep -v "jmp" | grep "mov qword"
 ROPgadget --binary vmd.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep -v "ret 0x"  | grep "mov qword"
