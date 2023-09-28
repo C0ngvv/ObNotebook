@@ -71,14 +71,14 @@ shl edx, 4 ; add eax, edx ; ret  *8 time
 ```
 
 ```
-ROPgadget --binary libwget.so.2.0.0.bin --only "pop|ret" | grep "rdi"
-ROPgadget --binary libwget.so.2.0.0.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
+ROPgadget --binary libnetsnmp.so.40.2.1.bin --only "pop|ret" | grep "rdi"
+ROPgadget --binary libnetsnmp.so.40.2.1.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
 
-ROPgadget --binary libwget.so.2.0.0.bin | grep -v "jmp" | grep "mov qword"
-ROPgadget --binary libwget.so.2.0.0.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep "mov qword"
-ROPgadget --binary libwget.so.2.0.0.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep "\["
+ROPgadget --binary libnetsnmp.so.40.2.1.bin | grep -v "jmp" | grep "mov qword"
+ROPgadget --binary libnetsnmp.so.40.2.1.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep "mov qword"
+ROPgadget --binary libnetsnmp.so.40.2.1.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep "\["
 
-ROPgadget --binary libwget.so.2.0.0.bin | grep "syscall"
+ROPgadget --binary libnetsnmp.so.40.2.1.bin | grep "syscall"
 
 ```
 ## 可控参数检查
