@@ -126,3 +126,11 @@ qemu-system-arm -M vexpress-a9 -kernel vmlinuz-3.2.0-4-vexpress -initrd initrd.i
 **Insufficient support of kernel module**尽管Firmadyne用硬编码设备名称和icotl命令实现了虚拟模块，但当程序用不同的配置来访问内核时还是会失败。例如，大量的NETGEAR映像使用acos_nat模块来与安装在/dev/acos_nat_cli上的外设通信。在这些映像中，Firmadyne模块返回不正确的值，并在httpd中形成无限循环。此外，我们还发现ioctl命令根据固件体系结构的不同而不同，这一点也需要考虑进来。
 FirmAE的高级仿真方法可以利用特定内核模块的优势。这里关键的一点是通过共享库来访问许多内核模块，这些共享库有发送相应ioctl命令的函数。因此，FirmAE可以像处理NVRAM问题一样对其处理。当程序调用库函数时，FirmAE返回一个预定义的值。因此，并不需要模拟每个设备架构中的每一条icotl命令。在这个例子中，我们只需要关注acos_nat，而经由共享库的其他外设访问可以用相同的方式处理。
 ##############
+
+下载交叉编译工具：[armv7-eabihf--uclibc--stable-2020.08-1](https://toolchains.bootlin.com/downloads/releases/toolchains/armv7-eabihf/tarballs/armv7-eabihf--uclibc--stable-2020.08-1.tar.bz2)
+
+对相关函数进行hook
+
+```
+
+```

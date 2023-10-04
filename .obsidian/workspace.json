@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bb12f6e3c99a54d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
                 "mode": "source",
                 "source": false
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -195,9 +208,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "43e2e456282a339b",
+  "active": "bb12f6e3c99a54d7",
   "lastOpenFiles": [
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "Pwn/ROP实验/ROP实验.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
@@ -234,7 +248,6 @@
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols",
     "Paper/MultiFuzz/MultiFuzz.md",
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "Paper/EQUAFL/EQUAFL.md",
