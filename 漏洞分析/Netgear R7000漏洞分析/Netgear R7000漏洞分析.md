@@ -154,7 +154,7 @@ int open(const char *file, int oflag, ...)
 ```
 
 ```
-rmv7-eabihf--uclibc--stable-2020.08-1/bin/arm-linux-gcc hook.c -o hook.so  -fPIC -shared -ldl
+armv7-eabihf--uclibc--stable-2020.08-1/bin/arm-linux-gcc hook.c -o hook.so  -fPIC -shared -ldl
 ```
 
 运行
