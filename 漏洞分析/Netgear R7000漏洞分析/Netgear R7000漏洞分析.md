@@ -130,7 +130,35 @@ FirmAE的高级仿真方法可以利用特定内核模块的优势。这里关�
 下载交叉编译工具：[armv7-eabihf--uclibc--stable-2020.08-1](https://toolchains.bootlin.com/downloads/releases/toolchains/armv7-eabihf/tarballs/armv7-eabihf--uclibc--stable-2020.08-1.tar.bz2)
 
 对相关函数进行hook
+```
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <dlfcn.h>
+#include <string.h>
 
+int open(const char *file, int oflag, ...)
+{
+	fprintf(stderr, "hook open func!!\n");
+	char str1[] = "/dev/acos_nat_cli";
+	if(strcmp(str1, file) == 0){
+		// 1==2
+		fprintf(stderr, "return open 1 !!\n");
+		return 1;
+	}else{
+		fprintf(stderr, "try call open !!\n");
+		typeof(&open) orig = dlsym(RTLD_NEXT, "open");
+		return orig(file, oflag);
+	}
+	return 1;
+}
 ```
 
 ```
+rmv7-eabihf--uclibc--stable-2020.08-1/bin/arm-linux-gcc hook.c -o hook.so  -fPIC -shared -ldl
+```
+
+运行
+```
+sudo chroot . ./qemu-arm-static -E LD_PRELOAD=./hook.so usr/sbin/httpd -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+```
+

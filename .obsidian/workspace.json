@@ -44,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/华硕RT-AC68U/华硕RT-AC68U.md"
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md"
               }
             }
           },
@@ -208,11 +208,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bb12f6e3c99a54d7",
+  "active": "2b62b07baa5e9194",
   "lastOpenFiles": [
+    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
-    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "Pwn/ROP实验/ROP实验.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
