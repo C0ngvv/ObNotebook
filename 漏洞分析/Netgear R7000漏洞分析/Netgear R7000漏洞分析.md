@@ -162,3 +162,9 @@ rmv7-eabihf--uclibc--stable-2020.08-1/bin/arm-linux-gcc hook.c -o hook.so  -fPIC
 sudo chroot . ./qemu-arm-static -E LD_PRELOAD=./hook.so usr/sbin/httpd -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
 ```
 
+调试
+```
+sudo chroot . ./qemu-arm-static -g 1234 -E LD_PRELOAD=./hook.so usr/sbin/httpd -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+
+set follow-fork-mode parent
+```
