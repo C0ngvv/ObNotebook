@@ -128,13 +128,10 @@ qemu-system-arm -M vexpress-a9 -kernel vmlinuz-3.2.0-4-vexpress -initrd initrd.i
 > **Insufficient support of kernel module**尽管Firmadyne用硬编码设备名称和icotl命令实现了虚拟模块，但当程序用不同的配置来访问内核时还是会失败。例如，大量的NETGEAR映像使用acos_nat模块来与安装在/dev/acos_nat_cli上的外设通信。在这些映像中，Firmadyne模块返回不正确的值，并在httpd中形成无限循环。此外，我们还发现ioctl命令根据固件体系结构的不同而不同，这一点也需要考虑进来。
 
 > FirmAE的高级仿真方法可以利用特定内核模块的优势。这里关键的一点是通过共享库来访问许多内核模块，这些共享库有发送相应ioctl命令的函数。因此，FirmAE可以像处理NVRAM问题一样对其处理。当程序调用库函数时，FirmAE返回一个预定义的值。因此，并不需要模拟每个设备架构中的每一条icotl命令。在这个例子中，我们只需要关注acos_nat，而经由共享库的其他外设访问可以用相同的方式处理。
-##############
 
-对此，我尝试进行Hook。
+对此，我尝试进行Hook。要Hook需要编译so文件，需要先下载交叉编译工具：[armv7-eabihf--uclibc--stable-2020.08-1](https://toolchains.bootlin.com/downloads/releases/toolchains/armv7-eabihf/tarballs/armv7-eabihf--uclibc--stable-2020.08-1.tar.bz2)
 
-下载交叉编译工具：[armv7-eabihf--uclibc--stable-2020.08-1](https://toolchains.bootlin.com/downloads/releases/toolchains/armv7-eabihf/tarballs/armv7-eabihf--uclibc--stable-2020.08-1.tar.bz2)
-
-对相关函数进行hook
+编写函数hook.c，对open函数进行hook
 ```
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -158,6 +155,7 @@ int open(const char *file, int oflag, ...)
 }
 ```
 
+然后编译
 ```
 armv7-eabihf--uclibc--stable-2020.08-1/bin/arm-linux-gcc hook.c -o hook.so  -fPIC -shared -ldl
 ```
@@ -167,11 +165,22 @@ armv7-eabihf--uclibc--stable-2020.08-1/bin/arm-linux-gcc hook.c -o hook.so  -fPI
 sudo chroot . ./qemu-arm-static -E LD_PRELOAD=./hook.so usr/sbin/httpd -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
 ```
 
-调试
+可以运行起来，发现PoC也可以触发崩溃，但还是存在很多问题。比如页面返回结果不对，存在daemon fork等。
+
+调试命令
 ```
 sudo chroot . ./qemu-arm-static -g 1234 -E LD_PRELOAD=./hook.so usr/sbin/httpd -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
 
 set follow-fork-mode parent
 ```
 
-将daemon hook掉
+### daemon
+其存在daemon，在调试的时候调试一半就结束了，但程序还在跑。后来将daemon hook掉进行调试，发现跑到sslwrite函数处理的时候报错了。启动httpd不加参数，到另一个地方又报错了。总之不能平稳的运行调试起来。
+
+```
+int daemon(int nochdir, int noclose)
+{
+	fprintf(stderr, "hook daemon func!!\n");
+	return 1;
+}
+```
