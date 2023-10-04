@@ -52,8 +52,9 @@ send_plain(ip, port, payload)
 
 ```
 
-由于项目需要，要尝试将httpd程序通过用户仿真方式跑起来并能够触发崩溃，查看固件支持的命令发现支持tftp，于是在主机搭建tftp服务器，把缺少的`libbdbroker.so`文件拷贝出来再尝试运行。
-## 搭建tftp服务器
+## 仿真
+由于项目需要，要尝试将httpd程序通过用户仿真方式跑起来并能够触发崩溃，查看固件支持的命令发现支持tftp，于是在主机搭建tftp服务器，把缺少的`libbdbroker.so`文件拷贝出来再尝试运行。（后来发现该文件可以在文件系统中一个打包文件中找到）
+### 搭建tftp服务器
 
 在ubuntu主机上安装服务端
 ```
@@ -95,21 +96,18 @@ tftp -l /tmp/media/nand/bitdefender/patches/base/lib/libbdbroker.so -r libbdbrok
 
 这次就开始报`/dev/nvram: No such file or directory`，这是因为没有配置nvram，可以安装firmadyne项目中提供的方法进行配置。
 
-## nvram配置
+### nvram配置
 根据[firmadyne/libnvram: NVRAM emulator (github.com)](https://github.com/firmadyne/libnvram) 中Usage的描述，下载arm版本的release，将`libnvram.so`覆盖原来的文件`usr/sbin/libnvram.so`，在文件系统根目录创建目录
 ```
 mkdir -p firmadyne/libnvram/
 mkdir -p firmadyne/libnvram.override/
 ```
 
-然后重新启动httpd程序，nvram问题解决了，但是又崩了。。
+然后重新启动httpd程序，nvram问题解决了，但是又崩了。
 
 ![](images/Pasted%20image%2020230919113506.png)
 
-没找出原因在哪儿，放弃。ps.尝试通过greenhouse工具跑该固件，但是跑完后没有结果。
-
-## 全系统仿真
-前面没跑通，后来又尝试全系统模式仿真，测试发现上面的问题是因为NVRAM的值（`gui_region`）没有设置，需要设置它的值才能继续跑下去，但是后面还有很多NVRAM的值需要设置，暂时还是没跑起来，记录一下全系统仿真时的脚本。
+刚开始没找出原因在哪儿，然后尝试通过greenhouse工具跑该固件，但是跑完后没有结果。后来又尝试全系统模式仿真，测试发现上面的问题是因为NVRAM的值（`gui_region`）没有设置，需要设置它的值才能继续跑下去，但是后面还有很多NVRAM的值需要设置，暂时还是没跑起来，记录一下全系统仿真时的脚本。
 
 ```
 qemu-system-arm -M vexpress-a9 -kernel vmlinuz-3.2.0-4-vexpress -initrd initrd.img-3.2.0-4-vexpress -drive if=sd,file=debian_wheezy_armhf_standard.qcow2 -append "root=/dev/mmcblk0p2" -net nic -net tap,ifname=tap0,script=no,downscript=no -nographic
