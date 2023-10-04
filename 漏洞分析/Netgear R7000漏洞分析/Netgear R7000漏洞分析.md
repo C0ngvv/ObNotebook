@@ -2,7 +2,7 @@
 
 刚开始尝试qemu用户仿真，会报错说`libbdbroker.so`找不到
 ```
-$ sudo chroot . ./qemu-arm-static /usr/sbin/httpd -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+sudo chroot . ./qemu-arm-static /usr/sbin/httpd -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
 /usr/sbin/httpd: can't load library 'libbdbroker.so'
 ```
 
