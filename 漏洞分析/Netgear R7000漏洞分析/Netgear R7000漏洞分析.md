@@ -116,3 +116,13 @@ qemu-system-arm -M vexpress-a9 -kernel vmlinuz-3.2.0-4-vexpress -initrd initrd.i
 
 ./gdbserver-7.7.1-armel-v1 192.168.2.2:1234 usr/sbin/httpd -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
 ```
+
+20231004
+
+有很多访问`/dev/acos_nat_cli`外设的，调用`ioctl()`函数操作，无法处理，导致崩溃，主要封装在`agApi_*` 函数。
+
+##############
+嵌入式设备中的很多程序通过内核设备驱动程序与外设协作。通常，其使用ioctl命令行与外设通信。但因为每个设备驱动程序都有其独特的特征，这些特征取决于其开发人员和相应的设备，所以这一过程并不容易模拟。尽管Firmadyne实现了一些虚拟内核模块，支持/dev/naram和/dev/acos_nat_cli，但这远远无法涵盖实际场景中中固件映像的各种特性。所以，这一问题会导致很多固件映像仿真过程中崩溃。 
+**Insufficient support of kernel module**尽管Firmadyne用硬编码设备名称和icotl命令实现了虚拟模块，但当程序用不同的配置来访问内核时还是会失败。例如，大量的NETGEAR映像使用acos_nat模块来与安装在/dev/acos_nat_cli上的外设通信。在这些映像中，Firmadyne模块返回不正确的值，并在httpd中形成无限循环。此外，我们还发现ioctl命令根据固件体系结构的不同而不同，这一点也需要考虑进来。
+FirmAE的高级仿真方法可以利用特定内核模块的优势。这里关键的一点是通过共享库来访问许多内核模块，这些共享库有发送相应ioctl命令的函数。因此，FirmAE可以像处理NVRAM问题一样对其处理。当程序调用库函数时，FirmAE返回一个预定义的值。因此，并不需要模拟每个设备架构中的每一条icotl命令。在这个例子中，我们只需要关注acos_nat，而经由共享库的其他外设访问可以用相同的方式处理。
+##############
