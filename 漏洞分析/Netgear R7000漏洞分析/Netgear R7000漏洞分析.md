@@ -168,3 +168,5 @@ sudo chroot . ./qemu-arm-static -g 1234 -E LD_PRELOAD=./hook.so usr/sbin/httpd -
 
 set follow-fork-mode parent
 ```
+
+将daemon hook掉
