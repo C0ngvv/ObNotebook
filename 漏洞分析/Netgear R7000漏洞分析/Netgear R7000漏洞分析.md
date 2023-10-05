@@ -175,7 +175,7 @@ set follow-fork-mode parent
 ```
 
 ### daemon
-其存在daemon，在调试的时候调试一半就结束了，但程序还在跑。后来将daemon hook掉进行调试，发现跑到sslwrite函数处理的时候报错了。启动httpd不加参数，到另一个地方又报错了。总之不能平稳的运行调试起来。
+其存在daemon，在调试的时候调试一半就结束了，但程序还在跑。后来将daemon hook掉进行调试，发现跑到SSL_write函数处理的时候报错了。启动httpd不加参数，到另一个地方又报错了。总之不能平稳的运行调试起来。
 
 ```
 int daemon(int nochdir, int noclose)
@@ -185,3 +185,4 @@ int daemon(int nochdir, int noclose)
 }
 ```
 
+后来经过调试，发现是未识别指令subs触发signal 4异常，跳到handler处理，处理过程中调用SSL_write参数异常。
