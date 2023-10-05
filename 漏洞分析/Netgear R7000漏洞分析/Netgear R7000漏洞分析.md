@@ -185,8 +185,9 @@ int daemon(int nochdir, int noclose)
 }
 ```
 
-后来经过调试，发现是未识别指令subs触发signal 4异常，跳到handler处理，处理过程中调用SSL_write参数异常。
+后来经过调试，发现是未识别指令subs触发signal 4异常，跳到handler处理，处理过程中调用SSL_write参数异常。把调用SSL_write的函数给patch掉了。
 
 ```
 patchelf --add-needed hook.so httpd_patched
 ```
+
