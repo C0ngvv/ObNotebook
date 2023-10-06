@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "随笔/20230918/20230919.md",
+                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
                 "mode": "source",
                 "source": false
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "随笔/20230918/20230919.md",
+                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "随笔/20230918/20230919.md",
+                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "随笔/20230918/20230919.md"
+                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md"
               }
             }
           },
@@ -207,8 +207,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2b62b07baa5e9194",
+  "active": "187d4ecd31b81bf7",
   "lastOpenFiles": [
+    "随笔/20230918/20230919.md",
     "随笔/20230922/20230922.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
@@ -224,7 +225,6 @@
     "Pwn/x64栈溢出",
     "Pwn",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
-    "随笔/20230918/20230919.md",
     "随笔/20230922",
     "随笔/20230918/未命名",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
