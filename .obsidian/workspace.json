@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
+                "file": "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5
+    "width": 227.5,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -102,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
+                "file": "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
+                "file": "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md"
+                "file": "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md"
               }
             }
           },
@@ -169,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 269.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -184,13 +186,17 @@
   },
   "active": "7817760b75f572a2",
   "lastOpenFiles": [
+    "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/images/Pasted image 20231009145619.png",
+    "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/images",
+    "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
+    "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
+    "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems",
     "固件分析/物联网固件逆向工程基础文章复现/images/Pasted image 20231009095140.png",
     "固件分析/物联网固件逆向工程基础文章复现/images/Pasted image 20231009093741.png",
     "固件分析/物联网固件逆向工程基础文章复现/images/Pasted image 20231009093740.png",
     "固件分析/物联网固件逆向工程基础文章复现/images/Pasted image 20231009093739.png",
     "固件分析/物联网固件逆向工程基础文章复现/images/Pasted image 20231009093426.png",
     "固件分析/物联网固件逆向工程基础文章复现/images",
-    "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
     "固件分析/物联网固件逆向工程基础文章复现",
     "安卓逆向分析/普通分析/普通分析.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
@@ -213,22 +219,18 @@
     "随笔/20230922",
     "随笔/20230918/未命名",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
-    "工具/Greenhouse/Greenhouse源码分析",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20230814205757.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20230814205915.png",
-    "工具/Greenhouse/Greenhouse测试",
     "环境配置/更换镜像源/更换镜像源.md",
     "images/Pasted image 20230414114546.png.md",
     "images/Pasted image 20230422004835.png.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920215612.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920214610.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920214441.png",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920214207.png",
     "Paper/MultiFuzz/MultiFuzz.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "Paper/EQUAFL/EQUAFL.md",
-    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
-    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md"
+    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md"
   ]
 }
