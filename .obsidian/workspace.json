@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c6be7327220d667d",
+        "id": "88c7f4c7e8095919",
         "type": "tabs",
         "children": [
           {
-            "id": "2b62b07baa5e9194",
+            "id": "7817760b75f572a2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "安卓逆向分析/普通分析/普通分析.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -102,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "安卓逆向分析/普通分析/普通分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "安卓逆向分析/普通分析/普通分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "安卓逆向分析/普通分析/普通分析.md"
-              }
+              "state": {}
             }
           },
           {
@@ -182,10 +174,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "2b62b07baa5e9194",
+  "active": "7817760b75f572a2",
   "lastOpenFiles": [
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "安卓逆向分析/普通分析/普通分析.md",
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "安卓逆向分析/普通分析",
     "随笔/20230918/20230919.md",
     "随笔/20230922/20230922.md",
