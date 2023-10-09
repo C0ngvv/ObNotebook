@@ -11,8 +11,12 @@
             "id": "7817760b75f572a2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -98,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +141,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md"
+              }
             }
           },
           {
@@ -176,6 +184,8 @@
   },
   "active": "7817760b75f572a2",
   "lastOpenFiles": [
+    "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
+    "固件分析/物联网固件逆向工程基础文章复现",
     "安卓逆向分析/普通分析/普通分析.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "安卓逆向分析/普通分析",
@@ -213,14 +223,12 @@
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920212942.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920203709.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920202559.png",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images",
     "Paper/MultiFuzz/MultiFuzz.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "Paper/EQUAFL/EQUAFL.md",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
     "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
-    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md",
-    "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md"
+    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md"
   ]
 }
