@@ -184,6 +184,12 @@
   },
   "active": "7817760b75f572a2",
   "lastOpenFiles": [
+    "固件分析/物联网固件逆向工程基础文章复现/images/Pasted image 20231009095140.png",
+    "固件分析/物联网固件逆向工程基础文章复现/images/Pasted image 20231009093741.png",
+    "固件分析/物联网固件逆向工程基础文章复现/images/Pasted image 20231009093740.png",
+    "固件分析/物联网固件逆向工程基础文章复现/images/Pasted image 20231009093739.png",
+    "固件分析/物联网固件逆向工程基础文章复现/images/Pasted image 20231009093426.png",
+    "固件分析/物联网固件逆向工程基础文章复现/images",
     "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
     "固件分析/物联网固件逆向工程基础文章复现",
     "安卓逆向分析/普通分析/普通分析.md",
@@ -211,7 +217,6 @@
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20230814205757.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20230814205915.png",
     "工具/Greenhouse/Greenhouse测试",
-    "工具/G",
     "环境配置/更换镜像源/更换镜像源.md",
     "images/Pasted image 20230414114546.png.md",
     "images/Pasted image 20230422004835.png.md",
@@ -219,16 +224,11 @@
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920214610.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920214441.png",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920214207.png",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920213828.png",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920212942.png",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920203709.png",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/images/Pasted image 20230920202559.png",
     "Paper/MultiFuzz/MultiFuzz.md",
     "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "Paper/EQUAFL/EQUAFL.md",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
-    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
-    "Paper/Forming Faster Firmware Fuzzers/Forming Faster Firmware Fuzzers.md"
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md"
   ]
 }
