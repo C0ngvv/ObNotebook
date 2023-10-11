@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5,
-    "collapsed": true
+    "width": 227.5
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -103,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -143,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md"
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md"
               }
             }
           },
@@ -186,6 +185,7 @@
   },
   "active": "7817760b75f572a2",
   "lastOpenFiles": [
+    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010203647.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010203344.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010203304.png",
@@ -196,9 +196,7 @@
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010194654.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010193016.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010191754.png",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010191736.png",
     "images/Pasted image 20231010104318.png.md",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "images",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
