@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+                "file": "Python/无头浏览器爬虫/无头浏览器爬虫.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+                "file": "Python/无头浏览器爬虫/无头浏览器爬虫.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+                "file": "Python/无头浏览器爬虫/无头浏览器爬虫.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md"
+                "file": "Python/无头浏览器爬虫/无头浏览器爬虫.md"
               }
             }
           },
@@ -185,6 +185,9 @@
   },
   "active": "7817760b75f572a2",
   "lastOpenFiles": [
+    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+    "Python/无头浏览器爬虫/无头浏览器爬虫.md",
+    "Python/无头浏览器爬虫",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010203647.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010203344.png",
@@ -212,7 +215,6 @@
     "随笔/20230918/20230919.md",
     "随笔/20230922/20230922.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
-    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "Pwn/ROP实验/ROP实验.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
@@ -221,7 +223,6 @@
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
     "Pwn/x64栈溢出/x64栈溢出.md",
     "Pwn/ROP实验",
-    "Pwn/x64栈溢出",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "环境配置/更换镜像源/更换镜像源.md",
