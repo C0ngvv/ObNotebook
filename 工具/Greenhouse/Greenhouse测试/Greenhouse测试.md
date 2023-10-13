@@ -126,20 +126,34 @@ sudo docker cp 2f4:/gh/results/59f03e424c464cbb729d46e9f88da7dad98eb37e607b07cb4
 ```
 
 结果如图所示，重托管成功。
+![](images/Pasted%20image%2020231013170010.png)
 
+结果保存在/gh/results目录下
+![](images/Pasted%20image%2020231013170043.png)
+
+将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/a28394246ff8925b79f9dbdc85c73b0d9e29d26b81fb1bcab648d6ce1a187dd9/TEW632BRPA1_FW110B31 /home/ubuntu/Desktop/test_result/TEW632BRPA1_FW110B31
+```
+
+
+## DAP-2330_REVA_1.01RC014
+```
+/gh/run.sh dlink /test_firmware/DAP-2330_REVA_FIRMWARE_1.01RC014/DAP2330-firmware-v101-rc014.bin
+```
+
+结果如图所示，重托管成功。
 
 
 结果保存在/gh/results目录下
 
 
-
 将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/results/59f03e424c464cbb729d46e9f88da7dad98eb37e607b07cb49660c0517a49717/RT_AC51U_3.0.0.4_380_8497_g179ec32.trx /home/ubuntu/Desktop/test_result/RT_AC51U_3.0.0.4_380_8497_g179ec32.trx
+sudo docker cp 2f4:/gh/results/a28394246ff8925b79f9dbdc85c73b0d9e29d26b81fb1bcab648d6ce1a187dd9/TEW632BRPA1_FW110B31 /home/ubuntu/Desktop/test_result/TEW632BRPA1_FW110B31
 ```
 
 
-## DAP-2330_REVA_1.01RC014
 
 ## WNDRMACv2_Version_1.0.0.4
 
