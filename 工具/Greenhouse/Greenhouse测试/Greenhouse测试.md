@@ -1,7 +1,7 @@
 ## 1.固件选择
 对论文里提到的14个固件对Greenhouse进行测试，分别是：
 
-- [TEW-652BRP_v2.0R(2.00).zip](https://downloads.trendnet.com/TEW-652BRP_v2/firmware/TEW-652BRP_v2.0R(2.00).zip)
+- [TEW-652BRP_v2.0R(2.00)](https://downloads.trendnet.com/TEW-652BRP_v2/firmware/TEW-652BRP_v2.0R(2.00).zip)
 - [AC1450_V1.0.0.6_1.0.3](https://www.downloads.netgear.com/files/GDC/AC1450/AC1450-V1.0.0.6_1.0.3.zip)
 - [FW_RT_AC750_30043808497](https://dlsvr04.asus.com.cn/pub/ASUS/wireless/RT-AC750/FW_RT_AC750_30043808497.zip?model=RT-AC750)
 - [TEW-632BRPA1_FW1.10B31](http://downloads.trendnet.com/TEW-632BRP_A1.1/firmware/TEW-632BRPA1(FW1.10B31).zip)
@@ -15,6 +15,16 @@
 - [DIR-825_REVB_2.03](https://drivers.softpedia.com/dyn-postdownload.php/54e62cdaa8af972bb4440f97599c2fbc/6528a440/3e14e/4/1)
 - [DIR-825 209EUb09](https://ftp.dlink.de/dir/dir-825/archive/driver_software/DIR-825_fw_revb_209EUb09_03_ALL_multi_20130114.zip)
 - [DSP-W215_REVB_v2.23B02](https://support.dlink.com/resource/products/dsp-w215/REVB/DSP-W215_REVB_FIRMWARE_v2.23B02.zip)
+
+## TEW-652BRP_v2.0R(2.00)
+```
+sudo docker run -it --privileged -v /dev:/host/dev greenhouse:usenix-eval-jul2023 bash
+/gh/docker_init.sh
+/gh/test.sh
+
+```
+
+
 
 
 
