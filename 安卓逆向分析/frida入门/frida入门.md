@@ -27,3 +27,6 @@ adb shell chmod 777 /data/local/tmp/frida-server
 
 
 
+## 参考链接
+
+[是时候来了解frida的用法了--Hook Java代码篇 - 『移动安全区』 - 吾爱破解](https://www.52pojie.cn/thread-931872-1-1.html)
