@@ -176,14 +176,27 @@ sudo docker cp 2f4:/gh/results/935e41a07256af9c4166e8f9bc77d1022e0bbde63f4ad73be
 ```
 
 结果如图所示，重托管成功。
+![](images/Pasted%20image%2020231013221700.png)
+
+结果保存在/gh/results目录下，将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/978cf40888348a5487f45c44d1feb8bf947326d1cc35ca675f137412d413d373/DAP_1513FW1.01b05 /home/ubuntu/Desktop/test_result/DAP_1513FW1.01b05
+```
+
+## FW_RT_G32_C1_5002b
+```
+/gh/run.sh asus /test_firmware/FW_RT_G32_C1_5002b/RT-G32C1_5.0.0.2b.trx
+```
+
+结果如图所示，重托管成功。
 
 
 结果保存在/gh/results目录下，将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/results/935e41a07256af9c4166e8f9bc77d1022e0bbde63f4ad73be46df1d653cba0b2/WNDRMACv2_V1.0.0.4.img /home/ubuntu/Desktop/test_result/WNDRMACv2_V1.0.0.4.img
+sudo docker cp 2f4:/gh/results/978cf40888348a5487f45c44d1feb8bf947326d1cc35ca675f137412d413d373/DAP_1513FW1.01b05 /home/ubuntu/Desktop/test_result/DAP_1513FW1.01b05
 ```
 
-## FW_RT_G32_C1_5002b
+
 
 ## DAP-2695_REVA_1.11.RC044
 
