@@ -189,16 +189,29 @@ sudo docker cp 2f4:/gh/results/978cf40888348a5487f45c44d1feb8bf947326d1cc35ca675
 ```
 
 结果如图所示，重托管成功。
-
+![](images/Pasted%20image%2020231013230537.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/results/978cf40888348a5487f45c44d1feb8bf947326d1cc35ca675f137412d413d373/DAP_1513FW1.01b05 /home/ubuntu/Desktop/test_result/DAP_1513FW1.01b05
+sudo docker cp 2f4:/gh/results/8341ac22a8e2de962e33fe3b34f2f7df67a5fff0fc44386baf98f06a1112c450/RT_G32C1_5.0.0.2b.trx /home/ubuntu/Desktop/test_result/RT_G32C1_5.0.0.2b.trx
 ```
 
 
 
 ## DAP-2695_REVA_1.11.RC044
+```
+/gh/run.sh dlink /test_firmware/DAP-2695_REVA_FIRMWARE_1.11.RC044/DAP-2695-firmware-v111-rc044.bin
+```
+
+结果如图所示，重托管成功。
+
+
+结果保存在/gh/results目录下，将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/8341ac22a8e2de962e33fe3b34f2f7df67a5fff0fc44386baf98f06a1112c450/RT_G32C1_5.0.0.2b.trx /home/ubuntu/Desktop/test_result/RT_G32C1_5.0.0.2b.trx
+```
+
+
 
 ## FW_RT_G32_C1_5002b
 
