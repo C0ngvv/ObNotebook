@@ -150,7 +150,7 @@ sudo docker cp 2f4:/gh/results/a28394246ff8925b79f9dbdc85c73b0d9e29d26b81fb1bcab
 
 将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/resultscbec3a0713a694fbf717520a90ab6e7d61475a4c92a843c5e424157c01a6e362/DAP2330_firmware_v101_rc014 /home/ubuntu/Desktop/test_result/DAP2330_firmware_v101_rc014
+sudo docker cp 2f4:/gh/results/cbec3a0713a694fbf717520a90ab6e7d61475a4c92a843c5e424157c01a6e362/DAP2330_firmware_v101_rc014 /home/ubuntu/Desktop/test_result/DAP2330_firmware_v101_rc014
 ```
 
 
@@ -161,19 +161,27 @@ sudo docker cp 2f4:/gh/resultscbec3a0713a694fbf717520a90ab6e7d61475a4c92a843c5e4
 ```
 
 结果如图所示，重托管成功。
+![](images/Pasted%20image%2020231013201427.png)
 
-
-结果保存在/gh/results目录下
-
-
-将结果拷贝到主机
+结果保存在/gh/results目录下，将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/resultscbec3a0713a694fbf717520a90ab6e7d61475a4c92a843c5e424157c01a6e362/DAP2330_firmware_v101_rc014 /home/ubuntu/Desktop/test_result/DAP2330_firmware_v101_rc014
+sudo docker cp 2f4:/gh/results/935e41a07256af9c4166e8f9bc77d1022e0bbde63f4ad73be46df1d653cba0b2/WNDRMACv2_V1.0.0.4.img /home/ubuntu/Desktop/test_result/WNDRMACv2_V1.0.0.4.img
 ```
 
 
 
 ## DAP_1513_REVA_1.01
+```
+/gh/run.sh dlink /test_firmware/DAP-1513_REVA_FIRMWARE_1.01/DAP-1513FW1.01b05.bin
+```
+
+结果如图所示，重托管成功。
+
+
+结果保存在/gh/results目录下，将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/935e41a07256af9c4166e8f9bc77d1022e0bbde63f4ad73be46df1d653cba0b2/WNDRMACv2_V1.0.0.4.img /home/ubuntu/Desktop/test_result/WNDRMACv2_V1.0.0.4.img
+```
 
 ## FW_RT_G32_C1_5002b
 
