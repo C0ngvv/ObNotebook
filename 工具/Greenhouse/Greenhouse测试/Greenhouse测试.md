@@ -22,6 +22,8 @@ sudo docker run -it --privileged -v /dev:/host/dev greenhouse:usenix-eval-jul202
 /gh/docker_init.sh
 /gh/test.sh
 
+sudo docker cp /home/ubuntu/Desktop/test_firmware 2f4:/test_firmware
+/gh/run.sh trendnet /test_firmware/TEW-652BRPv2.0R2.00/TEW652BRPR1_FW200b08_nml.bin
 ```
 
 
