@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+                "file": "安卓逆向分析/frida入门/frida入门.md",
                 "mode": "source",
                 "source": false
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+                "file": "安卓逆向分析/frida入门/frida入门.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+                "file": "安卓逆向分析/frida入门/frida入门.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md"
+                "file": "安卓逆向分析/frida入门/frida入门.md"
               }
             }
           },
@@ -209,9 +209,14 @@
   },
   "active": "7817760b75f572a2",
   "lastOpenFiles": [
+    "安卓逆向分析/frida入门/images/Pasted image 20231013101403.png",
+    "安卓逆向分析/frida入门/images/Pasted image 20231013101336.png",
+    "安卓逆向分析/frida入门/images",
+    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+    "安卓逆向分析/frida入门/frida入门.md",
+    "安卓逆向分析/frida入门",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
-    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "Python/无头浏览器爬虫/无头浏览器爬虫.md",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "Python/无头浏览器爬虫",
@@ -224,7 +229,6 @@
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010201333.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010194654.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010193016.png",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010191754.png",
     "images/Pasted image 20231010104318.png.md",
     "images",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images",
@@ -237,7 +241,6 @@
     "固件分析/物联网固件逆向工程基础文章复现",
     "安卓逆向分析/普通分析/普通分析.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
-    "安卓逆向分析/普通分析",
     "随笔/20230918/20230919.md",
     "随笔/20230922/20230922.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
@@ -248,12 +251,9 @@
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
     "Pwn/x64栈溢出/x64栈溢出.md",
-    "Pwn/ROP实验",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "环境配置/更换镜像源/更换镜像源.md",
     "images/Pasted image 20230414114546.png.md",
-    "images/Pasted image 20230422004835.png.md",
-    "Paper/MultiFuzz/MultiFuzz.md",
-    "Paper/Federated Route Leak Detection in Inter-domain Routingwith Privacy Guarantee/Federated Route Leak Detection in Inter-domain Routing with Privacy Guarantee.md"
+    "images/Pasted image 20230422004835.png.md"
   ]
 }
