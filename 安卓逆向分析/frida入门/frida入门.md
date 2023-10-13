@@ -28,7 +28,11 @@ adb shell chmod 777 /data/local/tmp/frida-server
 adb shell 'su -c /data/local/tmp/frida-server'
 ```
 ## 3.hook注入
+如将hook代码保存为hook.js，然后运行目标APP，执行下面命令，APP返回桌面再打开APP发现就能实现预期功能，输入exit停止注入。
 
+```
+frida -U -l hook.js com.luoyesiqiu.crackme
+```
 
 
 

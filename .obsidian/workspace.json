@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5
+    "width": 227.5,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+                "file": "安卓逆向分析/frida入门/frida入门.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+                "file": "安卓逆向分析/frida入门/frida入门.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md"
+                "file": "安卓逆向分析/frida入门/frida入门.md"
               }
             }
           },
@@ -195,12 +195,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "35c87335f18df721",
+  "active": "7817760b75f572a2",
   "lastOpenFiles": [
+    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231013140433.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231013140334.png",
     "安卓逆向分析/frida入门/frida入门.md",
-    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231013111845.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231013111634.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231013111352.png",
@@ -211,7 +211,6 @@
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231013104745.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
-    "安卓逆向分析/frida入门/images/Pasted image 20231013101403.png",
     "安卓逆向分析/frida入门/images",
     "安卓逆向分析/frida入门",
     "Python/无头浏览器爬虫/无头浏览器爬虫.md",
