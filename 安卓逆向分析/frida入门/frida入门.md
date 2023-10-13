@@ -23,7 +23,12 @@ adb push frida-server-16.1.4-android-x86_64 /data/local/tmp/frida-server
 adb shell chmod 777 /data/local/tmp/frida-server
 ```
 
-## 3.
+3.启动服务端
+```
+adb shell 'su -c /data/local/tmp/frida-server'
+```
+## 3.hook注入
+
 
 
 

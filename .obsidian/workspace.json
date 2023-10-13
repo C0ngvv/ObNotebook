@@ -20,30 +20,19 @@
             }
           },
           {
-            "id": "111570f573628740",
+            "id": "35c87335f18df721",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "637ced75df5fa74c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
+                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -126,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "安卓逆向分析/frida入门/frida入门.md",
+                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "安卓逆向分析/frida入门/frida入门.md",
+                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "安卓逆向分析/frida入门/frida入门.md"
+                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md"
               }
             }
           },
@@ -207,16 +196,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7817760b75f572a2",
+  "active": "35c87335f18df721",
   "lastOpenFiles": [
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231013105318.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231013104745.png",
+    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
+    "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
+    "安卓逆向分析/frida入门/frida入门.md",
     "安卓逆向分析/frida入门/images/Pasted image 20231013101403.png",
     "安卓逆向分析/frida入门/images/Pasted image 20231013101336.png",
     "安卓逆向分析/frida入门/images",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
-    "安卓逆向分析/frida入门/frida入门.md",
     "安卓逆向分析/frida入门",
-    "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Python/无头浏览器爬虫/无头浏览器爬虫.md",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "Python/无头浏览器爬虫",
@@ -227,8 +218,6 @@
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010203150.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010201630.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010201333.png",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010194654.png",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010193016.png",
     "images/Pasted image 20231010104318.png.md",
     "images",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images",

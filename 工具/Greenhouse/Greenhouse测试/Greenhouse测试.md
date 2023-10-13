@@ -25,6 +25,27 @@ sudo docker run -it --privileged -v /dev:/host/dev greenhouse:usenix-eval-jul202
 sudo docker cp /home/ubuntu/Desktop/test_firmware 2f4:/test_firmware
 /gh/run.sh trendnet /test_firmware/TEW-652BRPv2.0R2.00/TEW652BRPR1_FW200b08_nml.bin
 ```
+结果如图所示，重托管成功。
+
+![](images/Pasted%20image%2020231013104745.png)
+
+结果保存在/gh/results目录下
+
+![](images/Pasted%20image%2020231013105318.png)
+
+将结果拷贝到主机
+```
+docker cp 2f4:/gh/results/6a6b09de38ff710647f598430ccac22924a1dff3697152bd460021ad1929e884/TEW652BRPR1_FW200b08_nml /home/ubuntu/Desktop/test_result/TEW652BRPR1_FW200b08_nml
+```
+
+停止greenhouse环境，进入结果的debug目录，启动docker容器
+```
+sudo docker stop 2f4
+cd /home/ubuntu/Desktop/test_result/TEW652BRPR1_FW200b08_nml/debug
+sudo docker-compose build
+sudo docker-compose up
+
+```
 
 
 
