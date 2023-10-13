@@ -35,7 +35,7 @@ sudo docker cp /home/ubuntu/Desktop/test_firmware 2f4:/test_firmware
 
 将结果拷贝到主机
 ```
-docker cp 2f4:/gh/results/6a6b09de38ff710647f598430ccac22924a1dff3697152bd460021ad1929e884/TEW652BRPR1_FW200b08_nml /home/ubuntu/Desktop/test_result/TEW652BRPR1_FW200b08_nml
+sudo docker cp 2f4:/gh/results/6a6b09de38ff710647f598430ccac22924a1dff3697152bd460021ad1929e884/TEW652BRPR1_FW200b08_nml /home/ubuntu/Desktop/test_result/TEW652BRPR1_FW200b08_nml
 ```
 
 停止greenhouse环境，进入结果的debug目录，启动docker容器
@@ -77,33 +77,47 @@ sudo docker network rm 8188c950b187
 sudo docker-compose down
 ```
 
-
-
-
-
-
-```
-sudo docker run -it -p 50003:22 --privileged=true -v ~/Desktop/ghShareSpace:/ghShareSpace greenhouse:usenix-eval-jul2023 /bin/bash
-
-service ssh start
-```
-
-之前测试了几个（）都不行，后来试了RT_AC51U_3.0.0.4_380_8497_g179ec32这个可以，但可以显示web登录路由器初始设置页面，点击Apply后没反应，没有达到模糊测试的标准。
-
-![](Greenhouse测试/images/Pasted%20image%2020230814205757.png)
-
-![](Greenhouse测试/images/Pasted%20image%2020230814205915.png)
-
 ## AC1450_V1.0.0.6_1.0.3
 ```
 /gh/docker_init.sh
 /gh/test.sh
 /gh/run.sh netgear /test_firmware/AC1450-V1.0.0.6_1.0.3/AC1450-V1.0.0.6_1.0.3.chk
 ```
+
 结果如图所示，重托管成功。
+
+![](images/Pasted%20image%2020231013140334.png)
+
+结果保存在/gh/results目录下
+
+![](images/Pasted%20image%2020231013140433.png)
+
+将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/eca65ffc2bb1cfcb0dec6cd8d467a1db0d4979d54f983cda51637846cc1bb995/AC1450_V1.0.0.6_1.0.3.chk /home/ubuntu/Desktop/test_result/AC1450_V1.0.0.6_1.0.3.chk
+```
+
 
 
 ## FW_RT_AC750_30043808497
+```
+/gh/docker_init.sh
+/gh/test.sh
+/gh/run.sh asus /test_firmware/FW_RT_AC750_30043808497/RT-AC51U_3.0.0.4_380_8497-g179ec32.trx
+```
+
+结果如图所示，重托管成功。
+
+
+
+结果保存在/gh/results目录下
+
+
+
+将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/eca65ffc2bb1cfcb0dec6cd8d467a1db0d4979d54f983cda51637846cc1bb995/AC1450_V1.0.0.6_1.0.3.chk /home/ubuntu/Desktop/test_result/AC1450_V1.0.0.6_1.0.3.chk
+```
 
 
 ## TEW-632BRPA1_FW1.10B31
@@ -133,3 +147,18 @@ service ssh start
 
 ## DSP-W215_REVB_v2.23B02
 
+
+
+
+
+```
+sudo docker run -it -p 50003:22 --privileged=true -v ~/Desktop/ghShareSpace:/ghShareSpace greenhouse:usenix-eval-jul2023 /bin/bash
+
+service ssh start
+```
+
+之前测试了几个（）都不行，后来试了RT_AC51U_3.0.0.4_380_8497_g179ec32这个可以，但可以显示web登录路由器初始设置页面，点击Apply后没反应，没有达到模糊测试的标准。
+
+![](Greenhouse测试/images/Pasted%20image%2020230814205757.png)
+
+![](Greenhouse测试/images/Pasted%20image%2020230814205915.png)
