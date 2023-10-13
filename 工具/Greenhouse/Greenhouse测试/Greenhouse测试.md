@@ -44,12 +44,33 @@ sudo docker stop 2f4
 cd /home/ubuntu/Desktop/test_result/TEW652BRPR1_FW200b08_nml/debug
 sudo docker-compose build
 sudo docker-compose up
-
 ```
 
+如果遇到下面的情况，就使用命令把冲突的debug网络删除
+![](images/Pasted%20image%2020231013111106.png)
 
+```
+sudo docker network ls
+sudo docker network rm 8188c950b187
+```
 
+![](images/Pasted%20image%2020231013111248.png)
 
+然后就可以成功启动
+
+![](images/Pasted%20image%2020231013111326.png)
+
+在浏览器访问:`172.21.0.2:80`，可以成功访问！尝试输入账号密码登录，也可以进行交互。
+
+![](images/Pasted%20image%2020231013111352.png)
+
+不过当输入正确账号密码`admin:admin`登录时，显示就不知道是否正常了。
+
+![](images/Pasted%20image%2020231013111634.png)
+
+从www目录下找到一个settings.asp尝试访问，可以获得
+
+![](images/Pasted%20image%2020231013111845.png)
 
 
 ```
