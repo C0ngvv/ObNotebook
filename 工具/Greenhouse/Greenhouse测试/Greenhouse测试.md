@@ -204,20 +204,27 @@ sudo docker cp 2f4:/gh/results/8341ac22a8e2de962e33fe3b34f2f7df67a5fff0fc44386ba
 ```
 
 结果如图所示，重托管成功。
+![](images/Pasted%20image%2020231013235743.png)
+
+结果保存在/gh/results目录下，将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/0ab3b8367ab862344a74eaf8a90a69749ceca7d4f4d46353281a7e0001f876f2/DAP_2695_firmware_v111_rc044 /home/ubuntu/Desktop/test_result/DAP_2695_firmware_v111_rc044
+```
+
+
+## WN2000RPT_V1.0.1.20
+```
+/gh/run.sh netgear /test_firmware/WN2000RPT-V1.0.1.20/WN2000RPT-V1.0.1.20.img
+```
+
+结果如图所示，重托管成功。
 
 
 结果保存在/gh/results目录下，将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/results/8341ac22a8e2de962e33fe3b34f2f7df67a5fff0fc44386baf98f06a1112c450/RT_G32C1_5.0.0.2b.trx /home/ubuntu/Desktop/test_result/RT_G32C1_5.0.0.2b.trx
+sudo docker cp 2f4:/gh/results/0ab3b8367ab862344a74eaf8a90a69749ceca7d4f4d46353281a7e0001f876f2/DAP_2695_firmware_v111_rc044 /home/ubuntu/Desktop/test_result/DAP_2695_firmware_v111_rc044
 ```
 
-
-
-## FW_RT_G32_C1_5002b
-
-## DAP-2695_REVA_1.11.RC044
-
-## WN2000RPT_V1.0.1.20
 
 ## DIR-601_REVA_1.02
 
