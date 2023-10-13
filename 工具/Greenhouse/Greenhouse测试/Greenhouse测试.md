@@ -1,4 +1,4 @@
-## 1.固件选择
+## 固件选择
 对论文里提到的14个固件对Greenhouse进行测试，分别是：
 
 - [TEW-652BRP_v2.0R(2.00)](https://downloads.trendnet.com/TEW-652BRP_v2/firmware/TEW-652BRP_v2.0R(2.00).zip)
@@ -72,6 +72,15 @@ sudo docker network rm 8188c950b187
 
 ![](images/Pasted%20image%2020231013111845.png)
 
+关闭并清除容器
+```
+sudo docker-compose down
+```
+
+
+
+
+
 
 ```
 sudo docker run -it -p 50003:22 --privileged=true -v ~/Desktop/ghShareSpace:/ghShareSpace greenhouse:usenix-eval-jul2023 /bin/bash
@@ -84,3 +93,43 @@ service ssh start
 ![](Greenhouse测试/images/Pasted%20image%2020230814205757.png)
 
 ![](Greenhouse测试/images/Pasted%20image%2020230814205915.png)
+
+## AC1450_V1.0.0.6_1.0.3
+```
+/gh/docker_init.sh
+/gh/test.sh
+/gh/run.sh netgear /test_firmware/AC1450-V1.0.0.6_1.0.3/AC1450-V1.0.0.6_1.0.3.chk
+```
+结果如图所示，重托管成功。
+
+
+## FW_RT_AC750_30043808497
+
+
+## TEW-632BRPA1_FW1.10B31
+
+
+## DAP-2330_REVA_1.01RC014
+
+## WNDRMACv2_Version_1.0.0.4
+
+## DAP_1513_REVA_1.01
+
+## FW_RT_G32_C1_5002b
+
+## DAP-2695_REVA_1.11.RC044
+
+## FW_RT_G32_C1_5002b
+
+## DAP-2695_REVA_1.11.RC044
+
+## WN2000RPT_V1.0.1.20
+
+## DIR-601_REVA_1.02
+
+## DIR-825_REVB_2.03
+
+## DIR-825 209EUb09
+
+## DSP-W215_REVB_v2.23B02
+
