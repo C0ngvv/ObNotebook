@@ -107,6 +107,25 @@ sudo docker cp 2f4:/gh/results/eca65ffc2bb1cfcb0dec6cd8d467a1db0d4979d54f983cda5
 ```
 
 结果如图所示，重托管成功。
+![](images/Pasted%20image%2020231013155228.png)
+
+
+结果保存在/gh/results目录下
+![](images/Pasted%20image%2020231013155338.png)
+
+
+将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/59f03e424c464cbb729d46e9f88da7dad98eb37e607b07cb49660c0517a49717/RT_AC51U_3.0.0.4_380_8497_g179ec32.trx /home/ubuntu/Desktop/test_result/RT_AC51U_3.0.0.4_380_8497_g179ec32.trx
+```
+
+
+## TEW-632BRPA1_FW1.10B31
+```
+/gh/run.sh trendnet /test_firmware/TEW-632BRPA1FW1.10B31/TEW632BRPA1_FW110B31.bin
+```
+
+结果如图所示，重托管成功。
 
 
 
@@ -116,11 +135,8 @@ sudo docker cp 2f4:/gh/results/eca65ffc2bb1cfcb0dec6cd8d467a1db0d4979d54f983cda5
 
 将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/results/eca65ffc2bb1cfcb0dec6cd8d467a1db0d4979d54f983cda51637846cc1bb995/AC1450_V1.0.0.6_1.0.3.chk /home/ubuntu/Desktop/test_result/AC1450_V1.0.0.6_1.0.3.chk
+sudo docker cp 2f4:/gh/results/59f03e424c464cbb729d46e9f88da7dad98eb37e607b07cb49660c0517a49717/RT_AC51U_3.0.0.4_380_8497_g179ec32.trx /home/ubuntu/Desktop/test_result/RT_AC51U_3.0.0.4_380_8497_g179ec32.trx
 ```
-
-
-## TEW-632BRPA1_FW1.10B31
 
 
 ## DAP-2330_REVA_1.01RC014
