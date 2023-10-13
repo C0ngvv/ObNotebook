@@ -13,7 +13,10 @@
 - [WN2000RPT_V1.0.1.20](https://www.downloads.netgear.com/files/GDC/WN2000RPT/WN2000RPT-V1.0.1.20.zip)
 - [DIR-601_REVA_1.02](http://legacyfiles.us.dlink.com/DIR-601/REVA/FIRMWARE/DIR-601_REVA_FIRMWARE_1.02.ZIP)
 - [DIR-825_REVB_2.03](https://drivers.softpedia.com/dyn-postdownload.php/54e62cdaa8af972bb4440f97599c2fbc/6528a440/3e14e/4/1)
-- 
+- [DIR-825 209EUb09](https://ftp.dlink.de/dir/dir-825/archive/driver_software/DIR-825_fw_revb_209EUb09_03_ALL_multi_20130114.zip)
+- [DSP-W215_REVB_v2.23B02](https://support.dlink.com/resource/products/dsp-w215/REVB/DSP-W215_REVB_FIRMWARE_v2.23B02.zip)
+
+
 
 
 ```
