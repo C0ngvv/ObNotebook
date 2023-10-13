@@ -12,6 +12,7 @@
 - [DAP-2695_REVA_1.11.RC044](https://support.dlink.com/resource/products/dap-2695/REVA/DAP-2695_REVA_FIRMWARE_1.11.RC044.ZIP)
 - [WN2000RPT_V1.0.1.20](https://www.downloads.netgear.com/files/GDC/WN2000RPT/WN2000RPT-V1.0.1.20.zip)
 - [DIR-601_REVA_1.02](http://legacyfiles.us.dlink.com/DIR-601/REVA/FIRMWARE/DIR-601_REVA_FIRMWARE_1.02.ZIP)
+- [DIR-825_REVB_2.03](https://drivers.softpedia.com/dyn-postdownload.php/54e62cdaa8af972bb4440f97599c2fbc/6528a440/3e14e/4/1)
 - 
 
 
