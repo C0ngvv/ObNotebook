@@ -143,6 +143,24 @@ sudo docker cp 2f4:/gh/results/a28394246ff8925b79f9dbdc85c73b0d9e29d26b81fb1bcab
 ```
 
 结果如图所示，重托管成功。
+![](images/Pasted%20image%2020231013183044.png)
+
+结果保存在/gh/results目录下
+![](images/Pasted%20image%2020231013183128.png)
+
+将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/resultscbec3a0713a694fbf717520a90ab6e7d61475a4c92a843c5e424157c01a6e362/DAP2330_firmware_v101_rc014 /home/ubuntu/Desktop/test_result/DAP2330_firmware_v101_rc014
+```
+
+
+
+## WNDRMACv2_Version_1.0.0.4
+```
+/gh/run.sh netgear /test_firmware/WNDRMACv2V1.0.0.4/WNDRMACv2-V1.0.0.4.img
+```
+
+结果如图所示，重托管成功。
 
 
 结果保存在/gh/results目录下
@@ -150,12 +168,10 @@ sudo docker cp 2f4:/gh/results/a28394246ff8925b79f9dbdc85c73b0d9e29d26b81fb1bcab
 
 将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/results/a28394246ff8925b79f9dbdc85c73b0d9e29d26b81fb1bcab648d6ce1a187dd9/TEW632BRPA1_FW110B31 /home/ubuntu/Desktop/test_result/TEW632BRPA1_FW110B31
+sudo docker cp 2f4:/gh/resultscbec3a0713a694fbf717520a90ab6e7d61475a4c92a843c5e424157c01a6e362/DAP2330_firmware_v101_rc014 /home/ubuntu/Desktop/test_result/DAP2330_firmware_v101_rc014
 ```
 
 
-
-## WNDRMACv2_Version_1.0.0.4
 
 ## DAP_1513_REVA_1.01
 
