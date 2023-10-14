@@ -218,15 +218,30 @@ sudo docker cp 2f4:/gh/results/0ab3b8367ab862344a74eaf8a90a69749ceca7d4f4d463532
 ```
 
 结果如图所示，重托管成功。
-
+![](images/Pasted%20image%2020231014090550.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/results/0ab3b8367ab862344a74eaf8a90a69749ceca7d4f4d46353281a7e0001f876f2/DAP_2695_firmware_v111_rc044 /home/ubuntu/Desktop/test_result/DAP_2695_firmware_v111_rc044
+sudo docker cp 2f4:/gh/results/fea9e1327adedca1baa0cbe4c0244606b9241dc17debac2307b001503d4758a9/WN2000RPT_V1.0.1.20.img /home/ubuntu/Desktop/test_result/WN2000RPT_V1.0.1.20.img
 ```
 
 
 ## DIR-601_REVA_1.02
+```
+/gh/run.sh dlink /test_firmware/DIR-601_REVA_FIRMWARE_1.02/dir601_FW_102NA.bin
+```
+
+结果如图所示，重托管成功。
+
+
+结果保存在/gh/results目录下，将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/fea9e1327adedca1baa0cbe4c0244606b9241dc17debac2307b001503d4758a9/WN2000RPT_V1.0.1.20.img /home/ubuntu/Desktop/test_result/WN2000RPT_V1.0.1.20.img
+```
+
+
+
+
 
 ## DIR-825_REVB_2.03
 
