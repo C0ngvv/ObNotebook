@@ -104,21 +104,21 @@ sudo docker-compose build
 sudo docker-compose up
 ```
 
-如果遇到下面的情况，就使用命令把冲突的debug网络删除
-![](images/Pasted%20image%2020231013111106.png)
+直接启动会报错：`Error response from daemon: Address already in use`
 
-```
-sudo docker network ls
-sudo docker network rm 8188c950b187
-```
+![](images/Pasted%20image%2020231014205643.png)
 
-![](images/Pasted%20image%2020231013111248.png)
+找了很久发现docker-compose.yml配置文件里将service-network设置为了192.168.1.1和192.168.2.1，跟主机配置的网桥ip冲突了，然后将它们的地址由1改成了5，然后就可以了。
 
-然后就可以成功启动
+![](images/Pasted%20image%2020231014205949.png)
 
-![](images/Pasted%20image%2020231013111326.png)
+再启动可以启动了
 
-在浏览器访问:`172.21.0.2:80`，可以成功访问！尝试输入账号密码登录，也可以进行交互。
+![](images/Pasted%20image%2020231014210020.png)
+
+在浏览器访问:`172.21.0.2`，可以成功访问。
+
+![](images/Pasted%20image%2020231014205546.png)
 
 ## FW_RT_AC750_30043808497
 ```
