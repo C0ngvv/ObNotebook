@@ -44,7 +44,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md"
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md"
               }
             }
           },
@@ -207,12 +207,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "35c87335f18df721",
+  "active": "ec4476dcbb0db501",
   "lastOpenFiles": [
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014221423.png",
+    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014220107.png",
+    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014220044.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014212256.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
-    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/未命名",
     "工具/Greenhouse/Greenhouse Patch结果分析",
     "工具/Greenhouse/Greenhouse测试/未命名",
@@ -224,10 +227,6 @@
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014203238.png",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "安卓逆向分析/frida入门/frida入门.md",
-    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014192329.png",
-    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014153533.png",
-    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014125846.png",
-    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014095544.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
     "安卓逆向分析/frida入门/images",
