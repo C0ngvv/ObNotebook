@@ -301,5 +301,8 @@ static abi_long do_socket(int domain, int type, int protocol)
     return ret;
 }
 ```
+switch在8565行
+
+![](images/Pasted%20image%2020231014230824.png)
 
 ![](images/Pasted%20image%2020231014225122.png)
