@@ -232,11 +232,11 @@ sudo docker cp 2f4:/gh/results/fea9e1327adedca1baa0cbe4c0244606b9241dc17debac230
 ```
 
 结果如图所示，重托管成功。
-
+![](images/Pasted%20image%2020231014095544.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/results/fea9e1327adedca1baa0cbe4c0244606b9241dc17debac2307b001503d4758a9/WN2000RPT_V1.0.1.20.img /home/ubuntu/Desktop/test_result/WN2000RPT_V1.0.1.20.img
+sudo docker cp 2f4:/gh/results/41a11fde62a2e1988fb1606bace0b268a39293e3c0c6fc992478897972e5cd74/dir601_FW_102NA /home/ubuntu/Desktop/test_result/dir601_FW_102NA
 ```
 
 
@@ -248,6 +248,20 @@ sudo docker cp 2f4:/gh/results/fea9e1327adedca1baa0cbe4c0244606b9241dc17debac230
 ## DIR-825 209EUb09
 
 ## DSP-W215_REVB_v2.23B02
+```
+/gh/run.sh dlink /test_firmware/DSP-W215_REVB_FIRMWARE_v2.23B02/DSP-W215B2_FW223B02.bin
+```
+
+结果如图所示，重托管成功。
+
+
+结果保存在/gh/results目录下，将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/41a11fde62a2e1988fb1606bace0b268a39293e3c0c6fc992478897972e5cd74/dir601_FW_102NA /home/ubuntu/Desktop/test_result/dir601_FW_102NA
+```
+
+
+
 
 
 
