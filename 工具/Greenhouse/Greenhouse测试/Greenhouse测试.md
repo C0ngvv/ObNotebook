@@ -245,7 +245,7 @@ sudo docker cp 2f4:/gh/results/41a11fde62a2e1988fb1606bace0b268a39293e3c0c6fc992
 
 ## DIR-825_REVB_2.03
 ```
-/gh/run.sh dlink /test_firmware/DIR-825_fw_revb_209EUb09_03_ALL_multi_20130114/DIR825B1_FW209EUB09_03.bin
+/gh/run.sh dlink /test_firmware/dir825_revB_fw_203NA/dir825_revB_fw_203NA.bin
 ```
 
 结果如图所示，重托管成功。
@@ -253,11 +253,23 @@ sudo docker cp 2f4:/gh/results/41a11fde62a2e1988fb1606bace0b268a39293e3c0c6fc992
 
 结果保存在/gh/results目录下，将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/results/3adfdded29a23a734cb91fc64602323ff0ae835de7534c07cf3cd0bb637bbfb2/DSP_W215B2_FW223B02 /home/ubuntu/Desktop/test_result/DSP_W215B2_FW223B02
+sudo docker cp 2f4:/gh/results/149c878232fa94b3d3063be251c70c366165a153167a66f94140a3067108ce0c/DIR825B1_FW209EUB09_03 /home/ubuntu/Desktop/test_result/DIR825B1_FW209EUB09_03
 ```
 
 
 ## DIR-825 209EUb09
+```
+/gh/run.sh dlink /test_firmware/DIR-825_fw_revb_209EUb09_03_ALL_multi_20130114/DIR825B1_FW209EUB09_03.bin
+```
+
+结果如图所示，重托管成功。
+![](images/Pasted%20image%2020231014153533.png)
+
+结果保存在/gh/results目录下，将结果拷贝到主机
+```
+sudo docker cp 2f4:/gh/results/149c878232fa94b3d3063be251c70c366165a153167a66f94140a3067108ce0c/DIR825B1_FW209EUB09_03 /home/ubuntu/Desktop/test_result/DIR825B1_FW209EUB09_03
+```
+
 
 
 
