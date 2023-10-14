@@ -97,7 +97,28 @@ sudo docker-compose down
 sudo docker cp 2f4:/gh/results/eca65ffc2bb1cfcb0dec6cd8d467a1db0d4979d54f983cda51637846cc1bb995/AC1450_V1.0.0.6_1.0.3.chk /home/ubuntu/Desktop/test_result/AC1450_V1.0.0.6_1.0.3.chk
 ```
 
+进入结果的debug目录，启动docker容器
+```
+cd /home/ubuntu/Desktop/test_result/AC1450_V1.0.0.6_1.0.3.chk/debug
+sudo docker-compose build
+sudo docker-compose up
+```
 
+如果遇到下面的情况，就使用命令把冲突的debug网络删除
+![](images/Pasted%20image%2020231013111106.png)
+
+```
+sudo docker network ls
+sudo docker network rm 8188c950b187
+```
+
+![](images/Pasted%20image%2020231013111248.png)
+
+然后就可以成功启动
+
+![](images/Pasted%20image%2020231013111326.png)
+
+在浏览器访问:`172.21.0.2:80`，可以成功访问！尝试输入账号密码登录，也可以进行交互。
 
 ## FW_RT_AC750_30043808497
 ```
@@ -249,11 +270,11 @@ sudo docker cp 2f4:/gh/results/41a11fde62a2e1988fb1606bace0b268a39293e3c0c6fc992
 ```
 
 结果如图所示，重托管成功。
-
+![](images/Pasted%20image%2020231014192329.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
 ```
-sudo docker cp 2f4:/gh/results/149c878232fa94b3d3063be251c70c366165a153167a66f94140a3067108ce0c/DIR825B1_FW209EUB09_03 /home/ubuntu/Desktop/test_result/DIR825B1_FW209EUB09_03
+sudo docker cp 2f4:/gh/results/379836b8625f32fb3c2642656f056e9bf43f929101e2ff758bb5049c5373ef2d/dir825_revB_fw_203NA /home/ubuntu/Desktop/test_result/dir825_revB_fw_203NA
 ```
 
 
