@@ -225,84 +225,87 @@ sudo chroot . ./qemu-arm-static -hackbind -hackproc -hacksysinfo -execve "/qemu-
 看起来这几个参数很厉害，加上去之后之前仿真不起来的也能直接仿真起来，但是之前从来都没见过有人这么用。经过查阅发现，这应该不是原来qemu-arm-static里面的参数，而是作者patch后的。项目位于：[SEFCOM/GHQEMU5 (github.com)](https://github.com/sefcom/ghqemu5)
 
 这几个参数的准确作用如下：
-- hackdev/proc，复制/dev和/proc的内容，hack openat()系统调用来从那读
+- hackproc，复制/dev和/proc的内容，hack openat()系统调用来从那读
 - hackbind，强制ipv6绑定ipv4上的0.0.0.0
 - execve：添加一个参数，该参数指定 qemu-user-static 二进制文件的绝对路径，用于解决方法和调用，以便它们使用相同的 QEMU-user-static 二进制文件和传入相同的参数（否则，它默认为主机的 QEMU，即使安装了binfmt工具也可能导致问题）到`system()``execve()`
 - hacksys：始终指示正在使用0个 CPU 资源的解决方法，以绕过由于系统限制而导致的行为更改，尤其是在模糊测试时
 
-syscall.c文件
-
-![](images/Pasted%20image%2020231014224711.png)
-
-syscall.c第3161行
-
-```c
-/* do_socket() Must return target values and target errnos. */
-static abi_long do_socket(int domain, int type, int protocol)
-{
-    int target_type = type;
-    int ret;
-
-    ret = target_to_host_sock_type(&type);
-    if (ret) {
-        return ret;
-    }
-
-    if (domain == PF_NETLINK && !(
-#ifdef CONFIG_RTNETLINK
-         protocol == NETLINK_ROUTE ||
-#endif
-         protocol == NETLINK_KOBJECT_UEVENT ||
-         protocol == NETLINK_AUDIT)) {
-        return -TARGET_EPROTONOSUPPORT;
-    }
-
-    /* GREENHOUSE PATCH */
-    if (hackbind && domain == AF_INET6) {
-        // handle all ipv6 networking as ipv4
-        domain = AF_INET;
-    }
-
-
-    if (domain == AF_PACKET ||
-        (domain == AF_INET && type == SOCK_PACKET)) {
-        protocol = tswap16(protocol);
-    }
-
-    ret = get_errno(socket(domain, type, protocol));
-    if (ret >= 0) {
-        ret = sock_flags_fixup(ret, target_type);
-        if (type == SOCK_PACKET) {
-            /* Manage an obsolete case :
-             * if socket type is SOCK_PACKET, bind by name
-             */
-            fd_trans_register(ret, &target_packet_trans);
-        } else if (domain == PF_NETLINK) {
-            switch (protocol) {
-#ifdef CONFIG_RTNETLINK
-            case NETLINK_ROUTE:
-                fd_trans_register(ret, &target_netlink_route_trans);
-                break;
-#endif
-            case NETLINK_KOBJECT_UEVENT:
-                /* nothing to do: messages are strings */
-                break;
-            case NETLINK_AUDIT:
-                fd_trans_register(ret, &target_netlink_audit_trans);
-                break;
-            default:
-                g_assert_not_reached();
-            }
-        }
-    }
-
-    /* GREENHOUSE PATCH */
-    // create_mark(FIRMFUCK, "socket\n")
-    return ret;
-}
-```
-switch在8565行
+## ghqemu5源码分析
+### sysinfo
+涉及sysinfo的主要代码如下，switch在8565行
 
 ![](images/Pasted%20image%2020231014230824.png)
 
 ![](images/Pasted%20image%2020231014225122.png)
+
+看源码感觉sysinfo改的没什么用，经测试，-hacksysinfo参数去掉确实对仿真没有影响，其次测试发现去掉-execve参数对仿真也没有影响，所以影响仿真最重要的两个参数是-hackbind和-hackproc。
+
+```
+sudo chroot . ./qemu-arm-static -hackbind -hackproc -execve "/qemu-arm-static -hackbind -hackproc " -E LD_PRELOAD="libnvram-faker.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+
+sudo chroot . ./qemu-arm-static -hackproc -execve "/qemu-arm-static -hackproc " -E LD_PRELOAD="libnvram-faker.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+```
+
+### hackbind
+去掉-hackbind的结果如下，不能正常访问：
+
+![](images/Pasted%20image%2020231014231658.png)
+
+hackbind在syscall.c文件中有3处引用，似乎就是处理IPV6情况，转换为IPV4处理。
+
+但是为什么需要处理IPV6的情况呢？查找提到的关键字发现就在httpd程序里出现过。
+
+![](images/Pasted%20image%2020231014235233.png)
+
+引用该字符串的位置如下，因为s1与"GET /shares"不同所以输出了这个字符串，那么s1是什么，dword_21BA04和fd是什么，为什么会跳到else这里。
+
+![](images/Pasted%20image%2020231014235629.png)
+
+else对应的if语句如下，通过inet_ntoa将IP地址转化为点分十进制，然后判断是否是Lan子网，也就是说跳到else是因为没有从Lan访问。
+
+![](images/Pasted%20image%2020231014235948.png)
+
+fd、dword_21B9AC、dword_9C320、dword_21B99C等应该是不同类型或接口开启的套接字的文件描述符，通过dword_21BA04与其比较可以知道数据从哪个类型传过来的，其中fd = sub_D618(80)。
+
+![](images/Pasted%20image%2020231015001114.png)
+
+![](images/Pasted%20image%2020231015001129.png)
+
+所以这个sub_D618()的主要作用是开启IPV6监听，还有一个函数sub_D77C()专门用于开启IPV4监听。
+
+
+### hackproc
+去掉-hackproc结果如下，也是不能访问
+
+![](images/Pasted%20image%2020231014231801.png)
+
+hackproc在syscall.c文件中只有1处引用，如图所示
+
+![](images/Pasted%20image%2020231014232559.png)
+
+这个函数在syscall.c文件中只有一处调用，在do_openat()函数中，所以在打开文件时通过parse_ghpath对打开的文件进行判断，如果是/proc或/dev下的文件，就让其打开/ghproc或/ghdev下的对对应文件。
+> `do_openat()` 是 Linux 内核中用于处理 `openat()` 系统调用的函数。该系统调用是文件操作相关调用之一，用于打开或创建一个文件或目录，并返回其文件描述符。
+
+![](images/Pasted%20image%2020231014232707.png)
+
+经过查看，发现Greenhouse仿真后的ghdev文件夹中有内容，ghproc文件夹没有内容，所以对仿真影响比较大的是ghdev文件。但还是感觉很奇怪，如果是直接使用ghdev，那setup_dev.sh脚本有什么意义呢。/dev文件下的文件是什么东西，mknod又是什么。
+
+mknod用于创建设备文件或管道，基本语法：
+```
+mknod [OPTIONS] <name> <type> [<major> <minor>]
+```
+
+如建立一个新的名叫`coffee`，主设备号为`12`和从设备号为`2`的设备文件：
+```text
+mknod /dev/coffee c 12 2
+```
+
+其中`-m`参数的作用：`--mode=MODE`设置文件的权限为`MODE`。
+
+对于setup_dev.sh脚本中的命令`mknod -m 660 $DEV/mem c 1 1 &> /dev/null`来说，用于在 `$DEV/mem` 路径下创建一个权限为 `660` 的字符设备文件，设备的主设备号为 1，次设备号为 1。`&> /dev/null` 部分表示将命令的输出和错误信息都重定向到 `/dev/null`，即不显示输出和错误信息。
+
+也就是说仿真的时候dev还是用的/ghdev目录，自己在仿真的时候由于dev目录没有配置好会导致仿真失败。
+
+
+
+
