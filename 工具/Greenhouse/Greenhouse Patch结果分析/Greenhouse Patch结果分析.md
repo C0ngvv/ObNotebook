@@ -273,6 +273,8 @@ fd、dword_21B9AC、dword_9C320、dword_21B99C等应该是不同类型或接口�
 
 所以这个sub_D618()的主要作用是开启IPV6监听，还有一个函数sub_D77C()专门用于开启IPV4监听。
 
+从wan口过来，ipv6，。。
+
 
 ### hackproc
 去掉-hackproc结果如下，也是不能访问
