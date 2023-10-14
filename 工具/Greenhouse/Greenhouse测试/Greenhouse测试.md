@@ -189,7 +189,8 @@ sudo docker cp 2f4:/gh/results/cbec3a0713a694fbf717520a90ab6e7d61475a4c92a843c5e
 sudo docker cp 2f4:/gh/results/935e41a07256af9c4166e8f9bc77d1022e0bbde63f4ad73be46df1d653cba0b2/WNDRMACv2_V1.0.0.4.img /home/ubuntu/Desktop/test_result/WNDRMACv2_V1.0.0.4.img
 ```
 
-
+启动后可以访问
+![](images/Pasted%20image%2020231014203238.png)
 
 ## DAP_1513_REVA_1.01
 ```
