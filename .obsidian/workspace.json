@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md"
+                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md"
               }
             }
           },
@@ -209,6 +209,13 @@
   },
   "active": "35c87335f18df721",
   "lastOpenFiles": [
+    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014212256.png",
+    "工具/Greenhouse/Greenhouse Patch结果分析/images",
+    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "工具/Greenhouse/Greenhouse Patch结果分析/未命名",
+    "工具/Greenhouse/Greenhouse Patch结果分析",
+    "工具/Greenhouse/Greenhouse测试/未命名",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014210020.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014205949.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014205643.png",
@@ -216,13 +223,11 @@
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014204700.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014203238.png",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
-    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "安卓逆向分析/frida入门/frida入门.md",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014192329.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014153533.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014125846.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014095544.png",
-    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014090550.png",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
     "安卓逆向分析/frida入门/images",
@@ -234,11 +239,7 @@
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities",
-    "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/images",
     "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
-    "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems",
-    "固件分析/物联网固件逆向工程基础文章复现/images",
-    "固件分析/物联网固件逆向工程基础文章复现",
     "安卓逆向分析/普通分析/普通分析.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "随笔/20230918/20230919.md",
@@ -253,7 +254,6 @@
     "Pwn/x64栈溢出/x64栈溢出.md",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "环境配置/更换镜像源/更换镜像源.md",
-    "images/Pasted image 20230414114546.png.md",
-    "images/Pasted image 20230422004835.png.md"
+    "images/Pasted image 20230414114546.png.md"
   ]
 }

@@ -47,6 +47,7 @@ sudo docker-compose up
 ```
 
 如果遇到下面的情况，就使用命令把冲突的debug网络删除
+
 ![](images/Pasted%20image%2020231013111106.png)
 
 ```
@@ -128,10 +129,11 @@ sudo docker-compose up
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231013155228.png)
 
-
 结果保存在/gh/results目录下
+
 ![](images/Pasted%20image%2020231013155338.png)
 
 
@@ -140,16 +142,17 @@ sudo docker-compose up
 sudo docker cp 2f4:/gh/results/59f03e424c464cbb729d46e9f88da7dad98eb37e607b07cb49660c0517a49717/RT_AC51U_3.0.0.4_380_8497_g179ec32.trx /home/ubuntu/Desktop/test_result/RT_AC51U_3.0.0.4_380_8497_g179ec32.trx
 ```
 
-
 ## TEW-632BRPA1_FW1.10B31
 ```
 /gh/run.sh trendnet /test_firmware/TEW-632BRPA1FW1.10B31/TEW632BRPA1_FW110B31.bin
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231013170010.png)
 
 结果保存在/gh/results目录下
+
 ![](images/Pasted%20image%2020231013170043.png)
 
 将结果拷贝到主机
@@ -157,16 +160,17 @@ sudo docker cp 2f4:/gh/results/59f03e424c464cbb729d46e9f88da7dad98eb37e607b07cb4
 sudo docker cp 2f4:/gh/results/a28394246ff8925b79f9dbdc85c73b0d9e29d26b81fb1bcab648d6ce1a187dd9/TEW632BRPA1_FW110B31 /home/ubuntu/Desktop/test_result/TEW632BRPA1_FW110B31
 ```
 
-
 ## DAP-2330_REVA_1.01RC014
 ```
 /gh/run.sh dlink /test_firmware/DAP-2330_REVA_FIRMWARE_1.01RC014/DAP2330-firmware-v101-rc014.bin
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231013183044.png)
 
 结果保存在/gh/results目录下
+
 ![](images/Pasted%20image%2020231013183128.png)
 
 将结果拷贝到主机
@@ -182,6 +186,7 @@ sudo docker cp 2f4:/gh/results/cbec3a0713a694fbf717520a90ab6e7d61475a4c92a843c5e
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231013201427.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
@@ -190,6 +195,7 @@ sudo docker cp 2f4:/gh/results/935e41a07256af9c4166e8f9bc77d1022e0bbde63f4ad73be
 ```
 
 启动后可以访问
+
 ![](images/Pasted%20image%2020231014203238.png)
 
 ## DAP_1513_REVA_1.01
@@ -198,6 +204,7 @@ sudo docker cp 2f4:/gh/results/935e41a07256af9c4166e8f9bc77d1022e0bbde63f4ad73be
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231013221700.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
@@ -211,6 +218,7 @@ sudo docker cp 2f4:/gh/results/978cf40888348a5487f45c44d1feb8bf947326d1cc35ca675
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231013230537.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
@@ -218,21 +226,19 @@ sudo docker cp 2f4:/gh/results/978cf40888348a5487f45c44d1feb8bf947326d1cc35ca675
 sudo docker cp 2f4:/gh/results/8341ac22a8e2de962e33fe3b34f2f7df67a5fff0fc44386baf98f06a1112c450/RT_G32C1_5.0.0.2b.trx /home/ubuntu/Desktop/test_result/RT_G32C1_5.0.0.2b.trx
 ```
 
-
-
 ## DAP-2695_REVA_1.11.RC044
 ```
 /gh/run.sh dlink /test_firmware/DAP-2695_REVA_FIRMWARE_1.11.RC044/DAP-2695-firmware-v111-rc044.bin
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231013235743.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
 ```
 sudo docker cp 2f4:/gh/results/0ab3b8367ab862344a74eaf8a90a69749ceca7d4f4d46353281a7e0001f876f2/DAP_2695_firmware_v111_rc044 /home/ubuntu/Desktop/test_result/DAP_2695_firmware_v111_rc044
 ```
-
 
 ## WN2000RPT_V1.0.1.20
 ```
@@ -258,6 +264,7 @@ sudo docker cp 2f4:/gh/results/fea9e1327adedca1baa0cbe4c0244606b9241dc17debac230
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231014095544.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
@@ -275,6 +282,7 @@ sudo docker cp 2f4:/gh/results/41a11fde62a2e1988fb1606bace0b268a39293e3c0c6fc992
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231014192329.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
@@ -289,6 +297,7 @@ sudo docker cp 2f4:/gh/results/379836b8625f32fb3c2642656f056e9bf43f929101e2ff758
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231014153533.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
@@ -296,37 +305,18 @@ sudo docker cp 2f4:/gh/results/379836b8625f32fb3c2642656f056e9bf43f929101e2ff758
 sudo docker cp 2f4:/gh/results/149c878232fa94b3d3063be251c70c366165a153167a66f94140a3067108ce0c/DIR825B1_FW209EUB09_03 /home/ubuntu/Desktop/test_result/DIR825B1_FW209EUB09_03
 ```
 
-
-
-
 ## DSP-W215_REVB_v2.23B02
 ```
 /gh/run.sh dlink /test_firmware/DSP-W215_REVB_FIRMWARE_v2.23B02/DSP-W215B2_FW223B02.bin
 ```
 
 结果如图所示，重托管成功。
+
 ![](images/Pasted%20image%2020231014125846.png)
 
 结果保存在/gh/results目录下，将结果拷贝到主机
 ```
 sudo docker cp 2f4:/gh/results/3adfdded29a23a734cb91fc64602323ff0ae835de7534c07cf3cd0bb637bbfb2/DSP_W215B2_FW223B02 /home/ubuntu/Desktop/test_result/DSP_W215B2_FW223B02
 ```
-
-
-
-
-
-
-
-
-```
-sudo docker run -it -p 50003:22 --privileged=true -v ~/Desktop/ghShareSpace:/ghShareSpace greenhouse:usenix-eval-jul2023 /bin/bash
-
-service ssh start
-```
-
-之前测试了几个（）都不行，后来试了RT_AC51U_3.0.0.4_380_8497_g179ec32这个可以，但可以显示web登录路由器初始设置页面，点击Apply后没反应，没有达到模糊测试的标准。
-
-![](Greenhouse测试/images/Pasted%20image%2020230814205757.png)
-
-![](Greenhouse测试/images/Pasted%20image%2020230814205915.png)
+## 总结
+经过测试，论文里提到的14个固件都可以产生重托管结果，并且启动了其中几个Netgear固件可以打开web页面并可以访问。总体来看，效果应该是比较好的，下一步研究一下如何不用docker启动Greenhouse Patch后的结果。
