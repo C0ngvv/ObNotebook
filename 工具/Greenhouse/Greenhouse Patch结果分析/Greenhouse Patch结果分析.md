@@ -230,3 +230,76 @@ sudo chroot . ./qemu-arm-static -hackbind -hackproc -hacksysinfo -execve "/qemu-
 - execve：添加一个参数，该参数指定 qemu-user-static 二进制文件的绝对路径，用于解决方法和调用，以便它们使用相同的 QEMU-user-static 二进制文件和传入相同的参数（否则，它默认为主机的 QEMU，即使安装了binfmt工具也可能导致问题）到`system()``execve()`
 - hacksys：始终指示正在使用0个 CPU 资源的解决方法，以绕过由于系统限制而导致的行为更改，尤其是在模糊测试时
 
+syscall.c文件
+
+![](images/Pasted%20image%2020231014224711.png)
+
+syscall.c第3161行
+
+```c
+/* do_socket() Must return target values and target errnos. */
+static abi_long do_socket(int domain, int type, int protocol)
+{
+    int target_type = type;
+    int ret;
+
+    ret = target_to_host_sock_type(&type);
+    if (ret) {
+        return ret;
+    }
+
+    if (domain == PF_NETLINK && !(
+#ifdef CONFIG_RTNETLINK
+         protocol == NETLINK_ROUTE ||
+#endif
+         protocol == NETLINK_KOBJECT_UEVENT ||
+         protocol == NETLINK_AUDIT)) {
+        return -TARGET_EPROTONOSUPPORT;
+    }
+
+    /* GREENHOUSE PATCH */
+    if (hackbind && domain == AF_INET6) {
+        // handle all ipv6 networking as ipv4
+        domain = AF_INET;
+    }
+
+
+    if (domain == AF_PACKET ||
+        (domain == AF_INET && type == SOCK_PACKET)) {
+        protocol = tswap16(protocol);
+    }
+
+    ret = get_errno(socket(domain, type, protocol));
+    if (ret >= 0) {
+        ret = sock_flags_fixup(ret, target_type);
+        if (type == SOCK_PACKET) {
+            /* Manage an obsolete case :
+             * if socket type is SOCK_PACKET, bind by name
+             */
+            fd_trans_register(ret, &target_packet_trans);
+        } else if (domain == PF_NETLINK) {
+            switch (protocol) {
+#ifdef CONFIG_RTNETLINK
+            case NETLINK_ROUTE:
+                fd_trans_register(ret, &target_netlink_route_trans);
+                break;
+#endif
+            case NETLINK_KOBJECT_UEVENT:
+                /* nothing to do: messages are strings */
+                break;
+            case NETLINK_AUDIT:
+                fd_trans_register(ret, &target_netlink_audit_trans);
+                break;
+            default:
+                g_assert_not_reached();
+            }
+        }
+    }
+
+    /* GREENHOUSE PATCH */
+    // create_mark(FIRMFUCK, "socket\n")
+    return ret;
+}
+```
+
+![](images/Pasted%20image%2020231014225122.png)
