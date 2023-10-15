@@ -312,8 +312,8 @@ mknod /dev/coffee c 12 2
 sudo chroot . /greenhouse/busybox sh
 /setup_dev.sh /greenhouse/busybox /dev
 /qemu-arm-static -hackbind -execve "/qemu-arm-static -hackbind " -E LD_PRELOAD="libnvram-faker.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
-
 ```
+
 
 
 ## end
