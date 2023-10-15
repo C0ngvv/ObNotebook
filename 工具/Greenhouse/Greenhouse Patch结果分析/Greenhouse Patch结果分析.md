@@ -314,6 +314,8 @@ sudo chroot . /greenhouse/busybox sh
 /qemu-arm-static -hackbind -execve "/qemu-arm-static -hackbind " -E LD_PRELOAD="libnvram-faker.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
 ```
 
-
+```
+sudo chroot . ./qemu-arm-static -E LD_PRELOAD="libnvram-faker.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+```
 
 ## end
