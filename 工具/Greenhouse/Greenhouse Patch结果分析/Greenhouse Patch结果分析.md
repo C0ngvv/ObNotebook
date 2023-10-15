@@ -308,6 +308,12 @@ mknod /dev/coffee c 12 2
 
 也就是说仿真的时候dev还是用的/ghdev目录，自己在仿真的时候由于dev目录没有配置好会导致仿真失败。
 
+```
+sudo chroot . /greenhouse/busybox sh
+/setup_dev.sh /greenhouse/busybox /dev
+/qemu-arm-static -hackbind -execve "/qemu-arm-static -hackbind " -E LD_PRELOAD="libnvram-faker.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+
+```
 
 
-
+## end
