@@ -308,6 +308,8 @@ mknod /dev/coffee c 12 2
 
 也就是说仿真的时候dev还是用的/ghdev目录，自己在仿真的时候由于dev目录没有配置好会导致仿真失败。
 
+为什么使用了dev还是仿真不起来
+
 ```
 sudo chroot . /greenhouse/busybox sh
 /setup_dev.sh /greenhouse/busybox /dev
