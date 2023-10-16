@@ -32,6 +32,16 @@
             }
           },
           {
+            "id": "b420e3b7883091f6",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.16"
+              }
+            }
+          },
+          {
             "id": "ec4476dcbb0db501",
             "type": "leaf",
             "state": {
@@ -44,7 +54,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -207,7 +217,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "35c87335f18df721",
+  "active": "b420e3b7883091f6",
   "lastOpenFiles": [
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231015001129.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231015001114.png",
