@@ -42,6 +42,16 @@ trusted-host = https://pypi.tuna.tsinghua.edu.cn
 ```
 sudo apt install openssh-server
 sudo systemctl status ssh
+# 或
+sudo service ssh status
+sudo service ssh start
+sudo service ssh restart
+```
+
+编辑配置文件`/etc/ssh/sshd_config`，允许root登录，设置以下选项：
+```
+PermitRootLogin yes
+PasswordAuthentication yes
 ```
 
 ## pwngdb/pwngdb

@@ -35,9 +35,11 @@
             "id": "b420e3b7883091f6",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.4.16"
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
+                "mode": "source",
+                "source": false
               }
             }
           },
@@ -54,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -137,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md"
+                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md"
               }
             }
           },
@@ -217,8 +219,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b420e3b7883091f6",
+  "active": "ec4476dcbb0db501",
   "lastOpenFiles": [
+    "环境配置/软件安装/ubuntu常用软件安装.md",
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+    "Python/无头浏览器爬虫/无头浏览器爬虫.md",
+    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
+    "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231015001129.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231015001114.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231015001004.png",
@@ -229,10 +237,7 @@
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014232559.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014231801.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014231658.png",
-    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014230824.png",
     "安卓逆向分析/frida入门/frida入门.md",
-    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
-    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/images",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/未命名",
@@ -242,7 +247,6 @@
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
     "安卓逆向分析/frida入门/images",
     "安卓逆向分析/frida入门",
-    "Python/无头浏览器爬虫/无头浏览器爬虫.md",
     "Python/无头浏览器爬虫",
     "images/Pasted image 20231010104318.png.md",
     "images",
@@ -254,7 +258,6 @@
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "随笔/20230918/20230919.md",
     "随笔/20230922/20230922.md",
-    "环境配置/软件安装/ubuntu常用软件安装.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "Pwn/ROP实验/ROP实验.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
@@ -263,7 +266,6 @@
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
     "Pwn/x64栈溢出/x64栈溢出.md",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
-    "环境配置/更换镜像源/更换镜像源.md",
-    "images/Pasted image 20230414114546.png.md"
+    "环境配置/更换镜像源/更换镜像源.md"
   ]
 }
