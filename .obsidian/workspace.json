@@ -8,55 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7817760b75f572a2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "安卓逆向分析/frida入门/frida入门.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "35c87335f18df721",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b420e3b7883091f6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ec4476dcbb0db501",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -139,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md"
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md"
               }
             }
           },
@@ -219,11 +182,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ec4476dcbb0db501",
+  "active": "b420e3b7883091f6",
   "lastOpenFiles": [
-    "环境配置/软件安装/ubuntu常用软件安装.md",
-    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "工具/SaTC/SaTC测试与分析/images/Pasted image 20231016224033.png",
+    "工具/SaTC/SaTC测试与分析/images",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+    "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "安卓逆向分析/frida入门/frida入门.md",
+    "环境配置/软件安装/ubuntu常用软件安装.md",
+    "工具/SaTC/SaTC测试与分析",
+    "工具/SaTC",
     "Python/无头浏览器爬虫/无头浏览器爬虫.md",
     "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
@@ -237,7 +206,6 @@
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014232559.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014231801.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014231658.png",
-    "安卓逆向分析/frida入门/frida入门.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/images",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/未命名",
@@ -249,10 +217,7 @@
     "安卓逆向分析/frida入门",
     "Python/无头浏览器爬虫",
     "images/Pasted image 20231010104318.png.md",
-    "images",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities",
     "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
     "安卓逆向分析/普通分析/普通分析.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
@@ -264,8 +229,6 @@
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
-    "Pwn/x64栈溢出/x64栈溢出.md",
-    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
-    "环境配置/更换镜像源/更换镜像源.md"
+    "Pwn/x64栈溢出/x64栈溢出.md"
   ]
 }
