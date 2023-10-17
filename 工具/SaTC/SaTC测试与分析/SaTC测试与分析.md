@@ -19,20 +19,19 @@ python satc.py -d /workspace/NetGear/RV6400_v2/squashfs-root -o /workspace/NetGe
 ![](images/Pasted%20image%2020231017085241.png)
 
 ## SaTC源码分析
-### satc.py
-这个文件是所有分析的起点，所以先从这里开始分析。在main()方法里首先解析参数，然后：
+satc.py文件是所有分析的起点，所以先从这里开始分析。在main()方法里首先解析参数，然后：
 1. 调用`front_analysise(args)`进行前端关键字提取并分析获取边界二进制程序列表。
 2. 如果有ghidra_script就调用`ghidra_analysise(args, bin_list)`进行分析。
 3. 最后调用`taint_stain_analysis(bin_path, ghidra_result, args.output)`对污点分析结果分析
 
-#### front_analysise()
+### front_analysise()
 首先进行前端分析进行（不同类型的）字符串提取，调用FrontAnalysise().analysise()方法，结果在f_res变量中，后续通过Output().write_file_info()方法写入文件中。
 
 然后进行后端二进制分析识别边界二进制程序，调用BlackAnalysise().analysise()方法，通过get_result()方法可以获得结果。
 
 还有针对UPNP具体分析的以及其他的辅助性分析操作，不做分析，最后返回边界二进制列表border_bin，类型为列表，里面元素为元组(f_name, f_path)。
 
-#### ghidra_analysise()
+### ghidra_analysise()
 创建ghidra工作目录，依次执行ghidra脚本分析：
 
 ```
@@ -42,7 +41,20 @@ ref2sink_cmdi: ref2sink_cmdi.py
 share2sink: share2sink.py
 ```
 
+### ref2sink_bof.py
+依次遍历提取的字符串作为参数，调用searchParam(param)进行污点分析。
+
+#### searchParam()
+获取程序最小和最大地址，依次寻找匹配字符串target，通过`getReferencesTo()`找到交叉引用字符串的位置，调用`getFunctionContaining()`找到引用它的函数，如0x12B2位置的字符串变量"pptp_localip"被位于函数FUN_00024e74中的0x0002506c和0x0002507c位置引用。
+
+```
+start searching "pptp_localip" ...
+Reference From 0x0002506c (FUN_00024e74) To 0x000d12b2 ("pptp_localip")
+Reference From 0x0002507c (FUN_00024e74) To 0x000d12b2 ("pptp_localip")
+```
+
+找到引用后就调用`findSinkPath(ref.fromAddress, curAddr, target)`进行污点分析查询危险路径，并将引用地址加入检查过的引用地址变量`checkedRefAddr`中。
 
 
 
-#### taint_stain_analysis()
+### taint_stain_analysis()
