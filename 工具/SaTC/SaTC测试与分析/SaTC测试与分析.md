@@ -42,7 +42,7 @@ share2sink: share2sink.py
 ```
 
 ### ref2sink_bof.py
-依次遍历提取的字符串作为参数，调用searchParam(param)进行污点分析。
+依次遍历提取的字符串作为参数，调用searchParam(param)进行危险路径分析。
 
 #### searchParam()
 获取程序最小和最大地址，依次寻找匹配字符串target，通过`getReferencesTo()`找到交叉引用字符串的位置，调用`getFunctionContaining()`找到引用它的函数，如0x12B2位置的字符串变量"pptp_localip"被位于函数FUN_00024e74中的0x0002506c和0x0002507c位置引用。
@@ -56,7 +56,8 @@ Reference From 0x0002507c (FUN_00024e74) To 0x000d12b2 ("pptp_localip")
 找到引用后就调用`findSinkPath(ref.fromAddress, curAddr, target)`进行污点分析查询危险路径，并将引用地址加入检查过的引用地址变量`checkedRefAddr`中。
 
 #### findSinkPath()
-先调用`getFunctionContaining(refaddr)`获取函数调用图，然后通过`dfs(startFunc, [], refaddr)`递归寻找是否存在到达sink的路径，最后调用`searchStrAArg(startFunc)`通过启发式增加识别的参数。
-
+- 先调用`getFunctionContaining(refaddr)`获取函数调用图
+- 然后通过`dfs(startFunc, [], refaddr)`递归寻找是否存在到达sink的路径，并对常量字符串参数和格式字符串参数检查确定是否具有漏洞，没有漏洞的函数加入`safeFuncs`中减少后面搜索量。
+- 最后调用`searchStrAArg(startFunc)`通过启发式增加识别的参数，如果函数一直调用同一个字符串参数超过阈值，且该参数不在识别字符串里，就把该字符串加入到识别的字符串中，后续也对其进行分析。
 
 ### taint_stain_analysis()
