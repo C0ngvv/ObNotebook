@@ -17,8 +17,11 @@ for ref in getReferencesTo(curAddr):
 ```
 
 获取包含某个地址的函数
-```
-caller = getFunctionContaining(ref.fromAddress)
+```python
+func = getFunctionContaining(ref.fromAddress)
+# 函数入口地址和结束地址
+start = func.entryPoint
+end = func.body.maxAddress
 ```
 
 
