@@ -61,10 +61,24 @@ Reference From 0x0002507c (FUN_00024e74) To 0x000d12b2 ("pptp_localip")
 - 最后调用`searchStrAArg(startFunc)`通过启发式增加识别的参数，如果函数一直调用同一个字符串参数超过阈值，且该参数不在识别字符串里，就把该字符串加入到识别的字符串中，后续也对其进行分析。
 
 ### taint_stain_analysis()
+进行污点分析。首先调用`conv_Ghidra_output.main()`将前面的分析结果简化，每个参数点简化为三行：分别表示source，传播路径，sink点。
+
+然后创建angr项目，生成CFG图，然后读取前面简化的信息，分别保存在taint_addr、func_addr[]、sinkTargets，然后判断是否开启PIC，根据结果绝对是否将地址转换（-0x10000 + 0x400000）,调用`cfg.get_any_node()`获取污点分析的起始位置`start_addr`、所有sink位置`sinkTargets[]`、所有传播过的函数`followtar[]`。
+
+调用`setfindflag(False)`设置全局找到标志，`setSinkTarget(sinkTargets)`设置全局sink点列表，~setfollowTarget(followtar)`设置全局传播函数列表，相当于设置污点分析的那些东西。然后调用`main(start_addr, taint_addr, binary, proj, cfg)`开展主要分析过程。（其中start_addr为字符串被引用地址，taint_addr为字符串地址）
+
+main执行完判断是否找到污点路径，找到则输出保存结果。
+
 #### conv_Ghidra_output.main(ghidra_analysis_result)
-将分析结果简化，提取出字符串和引用地址组成元组作为字典key，将路径地址作为value，以及最后一个点作为sink点，然后向-alter2文件输出三行：
+将分析结果简化，提取出字符串和引用地址组成元组作为字典key，将路径地址作为value，以及最后一个点作为sink点，然后向-alter2文件输出三行，分别表示source，传播路径，sink点。
 ```
 字符串地址 引用地址
 所有从引用地址到sink点前的路径的合并
 所有的sink点位置
 ```
+
+#### main()
+进去后进行先进行一些配置，然后调用`bugfinder._vuln_analysis(proj, cfg, "environment", taint_addr, info, 4294967295)`展开分析。
+
+#### \_vuln_analysis()
+
