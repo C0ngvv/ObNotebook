@@ -78,7 +78,7 @@ main执行完判断是否找到污点路径，找到则输出保存结果。
 ```
 
 #### main()
-进去后进行先进行一些配置，然后调用`bugfinder._vuln_analysis(proj, cfg, "environment", taint_addr, info, 4294967295)`展开分析。
+进去后进行先进行一些配置，然后调用`bugfinder._vuln_analysis(proj, cfg, "environment", taint_addr, info, 4294967295)`展开分析。//这个好像是用的别人的轮子。
 
 #### \_vuln_analysis()
 
