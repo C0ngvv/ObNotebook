@@ -61,3 +61,10 @@ Reference From 0x0002507c (FUN_00024e74) To 0x000d12b2 ("pptp_localip")
 - 最后调用`searchStrAArg(startFunc)`通过启发式增加识别的参数，如果函数一直调用同一个字符串参数超过阈值，且该参数不在识别字符串里，就把该字符串加入到识别的字符串中，后续也对其进行分析。
 
 ### taint_stain_analysis()
+#### conv_Ghidra_output.main(ghidra_analysis_result)
+将分析结果简化，提取出字符串和引用地址组成元组作为字典key，将路径地址作为value，以及最后一个点作为sink点，然后向-alter2文件输出三行：
+```
+字符串地址 引用地址
+最后一条从引用地址到sink点前的路径
+最后一条的sink点位置
+```
