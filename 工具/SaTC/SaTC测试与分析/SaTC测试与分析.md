@@ -19,7 +19,7 @@ python satc.py -d /workspace/NetGear/RV6400_v2/squashfs-root -o /workspace/NetGe
 ![](images/Pasted%20image%2020231017085241.png)
 
 ## SaTC源码分析
-## satc.py
+### satc.py
 这个文件是所有分析的起点，所以先从这里开始分析。在main()方法里首先解析参数，然后：
 1. 调用`front_analysise(args)`进行前端关键字提取并分析获取边界二进制程序列表。
 2. 如果ghidra_script是share2sink类型的就调用`ghidra_analysise(args, bin_list)`进行分析，缓冲区溢出和命令注入脚本不在这里分析。
