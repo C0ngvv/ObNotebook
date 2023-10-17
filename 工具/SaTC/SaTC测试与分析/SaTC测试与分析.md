@@ -55,6 +55,8 @@ Reference From 0x0002507c (FUN_00024e74) To 0x000d12b2 ("pptp_localip")
 
 找到引用后就调用`findSinkPath(ref.fromAddress, curAddr, target)`进行污点分析查询危险路径，并将引用地址加入检查过的引用地址变量`checkedRefAddr`中。
 
+#### findSinkPath()
+先调用`getFunctionContaining(refaddr)`获取函数调用图，然后通过`dfs(startFunc, [], refaddr)`递归寻找是否存在到达sink的路径，最后调用`searchStrAArg(startFunc)`通过启发式增加识别的参数。
 
 
 ### taint_stain_analysis()

@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -114,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md",
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md",
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md"
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md"
               }
             }
           },
@@ -194,10 +195,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b420e3b7883091f6",
+  "active": "f0ff311897e82135",
   "lastOpenFiles": [
-    "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md",
+    "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
+    "安卓逆向分析/frida入门/frida入门.md",
     "工具/Ghidra/Ghidra常见用法",
     "工具/Ghidra",
     "工具/SaTC/SaTC测试与分析/images/Pasted image 20231017085241.png",
@@ -207,7 +209,6 @@
     "工具/SaTC/SaTC测试与分析/images",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
-    "安卓逆向分析/frida入门/frida入门.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "工具/SaTC/SaTC测试与分析",
     "工具/SaTC",
