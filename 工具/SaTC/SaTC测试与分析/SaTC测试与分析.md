@@ -28,4 +28,8 @@ python satc.py -d /workspace/NetGear/RV6400_v2/squashfs-root -o /workspace/NetGe
 #### front_analysise()
 首先进行前端分析进行（不同类型的）字符串提取，调用FrontAnalysise().analysise()方法，结果在f_res变量中，后续通过Output().write_file_info()方法写入文件中。
 
-然后进行后端二进制分析识别边界二进制程序，调用BlackAnalysise().analysise()方法，通过get_result()方法可以获得结果，
+然后进行后端二进制分析识别边界二进制程序，调用BlackAnalysise().analysise()方法，通过get_result()方法可以获得结果。
+
+还有针对UPNP具体分析的以及其他的辅助性分析操作，不做分析，最后返回边界二进制列表border_bin，类型为列表，里面元素为元组(f_name, f_path)。
+
+#### taint_stain_analysis()
