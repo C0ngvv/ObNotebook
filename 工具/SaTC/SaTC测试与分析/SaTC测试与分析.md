@@ -22,8 +22,8 @@ python satc.py -d /workspace/NetGear/RV6400_v2/squashfs-root -o /workspace/NetGe
 ### satc.py
 这个文件是所有分析的起点，所以先从这里开始分析。在main()方法里首先解析参数，然后：
 1. 调用`front_analysise(args)`进行前端关键字提取并分析获取边界二进制程序列表。
-2. 如果ghidra_script是share2sink类型的就调用`ghidra_analysise(args, bin_list)`进行分析，缓冲区溢出和命令注入脚本不在这里分析。
-3. 如果启动ghidra_script和taint_check，对于命令注入和缓冲区溢出设置相关的标志，然后调用`taint_stain_analysis(bin_path, ghidra_result, args.output)`进行污点分析。
+2. 如果有ghidra_script就调用`ghidra_analysise(args, bin_list)`进行分析。
+3. 最后调用`taint_stain_analysis(bin_path, ghidra_result, args.output)`对污点分析结果分析
 
 #### front_analysise()
 首先进行前端分析进行（不同类型的）字符串提取，调用FrontAnalysise().analysise()方法，结果在f_res变量中，后续通过Output().write_file_info()方法写入文件中。
@@ -31,5 +31,18 @@ python satc.py -d /workspace/NetGear/RV6400_v2/squashfs-root -o /workspace/NetGe
 然后进行后端二进制分析识别边界二进制程序，调用BlackAnalysise().analysise()方法，通过get_result()方法可以获得结果。
 
 还有针对UPNP具体分析的以及其他的辅助性分析操作，不做分析，最后返回边界二进制列表border_bin，类型为列表，里面元素为元组(f_name, f_path)。
+
+#### ghidra_analysise()
+创建ghidra工作目录，依次执行ghidra脚本分析：
+
+```
+ref2share: ref2share.py
+ref2sink_bof: ref2sink_bof.py
+ref2sink_cmdi: ref2sink_cmdi.py
+share2sink: share2sink.py
+```
+
+
+
 
 #### taint_stain_analysis()
