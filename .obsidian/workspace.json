@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f0ff311897e82135",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -182,15 +195,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b420e3b7883091f6",
+  "active": "f0ff311897e82135",
   "lastOpenFiles": [
+    "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md",
+    "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
+    "工具/Ghidra/Ghidra常见用法",
+    "工具/Ghidra",
     "工具/SaTC/SaTC测试与分析/images/Pasted image 20231017085241.png",
     "工具/SaTC/SaTC测试与分析/images/Pasted image 20231017085221.png",
     "工具/SaTC/SaTC测试与分析/images/Pasted image 20231017085006.png",
     "工具/SaTC/SaTC测试与分析/images/Pasted image 20231016224033.png",
     "工具/SaTC/SaTC测试与分析/images",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
-    "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "安卓逆向分析/frida入门/frida入门.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
@@ -205,7 +221,6 @@
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014235948.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014235629.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014235233.png",
-    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231014232707.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/未命名",
@@ -214,8 +229,6 @@
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
     "安卓逆向分析/frida入门/images",
-    "安卓逆向分析/frida入门",
-    "Python/无头浏览器爬虫",
     "images/Pasted image 20231010104318.png.md",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
     "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
