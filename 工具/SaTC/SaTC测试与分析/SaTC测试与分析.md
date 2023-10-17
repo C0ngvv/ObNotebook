@@ -26,3 +26,6 @@ python satc.py -d /workspace/NetGear/RV6400_v2/squashfs-root -o /workspace/NetGe
 3. 如果启动ghidra_script和taint_check，对于命令注入和缓冲区溢出设置相关的标志，然后调用`taint_stain_analysis(bin_path, ghidra_result, args.output)`进行污点分析。
 
 #### front_analysise()
+首先进行前端分析进行（不同类型的）字符串提取，调用FrontAnalysise().analysise()方法，结果在f_res变量中，后续通过Output().write_file_info()方法写入文件中。
+
+然后进行后端二进制分析识别边界二进制程序，调用BlackAnalysise().analysise()方法，通过get_result()方法可以获得结果，
