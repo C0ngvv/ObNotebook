@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f0ff311897e82135",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5,
-    "collapsed": true
+    "width": 227.5
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -196,9 +182,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f0ff311897e82135",
+  "active": "b420e3b7883091f6",
   "lastOpenFiles": [
+    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images/Pasted image 20231018210735.png",
     "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md",
+    "images/Pasted image 20231018204219.png.md",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images/Pasted image 20231018204219.png",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images/Pasted image 20231018204210.png",
@@ -241,7 +229,6 @@
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "Pwn/ROP实验/ROP实验.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md"
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md"
   ]
 }
