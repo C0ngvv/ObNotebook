@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
+                "file": "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,7 +99,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5
+    "width": 227.5,
+    "collapsed": true
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -115,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
+                "file": "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
+                "file": "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md"
+                "file": "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md"
               }
             }
           },
@@ -195,10 +196,15 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f0ff311897e82135",
+  "active": "04b4e2e0944c66f2",
   "lastOpenFiles": [
-    "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md",
+    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images/Pasted image 20231018111655.png",
+    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
+    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
+    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/未命名",
+    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis",
+    "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md",
     "安卓逆向分析/frida入门/frida入门.md",
     "工具/Ghidra/Ghidra常见用法",
     "工具/Ghidra",
@@ -224,11 +230,8 @@
     "工具/Greenhouse/Greenhouse Patch结果分析/images",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/未命名",
-    "工具/Greenhouse/Greenhouse Patch结果分析",
-    "工具/Greenhouse/Greenhouse测试/未命名",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
-    "安卓逆向分析/frida入门/images",
     "images/Pasted image 20231010104318.png.md",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
     "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
@@ -240,8 +243,6 @@
     "Pwn/ROP实验/ROP实验.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
-    "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
-    "Pwn/x64栈溢出/x64栈溢出.md"
+    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md"
   ]
 }
