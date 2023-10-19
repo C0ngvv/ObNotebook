@@ -58,3 +58,20 @@
 }
 ```
 
+## /data/result_data/router_version.json
+对结果文件进行分析
+```
+{
+	"buffer_overflow":{
+		"危险调用位置地址":{
+			"name调用的危险函数": "sprintf",
+			"offset危险参数栈上偏移":[
+				90
+			],
+			"info": [
+				?
+			]
+		}
+	}
+}
+```
