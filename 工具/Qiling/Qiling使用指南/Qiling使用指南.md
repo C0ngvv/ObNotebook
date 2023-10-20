@@ -74,13 +74,19 @@ ql = Qiling([r'/bin/ls'], r'examples/rootfs/x86_linux', verbose=QL_VERBOSE.DEBUG
 
 ### ql.filter
 此外，还可以使用`ql.filter`通过正则表达式对日志进行过滤。
-```
+```python
 if __name__ == "__main__": 
 	ql = Qiling([r'examples/rootfs/arm_linux/bin/arm_hello'], r'examples/rootfs/arm_linux') 
 	# show only log entries that start with "open" 
 	ql.filter = '^open' ql.run()
 ```
 
+## Memory
+### 内存读写
+```
+ql.mem.read(address, size)
+ql.mem.write(address, data)
+```
 ## Hook
 ### ql.hook_address()
 hook一个地址，当执行到指定地址时就激活回调函数。
@@ -89,6 +95,15 @@ ql.hook_address(callback.Callable, address.int)
 ```
 
 例
+```python
+from qiling import Qiling
+def stop(ql: Qiling) -> None: 
+	ql.log.info('killer switch found, stopping') 
+	ql.emu_stop() 
+	
+ql = Qiling([r'examples/rootfs/x86_windows/bin/wannacry.bin'], r'examples/rootfs/x86_windows') 
+# have 'stop' called when execution reaches 0x40819a 
+ql.hook_address(stop, 0x40819a) 
+ql.run()
 ```
-from qiling import Qiling def stop(ql: Qiling) -> None: ql.log.info('killer switch found, stopping') ql.emu_stop() ql = Qiling([r'examples/rootfs/x86_windows/bin/wannacry.bin'], r'examples/rootfs/x86_windows') # have 'stop' called when execution reaches 0x40819a ql.hook_address(stop, 0x40819a) ql.run()
-```
+
