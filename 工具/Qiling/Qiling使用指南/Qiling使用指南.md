@@ -197,3 +197,18 @@ def my_syscall_write(ql: Qiling, fd: int, buf: int, count: int) -> int:
 ql.os.set_syscall('write', my_syscall_write, QL_INTERCEPT.CALL)
 ```
 
+### Hijacking OS API(POSIX)
+与系统调用一样，POSIX libc函数也可以类似的方式挂钩，允许用户控制其功能。
+```python
+from qiling.const import QL_INTERCEPT 
+from qiling.os.const import STRING
+
+def my_puts(ql: Qiling):
+	params = ql.os.resolve_fcall_params({'s': STRING})
+	s = params['s']
+	print(s)
+	return len(s)
+
+ql.os.set_api('puts', my_puts, QL_INTERCEPT.CALL)
+```
+
