@@ -224,3 +224,7 @@ def my_puts(ql: Qiling):
 ql.os.set_api('puts', my_puts, QL_INTERCEPT.CALL)
 ```
 
+## 参考链接
+[Hook - Qiling Framework Documentation](https://docs.qiling.io/en/latest/hook/)
+
+[[原创]11个小挑战，Qiling Framework 入门上手跟练-软件逆向-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-268989.htm)
