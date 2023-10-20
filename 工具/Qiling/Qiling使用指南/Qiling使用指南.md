@@ -81,3 +81,14 @@ if __name__ == "__main__":
 	ql.filter = '^open' ql.run()
 ```
 
+## Hook
+### ql.hook_address()
+hook一个地址，当执行到指定地址时就激活回调函数。
+```
+ql.hook_address(callback.Callable, address.int)
+```
+
+例
+```
+from qiling import Qiling def stop(ql: Qiling) -> None: ql.log.info('killer switch found, stopping') ql.emu_stop() ql = Qiling([r'examples/rootfs/x86_windows/bin/wannacry.bin'], r'examples/rootfs/x86_windows') # have 'stop' called when execution reaches 0x40819a ql.hook_address(stop, 0x40819a) ql.run()
+```
