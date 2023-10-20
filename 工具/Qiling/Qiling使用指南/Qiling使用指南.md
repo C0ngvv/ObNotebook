@@ -148,6 +148,18 @@ ql.hook_address(stop, 0x40819a)
 ql.run()
 ```
 
+### ql.hook_code()
+hook所有指令，注册的回调将在每条汇编指令执行前被调用
+```python
+from capstone import Cs
+def simple_diassembler(ql: Qiling, address: int, size: int, md: Cs) -> None:
+	buf = ql.mem.read(address, size)
+	for insn in md.disasm(buf, address):
+		ql.log.debug(f':: {insn.address:#x} : {insn.mnemonic:24s} {insn.op_str}')
+
+ql.hook_code(simple_diassembler, user_data=ql.arch.disassembler)
+```
+
 ## Hijack
 ### Hijacking VFS objects
 虽然 rootfs 中包含的文件和文件夹都是静态的，但仿真程序可能需要访问虚拟文件系统对象，如 udev、procfs、sysfs等。为了弥补这一差距，Qiling 允许将虚拟路径绑定到主机系统上的现有文件或自定义文件对象。
