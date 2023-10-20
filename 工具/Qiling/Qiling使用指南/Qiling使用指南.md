@@ -149,6 +149,37 @@ ql.run()
 ```
 
 ## Hijack
+### Hijacking VFS objects
+虽然 rootfs 中包含的文件和文件夹都是静态的，但仿真程序可能需要访问虚拟文件系统对象，如 udev、procfs、sysfs等。为了弥补这一差距，Qiling 允许将虚拟路径绑定到主机系统上的现有文件或自定义文件对象。
+
+下面的示例将虚拟路径 /dev/urandom 映射到主机系统上现有的 /dev/urandom 文件。当仿真程序访问 /dev/random 时，将访问映射的文件。
+```
+ql.add_fs_mapper(r'/dev/urandom', r'/dev/urandom')
+```
+
+下面的示例将虚拟路径 /dev/random 映射到一个用户定义的文件对象，该对象允许对交互进行更精细的控制。请注意，映射对象继承了QlFsMappedObject。
+```
+from qiling.os.mapper import QlFsMappedObject
+class FakeUrandom(QlFsMappedObject):
+	def read(self, size: int) -> bytes:
+		return b"\x04"
+	def fstat(self) -> int:
+		return -1
+	def close(self) -> int:
+		return 0
+
+ql.add_fs_mapper(r'/dev/urandom', FakeUrandom())
+```
+
+另一种用途是磁盘模拟。通常情况下，程序希望直接访问磁盘，你可以利用 fs mapper 来模拟磁盘。
+```
+from qiling.os.disk import QlDisk
+emu_path = 0x80
+emu_disk = QlDisk(r'rootfs/8086_dos/petya/out_1M.raw', emu_path)
+ql.add_fs_mapper(emu_path, emu_disk)
+```
+
+QlDisk 对象实际上继承自 QlFsMappedObejct，并实现了磁盘操作逻辑，如磁盘柱面、磁头、扇区和逻辑块地址。out_1M.raw 是原始磁盘映像，0x80 是 BIOS 和 DOS 中的磁盘驱动器索引。对于 Linux 和 Windows，驱动器索引可能分别是"/dev/sda "或"\.\PHYSICALDRIVE0"。
 ### Hijack POSIX system calls
 POSIX系统调用可能被挂钩，允许用户修改参数、更改返回值或完全替换其功能。系统调用可以通过名称或编号挂钩，并在一个或多个阶段被拦截：
 - `QL_INTERCEPT.CALL`：当指定的系统调用即将被调用时；可用于完全替换系统调用功能
