@@ -81,6 +81,14 @@ if __name__ == "__main__":
 	ql.filter = '^open' ql.run()
 ```
 
+## Register
+```
+eax = ql.arch.regs.eax
+ql.arch.regs.eax = 0xFF
+ql.arch.regs.arch_pc 
+ql.arch.regs.arch_sp
+```
+
 ## Memory
 ### 内存映射
 **在访问内存之前，必须对其进行映射**。映射方法在指定位置绑定一个连续的内存区域，并设置其访问保护位。可以提供一个字符串标签，以便在映射信息表（参见：get_map_info）中轻松识别。
@@ -138,5 +146,23 @@ ql = Qiling([r'examples/rootfs/x86_windows/bin/wannacry.bin'], r'examples/rootfs
 # have 'stop' called when execution reaches 0x40819a 
 ql.hook_address(stop, 0x40819a) 
 ql.run()
+```
+
+## Hijack
+### Hijack POSIX system calls
+POSIX系统调用可能被挂钩，允许用户修改参数、更改返回值或完全替换其功能。系统调用可以通过名称或编号挂钩，并在一个或多个阶段被拦截：
+- `QL_INTERCEPT.CALL`：当指定的系统调用即将被调用时；可用于完全替换系统调用功能
+- `QL_INTERCEPT.ENTER`：可用于篡改系统调用参数值
+- `QL_INTERCEPT.EXIT`：可用于篡改返回值
+
+```python
+from qiling.const import QL_INTERCEPT
+def my_syscall_write(ql: Qiling, fd: int, buf: int, count: int) -> int:
+	data = ql.mem.read(buf, count)
+	fobj = ql.os.fd[fd]
+	if hasattr(fobj, 'write'):
+		fobj.write(data)
+
+ql.os.set_syscall('write', my_syscall_write, QL_INTERCEPT.CALL)
 ```
 
