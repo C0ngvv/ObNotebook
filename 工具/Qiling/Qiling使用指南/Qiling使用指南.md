@@ -82,11 +82,44 @@ if __name__ == "__main__":
 ```
 
 ## Memory
-### 内存读写
+### 内存映射
+**在访问内存之前，必须对其进行映射**。映射方法在指定位置绑定一个连续的内存区域，并设置其访问保护位。可以提供一个字符串标签，以便在映射信息表（参见：get_map_info）中轻松识别。
 ```
+ql.mem.map(addr: int, size: int, perms: int = UC_PROT_ALL, info: Optional[str] = None) -> None
+```
+
+- `addr`；需要映射的基地址，应按页面粒度，需要对齐内存偏移和地址以进行映射。
+- `size`：映射大小（以字节为单位），必须是页面大小的倍数
+- `perms`：保护位图，定义此内存范围是否可读、可写和/或可执行
+- `info`：为映射范围设置字符串标签，以方便识别（可选）
+
+unmap方法可在指定位置回收内存区域，unmap功能不局限于完整内存区域，也可用于部分范围。
+```
+ql.mem.unmap(addr: int, size: int) -> None:
+```
+
+显示所有映射的区域
+```python
+for info_line in self.ql.mem.get_formatted_mapinfo():
+	self.ql.log.error(info_line)
+```
+### 内存访问
+```python
+# 读写
 ql.mem.read(address, size)
 ql.mem.write(address, data)
+#写入整数时需要pack
+ql.mem.write(0x1337, ql.pack16(1337))  # or struct.pack("H",1337))
+
+# 读写字符串
+ql.mem.string(address)
+ql.mem.string(address, "stringwith")
+
+# 搜索匹配
+address = ql.mem.search(b"\xFF\xFE\xFD\xFC\xFB\xFA")
+address = ql.mem.search(b"\xFF\xFE\xFD\xFC\xFB\xFA", begin= 0x1000, end= 0x2000)
 ```
+
 ## Hook
 ### ql.hook_address()
 hook一个地址，当执行到指定地址时就激活回调函数。
