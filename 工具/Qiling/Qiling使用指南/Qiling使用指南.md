@@ -153,12 +153,12 @@ ql.run()
 虽然 rootfs 中包含的文件和文件夹都是静态的，但仿真程序可能需要访问虚拟文件系统对象，如 udev、procfs、sysfs等。为了弥补这一差距，Qiling 允许将虚拟路径绑定到主机系统上的现有文件或自定义文件对象。
 
 下面的示例将虚拟路径 /dev/urandom 映射到主机系统上现有的 /dev/urandom 文件。当仿真程序访问 /dev/random 时，将访问映射的文件。
-```
+```python
 ql.add_fs_mapper(r'/dev/urandom', r'/dev/urandom')
 ```
 
 下面的示例将虚拟路径 /dev/random 映射到一个用户定义的文件对象，该对象允许对交互进行更精细的控制。请注意，映射对象继承了QlFsMappedObject。
-```
+```python
 from qiling.os.mapper import QlFsMappedObject
 class FakeUrandom(QlFsMappedObject):
 	def read(self, size: int) -> bytes:
