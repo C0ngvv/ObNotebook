@@ -114,7 +114,7 @@ ql.mem.map(addr: int, size: int, perms: int = UC_PROT_ALL, info: Optional[str] =
 
 unmap方法可在指定位置回收内存区域，unmap功能不局限于完整内存区域，也可用于部分范围。
 ```
-ql.mem.unmap(addr: int, size: int) -> None:
+ql.mem.unmap(addr: int, size: int) -> None
 ```
 
 显示所有映射的区域
@@ -240,7 +240,7 @@ ql.clear_hooks()
 
 ## Hijack
 ### Hijacking program standard streams
-Qiling可以劫持程序的标准流（stdin、stdout 和 stderr），并用自定义实现来取代它们。下面的示例展示了如何接管stdin 并为其输入我们自己的内容。仿真程序稍后将使用这些内容。
+Qiling可以劫持程序的标准流（stdin、stdout 和 stderr），并用自定义实现来取代它们。下面的示例展示了如何接管stdin 并为其输入我们自己的内容。
 
 ```python
 # 劫持程序stdin并输入指定内容
@@ -255,7 +255,7 @@ ql.os.stdin.write(b'Ea5yR3versing\n')
 ql.add_fs_mapper(r'/dev/urandom', r'/dev/urandom')
 ```
 
-下面的示例将虚拟路径 /dev/random 映射到一个用户定义的文件对象，该对象允许对交互进行更精细的控制。请注意，映射对象继承了QlFsMappedObject。
+下面的示例将虚拟路径 /dev/urandom 映射到一个用户定义的文件对象，该对象允许对交互进行更精细的控制。请注意，映射对象继承了QlFsMappedObject。
 ```python
 from qiling.os.mapper import QlFsMappedObject
 class FakeUrandom(QlFsMappedObject):
