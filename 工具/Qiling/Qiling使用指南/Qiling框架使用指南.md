@@ -88,7 +88,7 @@ if __name__ == "__main__":
 
 ## Register
 ```python
-# 取值赋值
+# 寄存器取值赋值
 eax = ql.arch.regs.eax
 ql.arch.regs.eax = 0xFF
 # 跨架构寄存器，仅限于pc和sp
@@ -413,7 +413,7 @@ log_split = True
 - Linux: [qiling/pofiles/linux.ql](https://github.com/qilingframework/qiling/blob/dev/qiling/profiles/linux.ql)
 - MacOS: [qiling/pofiles/macos.ql](https://github.com/qilingframework/qiling/blob/dev/qiling/profiles/macos.ql)
 - UEFI: [qiling/pofiles/uefi.ql](https://github.com/qilingframework/qiling/blob/dev/qiling/profiles/uefi.ql)
-- UEFI: [qiling/pofiles/freebsd.ql](https://github.com/qilingframework/qiling/blob/dev/qiling/profiles/freebsd.ql)
+- FreeBSD: [qiling/pofiles/freebsd.ql](https://github.com/qilingframework/qiling/blob/dev/qiling/profiles/freebsd.ql)
 
 ## 参考链接
 [Hook - Qiling Framework Documentation](https://docs.qiling.io/en/latest/hook/)
