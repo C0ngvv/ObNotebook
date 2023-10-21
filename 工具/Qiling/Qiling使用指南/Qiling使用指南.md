@@ -165,11 +165,9 @@ ql.hook_code(simple_diassembler, user_data=ql.arch.disassembler)
 Qiling可以劫持程序的标准流（stdin、stdout 和 stderr），并用自定义实现来取代它们。下面的示例展示了如何接管stdin 并为其输入我们自己的内容。仿真程序稍后将使用这些内容。
 
 ```python
-
-
+# 劫持程序stdin并输入指定内容
 ql.os.stdin = pipe.SimpleInStream(0)
 ql.os.stdin.write(b'Ea5yR3versing\n')
-ql.hook_address(force_call_dialog_func, 0x00401016)
 ```
 ### Hijacking VFS objects
 虽然 rootfs 中包含的文件和文件夹都是静态的，但仿真程序可能需要访问虚拟文件系统对象，如 udev、procfs、sysfs等。为了弥补这一差距，Qiling 允许将虚拟路径绑定到主机系统上的现有文件或自定义文件对象。
