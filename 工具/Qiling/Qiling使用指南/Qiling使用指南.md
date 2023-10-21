@@ -82,16 +82,22 @@ if __name__ == "__main__":
 ```
 
 ## Register
-```
+```python
+# 取值赋值
 eax = ql.arch.regs.eax
 ql.arch.regs.eax = 0xFF
+# 跨架构寄存器，仅限于pc和sp
 ql.arch.regs.arch_pc 
 ql.arch.regs.arch_sp
+ql.arch.regs.arch_pc = 0xFF
+ql.arch.regs.arch_sp = 0xFF
+# 获取寄存器位数
+ql.arch.reg_bits("rax")
 ```
 
 ## Memory
 ### 内存映射
-**在访问内存之前，必须对其进行映射**。映射方法在指定位置绑定一个连续的内存区域，并设置其访问保护位。可以提供一个字符串标签，以便在映射信息表（参见：get_map_info）中轻松识别。
+在访问内存之前，必须对其进行映射。映射方法在指定位置绑定一个连续的内存区域，并设置其访问保护位。可以提供一个字符串标签，以便在映射信息表（参见：get_map_info）中轻松识别。
 ```
 ql.mem.map(addr: int, size: int, perms: int = UC_PROT_ALL, info: Optional[str] = None) -> None
 ```
@@ -128,9 +134,19 @@ address = ql.mem.search(b"\xFF\xFE\xFD\xFC\xFB\xFA")
 address = ql.mem.search(b"\xFF\xFE\xFD\xFC\xFB\xFA", begin= 0x1000, end= 0x2000)
 ```
 
+### 栈操作
+```python
+# 出栈入栈
+value = ql.arch.stack_pop()
+ql.arch.stack_push(value)
+# 读|写距离栈顶指定偏移位置而不修改sp，偏移offset可为正、负、0
+value = ql.arch.stack_read(offset)
+ql.arch.stack_write(offset, value)
+```
+
 ## Hook
 ### ql.hook_address()
-hook一个地址，当执行到指定地址时就激活回调函数。
+hook一个地址，当执行到指定地址时就激活回调函数，执行完后还是继续从指定地址运行程序，因此pc寄存器值未作修改。
 ```
 ql.hook_address(callback.Callable, address.int)
 ```
@@ -158,6 +174,13 @@ def simple_diassembler(ql: Qiling, address: int, size: int, md: Cs) -> None:
 		ql.log.debug(f':: {insn.address:#x} : {insn.mnemonic:24s} {insn.op_str}')
 
 ql.hook_code(simple_diassembler, user_data=ql.arch.disassembler)
+```
+
+### ql.hook_block()
+hook基本块代码
+```python
+def ql_hook_block_disasm(ql, address, size): 
+	ql.log.debug("\n[+] Tracing basic block at 0x%x" % (address)) ql.hook_block(ql_hook_block_disasm)
 ```
 
 ## Hijack
@@ -236,3 +259,9 @@ ql.os.set_api('puts', my_puts, QL_INTERCEPT.CALL)
 [Hook - Qiling Framework Documentation](https://docs.qiling.io/en/latest/hook/)
 
 [[原创]11个小挑战，Qiling Framework 入门上手跟练-软件逆向-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-268989.htm)
+
+## TODO
+1.Hook
+2.Pack and Unpack
+3.Snaphook
+4.Profile
