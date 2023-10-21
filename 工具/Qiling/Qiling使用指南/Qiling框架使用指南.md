@@ -1,3 +1,6 @@
+Qiling是一个功能强大的二进制模拟框架，还可以用于fuzz固件等二进制程序，因此学习一下它的用法是必要的。这里的内容大部分都来自于官方文档（[Qiling Framework Documentation](https://docs.qiling.io/en/latest/)），是对其主要内容的整理和汇总，学习的过程中应该跟着[看雪文章](https://bbs.kanxue.com/thread-268989.htm)做一下[Shielder-QilingLab](https://www.shielder.com/blog/2021/07/qilinglab-release/)，做完之后对Qiling的大致使用方法就掌握了，相关链接已放在末尾。
+
+## 基本使用方法
 启动模拟，Qiling()参数中加入`verbose=QL_VERBOSE.DEBUG`可以显示更详细的信息。
 ```python
 from qiling import *
@@ -7,7 +10,6 @@ ql = Qiling(path, rootfs)
 ql.run()
 ```
 
-## 基本使用方法
 ### 初始化
 ```
 ql = Qiling()
@@ -45,13 +47,16 @@ ql = Qiling()
 
 ### 运行
 要启动二进制执行，只需调用`ql.run()`。但在某些情况下，例如部分执行，ql.run()还提供了 4 个额外选项，以实现更精细的控制。
-```
+```python
 ql.run(begin, end, timeout, count)
+
+# 停止模拟
+ql.emu_stop()
 ```
 
 ## Log Printing
 log输出
-```
+```python
 ql.log.info('Hello from Qiling Framework!')
 ```
 
@@ -139,6 +144,7 @@ address = ql.mem.search(b"\xFF\xFE\xFD\xFC\xFB\xFA", begin= 0x1000, end= 0x2000)
 # 出栈入栈
 value = ql.arch.stack_pop()
 ql.arch.stack_push(value)
+
 # 读|写距离栈顶指定偏移位置而不修改sp，偏移offset可为正、负、0
 value = ql.arch.stack_read(offset)
 ql.arch.stack_write(offset, value)
@@ -151,7 +157,7 @@ hook一个地址，当执行到指定地址时就激活回调函数，执行完�
 ql.hook_address(callback.Callable, address.int)
 ```
 
-例
+例子
 ```python
 from qiling import Qiling
 def stop(ql: Qiling) -> None: 
@@ -181,6 +187,55 @@ hook基本块代码
 ```python
 def ql_hook_block_disasm(ql, address, size): 
 	ql.log.debug("\n[+] Tracing basic block at 0x%x" % (address)) ql.hook_block(ql_hook_block_disasm)
+```
+
+### ql.hook_intno()
+hook中断数来激活一个自定义函数
+```python
+ql.hook_intno(hook_syscall, 0x80)
+```
+
+### ql.hook_mem_read()
+拦截位置在begin和end之间的内存读，在值被读取之前激活回调函数。
+- 如果end没有指定，仅仅当begin处地址读时被拦截
+- 如果begin和end都没有指定，则当作为设置为所有内存
+- 回调函数value参数值是无用的，总是为0
+- 回调函数可能在它被读之前修改内存中的值
+
+```python
+from unicorn.unicorn_const import UC_MEM_READ
+
+def mem_read(ql: Qiling, access: int, address: int, size: int, value: int) -> None:
+	# only read accesses are expected here
+	assert access == UC_MEM_READ
+	ql.log.debug(f'intercepted a memory read from {address:#x}')
+
+stack_lbound = ql.arch.regs.arch_sp 
+stack_ubound = ql.arch.regs.arch_sp - 0x1000
+ql.hook_mem_read(mem_read, begin=stack_ubound, end=stack_lbound)
+```
+
+### ql.hook_mem_write()
+拦截位置在begin和end之间的内存写，在值被写入之前激活回调函数。
+- 如果end没有指定，仅仅当begin处地址读时被拦截
+- 如果begin和end都没有指定，则当作为设置为所有内存
+
+```python
+from unicorn.unicorn_const import UC_MEM_WRITE
+
+def mem_write(ql: Qiling, access: int, address: int, size: int, value: int) -> None:
+	# only write accesses are expected here 
+	assert access == UC_MEM_WRITE
+	ql.log.debug(f'intercepted a memory write to {address:#x} (value = {value:#x})')
+
+trigger_address = 0xdecaf000
+ql.hook_mem_write(mem_write, trigger_address)
+```
+
+### ql.clear_hooks()
+清除所有的hook
+```python
+ql.clear_hooks()
 ```
 
 ## Hijack
@@ -254,14 +309,115 @@ def my_puts(ql: Qiling):
 
 ql.os.set_api('puts', my_puts, QL_INTERCEPT.CALL)
 ```
+## Snapshot
+Qiling可用设置和恢复快照。
+
+```python
+# Qiling状态的保存和恢复
+ql_all = ql.save() 
+ql.restore(ql_all)
+# 附加选项
+ql.save(mem=True, reg=True, fd=True, cpu_ctx=False)
+
+# 当前文件描述符状态的保存和恢复
+all_fd = ql.fd.save() 
+ql.fd.restore(all_fd)
+
+# CPU状态的保存和恢复
+all_registers_context = ql.arch.regs.context_save()
+ql.arch.regs.context_restore(all_registers_context)
+
+# 内存状态的保存和恢复
+all_mem = ql.mem.save() 
+ql.mem.restore(all_mem)
+
+# 寄存器的保存、设置和恢复
+all_registers = ql.arch.regs.save() 
+all_registers["eip"] = 0xaabbccdd
+ql.arch.regs.restore(all_registers)
+```
+
+案例
+```python
+from qiling.const import QL_VERBOSE 
+
+def dump(ql, *args, **kw): 
+	ql.save(reg=False, cpu_context=True, snapshot="/tmp/snapshot.bin") 
+	ql.emu_stop() 
+
+# 通过hook运行到0x1094后激活回调函数dump，通过调用ql.save()保存当前的模拟状态到文件snapshot.bin中，并停止模拟
+ql = Qiling(["../examples/rootfs/x8664_linux/bin/sleep_hello"], "../examples/rootfs/x8664_linux", verbose=QL_VERBOSE.DEFAULT) 
+X64BASE = int(ql.profile.get("OS64", "load_address"), 16) 
+ql.hook_address(dump, X64BASE + 0x1094) 
+ql.run() 
+
+# 通过调用ql.restore恢复模拟状态，并可以设置从begin位置开始模拟而非前面hook的0x1094，跳过某些代码继续执行
+ql = Qiling(["../examples/rootfs/x8664_linux/bin/sleep_hello"], "../examples/rootfs/x8664_linux", verbose=QL_VERBOSE.DEBUG) 
+X64BASE = int(ql.profile.get("OS64", "load_address"), 16) ql.restore(snapshot="/tmp/snapshot.bin") 
+begin_point = X64BASE + 0x109e 
+end_point = X64BASE + 0x10bc 
+ql.run(begin = begin_point, end = end_point)
+```
+
+## Pack and Unpack
+Qiling有一些内置函数来处理内存的打包和解包，但如果需要更大的灵活性，可用使用python的`struct`库。
+
+```python
+# 数字代表位数，没有数字标明的取决于架构位数，小端，表示unsigned "Q, I, H"
+ql.pack()
+ql.pack64()
+ql.pack32()
+ql.pack16()
+
+ql.unpack()
+ql.upack64()
+ql.unpack32()
+ql.unpack16()
+
+# 加上s表示signed "q, i, h"
+ql.packs()
+ql.pack64s()
+ql.pack32s()
+ql.pack16s()
+
+ql.unpacks()
+ql.upack64s()
+ql.unpack32s()
+ql.unpack16s()
+```
+
+## Profile
+使用自定义用户配置文件覆盖Qiling框架的默认配置文件值。
+```python
+from qiling import * 
+from qiling.const import QL_VERBOSE.DEBUG 
+def my_sandbox(path, rootfs): 
+	ql = Qiling(path, rootfs, verbose=QL_VERBOSE.DEBUG, profile= "netgear.ql") 
+	ql.add_fs_mapper("/proc", "/proc") 
+	ql.run() 
+
+if __name__ == "__main__": 
+	my_sandbox(["rootfs/netgear_r6220/bin/mini_httpd","-d","/www","-r","NETGEAR R6220","-c","**.cgi","-t","300"], "rootfs/netgear_r6220")
+```
+
+其中netgear.ql内容为：
+```
+[MIPS] 
+mmap_address = 0x7f7ee000 
+log_dir = qlog 
+log_split = True
+```
+
+不同操作系统的默认配置：
+- Windows: [qiling/pofiles/windows.ql](https://github.com/qilingframework/qiling/blob/dev/qiling/profiles/windows.ql)
+- Linux: [qiling/pofiles/linux.ql](https://github.com/qilingframework/qiling/blob/dev/qiling/profiles/linux.ql)
+- MacOS: [qiling/pofiles/macos.ql](https://github.com/qilingframework/qiling/blob/dev/qiling/profiles/macos.ql)
+- UEFI: [qiling/pofiles/uefi.ql](https://github.com/qilingframework/qiling/blob/dev/qiling/profiles/uefi.ql)
+- UEFI: [qiling/pofiles/freebsd.ql](https://github.com/qilingframework/qiling/blob/dev/qiling/profiles/freebsd.ql)
 
 ## 参考链接
 [Hook - Qiling Framework Documentation](https://docs.qiling.io/en/latest/hook/)
 
 [[原创]11个小挑战，Qiling Framework 入门上手跟练-软件逆向-看雪-安全社区|安全招聘|kanxue.com](https://bbs.kanxue.com/thread-268989.htm)
 
-## TODO
-1.Hook
-2.Pack and Unpack
-3.Snaphook
-4.Profile
+[Shielder - QilingLab – Release](https://www.shielder.com/blog/2021/07/qilinglab-release/)
