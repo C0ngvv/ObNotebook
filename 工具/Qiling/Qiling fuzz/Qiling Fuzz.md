@@ -141,5 +141,7 @@ if __name__ == "__main__":
 AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl-fuzz -i afl_inputs -o afl_outputs -U -- python3 ./dir815_mips32el_linux.py @@
 ```
 
-## 案例3：dir645
+## 案例3：tenda-ac15
+
+![](images/Pasted%20image%2020231022220347.png)
 
