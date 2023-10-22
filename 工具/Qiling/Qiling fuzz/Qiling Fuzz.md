@@ -77,3 +77,67 @@ afl进行模糊测试时输入是文件输入，因此测试脚本中的__main__
 - 而`place_input_callback()`负责自定义将`input_file`中的内容变为程序输入，ql.exit_point表示的是调用run()方法时参数end的值
 - 另一个hook的作用是对`___stack_chk_fail()`调用指令进行hook，当这条指令并执行时说明已经栈溢出了，这个设置调用`os.abort()`生成一个SIGABRT信号来使afl检测到并保存crash。
 
+### 案例2：fuzz dlink_dir815
+dir815_mips32el_linux.py是对hedwig.cgi程序进行模糊测试，这里与案例1不同的是该程序在这里是通过读取环境变量作为输入，所以创建Qiling对象时需要设置env。其次在处理输入时，它是通过通过关键字在内存中找到输入数据存储位置，然后通过`ql.mem.write`向该位置写入新的变异数据。
+```python
+#!/usr/bin/env python3
+import os,sys
+sys.path.append("../../..")
+from qiling import Qiling
+from qiling.const import QL_VERBOSE
+from qiling.extensions.afl import ql_afl_fuzz
+
+def main(input_file, enable_trace=False):
+
+    env_vars = {
+        "REQUEST_METHOD": "POST",
+        "REQUEST_URI": "/hedwig.cgi",
+        "CONTENT_TYPE": "application/x-www-form-urlencoded",
+        "REMOTE_ADDR": "127.0.0.1",
+        "HTTP_COOKIE": "uid=1234&password="+"A" * 0x1000,  # fill up
+        # "CONTENT_LENGTH": "8", # no needed
+    }
+
+    ql = Qiling(["./rootfs/htdocs/web/hedwig.cgi"], "./rootfs",
+                verbose=QL_VERBOSE.DEBUG, env=env_vars, console=enable_trace)
+
+    def place_input_callback(ql: Qiling, input: bytes, _: int):
+        env_var = ("HTTP_COOKIE=uid=1234&password=").encode()
+        env_vars = env_var + input + b"\x00" + (ql.path).encode() + b"\x00"
+        ql.mem.write(ql.target_addr, env_vars)
+
+    def start_afl(_ql: Qiling):
+        """
+        Callback from inside
+        """
+        ql_afl_fuzz(_ql, input_file=input_file, place_input_callback=place_input_callback, exits=[ql.os.exit_point])
+
+    addr = ql.mem.search("HTTP_COOKIE=uid=1234&password=".encode())
+    ql.target_addr = addr[0]
+
+    main_addr = ql.os.elf_entry
+    ql.hook_address(callback=start_afl, address=main_addr)
+
+    try:
+        ql.run()
+        os._exit(0)
+    except:
+        if enable_trace:
+            print("\nFuzzer Went Shit")
+        os._exit(0)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) == 1:
+        raise ValueError("No input file provided.")
+    if len(sys.argv) > 2 and sys.argv[1] == "-t":
+        main(sys.argv[2], enable_trace=True)
+    else:
+        main(sys.argv[1])
+```
+
+启动模糊测试运行命令
+```bash
+AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl-fuzz -i afl_inputs -o afl_outputs -U -- python3 ./dir815_mips32el_linux.py @@
+```
+

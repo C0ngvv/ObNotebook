@@ -183,10 +183,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b420e3b7883091f6",
+  "active": "187d4ecd31b81bf7",
   "lastOpenFiles": [
-    "安卓逆向分析/frida入门/frida入门.md",
+    "安卓逆向分析/IDA调试/IDA远程调试.md",
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+    "安卓逆向分析/frida入门/frida入门.md",
     "工具/Qiling/Qiling fuzz",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
@@ -229,7 +230,6 @@
     "安卓逆向分析/普通分析/普通分析.md",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
     "随笔/20230918/20230919.md",
-    "随笔/20230922/20230922.md",
-    "Pwn/ROP实验/ROP实验.md"
+    "随笔/20230922/20230922.md"
   ]
 }
