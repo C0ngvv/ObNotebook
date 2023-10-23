@@ -156,3 +156,11 @@ AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl
 
 [2020 看雪SDC议题回顾 | 麒麟框架：现代化的逆向分析体验 (kanxue.com)](https://zhuanlan.kanxue.com/article-14181.htm)+
 
+[[Fuzzing] Qiling 框架在 Ubuntu22.04 rootfs下遇到 CPU ISA level 错误的临时解决方案 - 赤道企鹅的博客 | Eqqie's Blog](https://eqqie.cn/index.php/archives/2015)
+
+[从零开始的 Boa 框架 Fuzz (seebug.org)](https://paper.seebug.org/2043/)
+
+[Qiling Fuzz实例分析 (qq.com)](https://mp.weixin.qq.com/s/RiPgpROBlwJo9endSJkk_w?ref=www.ctfiot.com)
+
+[Emulate_iot_programs_with_qiling_1 | JiansLife](https://www.jianslife.me/posts/emulate_iot_programs_with_qiling_1/)
+
