@@ -152,3 +152,7 @@ AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl
 
 [jtsec | Blog | Evaluating IoT firmware through emulation and fuzzing](https://www.jtsec.es/blog-entry/113/evaluating-iot-firmware-through-emulation-and-fuzzing)
 
+[Dynamic analysis of firmware components in IoT devices | Kaspersky ICS CERT](https://ics-cert.kaspersky.com/publications/reports/2022/07/06/dynamic-analysis-of-firmware-components-in-iot-devices/?utm_source=securelist&utm_medium=link&utm_campaign=dynamic-analysis-of-firmware-components-in-iot-devices)
+
+[2020 看雪SDC议题回顾 | 麒麟框架：现代化的逆向分析体验 (kanxue.com)](https://zhuanlan.kanxue.com/article-14181.htm)+
+
