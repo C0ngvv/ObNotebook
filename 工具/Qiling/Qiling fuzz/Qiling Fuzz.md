@@ -164,3 +164,5 @@ AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl
 
 [Emulate_iot_programs_with_qiling_1 | JiansLife](https://www.jianslife.me/posts/emulate_iot_programs_with_qiling_1/)
 
+[D1T3 - Qiling Framework with IDA Pro.pdf (cyberweek.ae)](https://cyberweek.ae/materials/2020/D1T3%20-%20Qiling%20Framework%20with%20IDA%20Pro.pdf)
+
