@@ -166,3 +166,5 @@ AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl
 
 [D1T3 - Qiling Framework with IDA Pro.pdf (cyberweek.ae)](https://cyberweek.ae/materials/2020/D1T3%20-%20Qiling%20Framework%20with%20IDA%20Pro.pdf)
 
+[使用Qiling分析Dlink DIR-645中的缓冲区溢出(part I) - 先知社区 (aliyun.com)](https://xz.aliyun.com/t/8156#toc-0)
+
