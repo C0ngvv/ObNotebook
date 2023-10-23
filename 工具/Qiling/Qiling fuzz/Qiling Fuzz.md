@@ -168,3 +168,5 @@ AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl
 
 [使用Qiling分析Dlink DIR-645中的缓冲区溢出(part I) - 先知社区 (aliyun.com)](https://xz.aliyun.com/t/8156#toc-0)
 
+[bkerler/netgear_telnet: Netgear Enable Telnet (New Crypto) (github.com)](https://github.com/bkerler/netgear_telnet/tree/main)
+
