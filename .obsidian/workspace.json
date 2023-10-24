@@ -184,6 +184,9 @@
   },
   "active": "b420e3b7883091f6",
   "lastOpenFiles": [
+    "工具/Qiling/Qiling fuzz/images/Pasted image 20231024223736.png",
+    "工具/Qiling/Qiling fuzz/images/Pasted image 20231024223049.png",
+    "工具/Qiling/Qiling fuzz/images/Pasted image 20231024221530.png",
     "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
@@ -209,8 +212,6 @@
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images/Pasted image 20231018204210.png",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images/Pasted image 20231018204203.png",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images/Pasted image 20231018204202.png",
-    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images/Pasted image 20231018204200.png",
-    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images/Pasted image 20231018203827.png",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/未命名",
@@ -228,7 +229,6 @@
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
     "固件分析/物联网固件逆向工程基础文章复现/物联网固件逆向工程基础文章复现.md",
     "安卓逆向分析/普通分析/普通分析.md",
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
-    "随笔/20230918/20230919.md"
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md"
   ]
 }

