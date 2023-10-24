@@ -169,3 +169,16 @@ AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl
 
 [Emulate_iot_programs_with_qiling_1 | JiansLife](https://www.jianslife.me/posts/emulate_iot_programs_with_qiling_1/)
 
+
+patch
+
+对于BlockingIOError问题，我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:116，修改如下：
+```python
+    def recv(self, bufsize: int, flags: int) -> bytes:
+        try:
+            return self.__socket.recv(bufsize, flags)
+        except BlockingIOError as err:
+            print(err)
+            return b""
+```
+
