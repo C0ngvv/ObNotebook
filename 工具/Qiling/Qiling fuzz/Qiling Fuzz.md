@@ -174,11 +174,23 @@ patch
 
 对于BlockingIOError问题，我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:116，修改如下：
 ```python
+# qiling/os/posix/filestruct.py:116
     def recv(self, bufsize: int, flags: int) -> bytes:
         try:
             return self.__socket.recv(bufsize, flags)
         except BlockingIOError as err:
             print(err)
             return b""
+```
+
+对于`OSError: [Errno 107] Transport endpoint is not connected`问题，我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:79，修改如下：
+```python
+# qiling/os/posix/filestruct.py:79
+    def shutdown(self, how: int) -> None:
+        try:
+            return self.__socket.shutdown(how)
+        except OSError as err:
+            print(err)
+            return 0
 ```
 
