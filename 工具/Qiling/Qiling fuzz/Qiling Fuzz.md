@@ -77,7 +77,7 @@ afl进行模糊测试时输入是文件输入，因此测试脚本中的__main__
 - 而`place_input_callback()`负责自定义将`input_file`中的内容变为程序输入，ql.exit_point表示的是调用run()方法时参数end的值
 - 另一个hook的作用是对`___stack_chk_fail()`调用指令进行hook，当这条指令并执行时说明已经栈溢出了，这个设置调用`os.abort()`生成一个SIGABRT信号来使afl检测到并保存crash。
 
-### 案例2：fuzz dlink_dir815
+### 2.2 案例2：fuzz dlink_dir815
 dir815_mips32el_linux.py是对hedwig.cgi程序进行模糊测试，这里与案例1不同的是该程序在这里是通过读取环境变量作为输入，所以创建Qiling对象时需要设置env。其次在处理输入时，它是通过通过关键字在内存中找到输入数据存储位置，然后通过`ql.mem.write`向该位置写入新的变异数据。
 ```python
 #!/usr/bin/env python3
@@ -141,7 +141,50 @@ if __name__ == "__main__":
 AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl-fuzz -i afl_inputs -o afl_outputs -U -- python3 ./dir815_mips32el_linux.py @@
 ```
 
-## 案例3：tenda-ac15
+## 3.案例3：tenda-ac15
+tenda ac15的案例我无法直接运行起来，因此我先尝试对其进行模拟，然后找到一个漏洞验证是否能构正常触发，最后再构建模糊测试。
+### 3.1 固件模拟
+
+但是在运行时，
+
+[「非阻塞socket」报错 “BlockingIOError: [Errno 11]“ 复现以及分析解决_blockingioerror: [errno 11] resource temporarily u](https://blog.csdn.net/pythontide/article/details/109242386)
+
+[linux socket 错误 Transport endpoint is not connected 在 recv shutdown 中的触发时机_failed to reload daemon: transport endpoint is not](https://blog.csdn.net/whatday/article/details/104056667)
+
+patch
+
+对于BlockingIOError问题，我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:116，修改如下：
+```python
+# qiling/os/posix/filestruct.py:116
+    def recv(self, bufsize: int, flags: int) -> bytes:
+        try:
+            return self.__socket.recv(bufsize, flags)
+        except BlockingIOError as err:
+            print(err)
+            return b""
+```
+
+对于`OSError: [Errno 107] Transport endpoint is not connected`问题，我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:79，修改如下：
+```python
+# qiling/os/posix/filestruct.py:79
+    def shutdown(self, how: int) -> None:
+        try:
+            return self.__socket.shutdown(how)
+        except OSError as err:
+            print(err)
+            return 0
+```
+
+
+
+
+### 3.2 漏洞验证
+
+栈大小，超长字符串触发内存写错误，需要控制字符串长度不超过栈大小才能变为pc地址不可访问。
+
+
+### 3.3 模糊测试
+
 
 ![](images/Pasted%20image%2020231022220347.png)
 
@@ -169,28 +212,4 @@ AFL_AUTORESUME=1 AFL_PATH="$(realpath ./AFLplusplus)" PATH="$AFL_PATH:$PATH" afl
 
 [Emulate_iot_programs_with_qiling_1 | JiansLife](https://www.jianslife.me/posts/emulate_iot_programs_with_qiling_1/)
 
-
-patch
-
-对于BlockingIOError问题，我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:116，修改如下：
-```python
-# qiling/os/posix/filestruct.py:116
-    def recv(self, bufsize: int, flags: int) -> bytes:
-        try:
-            return self.__socket.recv(bufsize, flags)
-        except BlockingIOError as err:
-            print(err)
-            return b""
-```
-
-对于`OSError: [Errno 107] Transport endpoint is not connected`问题，我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:79，修改如下：
-```python
-# qiling/os/posix/filestruct.py:79
-    def shutdown(self, how: int) -> None:
-        try:
-            return self.__socket.shutdown(how)
-        except OSError as err:
-            print(err)
-            return 0
-```
 
