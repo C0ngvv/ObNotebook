@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+                "file": "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+                "file": "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+                "file": "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Qiling/Qiling fuzz/Qiling Fuzz.md"
+                "file": "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md"
               }
             }
           },
@@ -184,6 +184,8 @@
   },
   "active": "e27c7c79d37e35e4",
   "lastOpenFiles": [
+    "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/MultiFuzz/MultiFuzz.md",
     "工具/Qiling/Qiling fuzz/images/Pasted image 20231022220347.png",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
@@ -191,7 +193,6 @@
     "Paper/Snipfuzz/Snipuzz.md",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Paper/EQUAFL/EQUAFL.md",
-    "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
     "工具/Qiling/Qiling fuzz/images/Pasted image 20231025091302.png",
     "工具/Qiling/Qiling fuzz/images/Pasted image 20231025091042.png",
     "工具/Qiling/Qiling fuzz/images/Pasted image 20231025090822.png",
@@ -202,7 +203,6 @@
     "工具/Qiling/Qiling fuzz/images/Pasted image 20231025084543.png",
     "工具/Qiling/Qiling fuzz/images/Pasted image 20231025083736.png",
     "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
-    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "工具/Qiling/Qiling fuzz/images",
     "工具/Qiling/Qiling",
     "安卓逆向分析/IDA调试/IDA远程调试.md",

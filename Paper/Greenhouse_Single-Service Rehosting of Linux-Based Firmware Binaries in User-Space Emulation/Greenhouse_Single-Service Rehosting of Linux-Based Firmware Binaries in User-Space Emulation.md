@@ -102,7 +102,7 @@ Runner启动web服务器，等待60秒，然后调用Checker组件来测试web�
 在模拟结束时，将收集所有跟踪日志并将其发送到Fixer。
 
 ### 4.3 保真度测试
-Checker组件测试重托管服务的保真度(由Runner模拟)，并将结果传递给Fixer, Fixer随后决定应用哪些干预。
+Checker组件测试重托管服务的保真度(由Runner模拟)，并将结果传递给Fixer，Fixer随后决定应用哪些干预。
 
 Checker将固件的品牌名称和要测试的潜在端口的初始列表作为输入。我们使用特定于服务类型(HTTP、UPnP或DNS)的Checker来检查服务的连通性和测试行为。Checker使用来自Runner的检查结果和trace日志来确定重托管服务的执行保真度级别(详见第5节)。
 
