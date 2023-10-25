@@ -221,7 +221,6 @@ def my_sandbox(path, rootfs):
     # gdb> set remotetimeout 100
     # gdb> target remote localhost:9999
 
-    # if ql.debugger:
     ql.run()
 
 
@@ -357,6 +356,7 @@ OSError: [Errno 107] Transport endpoint is not connected
 ![](images/Pasted%20image%2020231024223049.png)
 
 ### 3.2 漏洞验证
+#### 漏洞验证
 为了验证通过qiling模拟跑起来的程序是否能够触发漏洞，以及修改是否对漏洞触发有影响，我执行了这一步骤：通过一个已知的漏洞PoC进行验证，看程序是否会崩溃。
 
 我选择的PoC如下
@@ -364,7 +364,7 @@ OSError: [Errno 107] Transport endpoint is not connected
 import requests
 
 host = 'http://127.0.0.1:8080'
-data = ("firewallEn="+'a'*0x51f).encode()
+data = ("firewallEn="+'a'*0x500).encode()
 
 session = requests.session()
 session.get(host)
@@ -376,15 +376,79 @@ print(res.text)
 
 ![](images/Pasted%20image%2020231024223736.png)
 
+程序崩溃如下图，提示`Invalid memory fetch (UC_ERR_FETCH_UNMAPPED)`。
 
+![](images/Pasted%20image%2020231025083351.png)
 
-栈大小，超长字符串触发内存写错误，需要控制字符串长度不超过栈大小才能变为pc地址不可访问。
+qiling崩溃时会显示上下文信息，可以看到PC值被溢出。
 
+![](images/Pasted%20image%2020231025083736.png)
+
+#### 验证时出现的异常
+上面是正常的显示结果，我在刚开始验证的时候溢出字符串太长了，在这个案例中超过了0x520，结果崩溃的时候PC显示在strcpy（libc.so.0 + 0x03e508）崩溃了，且崩溃错误提示`Invalid memory write (UC_ERR_WRITE_UNMAPPED)`，这与我通过Qemu仿真的结果不一致并且刚开始也没用成功启动调试功能导致我以为是qiling仿真存在问题。
+
+![](images/Pasted%20image%2020231025084543.png)
+
+![](images/Pasted%20image%2020231025084608.png)
+
+后来经过研究发现问题出在了栈溢出字符串太长，超出了qiling所映射的栈的范围，strcpy在写的时候就会尝试向栈外没有映射的区域写从而抛出`Invalid memory write`错误，后面调试也是成功调试了，应该是我之前的操作有误，稍后我也会介绍一下我调试的步骤，现在继续来介绍内存写错误问题。
+
+如图所示，通过qiling提供的错误上下文信息可以看到内存写崩溃时涉及到的两个地址为0x7ff3cae0和0x7ff3d000。
+
+![](images/Pasted%20image%2020231025085812.png)
+
+通过看内存映射信息，发现这两个地址位于栈空间，而栈的空间位于0x7ff0d000-0x7ff3d000，可以看到写入的地址r3已经位于栈的边缘了。
+
+![](images/Pasted%20image%2020231025085509.png)
+
+#### 调试
+现在我们通过gdb进行调试，查看strcpy调用时刚开始的写入地址。
+
+qiling调试的方法就是在`ql.run()`运行前设置`ql.debugger = True`。
+
+```python
+def my_sandbox(path, rootfs):
+    ql = Qiling(path, rootfs, verbose=QL_VERBOSE.DEBUG)
+    ql.add_fs_mapper(r'/dev/urandom', r'/dev/urandom')
+
+	ql.debugger = True  # open debugger
+
+    ql.run()
+```
+
+然后运行后会停住，等待gdb连接其9999端口。
+
+![](images/Pasted%20image%2020231025090640.png)
+
+我们在另一个终端开启`gdb-multiarch`，然后连接，在0xACA84（`strcpy`调用地址）下断点运行。
+```bash
+gdb-multiarch -q bin/httpd
+gdb> target remote :9999
+gdb> b *0xACA84
+gdb> c
+```
+
+![](images/Pasted%20image%2020231025090822.png)
+
+![](images/Pasted%20image%2020231025091042.png)
+
+这个时候程序通过qiling仿真起来，我们执行poc.py程序触发漏洞，稍微等待一会儿gdb就会在我们设置的断点停下。
+
+![](images/Pasted%20image%2020231025091302.png)
+
+可以看到strcpy当前尝试写入的地址为`0x7ff3cae0`，而栈最大地址为`0x7ff3d000`，它们之间的差值为`0x520`。于是我尝试将溢出字符串分别改为`0x520`和`0x51f`来触发漏洞，结果的确如所猜想的那样，前者会尝试向栈外地址写输入从而在调用strcpy时就触发`Invalid memory write`错误，而后者可以正常执行到return语句，pc(0x61616160)值无法解析从而触发`Invalid memory fetch`错误。
+
+```python
+# throw Invalid memory write error
+data = ("firewallEn="+'a'*0x520).encode()
+# throw Invalid memory fetch error
+data = ("firewallEn="+'a'*0x51f).encode()
+```
 
 ### 3.3 模糊测试
+在经过前面成功的仿真和漏洞触发验证后，现在就可以尝试开始写模糊测试脚本了。
 
 
-![](images/Pasted%20image%2020231022220347.png)
 
 ## 4.关于qiling fuzz固件的相关文章
 在研究的过程中我收集了一些关于使用qiling对固件进行模糊测试的文章，目前能找到的相关文章的数量还是比较少的。
