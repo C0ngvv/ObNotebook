@@ -17,7 +17,7 @@
 - [DSP-W215_REVB_v2.23B02](https://support.dlink.com/resource/products/dsp-w215/REVB/DSP-W215_REVB_FIRMWARE_v2.23B02.zip)
 
 ## TEW-652BRP_v2.0R(2.00)
-```
+```bash
 sudo docker run -it --privileged -v /dev:/host/dev greenhouse:usenix-eval-jul2023 bash
 /gh/docker_init.sh
 /gh/test.sh
