@@ -316,7 +316,7 @@ Qiling可用设置和恢复快照。
 # Qiling状态的保存和恢复
 ql_all = ql.save() 
 ql.restore(ql_all)
-ql.save(cpu_context=True, snapshot="snapshot.bin")
+ql.save(snapshot="snapshot.bin")
 ql.restore(snapshot="snapshot.bin")
 # 附加选项
 ql.save(mem=True, reg=True, fd=True, cpu_ctx=False)
