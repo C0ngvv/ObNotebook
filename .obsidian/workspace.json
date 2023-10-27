@@ -207,9 +207,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "187d4ecd31b81bf7",
+  "active": "87b04c99ec29debe",
   "lastOpenFiles": [
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "工具/Greenhouse/g3fuzz源码分析/未命名",
@@ -217,7 +218,6 @@
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
     "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
-    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/MultiFuzz/MultiFuzz.md",
     "工具/Qiling/Qiling fuzz/images/Pasted image 20231022220347.png",
