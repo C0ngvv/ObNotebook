@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "mode": "source",
                 "source": false
               }
@@ -114,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Qiling/Qiling fuzz/Qiling Fuzz.md"
+                "file": "环境配置/软件安装/ubuntu常用软件安装.md"
               }
             }
           },
@@ -196,8 +196,8 @@
   },
   "active": "e27c7c79d37e35e4",
   "lastOpenFiles": [
-    "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+    "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
