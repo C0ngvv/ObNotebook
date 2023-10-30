@@ -267,4 +267,4 @@ afl-fuzz++4.02a based on afl by Michal Zalewski and a large online community
 [*] Fuzzing test case #2 (38 total, 0 crashes saved, perf_score=75, exec_us=3772, hits=0, map=457, ascii=0)...
 ```
 
-只是输入数据是如何喂给httpd程序的？
+只是输入数据是如何喂给httpd程序的？afl++经过作者修改过，并对网络套接字部分进行了处理。
