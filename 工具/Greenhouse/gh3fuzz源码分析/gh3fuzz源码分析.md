@@ -149,3 +149,25 @@ entrypoint ["/root/entrypoint.sh"]
         assert ret == 0
 ```
 
+## 执行
+### 错误信息
+```bash
+ubuntu@ubuntu22:/sys/devices/system/cpu$ sudo docker run --privileged ac1450fuzz
+[Fuzz] Launch background scripts...
+    - settng up dev nodes in  /ghdeV
+cp: can't create '/etc/hosts': File exists
+cp: can't create '/etc/resolv.conf': File exists
+[Fuzz] Dry run the server...
+Terminated
+GH_SUCCESSFUL_BIND
+[Fuzz] Dry run the server again to obtain the address for forkserver...
+Terminated
+
+[GH_ERROR] something wrong with afl+GH!!!
+[HOOK] 1337 1338 [HOOK2] 1337 1338 [qemu] hackdev - changing /dev/urandom to /ghdev/urandom
+[Fuzz] Trying without unshare
+
+[GH_ERROR] something wrong with afl+GH!!!
+[HOOK] 1337 1338 [HOOK2] 1337 1338 [qemu] hackdev - changing /dev/urandom to /ghdev/urandom Segmentation fault (core dumped)
+[GH_ERROR] Giving up
+```
