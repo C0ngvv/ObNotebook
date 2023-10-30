@@ -208,14 +208,17 @@
   },
   "active": "e27c7c79d37e35e4",
   "lastOpenFiles": [
+    "工具/Greenhouse/gh3fuzz源码分析/images/Pasted image 20231030151732.png",
+    "工具/Greenhouse/gh3fuzz源码分析/images/Pasted image 20231030151718.png",
+    "工具/Greenhouse/gh3fuzz源码分析/images",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "工具/Greenhouse/g3fuzz源码分析/未命名",
     "工具/Greenhouse/gh3fuzz源码分析",
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
-    "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/MultiFuzz/MultiFuzz.md",
@@ -233,7 +236,6 @@
     "工具/Qiling/Qiling fuzz/images/Pasted image 20231025085509.png",
     "工具/Qiling/Qiling fuzz/images/Pasted image 20231025084608.png",
     "工具/Qiling/Qiling fuzz/images/Pasted image 20231025084543.png",
-    "工具/Qiling/Qiling fuzz/images/Pasted image 20231025083736.png",
     "工具/Qiling/Qiling fuzz/images",
     "工具/Qiling/Qiling",
     "安卓逆向分析/IDA调试/IDA远程调试.md",
@@ -248,11 +250,9 @@
     "工具/EmTaint",
     "工具/Ghidra/Ghidra常见用法/Ghidra常见用法.md",
     "images/Pasted image 20231018204219.png.md",
-    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/images",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "Python/无头浏览器爬虫/无头浏览器爬虫.md",
-    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
-    "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md"
+    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md"
   ]
 }
