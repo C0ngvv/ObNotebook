@@ -251,6 +251,91 @@ pip install -e .
 #### BlockingIOError: \[Errno 11] Resource temporarily unavailable
 运行报错如下：
 ```bash
+[+] 	0x901ed2ec: write(fd = 0x5, buf = 0x7ff3b284, count = 0x7e0) = 0x7e0
+[+] 	Received interrupt: 0x2
+[+] 	0x901ebf10: read(fd = 0x5, buf = 0x7ff3b284, length = 0x7e0) = -0x9 (EBADF)
+[+] 	Received interrupt: 0x2
+[+] 	close(5) = 0
+[+] 	0x901ea670: close(fd = 0x5) = 0x0
+[+] 	Received interrupt: 0x2
+[+] 	0x90226eb8: send(sockfd = 0x4, buf = 0x1251a0, length = 0x13, flags = 0x0) = 0x13
+[+] 	Received interrupt: 0x2
+[+] 	0x90226eb8: send(sockfd = 0x4, buf = 0x1251a0, length = 0x2eb, flags = 0x0) = 0x2eb
+[+] 	Received interrupt: 0x2
+[+] 	0x901ecd30: fcntl(fd = 0x4, cmd = 0x3, arg = 0x80) = 0x802
+[+] 	Received interrupt: 0x2
+[+] 	0x901ecd30: fcntl(fd = 0x4, cmd = 0x4, arg = 0x2) = 0x0
+[+] 	Received interrupt: 0x2
+[+] 	0x901ecd30: fcntl(fd = 0x4, cmd = 0x3, arg = 0x0) = 0x2
+[+] 	Received interrupt: 0x2
+[+] 	0x901ecd30: fcntl(fd = 0x4, cmd = 0x4, arg = 0x802) = 0x0
+[+] 	Received interrupt: 0x2
+[+] 	0x90226f84: shutdown(sockfd = 0x4, how = 0x1) = 0x0
+[+] 	Received interrupt: 0x2
+[x] 	Syscall ERROR: ql_syscall_recv DEBUG: [Errno 11] Resource temporarily unavailable
+Traceback (most recent call last):
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/posix.py", line 213, in load_syscall
+    retval = syscall_hook(self.ql, *params)
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/syscall/socket.py", line 676, in ql_syscall_recv
+    content = sock.recv(length, flags)
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/filestruct.py", line 116, in recv
+    return self.__socket.recv(bufsize, flags)
+BlockingIOError: [Errno 11] Resource temporarily unavailable
+Traceback (most recent call last):
+  File "tendaac1518_httpd.py", line 100, in <module>
+    my_sandbox([fr'{ROOTFS}/bin/httpd'], ROOTFS)
+  File "tendaac1518_httpd.py", line 93, in my_sandbox
+    ql.run()
+  File "/root/.local/lib/python3.8/site-packages/qiling/core.py", line 597, in run
+    self.os.run()
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/linux/linux.py", line 184, in run
+    self.ql.emu_start(self.ql.loader.elf_entry, self.exit_point, self.ql.timeout, self.ql.count)
+  File "/root/.local/lib/python3.8/site-packages/qiling/core.py", line 777, in emu_start
+    raise self.internal_exception
+  File "/root/.local/lib/python3.8/site-packages/qiling/core_hooks.py", line 127, in wrapper
+    return callback(*args, **kwargs)
+  File "/root/.local/lib/python3.8/site-packages/qiling/core_hooks.py", line 170, in _hook_intr_cb
+    ret = hook.call(ql, intno)
+  File "/root/.local/lib/python3.8/site-packages/qiling/core_hooks_types.py", line 25, in call
+    return self.callback(ql, *args)
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/linux/linux.py", line 138, in hook_syscall
+    return self.load_syscall()
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/posix.py", line 231, in load_syscall
+    raise e
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/posix.py", line 213, in load_syscall
+    retval = syscall_hook(self.ql, *params)
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/syscall/socket.py", line 676, in ql_syscall_recv
+    content = sock.recv(length, flags)
+  File "/root/.local/lib/python3.8/site-packages/qiling/os/posix/filestruct.py", line 116, in recv
+    return self.__socket.recv(bufsize, flags)
+BlockingIOError: [Errno 11] Resource temporarily unavailable
+```
+在网上搜索这个错误，然后看到了一篇文章：
+
+[「非阻塞socket」报错 “BlockingIOError: [Errno 11]“ 复现以及分析解决_blockingioerror: [errno 11] resource temporarily u](https://blog.csdn.net/pythontide/article/details/109242386)
+
+![](images/Pasted%20image%2020231024221530.png)
+
+我的简单理解就是在模拟的过程中，因为某种情况，缓冲区的数据已经接受完了但仍然调用`recv()`然后就报错了，博客中作者通过给recv()加入try-except异常机制来解决这个错误。因此我也采用一样的思路，既然缓冲区数据已经读完，这条指令执行不成功应该也没有影响。我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:116，修改前只有一个return语句。
+```python
+# qiling/os/posix/filestruct.py:116
+    def recv(self, bufsize: int, flags: int) -> bytes:
+        return self.__socket.recv(bufsize, flags)
+```
+
+修后的代码如下：
+```python
+# qiling/os/posix/filestruct.py:116
+    def recv(self, bufsize: int, flags: int) -> bytes:
+        try:
+            return self.__socket.recv(bufsize, flags)
+        except BlockingIOError as err:
+            print(err)
+            return b""
+```
+
+#### OSError: \[Errno 107] Transport endpoint is not connected
+```bash
 [+] 	0x901ebf10: read(fd = 0x6, buf = 0x12c7f0, length = 0x800) = 0x294
 [+] 	Received interrupt: 0x2
 [+] 	0x90226eb8: send(sockfd = 0x4, buf = 0x1251a0, length = 0x303, flags = 0x0) = 0x0
@@ -309,31 +394,7 @@ Traceback (most recent call last):
     return self.__socket.shutdown(how)
 OSError: [Errno 107] Transport endpoint is not connected
 ```
-在网上搜索这个错误，然后看到了一篇文章：
 
-[「非阻塞socket」报错 “BlockingIOError: [Errno 11]“ 复现以及分析解决_blockingioerror: [errno 11] resource temporarily u](https://blog.csdn.net/pythontide/article/details/109242386)
-
-![](images/Pasted%20image%2020231024221530.png)
-
-我的简单理解就是在模拟的过程中，因为某种情况，缓冲区的数据已经接受完了但仍然调用`recv()`然后就报错了，博客中作者通过给recv()加入try-except异常机制来解决这个错误。因此我也采用一样的思路，既然缓冲区数据已经读完，这条指令执行不成功应该也没有影响。我修改了qiling的代码，加入了try-except异常捕获机制，修改的代码位置位于qiling/os/posix/filestruct.py:116，修改前只有一个return语句。
-```python
-# qiling/os/posix/filestruct.py:116
-    def recv(self, bufsize: int, flags: int) -> bytes:
-        return self.__socket.recv(bufsize, flags)
-```
-
-修后的代码如下：
-```python
-# qiling/os/posix/filestruct.py:116
-    def recv(self, bufsize: int, flags: int) -> bytes:
-        try:
-            return self.__socket.recv(bufsize, flags)
-        except BlockingIOError as err:
-            print(err)
-            return b""
-```
-
-#### OSError: \[Errno 107] Transport endpoint is not connected
 对于第二个错误，我在这篇文章看了它的说明，`客户端socket 已经关闭的情况，服务器端socket 调用shutdown 则会出现这个错误。`
 
 [linux socket 错误 Transport endpoint is not connected 在 recv shutdown 中的触发时机_failed to reload daemon: transport endpoint is not](https://blog.csdn.net/whatday/article/details/104056667)
