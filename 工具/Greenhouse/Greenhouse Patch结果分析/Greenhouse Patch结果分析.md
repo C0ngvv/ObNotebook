@@ -571,3 +571,6 @@ int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen)
 ```
 sudo chroot . ./qemu-arm-static -E LD_PRELOAD="libnvram-faker.so hook.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
 ```
+
+![](images/Pasted%20image%2020231101142828.png)
+
