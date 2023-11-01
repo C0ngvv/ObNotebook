@@ -569,8 +569,25 @@ int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen)
 
 ### 最终运行
 ```
-sudo chroot . ./shellphish-qemu-linux-arm -E LD_PRELOAD="libnvram-faker.so hook.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+sudo chroot . ./qemu-arm-static -E LD_PRELOAD="libnvram-faker.so hook.so" /usr/sbin/httpd -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
 ```
 
 ![](images/Pasted%20image%2020231101142828.png)
 
+### 融入项目
+拷贝shellphish-qemu-linux-arm和fire进去，把httpd拷贝出来改名为httpd_patched，增加依赖
+```
+patchelf --add-needed libnvram-faker.so ./httpd_patched
+patchelf --add-needed hook.so ./httpd_patched
+```
+
+![](images/Pasted%20image%2020231101151701.png)
+
+可以使用命令运行
+```
+sudo chroot . ./shellphish-qemu-linux-arm ./httpd_patched -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+```
+
+```
+sudo chroot . ./fire ./shellphish-qemu-linux-arm -- ./httpd_patched -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+```
