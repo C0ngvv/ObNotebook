@@ -345,5 +345,88 @@ sudo chroot . ./qemu-arm-static -hackbind -hackproc -E LD_PRELOAD="libnvram-fake
 
 ![](images/Pasted%20image%2020231101095319.png)
 
-首先解决dev的问题，我想要讲ghdev作为实际运行的dev，并且采用hook的方式，这样可以直接应用于其它程序上。
+### hackproc参数处理
+首先解决dev的问题，我想要将ghdev作为实际运行的dev，并且采用hook的方式，这样可以将gh结果直接应用于其它程序上。编写hook.c
 
+```c
+#define _GNU_SOURCE
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+#include <string.h>
+
+#define PATH_MAX	260
+
+int open(const char *file, int oflag, ...)
+{
+    fprintf(stderr, "hook open func!!\n");
+    char* result;
+    char rpath[PATH_MAX+1];
+    char redirected_path[PATH_MAX+1];
+
+    memset(rpath, 0, PATH_MAX+1);
+    memset(redirected_path, 0, PATH_MAX+1);
+
+    result = realpath(file, rpath);
+    if (result == NULL) {
+        memset(rpath, 0, PATH_MAX+1);
+        snprintf(rpath, PATH_MAX, "%s", file);
+        snprintf(redirected_path, PATH_MAX, "%s", file);
+    }
+    if (strncmp(rpath, "/proc/", 6) == 0) {
+        snprintf(redirected_path, PATH_MAX, "/ghproc/%s", rpath+6);
+    }
+    else if (strncmp(rpath, "/dev/", 5) == 0) {
+        snprintf(redirected_path, PATH_MAX, "/ghdev/%s", rpath+5);
+    }else{
+        snprintf(redirected_path, PATH_MAX, "%s", file);
+    }
+    
+    fprintf(stderr, "try call open %s-->%s!!\n", file, redirected_path);
+    typeof(&open) orig = dlsym(RTLD_NEXT, "open");
+	return orig(redirected_path, oflag);
+}
+```
+
+交叉编译
+```
+/home/ubuntu/Desktop/Firmwares/Netgear/R7000-V1.0.11.100_10.2.100/_R7000-V1.0.11.100_10.2.100.chk.extracted/armv7-eabihf--uclibc--stable-2020.08-1/bin/arm-linux-gcc hook.c -o hook.so  -fPIC -shared -ldl
+```
+
+加入hook.so后运行，可以看到`-hookproc`参数的问题已经解决。
+
+```bash
+sudo chroot . ./qemu-arm-static -E LD_PRELOAD="libnvram-faker.so hook.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+```
+
+![](images/Pasted%20image%2020231101102257.png)
+
+### hackbind参数处理
+正常跑起来长这样，这与上面相比就增加了几条Qemu输出的调试信息，根据信息，qemu做了使用自定义的绑定，将ipv6协议强制到ipv4 0.0.0.0上。
+
+![](images/Pasted%20image%2020231101102715.png)
+
+socket()调用时domain address families对应的数值
+
+```c
+// int socket(int domain, int type, int protocol);
+/* Supported address families. */
+#define AF_UNSPEC	0
+#define AF_UNIX		1	/* Unix domain sockets 		*/
+#define AF_LOCAL	1	/* POSIX name for AF_UNIX	*/
+#define AF_INET		2	/* Internet IP Protocol 	*/
+#define AF_AX25		3	/* Amateur Radio AX.25 		*/
+#define AF_IPX		4	/* Novell IPX 			*/
+#define AF_APPLETALK	5	/* AppleTalk DDP 		*/
+#define AF_NETROM	6	/* Amateur Radio NET/ROM 	*/
+#define AF_BRIDGE	7	/* Multiprotocol bridge 	*/
+#define AF_ATMPVC	8	/* ATM PVCs			*/
+#define AF_X25		9	/* Reserved for X.25 project 	*/
+#define AF_INET6	10	/* IP version 6			*/
+```
+
+gh中关于hackbind的修改比较多，其中一个是将AF_INET6变为了AF_INET，不知道其它修改的作用是什么，我打算先对这个进行hook，看它的效果如何。继续在原来的hook.c代码上添加
+
+```c
+
+```
