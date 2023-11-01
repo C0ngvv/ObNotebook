@@ -491,9 +491,9 @@ int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen)
 
 ![](images/Pasted%20image%2020231101113158.png)
 
-后面又稍微完善了部分代码，
-```c
+后面又稍微完善了部分代码，最终的代码如下：
 
+```c
 int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen)
 {
     void* cust_addr = 0;
@@ -566,3 +566,4 @@ int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen)
     }
 }
 ```
+
