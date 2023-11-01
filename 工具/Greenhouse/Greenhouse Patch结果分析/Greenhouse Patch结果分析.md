@@ -320,4 +320,20 @@ sudo chroot . /greenhouse/busybox sh
 sudo chroot . ./qemu-arm-static -E LD_PRELOAD="libnvram-faker.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
 ```
 
-## end
+## 20231101
+复制gh_fs为fs-qemu作为标准发布的qemu仿真环境。
+```bash
+cp `which qemu-arm-static` ./
+```
+
+运行这个命令直接段错误，无论是标准qemu还是gh_qemu。
+```bash
+sudo chroot . ./qemu-arm-static -E LD_PRELOAD="libnvram-faker.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+```
+
+![](images/Pasted%20image%2020231101092633.png)
+
+首先找到能使gh_qemu跑起来的命令
+```bash
+sudo chroot . ./qemu-arm-static -hackbind -hackproc -hacksysinfo -execve "/qemu-arm-static -hackbind -hackproc -hacksysinfo" -E LD_PRELOAD="libnvram-faker.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
+```
