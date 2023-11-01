@@ -428,5 +428,23 @@ socket()调用时domain address families对应的数值
 gh中关于hackbind的修改比较多，其中一个是将AF_INET6变为了AF_INET，不知道其它修改的作用是什么，我打算先对这个进行hook，看它的效果如何。继续在原来的hook.c代码上添加
 
 ```c
+#include <sys/socket.h>
 
+int socket(int domain, int type, int protocol)
+{
+    int fd;
+    if (domain == AF_INET6) {
+        // handle all ipv6 networking as ipv4
+        fprintf(stderr, "hook socket!!\n");
+        domain = AF_INET;
+    }
+    typeof(&socket) original_socket = dlsym(RTLD_NEXT, "socket");
+    return original_socket(domain, type, protocol);
+}
 ```
+
+重新编译为hook.c，然后运行，结果如图所示，说明是在调用bind的时候出现了问题。
+
+![](images/Pasted%20image%2020231101104646.png)
+
+看了一下ghqemu patch的源码，我们还应该对bind时的地址进行hook，将ipv6地址变为ipv4地址。
