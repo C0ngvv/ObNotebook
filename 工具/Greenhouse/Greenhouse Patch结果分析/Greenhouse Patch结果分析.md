@@ -491,3 +491,78 @@ int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen)
 
 ![](images/Pasted%20image%2020231101113158.png)
 
+后面又稍微完善了部分代码，
+```c
+
+int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen)
+{
+    void* cust_addr = 0;
+    unsigned short port = 0, newport = 0;
+    unsigned short reuse = 0, retries = 0;
+    char ip[INET6_ADDRSTRLEN+1] = "";
+    long ret;
+    int used_ports[512] = {0};
+    int ports_index = 0;
+    
+    if(((struct sockaddr*)addr)->sa_family == AF_INET) {
+        inet_ntop(AF_INET, &((struct sockaddr_in*)addr)->sin_addr, ip, sizeof(ip));
+        port = ntohs(((struct sockaddr_in*)addr)->sin_port);
+        fprintf(stderr, "[hook bind AF_INET] IP: %s\n", ip);
+        fprintf(stderr, "[hook bind AF_INET] PORT: %hu\n", port);
+    }
+    else if(((struct sockaddr*)addr)->sa_family == AF_INET6){
+        cust_addr = alloca(sizeof(struct sockaddr_in));
+        port = ntohs(((struct sockaddr_in6*)addr)->sin6_port);
+        memset(((struct sockaddr_in*)cust_addr), 0, sizeof(struct sockaddr_in));
+        fprintf(stderr, "[hook bind AF_INET6] Using custom bind, forcing ipv6 protocol to ipv4 on addr 0.0.0.0 port %d\n", port);
+        inet_pton(AF_INET, "0.0.0.0", &((struct sockaddr_in*)cust_addr)->sin_addr);
+        inet_ntop(AF_INET, &((struct sockaddr_in*)cust_addr)->sin_addr, ip, sizeof(ip));
+        ((struct sockaddr_in*)cust_addr)->sin_port = htons(port);
+        ((struct sockaddr_in*)cust_addr)->sin_family = AF_INET;
+        addr = cust_addr;
+        addrlen = sizeof(struct sockaddr_in);
+        fprintf(stderr, "[hook bind AF_INET6] IPV6: 0.0.0.0\n");
+        fprintf(stderr, "[hook bind AF_INET6] IPV6_PORT: %hu\n", (unsigned short)ntohs(((struct sockaddr_in*)addr)->sin_port));
+    }
+
+    typeof(&bind) original_bind = dlsym(RTLD_NEXT, "bind");
+
+    newport = port;
+    retries = 0;
+    while (retries < 3) {
+        ret = original_bind(sockfd, addr, addrlen);
+        // fprintf(stderr, "[hook bind] get_errno: %d\n", ret);
+        if (!ret) {
+            fprintf(stderr, "[hook bind] Successful Bind %d\n", (int)ret);
+            used_ports[ports_index] = newport;
+            ports_index = ports_index + 1;
+            return ret;
+        }
+        if (newport <= 0) {
+            if (((struct sockaddr*)addr)->sa_family == AF_INET6 || ((struct sockaddr*)addr)->sa_family == AF_INET) {
+                fprintf(stderr, "[hook bind] Forcing port %d to 80 and retrying...", newport);
+                newport = 80;
+            }
+        }
+        else {
+            newport = newport + 1;
+            while(1) {
+                reuse = 0;
+                for (int i = 0; i < ports_index; i++) {
+                    if (newport == used_ports[i]) {
+                        newport = newport + 1;
+                        reuse = 1;
+                        break;
+                    }
+                }
+                if(reuse == 0) {
+                    break;
+                }
+            }
+            fprintf(stderr, "[hook bind] bind failed, retrying with port %d\n", newport);
+            retries = retries + 1;
+        }
+        ((struct sockaddr_in*)addr)->sin_port = htons(newport);
+    }
+}
+```
