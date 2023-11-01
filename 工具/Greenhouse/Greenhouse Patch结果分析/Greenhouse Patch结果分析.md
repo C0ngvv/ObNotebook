@@ -447,4 +447,47 @@ int socket(int domain, int type, int protocol)
 
 ![](images/Pasted%20image%2020231101104646.png)
 
-看了一下ghqemu patch的源码，我们还应该对bind时的地址进行hook，将ipv6地址变为ipv4地址。
+看了一下ghqemu patch的源码，我们还应该对bind时的地址进行hook，将ipv6地址变为ipv4地址。继续为hook.c添加代码
+
+```c
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+int bind(int sockfd, const struct sockaddr *addr, socklen_t addrlen)
+{
+    void* cust_addr = 0;
+    unsigned short port = 0;
+    char ip[INET6_ADDRSTRLEN+1] = "";
+    long ret;
+    
+    if(((struct sockaddr*)addr)->sa_family == AF_INET) {
+        inet_ntop(AF_INET, &((struct sockaddr_in*)addr)->sin_addr, ip, sizeof(ip));
+        port = ntohs(((struct sockaddr_in*)addr)->sin_port);
+        fprintf(stderr, "[hook bind AF_INET] IP: %s\n", ip);
+        fprintf(stderr, "[hook bind AF_INET] PORT: %hu\n", port);
+    }
+    else if (((struct sockaddr*)addr)->sa_family == AF_INET6){
+        cust_addr = alloca(sizeof(struct sockaddr_in));
+        port = ntohs(((struct sockaddr_in6*)addr)->sin6_port);
+        memset(((struct sockaddr_in*)cust_addr), 0, sizeof(struct sockaddr_in));
+        fprintf(stderr, "[hook bind AF_INET6] Using custom bind, forcing ipv6 protocol to ipv4 on addr 0.0.0.0 port %d\n", port);
+        inet_pton(AF_INET, "0.0.0.0", &((struct sockaddr_in*)cust_addr)->sin_addr);
+        inet_ntop(AF_INET, &((struct sockaddr_in*)cust_addr)->sin_addr, ip, sizeof(ip));
+        ((struct sockaddr_in*)cust_addr)->sin_port = htons(port);
+        ((struct sockaddr_in*)cust_addr)->sin_family = AF_INET;
+        addr = cust_addr;
+        addrlen = sizeof(struct sockaddr_in);
+        fprintf(stderr, "[hook bind AF_INET6] IPV6: 0.0.0.0\n");
+        fprintf(stderr, "[hook bind AF_INET6] IPV6_PORT: %hu\n", (unsigned short)ntohs(((struct sockaddr_in*)addr)->sin_port));
+    }
+
+    typeof(&bind) original_bind = dlsym(RTLD_NEXT, "bind");
+    ret = original_bind(sockfd, addr, addrlen);
+    fprintf(stderr, "[hook bind] get_errno: %d\n", ret);
+}
+```
+
+测试是可以访问http web服务了，不放图了。看控制台给出的信息好像是IPV6绑定为80端口，IPV4绑定到443端口。
+
+![](images/Pasted%20image%2020231101113158.png)
+
