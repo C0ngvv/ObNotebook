@@ -596,5 +596,4 @@ sudo chroot . ./fire ./shellphish-qemu-linux-arm -- ./httpd_patched -S -E /usr/s
 ```
 channel = nclib.Netcat((address, port), udp=udp, ipv6=ipv6, retry=30)
 
-
 ```
