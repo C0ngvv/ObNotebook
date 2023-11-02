@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
+                "file": "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
+                "file": "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
+                "file": "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md"
+                "file": "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md"
               }
             }
           },
@@ -184,26 +184,31 @@
   },
   "active": "ac95c68c013a8e60",
   "lastOpenFiles": [
-    "固件分析/AFL-QEMU语法感知模糊测试/images/Pasted image 20231102110204.png",
-    "固件分析/AFL-QEMU语法感知模糊测试/images/Pasted image 20231102104952.png",
-    "固件分析/AFL-QEMU语法感知模糊测试/images/Pasted image 20231102093802.png",
-    "固件分析/AFL-QEMU语法感知模糊测试/images",
-    "固件分析/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
-    "固件分析/AFL-QEMU语法感知模糊测试",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102152407.png",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102152226.png",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102152145.png",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102151838.png",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102151548.png",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102151047.png",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102151013.png",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102150648.png",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102150339.png",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102150238.png",
+    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102150140.png",
+    "文章阅读/Fuzzing socket-Apache Http/images",
+    "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
+    "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
+    "文章阅读/Fuzzing socket-Apache Http",
+    "文章阅读/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
+    "文章阅读",
+    "文章阅读/AFL-QEMU语法感知模糊测试/images",
+    "文章阅读/AFL-QEMU语法感知模糊测试",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
-    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101151701.png",
-    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101142828.png",
-    "工具/Greenhouse/Netgear R7000P重托管测试/images/Pasted image 20231101141725.png",
     "工具/Greenhouse/Netgear R7000P重托管测试/images",
-    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101113158.png",
-    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101104646.png",
     "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
-    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101102715.png",
-    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101102257.png",
-    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101095319.png",
     "工具/Greenhouse/Netgear R7000P重托管测试",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
@@ -223,12 +228,7 @@
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
     "工具/QEMU/QEMU/QEMU.md",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
-    "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
     "工具/Greenhouse/gh3fuzz源码分析/images",
-    "工具/Greenhouse/g3fuzz源码分析/未命名",
-    "工具/Greenhouse/gh3fuzz源码分析",
-    "工具/Qiling/Qiling fuzz/images",
-    "工具/Qiling/Qiling"
+    "工具/Greenhouse/g3fuzz源码分析/未命名"
   ]
 }
