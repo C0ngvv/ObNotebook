@@ -4,59 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d626531422afabe0",
+        "id": "3d32bc042a2f2f3a",
         "type": "tabs",
         "children": [
           {
-            "id": "a571344298d47101",
+            "id": "ac95c68c013a8e60",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1f4fe88f0f2810af",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "73f3637734f018c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "79ade9b3c813de84",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "固件分析/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -139,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "固件分析/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "固件分析/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md"
+                "file": "固件分析/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md"
               }
             }
           },
@@ -219,12 +182,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "79ade9b3c813de84",
+  "active": "ac95c68c013a8e60",
   "lastOpenFiles": [
-    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
-    "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
+    "固件分析/AFL-QEMU语法感知模糊测试/images/Pasted image 20231102110204.png",
+    "固件分析/AFL-QEMU语法感知模糊测试/images/Pasted image 20231102104952.png",
+    "固件分析/AFL-QEMU语法感知模糊测试/images/Pasted image 20231102093802.png",
+    "固件分析/AFL-QEMU语法感知模糊测试/images",
+    "固件分析/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
+    "固件分析/AFL-QEMU语法感知模糊测试",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+    "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101151701.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101142828.png",
     "工具/Greenhouse/Netgear R7000P重托管测试/images/Pasted image 20231101141725.png",
@@ -235,7 +204,6 @@
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101102715.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101102257.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101095319.png",
-    "工具/Greenhouse/Greenhouse Patch结果分析/images/Pasted image 20231101092633.png",
     "工具/Greenhouse/Netgear R7000P重托管测试",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
@@ -257,14 +225,10 @@
     "工具/QEMU/QEMU/QEMU.md",
     "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
     "Paper/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems/SFuzz_Slice-based Fuzzing for Real-Time Operating Systems.md",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/images/Pasted image 20231010104454 - 副本.png",
     "工具/Greenhouse/gh3fuzz源码分析/images",
-    "环境配置/软件安装/ubuntu常用软件安装.md",
     "工具/Greenhouse/g3fuzz源码分析/未命名",
     "工具/Greenhouse/gh3fuzz源码分析",
     "工具/Qiling/Qiling fuzz/images",
-    "工具/Qiling/Qiling",
-    "工具/Qiling/Qiling fuzz",
-    "工具/Qiling/Qiling使用指南"
+    "工具/Qiling/Qiling"
   ]
 }
