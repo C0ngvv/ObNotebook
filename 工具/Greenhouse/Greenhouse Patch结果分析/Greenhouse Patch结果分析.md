@@ -575,7 +575,7 @@ sudo chroot . ./qemu-arm-static -E LD_PRELOAD="libnvram-faker.so hook.so" /usr/s
 ![](images/Pasted%20image%2020231101142828.png)
 
 ### 融入项目
-拷贝shellphish-qemu-linux-arm和fire进去，把httpd拷贝出来改名为httpd_patched，增加依赖
+拷贝shellphish-qemu-linux-arm和fire进去，还有64位的sh，把httpd拷贝出来改名为httpd_patched，增加依赖
 ```
 patchelf --add-needed libnvram-faker.so ./httpd_patched
 patchelf --add-needed hook.so ./httpd_patched
@@ -585,15 +585,9 @@ patchelf --add-needed hook.so ./httpd_patched
 
 可以使用命令运行
 ```
-sudo chroot . ./shellphish-qemu-linux-arm ./httpd_patched -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
-```
-
-```
 sudo chroot . ./fire ./shellphish-qemu-linux-arm -- ./httpd_patched -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
 ```
 
+但是在加入项目中时遇到一个问题，就是触发漏洞不崩溃。最终经过排查，发现是启动时间的问题，由于项目运行时会记录trace信息，因此会比正常运行更耗时，项目中默认等待程序启动时间为10s，对于这个程序来说是不够用的，于是我给他多加了50s，然后就可以触发崩溃的。
 
-```
-channel = nclib.Netcat((address, port), udp=udp, ipv6=ipv6, retry=30)
-
-```
+在寻找无法崩溃原因的时候，发现了一个有趣的现象，就是当打开通道和发送数据包之间的间隔时间超过1s时，它就不会触发崩溃了。
