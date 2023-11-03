@@ -336,3 +336,4 @@ POS /shareswwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 +    }
 ```
 
+除此之外，还对do_poll(), do_select()等进行了hook，以及对qemu进行的修改也在这里进行了，如do_openat()等。
