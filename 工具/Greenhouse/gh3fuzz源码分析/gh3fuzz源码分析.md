@@ -284,3 +284,55 @@ POS /shareswwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 ## afl_gh.patch源码分析
 分析目标：如何将网络套接字转变为AFL++文件数据流。
 
+### do_accept4()
+以do_accept4()为例，这个hook的主要功能应该是：
+- 复制stdin_fd文件描述符作为返回的文件描述符
+- 修改参数target_addr设置为127.0.0.1：4444
+```diff
+ static abi_long do_accept4(int fd, abi_ulong target_addr,
+                            abi_ulong target_addrlen_addr, int flags)
+ {
+@@ -3524,6 +3737,45 @@ static abi_long do_accept4(int fd, abi_ulong target_addr,
+     abi_long ret;
+     int host_flags;
+ 
++    if(hookhack) {
++        struct sockaddr_in sin;
++        socklen_t len = sizeof(sin);
++        uint16_t port = 0;
++        // int new_fd = -1;
++        if(conn_fd != -1) {
++            fputs("[HOOK] deny subsequent accept calls!\n", bk_stdout);
++            return -EAGAIN;
++        }
++
++        fputs("[HOOK] accept hooked!\n", bk_stdout);
++        if(getsockname(fd, (struct sockaddr *)&sin, &len)) goto out;
++        port = ntohs(sin.sin_port);
++        fprintf(bk_stdout, "[HOOK] accept at port: %d\n", port);
++        if(port != 80) goto out;
++        if(hookhack_recved) {
++            fputs("[HOOK] done!\n", bk_stdout);
++            exit(0);
++        }
++        conn_fd = dup(bk_stdin_fd);
++        fprintf(bk_stdout, "[HOOK] accept sock fd: %d\n", conn_fd);
++
++        // fake connection source
++        if (get_user_u32(addrlen, target_addrlen_addr))
++            return -TARGET_EFAULT;
++        struct sockaddr_in saddr = {0};
++        fputs("[HOOK] getsockname invoked!\n", bk_stdout);
++        saddr.sin_family = AF_INET;
++        saddr.sin_port = htons(4444);
++        inet_pton(AF_INET, "127.0.0.1", &saddr.sin_addr);
++        host_to_target_sockaddr(target_addr, (void *)&saddr, addrlen);
++        if (put_user_u32(addrlen, target_addrlen_addr)) return -TARGET_EFAULT;
++
++        hookhack_done++;
++        if(getenv("GH_DRYRUN")) gh_dryrun_done = true;
++        return conn_fd;
++out:
++    }
+```
+
