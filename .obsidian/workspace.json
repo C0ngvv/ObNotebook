@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
+                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
+                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
+                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md"
+                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md"
               }
             }
           },
@@ -184,33 +184,40 @@
   },
   "active": "ac95c68c013a8e60",
   "lastOpenFiles": [
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102152407.png",
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102152226.png",
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102152145.png",
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102151838.png",
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102151548.png",
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102151047.png",
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102151013.png",
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102150648.png",
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102150339.png",
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102150238.png",
-    "文章阅读/Fuzzing socket-Apache Http/images/Pasted image 20231102150140.png",
-    "文章阅读/Fuzzing socket-Apache Http/images",
-    "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
-    "文章阅读/Fuzzing socket-Apache Http",
-    "文章阅读/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
-    "文章阅读",
-    "文章阅读/AFL-QEMU语法感知模糊测试/images",
-    "文章阅读/AFL-QEMU语法感知模糊测试",
-    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
-    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
-    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+    "工具/Greenhouse/Netgear R7000P重托管测试/images/Pasted image 20231101141725.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014210020.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014205949.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014205643.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014205546.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014204700.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014203238.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014192329.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014153533.png",
+    "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014125846.png",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/images",
-    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
-    "工具/Greenhouse/Netgear R7000P重托管测试",
+    "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
+    "工具/Greenhouse/Greenhouse测试/images",
+    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+    "工具/Greenhouse/Greenhouse Patch结果分析/images",
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "工具/Greenhouse/gh3fuzz源码分析/images",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
+    "工具/Greenhouse/Netgear R7000P重托管测试",
+    "工具/Greenhouse/Greenhouse源码分析",
+    "工具/Greenhouse/Greenhouse测试",
+    "工具/Greenhouse/Greenhouse Patch结果分析",
+    "工具/Greenhouse/gh3fuzz源码分析",
+    "工具/Greenhouse",
+    "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
+    "文章阅读/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
+    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
+    "工具/QEMU/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "工具/QEMU/Greenhouse/Greenhouse测试/Greenhouse测试.md",
+    "工具/QEMU/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
+    "固件分析/用AFL++模糊iot二进制/利用AFL++对固件进行协议模糊测试.md",
+    "工具/QEMU/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
     "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
     "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
@@ -221,14 +228,6 @@
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
-    "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
-    "Paper/MultiFuzz/MultiFuzz.md",
-    "Paper/Snipfuzz/Snipuzz.md",
-    "固件分析/固件论文研究脉络",
-    "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
-    "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
-    "工具/QEMU/QEMU/QEMU.md",
-    "工具/Greenhouse/gh3fuzz源码分析/images",
-    "工具/Greenhouse/g3fuzz源码分析/未命名"
+    "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md"
   ]
 }
