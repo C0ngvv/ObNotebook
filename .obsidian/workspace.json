@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
+                "file": "Paper/EQUAFL/EQUAFL.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
+                "file": "Paper/EQUAFL/EQUAFL.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
+                "file": "Paper/EQUAFL/EQUAFL.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md"
+                "file": "Paper/EQUAFL/EQUAFL.md"
               }
             }
           },
@@ -184,6 +184,10 @@
   },
   "active": "ac95c68c013a8e60",
   "lastOpenFiles": [
+    "Paper/firmadyne/firmadyne.md",
+    "Paper/firmae/FirmAE.md",
+    "Paper/firmadyne与firmae总结/firmware.md",
+    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/images/Pasted image 20231101141725.png",
     "工具/Greenhouse/Greenhouse测试/images/Pasted image 20231014210020.png",
@@ -203,7 +207,6 @@
     "工具/Greenhouse/Greenhouse Patch结果分析/images",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "工具/Greenhouse/gh3fuzz源码分析/images",
-    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "工具/Greenhouse/Netgear R7000P重托管测试",
     "工具/Greenhouse/Greenhouse源码分析",
     "工具/Greenhouse/Greenhouse测试",
@@ -226,8 +229,6 @@
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
-    "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
-    "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md"
+    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md"
   ]
 }
