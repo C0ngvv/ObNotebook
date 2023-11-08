@@ -40,6 +40,11 @@ pivot_inputs(afl);  //种子硬链接在output/queue目录下并改名为id:形�
 afl->tmp_dir = afl->out_dir;
 check_binary(afl, argv[optind]);  //检测输入文件是否为ELF可执行，检测是否插桩等，持久化检查等
 use_argv = get_qemu_argv(argv[0], &afl->fsrv.target_path, argc - optind, argv + optind);  // 返回类似：afl-qemu-trace -- target_path_p argv
+//一些设置realloc, memset..
+//cmplog_binary  不知道干啥的
+load_auto(afl);  /* Load automatically generated extras. */似乎加载自动发现的字典token
+
+
 
 ```
 
