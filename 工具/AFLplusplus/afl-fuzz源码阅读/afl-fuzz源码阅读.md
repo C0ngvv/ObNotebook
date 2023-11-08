@@ -53,6 +53,15 @@ perform_dry_run(afl);  //运行所以测试用例验证app是否正常工作
 		write_to_testcase(afl, (void **)&use_mem, q->len, 1);
 		fault = fuzz_run_target(afl, &afl->fsrv, use_tmout);
 		位图处理等
+cull_queue(afl);
+show_init_stats(afl);
+find_start_position(afl);
+load_stats_file(afl);
+write_stats_file(afl, 0, 0, 0, 0);
+maybe_update_plot_file(afl, 0, 0, 0);
+save_auto(afl);
+
+
 ```
 
 
