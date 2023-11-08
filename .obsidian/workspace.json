@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
+                "file": "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -123,8 +123,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 227.5,
-    "collapsed": true
+    "width": 227.5
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -140,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md",
+                "file": "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md",
+                "file": "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -180,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md"
+                "file": "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md"
               }
             }
           },
@@ -221,8 +220,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "04b4e2e0944c66f2",
+  "active": "af34f72827c4269c",
   "lastOpenFiles": [
+    "Paper/firmadyne/firmadyne.md",
     "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md",
     "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
     "工具/AFLplusplus/afl-fuzz源码阅读",
@@ -233,7 +233,6 @@
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/firmae/FirmAE.md",
     "Paper/EQUAFL/EQUAFL.md",
-    "Paper/firmadyne/firmadyne.md",
     "Paper/firmadyne与firmae总结/firmware.md",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
