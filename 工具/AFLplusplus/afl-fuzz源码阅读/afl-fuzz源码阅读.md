@@ -39,3 +39,8 @@ read_testcases(afl, NULL);
 
 
 ```
+
+
+
+代码中unlikely()的作用，用于编译优化，表示这条语句发生的概率低。
+"in place resume" 是指一种特定的 fuzzing 模式，它允许 fuzzing 进程在之前的状态基础上继续执行，而不需要重新从头开始。
