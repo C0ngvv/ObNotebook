@@ -1,21 +1,26 @@
-```
+```c
 alf-fuzz -i input_dir -o output_dir -Q -m none binary
 ```
-getopt()
+### getopt()参数解析
 `-i`
 
-```
+```c
 afl->in_dir = optarg;
 if (!strcmp(afl->in_dir, "-")) { afl->in_place_resume = 1; }
 ```
 
--o
+`-o`
 afl->out_dir = optarg;
 
--Q
-```
+`-Q`
+```c
 if (afl->fsrv.qemu_mode) { FATAL("Multiple -Q options not supported"); }
 afl->fsrv.qemu_mode = 1;
 if (!mem_limit_given) { afl->fsrv.mem_limit = MEM_LIMIT_QEMU; }
+```
+
+`-m none`
+```c
+afl->fsrv.mem_limit = 0;
 ```
 

@@ -4,59 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "3d32bc042a2f2f3a",
+        "id": "37fb319c61bc7fb9",
         "type": "tabs",
         "children": [
           {
-            "id": "ac95c68c013a8e60",
+            "id": "e8d1f276ac8db21f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/firmadyne/firmadyne.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "017c01ed51e951d3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/EQUAFL/EQUAFL.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "af34f72827c4269c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "69c905c9c7f85a59",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/firmae/FirmAE.md",
+                "file": "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -139,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
+                "file": "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
+                "file": "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md"
+                "file": "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md"
               }
             }
           },
@@ -206,8 +169,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5,
-    "collapsed": true
+    "width": 266.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -220,19 +182,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "af34f72827c4269c",
+  "active": "e8d1f276ac8db21f",
   "lastOpenFiles": [
+    "Paper/firmae/FirmAE.md",
     "Paper/firmadyne/firmadyne.md",
+    "Paper/EQUAFL/EQUAFL.md",
+    "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
     "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md",
     "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
     "工具/AFLplusplus/afl-fuzz源码阅读",
     "工具/AFLplusplus",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
-    "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
-    "Paper/firmae/FirmAE.md",
-    "Paper/EQUAFL/EQUAFL.md",
     "Paper/firmadyne与firmae总结/firmware.md",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
