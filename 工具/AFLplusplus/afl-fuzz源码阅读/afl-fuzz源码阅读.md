@@ -24,3 +24,15 @@ if (!mem_limit_given) { afl->fsrv.mem_limit = MEM_LIMIT_QEMU; }
 afl->fsrv.mem_limit = 0;
 ```
 
+ALF_PRELOAD
+```c
+/* afl-qemu-trace takes care of converting AFL_PRELOAD. */
+```
+
+```
+拷贝原始命令行
+创建output目录下的各种目录和文件
+init_count_class16();
+
+
+```
