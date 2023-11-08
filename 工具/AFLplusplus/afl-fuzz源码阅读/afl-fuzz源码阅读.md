@@ -33,6 +33,9 @@ ALF_PRELOAD
 拷贝原始命令行
 创建output目录下的各种目录和文件
 init_count_class16();
+...
+setup_cmdline_file(afl, argv + optind); //向cmdline写入命令行
+read_testcases(afl, NULL);  
 
 
 ```
