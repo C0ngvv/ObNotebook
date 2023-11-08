@@ -40,6 +40,9 @@ read_testcases(afl, NULL);
 
 ```
 
+### read_testcases()
+
+
 
 
 代码中unlikely()的作用，用于编译优化，表示这条语句发生的概率低。
