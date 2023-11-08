@@ -38,7 +38,7 @@ setup_cmdline_file(afl, argv + optind); //向cmdline写入命令行
 read_testcases(afl, NULL); 
 pivot_inputs(afl);  //种子硬链接在output/queue目录下并改名为id:形式
 afl->tmp_dir = afl->out_dir;
-
+check_binary(afl, argv[optind]);
 
 ```
 
