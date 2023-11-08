@@ -60,8 +60,11 @@ load_stats_file(afl);
 write_stats_file(afl, 0, 0, 0, 0);
 maybe_update_plot_file(afl, 0, 0, 0);
 save_auto(afl);
-
-
+while:
+	cull_queue(afl);
+	..
+	fuzz_one(afl);
+	
 ```
 
 
