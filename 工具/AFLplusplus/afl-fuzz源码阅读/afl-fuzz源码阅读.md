@@ -43,13 +43,17 @@ use_argv = get_qemu_argv(argv[0], &afl->fsrv.target_path, argc - optind, argv + 
 //一些设置realloc, memset..
 //cmplog_binary  不知道干啥的
 load_auto(afl);  /* Load automatically generated extras. */似乎加载自动发现的字典token
-
-
-
+load_extras(afl, extras_dir[i]);  // /* Read extras from the extras directory and sort them by size. */ 不知道干啥的
+deunicode_extras(afl);  //有时需要unicode解码
+dedup_extras(afl);  //去重
+afl->in_bitmap  //bitmap相关
+perform_dry_run(afl);  //运行所以测试用例验证app是否正常工作
+	calibrate_case(afl, q, use_mem, 0, 1);  //Calibrate a new test case.
+		afl_fsrv_start(&afl->fsrv, afl->argv, &afl->stop_soon, afl->afl_env.afl_debug_child); //启动forkserver
+		write_to_testcase(afl, (void **)&use_mem, q->len, 1);
+		fault = fuzz_run_target(afl, &afl->fsrv, use_tmout);
+		位图处理等
 ```
-
-### read_testcases()
-### add_to_queue()
 
 
 
