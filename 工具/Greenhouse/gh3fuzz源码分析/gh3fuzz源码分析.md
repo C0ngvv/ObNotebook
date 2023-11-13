@@ -366,3 +366,8 @@ POS /shareswwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 ```
 
 除此之外，还对do_poll(), do_select()等进行了hook，以及对qemu进行的修改也在这里进行了，如do_openat()等。
+
+## 融入Grammar Mutator
+向docker中加入语法变异库so后，不断递归提示缺少库。
+
+![](images/Pasted%20image%2020231113165031.png)
