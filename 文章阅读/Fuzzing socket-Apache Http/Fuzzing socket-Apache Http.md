@@ -3,7 +3,7 @@
 
 在之前关于套接字的博客文章中，我介绍了如何对 FTP 服务器进行模糊处理，并详细说明了如何对 FreeRDP 进行模糊处理。在 "套接字测试 "系列的第三部分，也是最后一部分，我将重点介绍 HTTP 协议，更具体地说，我将以 Apache HTTP 服务器 (https://httpd.apache.org/) 为目标。
 
-作为最流行的网络服务器之一，Apache HTTP 服务器无需任何介绍。Apache HTTP 是最早的 HTTP 服务器之一，其开发可追溯到 1995 年。截至 2021 年 1 月，它的市场份额为 26%，是互联网上使用第二多的网络服务器，目前运行在 300 000 000 多台服务器上，仅略微落后于 Nginx（31%）。
+作为最流行的网络服务器之一，Apache HTTP 服务器无需任何介绍。Apache HTTP 是最早的 HTTP 服务器之一，其开发可追溯到 1995 年。截至 2021 年 1 月，它的市场份额为 26%，是互联网上使用第二多的网络服务器，目前运行在 300 000 000多台服务器上，仅略微落后于 Nginx（31%）。
 
 我将分三部分详细介绍我的 Apache 模糊研究。在第一集中，我将简要介绍 Apache HTTP 的工作原理，并向大家介绍自定义突变器以及如何将其有效应用于 HTTP 协议。
 
@@ -58,7 +58,7 @@
 ### Custom grammar
 另一种方法是使用基于语法的突变器。除了使用自定义突变器外，我还使用最近添加到 AFL++ 中的一个工具自定义了一个语法，用于对 HTTP 进行模糊测试：[Grammar-Mutator](https://github.com/AFLplusplus/Grammar-Mutator)。
 
-使用 Grammar-Mutator 非常简单：
+使用Grammar-Mutator非常简单：
 
 ```
 make GRAMMAR_FILE=grammars/http.json
