@@ -173,6 +173,7 @@ Terminated
 [HOOK] 1337 1338 [HOOK2] 1337 1338 [qemu] hackdev - changing /dev/urandom to /ghdev/urandom Segmentation fault (core dumped)
 [GH_ERROR] Giving up
 ```
+
 后来发现是Netgear固件/tmp/shm_id的问题，重新设置并且运行`echo core > /proc/sys/kernel/core_pattern`后就可以跑起来模糊测试了，跑起来的信息如下。
 
 ```bash
@@ -286,8 +287,8 @@ POS /shareswwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
 ### do_accept4()
 以do_accept4()为例，这个hook的主要功能应该是：
-- 复制stdin_fd文件描述符作为返回的文件描述符
-- 修改参数target_addr设置为127.0.0.1：4444
+- 复制stdin_fd文件描述符作为返回的文件描述符(27行)
+- 修改参数target_addr设置为127.0.0.1：4444（38行）
 ```diff
  static abi_long do_accept4(int fd, abi_ulong target_addr,
                             abi_ulong target_addrlen_addr, int flags)
