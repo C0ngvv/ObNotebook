@@ -408,7 +408,7 @@ sudo chroot . ./greenhouse/busybox sh
 +    }
 ```
 
-
+经查询，dup2(oldfd, newfd)用于复制文件描述符使得newfd执行
 
 
 ### 尝试在docker上运行
