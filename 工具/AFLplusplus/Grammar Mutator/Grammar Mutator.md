@@ -61,3 +61,37 @@ make GRAMMAR_FILE=grammars/ruby.json
 }
 ```
 
+## 使用
+将项目下载下来
+```bash
+git clone https://github.com/AFLplusplus/Grammar-Mutator.git
+```
+
+安装工具包
+```bash
+sudo apt install valgrind uuid-dev default-jre python3
+wget https://www.antlr.org/download/antlr-4.8-complete.jar
+sudo cp -f antlr-4.8-complete.jar /usr/local/lib
+```
+### 构建
+进入到项目目录中，编写语法规则，这里使用grammar/http.json，然后构建
+```
+make GRAMMAR_FILE=grammars/http.json
+```
+
+![](images/Pasted%20image%2020231113144817.png)
+
+运行完后，src目录就会出现两个文件：`libgrammarmutator-http.so`和`grammar_generator-http`，前者用于AFL++模糊测试，后者用于生成该规则的种子。
+
+### 模糊测试
+进行模糊测试时，只需要设置`AFL_CUSTOM_MUTATOR_LIBRARY`和`AFL_CUSTOM_MUTATOR_ONLY`环境变量即可。
+```
+export AFL_CUSTOM_MUTATOR_LIBRARY=./libgrammarmutator-http.so
+export AFL_CUSTOM_MUTATOR_ONLY=1
+afl-fuzz -m 128 -i seeds -o out -- /path/to/target @@
+```
+
+### 可能出现的问题
+若出现这个问题，可能是因为目录下的`third_party/antlr4-cpp-runtime/antlr4-cpp-runtime-4.8-source.zip`文件没有成功下载下来，可以手动下载一下，目录下的Readme有下载连接。
+
+![](images/Pasted%20image%2020231113145006.png)
