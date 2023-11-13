@@ -150,7 +150,35 @@ entrypoint ["/root/entrypoint.sh"]
 ```
 
 ## 执行
+执行后创建docker时的目录如下
+![](images/Pasted%20image%2020231113152431.png)
 
+fuzz_bins目录提供了模糊测试所使用的程序，如afl-fuzz等。
+
+其中Dockerfile文件内容
+```
+FROM scratch
+ADD fs /
+
+ENV LD_PRELOAD=libnvram-faker.so
+
+EXPOSE 80/tcp
+EXPOSE 80/udp
+EXPOSE 1900/tcp
+EXPOSE 1900/udp
+
+COPY config.json /config.json
+COPY fuzz_bins /fuzz_bins
+COPY seeds /fuzz/seeds
+COPY dictionary /fuzz/dictionary
+COPY fuzz.sh /fuzz.sh
+COPY postauth_fuzz.sh /postauth_fuzz.sh
+COPY finish.sh /finish.sh
+COPY minify.sh /minify.sh
+RUN ["/fuzz_bins/utils/cp", "/fuzz_bins/qemu/afl-qemu-trace-arm", "/usr/bin/afl-qemu-trace"]
+WORKDIR /scratch
+CMD /fuzz.sh
+```
 
 ### 错误信息
 ```bash
