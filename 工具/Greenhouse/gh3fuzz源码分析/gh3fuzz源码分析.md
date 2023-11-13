@@ -368,7 +368,50 @@ POS /shareswwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 除此之外，还对do_poll(), do_select()等进行了hook，以及对qemu进行的修改也在这里进行了，如do_openat()等。
 
 ## 融入Grammar Mutator
+
+### 尝试在主机上chroot运行
+首先依照Dockerfile拷贝相应的文件到fs中
+```
+COPY config.json /config.json
+COPY fuzz_bins /fuzz_bins
+COPY seeds /fuzz/seeds
+COPY dictionary /fuzz/dictionary
+COPY fuzz.sh /fuzz.sh
+COPY postauth_fuzz.sh /postauth_fuzz.sh
+COPY finish.sh /finish.sh
+COPY minify.sh /minify.sh
+RUN ["/fuzz_bins/utils/cp", "/fuzz_bins/qemu/afl-qemu-trace-arm", "/usr/bin/afl-qemu-trace"]
+```
+
+然后进入fs中，chroot，根据fuzz.sh脚本顺次运行命令
+```
+sudo chroot . ./greenhouse/busybox sh
+```
+
+当运行到下面这条命令时，就出现问题了，错误提示如下图所示
+```
+/usr/bin/afl-qemu-trace -hookhack -hackbind -hackproc -execve "/qemu-static -hackbind -hackproc" -- $CMD 2>&1
+```
+
+![](images/Pasted%20image%2020231113215135.png)
+
+发现这段代码在afl_gh.patch(文件105行)中：
+```
++    main_bin_start = info->start_code;
++    main_bin_end = info->end_code;
++
++    bk_stdin_fd = dup2(0, 1337);
++    bk_stdout_fd = dup2(1, 1338);
++    if(bk_stdin_fd < 0 || bk_stdout_fd < 0) {
++        puts("Error when backing up stdin and stdout");
++        _exit(EXIT_FAILURE);
++    }
+```
+
+
+
+
+### 尝试在docker上运行
 向docker中加入语法变异库so后，不断递归提示缺少库。这个库一直找不到应该放在哪儿，里面放了这个库还是提示这个错误。
 
 ![](images/Pasted%20image%2020231113165031.png)
-
