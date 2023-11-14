@@ -431,10 +431,18 @@ sudo chroot . ./greenhouse/busybox sh
 通过afl对固件进行模糊测试必须在固件根目录下启动模糊测试，否则会出现很多异常问题，因为固件程序依据固件根目录而非主机根目录来寻找信息。
 
 ### 尝试在docker上运行
-使用正常gh3fuzz创建的docker环境启动后会自动运行fuzz.sh脚本开始模糊测试，当出现异常时就会停止环境。为了持续稳定的进入docker shell内进行分析，创建Docker image的时候不让它运行fuzz.sh脚本。
+使用正常gh3fuzz创建的docker环境启动后会自动运行fuzz.sh脚本开始模糊测试，当出现异常时就会停止环境。为了持续稳定的进入docker shell内进行分析，创建Docker image的时候不让它运行fuzz.sh脚本，删除最后一行`CMD /fuzz.sh`。
+
+在
 
 
 
 向docker中加入语法变异库so后，不断递归提示缺少库。这个库一直找不到应该放在哪儿，里面放了这个库还是提示这个错误。
 
 ![](images/Pasted%20image%2020231113165031.png)
+
+后来把这个库放在了lib目录下，终于不报这个错了，但是又段错误了。
+
+![](images/Pasted%20image%2020231114090338.png)
+
+我怀疑是不是种子不符合我们设置的libgrammarmutator-http.so的要求。
