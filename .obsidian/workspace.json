@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Puppeteer/Puppeteer.md",
+                "file": "工具/Pyppeteer/Pyppeteer.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Puppeteer/Puppeteer.md",
+                "file": "工具/Pyppeteer/Pyppeteer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Puppeteer/Puppeteer.md",
+                "file": "工具/Pyppeteer/Pyppeteer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Puppeteer/Puppeteer.md"
+                "file": "工具/Pyppeteer/Pyppeteer.md"
               }
             }
           },
@@ -221,9 +221,12 @@
   },
   "active": "377f5a5258421eff",
   "lastOpenFiles": [
+    "工具/Pyppeteer/images/Pasted image 20231114163206.png",
+    "工具/Pyppeteer/images/Pasted image 20231114162830.png",
+    "工具/Pyppeteer/images",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
-    "工具/Puppeteer/Puppeteer.md",
-    "工具/Puppeteer",
+    "工具/Pyppeteer/Pyppeteer.md",
+    "工具/Pyppeteer",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231114110818.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images",
@@ -259,13 +262,10 @@
     "工具/AFLplusplus",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/firmadyne与firmae总结/firmware.md",
-    "工具/Greenhouse/Netgear R7000P重托管测试/images/Pasted image 20231101141725.png",
     "工具/Greenhouse/Netgear R7000P重托管测试/images",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
-    "工具/Greenhouse/Greenhouse测试/images",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
     "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
-    "工具/QEMU/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
-    "工具/QEMU/Greenhouse/Greenhouse测试/Greenhouse测试.md"
+    "工具/QEMU/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md"
   ]
 }
