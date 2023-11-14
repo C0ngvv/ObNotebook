@@ -16,6 +16,7 @@ pip install pyppeteer
 换个下载：https://registry.npmmirror.com/-/binary/chromium-browser-snapshots/Linux_x64/970501/chrome-linux.zip，然后就可以了。
 
 ## 爬取
+### 登录弹窗认证
 Netgear登录抓包，在http报文中有一个认证。
 
 ![](images/Pasted%20image%2020231114203200.png)
@@ -23,4 +24,10 @@ Netgear登录抓包，在http报文中有一个认证。
 可以使用puppeteer的`page.authenticate()`来实现，其中Credentials接口有两个属性：`username`和`password`。
 
 ![](images/Pasted%20image%2020231114203548.png)
+
+代码
+```python
+await page.authenticate({'username':'admin','password':'password'})
+await page.goto(root_url)
+```
 
