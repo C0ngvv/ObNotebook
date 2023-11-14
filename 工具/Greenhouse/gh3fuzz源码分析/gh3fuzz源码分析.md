@@ -445,4 +445,4 @@ sudo chroot . ./greenhouse/busybox sh
 
 ![](images/Pasted%20image%2020231114090338.png)
 
-我怀疑是不是种子不符合我们设置的libgrammarmutator-http.so的要求。
+我怀疑是不是种子不符合我们设置的libgrammarmutator-http.so的要求，感觉也不是种子的问题。
