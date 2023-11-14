@@ -31,3 +31,5 @@ await page.authenticate({'username':'admin','password':'password'})
 await page.goto(root_url)
 ```
 
+当页面跳转导航到其它URL时，可以使用`page.waitForNavigation()`。
+
