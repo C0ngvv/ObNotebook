@@ -15,6 +15,19 @@ pip install pyppeteer
 
 换个下载：https://registry.npmmirror.com/-/binary/chromium-browser-snapshots/Linux_x64/970501/chrome-linux.zip，然后就可以了。
 
+## 算法思路
+针对页面元素分类：
+1. 输入：input
+2. 按钮：label, button
+3. 链接：a
+
+- 对于输入，读取属性，对其进行填充
+- 对于按钮，读取属性，进行点击
+- 对于链接，读取属性，进行跳转然后递归搜索这三个元素，注意url去重
+
+其它，form表单识别等。
+
+
 ## 爬取
 ### 登录弹窗认证
 Netgear登录抓包，在http报文中有一个认证。
