@@ -235,6 +235,7 @@
   },
   "active": "3a763fb7b1644532",
   "lastOpenFiles": [
+    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231115152023.png",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md",
@@ -279,7 +280,6 @@
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/firmadyne与firmae总结/firmware.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
-    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
-    "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md"
+    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md"
   ]
 }
