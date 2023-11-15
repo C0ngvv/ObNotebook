@@ -50,6 +50,19 @@ type(selector: str, text: str, options: dict = None, **kwargs) → None
 - id选择器：`#idname`
 - class选择器：`.classname`
 - 属性选择器：`[attr] [attr=value]`
+
+#### click()
+点击匹配selector的元素（模拟鼠标点击），如果没有匹配则抛出PageError。
+
+```
+ click(selector: str, options: dict = None, **kwargs) → None
+```
+
+可用选项：
+- `button` (str): `left`, `right`, or `middle`, defaults to `left`.
+- `clickCount` (int): defaults to 1.
+- `delay` (int|float): Time to wait between `mousedown` and `mouseup` in milliseconds. defaults to 0.
+
 ### Frame
 #### childFrmaes
 Get child frames.
