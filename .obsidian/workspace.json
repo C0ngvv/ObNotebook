@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Puppeteer/Puppeteer.md",
+                "file": "工具/Pyppeteer/Pyppeteer.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Puppeteer/Puppeteer.md",
+                "file": "工具/Pyppeteer/Pyppeteer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Puppeteer/Puppeteer.md",
+                "file": "工具/Pyppeteer/Pyppeteer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Puppeteer/Puppeteer.md"
+                "file": "工具/Pyppeteer/Pyppeteer.md"
               }
             }
           },
@@ -221,14 +221,15 @@
   },
   "active": "377f5a5258421eff",
   "lastOpenFiles": [
-    "工具/Puppeteer/images/Pasted image 20231114203548.png",
-    "工具/Puppeteer/images/Pasted image 20231114203200.png",
-    "工具/Puppeteer/images/Pasted image 20231114163206.png",
-    "工具/Puppeteer/images/Pasted image 20231114162830.png",
-    "工具/Puppeteer/images",
+    "工具/Pyppeteer/images/Pasted image 20231115090002.png",
+    "工具/Pyppeteer/images/Pasted image 20231114203548.png",
+    "工具/Pyppeteer/images/Pasted image 20231114203200.png",
+    "工具/Pyppeteer/images/Pasted image 20231114163206.png",
+    "工具/Pyppeteer/images/Pasted image 20231114162830.png",
+    "工具/Pyppeteer/images",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
-    "工具/Puppeteer/Puppeteer.md",
-    "工具/Puppeteer",
+    "工具/Pyppeteer/Pyppeteer.md",
+    "工具/Pyppeteer",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231114110818.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images",
@@ -241,7 +242,6 @@
     "工具/Greenhouse/gh3fuzz源码分析/images/Pasted image 20231113215135.png",
     "工具/Greenhouse/gh3fuzz源码分析/images/Pasted image 20231113165031.png",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
-    "工具/Greenhouse/gh3fuzz源码分析/images/Pasted image 20231113152431.png",
     "工具/AFLplusplus/Grammar Mutator/images",
     "文章阅读/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
     "工具/AFL/分支覆盖率/分支覆盖率.md",

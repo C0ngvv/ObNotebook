@@ -1,3 +1,4 @@
+API参考：[API Reference — Pyppeteer 0.0.25 documentation](https://pyppeteer.github.io/pyppeteer/reference.html)
 ## 环境安装
 
 ```
@@ -36,7 +37,7 @@ Netgear登录抓包，在http报文中有一个认证。
 
 可以使用puppeteer的`page.authenticate()`来实现，其中Credentials接口有两个属性：`username`和`password`。
 
-![](images/Pasted%20image%2020231114203548.png)
+![](images/Pasted%20image%2020231115090002.png)
 
 代码
 ```python
