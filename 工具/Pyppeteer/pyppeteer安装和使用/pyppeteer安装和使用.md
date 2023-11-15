@@ -40,6 +40,16 @@ evaluate(pageFunction: str, *args, force_expr: bool = False) → Any
 #### mainFrame
 获取页面的main Frame
 
+#### type()
+向匹配selector的元素写入text(模拟用户输入)，没有匹配的元素就抛出异常PageError。
+```
+type(selector: str, text: str, options: dict = None, **kwargs) → None
+```
+
+- 元素选择器：`elementname`
+- id选择器：`#idname`
+- class选择器：`.classname`
+- 属性选择器：`[attr] [attr=value]`
 ### Frame
 #### childFrmaes
 Get child frames.
