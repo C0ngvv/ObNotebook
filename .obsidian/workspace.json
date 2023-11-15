@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Pyppeteer/Pyppeteer.md",
+                "file": "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Pyppeteer/Pyppeteer.md",
+                "file": "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Pyppeteer/Pyppeteer.md",
+                "file": "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Pyppeteer/Pyppeteer.md"
+                "file": "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md"
               }
             }
           },
@@ -221,35 +221,39 @@
   },
   "active": "377f5a5258421eff",
   "lastOpenFiles": [
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231115090002.png",
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231114203200.png",
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231114163206.png",
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231114162830.png",
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/images",
+    "工具/Pyppeteer/pyppeteer爬取路由器请求",
+    "工具/Pyppeteer/新建文件夹",
+    "工具/Pyppeteer/Pyppeteer.md",
+    "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
+    "工具/Pyppeteer/pyppeteer安装和使用/images/Pasted image 20231115090002.png",
+    "工具/Pyppeteer/pyppeteer安装和使用/images/Pasted image 20231114203200.png",
+    "工具/Pyppeteer/pyppeteer安装和使用/images/Pasted image 20231114163206.png",
+    "工具/Pyppeteer/pyppeteer安装和使用/images/Pasted image 20231114162830.png",
+    "工具/Pyppeteer/pyppeteer安装和使用/images",
+    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
+    "工具/Pyppeteer/pyppeteer安装和使用",
     "工具/Pyppeteer/images/Pasted image 20231115090002.png",
     "工具/Pyppeteer/images/Pasted image 20231114203548.png",
-    "工具/Pyppeteer/images/Pasted image 20231114203200.png",
-    "工具/Pyppeteer/images/Pasted image 20231114163206.png",
-    "工具/Pyppeteer/images/Pasted image 20231114162830.png",
     "工具/Pyppeteer/images",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
-    "工具/Pyppeteer/Pyppeteer.md",
     "工具/Pyppeteer",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231114110818.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router",
-    "工具/Greenhouse/gh3fuzz源码分析/images/Pasted image 20231114092544.png",
-    "工具/Greenhouse/gh3fuzz源码分析/images/Pasted image 20231114090338.png",
     "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md",
-    "工具/Greenhouse/gh3fuzz源码分析/images/Pasted image 20231113221520.png",
-    "工具/Greenhouse/gh3fuzz源码分析/images/Pasted image 20231113215135.png",
-    "工具/Greenhouse/gh3fuzz源码分析/images/Pasted image 20231113165031.png",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "工具/AFLplusplus/Grammar Mutator/images",
     "文章阅读/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
     "工具/AFL/分支覆盖率/分支覆盖率.md",
-    "工具/AFLplusplus/Grammar Mutator",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
     "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
-    "工具/AFL/分支覆盖率",
     "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
@@ -258,14 +262,10 @@
     "Paper/firmadyne/firmadyne.md",
     "Paper/EQUAFL/EQUAFL.md",
     "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md",
-    "工具/AFLplusplus/afl-fuzz源码阅读",
-    "工具/AFLplusplus",
     "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/firmadyne与firmae总结/firmware.md",
-    "工具/Greenhouse/Netgear R7000P重托管测试/images",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md",
-    "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md",
-    "工具/QEMU/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md"
+    "固件分析/现代嵌入式系统漏洞研究技术文章/现代嵌入式系统漏洞研究技术文章.md"
   ]
 }
