@@ -47,3 +47,4 @@ await page.goto(root_url)
 
 当页面跳转导航到其它URL时，可以使用`page.waitForNavigation()`。
 
+现在的问题：Netgear页面URL不变，始终为start.html，使用waitForNavigation()好像会报错，不使用页面加载不出来。
