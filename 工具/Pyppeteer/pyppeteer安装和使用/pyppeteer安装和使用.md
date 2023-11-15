@@ -39,3 +39,14 @@ evaluate(pageFunction: str, *args, force_expr: bool = False) → Any
 
 #### mainFrame
 获取页面的main Frame
+
+### Frame
+#### childFrmaes
+Get child frames.
+
+#### querySelectorAll()
+Get all elements which matches`selector`.
+```
+querySelectorAll(selector: str) → List[pyppeteer.element_handle.ElementHandle]
+```
+
