@@ -59,3 +59,14 @@ Netgear路由器页面显示所采用的是一个iframe，如图所示。左边�
 ```
 frame = page.frames[0]
 ```
+
+研究半天，最后发现是因为加载需要延时，使用sleep()让它加载几秒它就出来了。
+```python
+await page.click("#basic-home")
+await asyncio.sleep(4)
+# 或
+frame = page.frames[1]
+await frame.waitForSelector('body')
+await asyncio.sleep(2)
+```
+
