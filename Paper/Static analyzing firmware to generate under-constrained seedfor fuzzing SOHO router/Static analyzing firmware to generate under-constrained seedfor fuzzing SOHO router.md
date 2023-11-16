@@ -145,3 +145,6 @@ UCRF的设计包括四个步骤：固件预处理、动作句柄识别、约束�
 
 ![](images/Pasted%20image%2020231116152552.png)
 
+**比较**。SRFuzzer (Zhang et al, 2019)和ESRFuzzer (Zhang et al, 2021)是最先进的SOHO路由器模糊测试工具。SRFuzzer (Zhang et al .， 2019)通过模拟浏览器的提交行为生成测试用例，并捕获前端发送的请求作为种子。SRFuzzer重复填充网页10次，分析变量属性标签请求，包括固定字符串、数字和可变字符串。SRFuzzer将固定字符串和数字视为不变量，可用于在后端通过条件检查。然而，后端代码的严格输入检查使得模糊测试效率低下。UCRF在后端收集约束，以获得更准确的语义信息，以达到深度路径。ESRFuzzer (Zhang et al, 2021)使用D-CONF模式增强了SRFuzzer，该模式利用部分路由器提供的NVRAM配置操作，并从后端从NVRAM键值对读取数据的位置开始模糊测试。单个NVRAM键值对代表一个参数关键字及其对应的值。D-CONF模式可以帮助ESRFuzzer在忽略部分后端数据验证的前提下更深入地测试代码。
+
+为了将我们的方法与SRFuzzer和ESRFuzzer进行比较，我们联系了作者，但未能获得他们的工具。我们从SRFuzzer和ESRFuzzer的数据集中选择了10个实验设备中的5个，在相同的固件版本上进行实验。没有选择设备进行评估，原因如下:(1)Mercury Mer450和ASUS RT-AC1200，供应商已经下架，我们无法获得。(2) Netgear Orbi和Netgear Insight，总价超过600美元，对我们来说价格比较贵。(3)对于TP-Link TL-WVR900G，设备的后端web服务器是用Lua编程的，UCRF目前只适用于内存不安全的低级编程语言(例如，C/ c++)，目的是发现内存损坏和命令注入漏洞。我们将UCRF运行了40小时，与SRFuzzer和ESRFuzzer论文中描述的时间相同。由于一些漏洞细节不是公开可用的，我们通过比较发现的漏洞的数量来说明UCRF的漏洞发现能力。
