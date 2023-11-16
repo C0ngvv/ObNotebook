@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c537db545f28ae6a",
+        "id": "a74b588f6c684457",
         "type": "tabs",
         "children": [
           {
-            "id": "b49d9338cae2057f",
+            "id": "15eeeceb4593834c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "377f5a5258421eff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
+                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
                 "mode": "source",
                 "source": false
               }
@@ -115,7 +103,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
+                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +120,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
+                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +143,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md"
+                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md"
               }
             }
           },
@@ -182,7 +170,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5
+    "width": 266.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,12 +184,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "b49d9338cae2057f",
+  "active": "15eeeceb4593834c",
   "lastOpenFiles": [
-    "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231116103032.png",
-    "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231116084940.png",
     "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231116103032.png",
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231116084940.png",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231115160531.png",
@@ -212,7 +201,6 @@
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231115090002.png",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231114203200.png",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231114163206.png",
-    "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231114162830.png",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images",
     "工具/Pyppeteer/pyppeteer爬取路由器请求",
     "工具/Pyppeteer/新建文件夹",
