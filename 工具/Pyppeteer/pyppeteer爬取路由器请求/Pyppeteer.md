@@ -62,8 +62,7 @@ frame = page.frames[0]
 
 研究半天，最后发现是因为加载需要延时，使用sleep()让它加载几秒它就出来了。
 ```python
-await page.click("#basic-home")
-await asyncio.sleep(4)
+await asyncio.sleep(3)
 # 或
 frame = page.frames[1]
 await frame.waitForSelector('body')
@@ -72,3 +71,21 @@ await asyncio.sleep(2)
 
 pytteteer解析的Netgear页面的frames有3个，其中frames\[0]为mainFrame，frames\[1]为BASIC页面的iframe，frames\[2]为ADVANCED页面的iframe。
 
+**初始页面加载模块**。包括登录和页面加载，使当前页面和状态处于爬虫的起始位置。
+
+当前页面包含的frame有：mainframe，主要包含链接标签；frames\[1]主要是BASIC功能页面，里面包含一些设置等。
+
+调研：在BASIC页面时，frames\[2]是否有内容；在ADVANCED页面时，frames\[1]是否有内容。
+
+下图是BASIC页面加载时，frames\[2]的内容。
+
+![](images/Pasted%20image%2020231116103032.png)
+
+
+
+算法设计
+```
+页面登录
+初始页面加载
+
+```
