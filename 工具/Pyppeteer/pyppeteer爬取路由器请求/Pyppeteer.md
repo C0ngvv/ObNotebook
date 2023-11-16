@@ -77,15 +77,16 @@ pytteteer解析的Netgear页面的frames有3个，其中frames\[0]为mainFrame�
 
 调研：在BASIC页面时，frames\[2]是否有内容；在ADVANCED页面时，frames\[1]是否有内容。
 
-下图是BASIC页面加载时，frames\[2]的内容。
+经过调查，点击ADVANCED页面时，BASIC页面的内容依然保存在页面中，只是上层div设置`display:None`，点击BASIC页面时同样如此。即我们不能直接遍历frames解析所有的内容，因为这样会重复解析。注意到，在iframe中包含了src属性，即显示的页面url，我们可以通过该属性来判断次iframe是否为我们当前加载的iframe，如果是就进行解析，如果不是则不进行解析。
 
-![](images/Pasted%20image%2020231116103032.png)
+```
+page.mainFrame.childFrames[0].url
+```
 
-
-
-算法设计
+Netgear爬取算法设计
 ```
 页面登录
 初始页面加载
+读取mainFrame的标签链接和按钮表单等
 
 ```
