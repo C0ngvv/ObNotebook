@@ -70,3 +70,5 @@ await frame.waitForSelector('body')
 await asyncio.sleep(2)
 ```
 
+pytteteer解析的Netgear页面的frames有3个，其中frames\[0]为mainFrame，frames\[1]为BASIC页面的iframe，frames\[2]为ADVANCED页面的iframe。
+
