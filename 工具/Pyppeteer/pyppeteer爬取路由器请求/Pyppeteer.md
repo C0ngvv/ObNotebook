@@ -48,3 +48,14 @@ await page.goto(root_url)
 当页面跳转导航到其它URL时，可以使用`page.waitForNavigation()`。
 
 现在的问题：Netgear页面URL不变，始终为start.html，使用waitForNavigation()好像会报错，不使用页面加载不出来。
+
+### iframe
+Netgear路由器页面显示所采用的是一个iframe，如图所示。左边的选项列表注册了event，当用户点击时，就将相应url(保存在a标签)传递到iframe的src进行加载。
+
+![](images/Pasted%20image%2020231116084940.png)
+
+所以如何让其加载iframe内容并对iframe进行爬取成为爬取Netgear页面的挑战点。当我们用page.click()后，页面并没有加载出来，而调用page.waitForNavigation()后可以加载出来但随后会抛出异常，可能因为网页url没有改变。加载出来页面后，因为改变的是iframe，所以我们又需要到iframe中去获取。
+
+```
+frame = page.frames[0]
+```

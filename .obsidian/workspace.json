@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9d96797755dce897",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b49d9338cae2057f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3a763fb7b1644532",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
                 "mode": "source",
                 "source": false
               }
@@ -54,21 +30,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "1b6ad1ae3b26c061",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -152,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+                "file": "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+                "file": "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md"
+                "file": "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md"
               }
             }
           },
@@ -219,8 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5,
-    "collapsed": true
+    "width": 266.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -233,17 +195,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3a763fb7b1644532",
+  "active": "b49d9338cae2057f",
   "lastOpenFiles": [
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231116084940.png",
+    "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
+    "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
+    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231115160531.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231115155015.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231115154907.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231115154448.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231115152023.png",
-    "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
-    "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md",
-    "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231115090002.png",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231114203200.png",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images/Pasted image 20231114163206.png",
@@ -253,12 +217,10 @@
     "工具/Pyppeteer/新建文件夹",
     "工具/Pyppeteer/Pyppeteer.md",
     "工具/Pyppeteer/pyppeteer安装和使用/images/Pasted image 20231115090002.png",
-    "工具/Pyppeteer/pyppeteer安装和使用/images/Pasted image 20231114203200.png",
     "工具/Pyppeteer/pyppeteer安装和使用/images",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "工具/Pyppeteer/pyppeteer安装和使用",
     "工具/Pyppeteer/images",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "工具/Pyppeteer",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
