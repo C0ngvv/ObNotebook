@@ -18,3 +18,24 @@ instruction = idc.GetDisasm(addr)
 ins = idc.GetDisasm(ref)   # 或idc.generate_disasm_line(ea, flags)
 
 ```
+
+```
+import idc
+import ida_segment
+
+data_address = 0x4d3dc
+refs = DataRefsTo(data_address)
+for ref in refs:
+    seg_type = idc.SegName(ref)
+    print("- 0x{:X}".format(ref))
+    print(seg_type)
+    if seg_type != ".text":
+        continue
+    mnemonic = idc.GetMnem(ref)
+    ins = idc.create_insn(ref)
+    print(ins)
+```
+
+```
+
+```
