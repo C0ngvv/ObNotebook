@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md",
+                "file": "Pwn/HWS/pwn3-inverse/inverse writeup.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md",
+                "file": "Pwn/HWS/pwn3-inverse/inverse writeup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md",
+                "file": "Pwn/HWS/pwn3-inverse/inverse writeup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md"
+                "file": "Pwn/HWS/pwn3-inverse/inverse writeup.md"
               }
             }
           },
@@ -222,8 +222,15 @@
   },
   "active": "e0c4f9d3f48d9c7e",
   "lastOpenFiles": [
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+    "Pwn/HWS/pwn3-inverse/images/Pasted image 20231118153422.png",
+    "Pwn/HWS/pwn3-inverse/images",
+    "Pwn/x64栈溢出/x64栈溢出.md",
+    "Pwn/HWS/pwn3-inverse/inverse writeup.md",
+    "Pwn/HWS/pwn3-inverse",
+    "Pwn/HWS",
+    "Pwn/ROP实验/ROP实验.md",
     "工具/IDA/IDAPython/IDAPython.md",
+    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "工具/IDA/IDAPython",
     "工具/IDA",
     "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
@@ -247,9 +254,6 @@
     "工具/Pyppeteer/pyppeteer安装和使用/images",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "工具/Pyppeteer/pyppeteer安装和使用",
-    "工具/Pyppeteer/images",
-    "工具/Pyppeteer",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "文章阅读/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
     "工具/AFL/分支覆盖率/分支覆盖率.md",
@@ -263,10 +267,6 @@
     "Paper/firmae/FirmAE.md",
     "Paper/firmadyne/firmadyne.md",
     "Paper/EQUAFL/EQUAFL.md",
-    "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md",
-    "Paper/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
-    "Paper/firmadyne与firmae总结/firmware.md",
-    "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
-    "工具/Greenhouse/Greenhouse测试/Greenhouse测试.md"
+    "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md"
   ]
 }
