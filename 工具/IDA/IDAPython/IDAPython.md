@@ -77,7 +77,7 @@ for func in Functions():
 ```
 
 成了
-## 代码
+## 第一种模式识别代码
 ```python
 import FIDL.decompiler_utils as du
 
