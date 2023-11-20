@@ -25,7 +25,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Pwn/HWS/pwn3-inverse/inverse writeup.md",
+                "file": "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bb72935ec146f78f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Pwn/HWS/pwn3-inverse/inverse writeup.md",
+                "file": "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Pwn/HWS/pwn3-inverse/inverse writeup.md",
+                "file": "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Pwn/HWS/pwn3-inverse/inverse writeup.md"
+                "file": "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md"
               }
             }
           },
@@ -206,8 +218,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5,
-    "collapsed": true
+    "width": 266.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -222,11 +233,13 @@
   },
   "active": "e0c4f9d3f48d9c7e",
   "lastOpenFiles": [
+    "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+    "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
+    "Pwn/HWS/pwn3-inverse/inverse writeup.md",
     "Pwn/HWS/pwn3-inverse/images/Pasted image 20231118155900.png",
     "Pwn/HWS/pwn3-inverse/images/Pasted image 20231118153422.png",
     "Pwn/HWS/pwn3-inverse/images",
     "Pwn/x64栈溢出/x64栈溢出.md",
-    "Pwn/HWS/pwn3-inverse/inverse writeup.md",
     "Pwn/HWS/pwn3-inverse",
     "Pwn/HWS",
     "Pwn/ROP实验/ROP实验.md",
@@ -244,7 +257,6 @@
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116160203.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116152552.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116151814.png",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116151756.png",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images",
@@ -266,7 +278,6 @@
     "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
     "Paper/firmae/FirmAE.md",
     "Paper/firmadyne/firmadyne.md",
-    "Paper/EQUAFL/EQUAFL.md",
-    "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md"
+    "Paper/EQUAFL/EQUAFL.md"
   ]
 }
