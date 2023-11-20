@@ -4,71 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "7ff558a88e47941e",
+        "id": "2ef199706debd526",
         "type": "tabs",
         "children": [
           {
-            "id": "27470ed0f27ccd64",
+            "id": "3a66dfcd4738e637",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e0c4f9d3f48d9c7e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "bb72935ec146f78f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c1bfedb9451fa0ab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3488991b0f255ae6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
+                "file": "工具/IDA/IDAPython/IDAPython.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -151,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
+                "file": "工具/IDA/IDAPython/IDAPython.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
+                "file": "工具/IDA/IDAPython/IDAPython.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md"
+                "file": "工具/IDA/IDAPython/IDAPython.md"
               }
             }
           },
@@ -231,10 +182,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e0c4f9d3f48d9c7e",
+  "active": "3a66dfcd4738e637",
   "lastOpenFiles": [
-    "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
+    "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
     "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
+    "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
     "Pwn/HWS/pwn3-inverse/inverse writeup.md",
     "Pwn/HWS/pwn3-inverse/images/Pasted image 20231118155900.png",
     "Pwn/HWS/pwn3-inverse/images/Pasted image 20231118153422.png",
@@ -247,8 +200,6 @@
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "工具/IDA/IDAPython",
     "工具/IDA",
-    "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
-    "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116162042.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161706.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161648.png",

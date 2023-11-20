@@ -47,3 +47,22 @@ for ref in refs:
 排序所有函数计数，最高为注册函数
 遍历所有注册函数调用，提取字符串和函数地址
 ```
+
+```
+import idaapi
+import idc
+
+# 输入已知的函数调用点地址
+call_addr  = 0x3FF7C
+func_addr = 0x15D0C
+
+print(idaapi.get_arg_addrs(call_addr))
+cfunc = idaapi.decompile(func_addr)
+
+func_type = idaapi.tinfo_t()
+cfunc.get_func_type( func_type )
+nargs = func_type.get_nargs()
+print(nargs)
+print(str( func_type.get_nth_arg(0) ))
+```
+
