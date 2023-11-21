@@ -13,19 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md",
+                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "c31cd428a3b280d5",
+            "id": "91f705a010a3bead",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "10cae790fb66a2ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pwn/MIPS/mips汇编/mips汇编.md",
                 "mode": "source",
                 "source": false
               }
@@ -67,7 +79,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -150,7 +163,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md",
+                "file": "Pwn/MIPS/mips汇编/mips汇编.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -167,7 +180,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md",
+                "file": "Pwn/MIPS/mips汇编/mips汇编.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,7 +203,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md"
+                "file": "Pwn/MIPS/mips汇编/mips汇编.md"
               }
             }
           },
@@ -230,15 +243,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "61d8ed6bdf485771",
+  "active": "10cae790fb66a2ec",
   "lastOpenFiles": [
+    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
+    "Pwn/MIPS/mips汇编/mips汇编.md",
+    "Pwn/MIPS/mips汇编",
+    "Pwn/MIPS",
+    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+    "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
+    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
+    "工具/IDA/IDAPython/IDAPython.md",
     "工具/IDA/IDAPython/images/Pasted image 20231121160048.png",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
-    "工具/IDA/IDAPython/IDAPython.md",
     "工具/IDA/IDAPython/images/Pasted image 20231121100946.png",
     "工具/IDA/IDAPython/images/Pasted image 20231121095935.png",
     "工具/IDA/IDAPython/images/Pasted image 20231120221155.png",
@@ -261,22 +280,16 @@
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161706.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161648.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161208.png",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116160610.png",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images",
     "工具/Pyppeteer/pyppeteer爬取路由器请求",
-    "工具/Pyppeteer/新建文件夹",
     "工具/Pyppeteer/Pyppeteer.md",
-    "工具/Pyppeteer/pyppeteer安装和使用/images",
     "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "文章阅读/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
     "工具/AFL/分支覆盖率/分支覆盖率.md",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
-    "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
-    "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
-    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
-    "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md"
+    "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md"
   ]
 }
