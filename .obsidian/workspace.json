@@ -32,6 +32,30 @@
             }
           },
           {
+            "id": "ef38ff1e69de3271",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0dd82f26361ff0ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "262225d95a5afd5a",
             "type": "leaf",
             "state": {
@@ -43,8 +67,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -127,7 +150,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+                "file": "工具/IDA/IDAPython/IDAPython.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +167,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+                "file": "工具/IDA/IDAPython/IDAPython.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +190,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md"
+                "file": "工具/IDA/IDAPython/IDAPython.md"
               }
             }
           },
@@ -207,13 +230,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c31cd428a3b280d5",
+  "active": "61d8ed6bdf485771",
   "lastOpenFiles": [
+    "工具/IDA/IDAPython/images/Pasted image 20231121160048.png",
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+    "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
+    "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
+    "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "工具/IDA/IDAPython/IDAPython.md",
     "工具/IDA/IDAPython/images/Pasted image 20231121100946.png",
     "工具/IDA/IDAPython/images/Pasted image 20231121095935.png",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
-    "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "工具/IDA/IDAPython/images/Pasted image 20231120221155.png",
     "工具/IDA/IDAPython/images",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
@@ -250,9 +277,6 @@
     "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
     "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
     "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
-    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
-    "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
-    "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
-    "Paper/firmae/FirmAE.md"
+    "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md"
   ]
 }

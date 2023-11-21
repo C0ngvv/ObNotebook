@@ -777,4 +777,36 @@ print(hit_func_records)
 {'sub_2B794': 200, 'sub_41328': 270, 'sub_9C3D0': 33, 'sub_9C490': 15, 'sub_BB0D8': 2, 'strcmp': 23, 'strncmp': 1, 'GetIniFileValue': 8, 'sub_6CD40': 28, 'sub_700E8': 4, 'sub_9DD34': 4, 'vos_get_value_from_file': 1, 'sprintf': 1, 'sub_28260': 1, 'doSystemCmd': 1}
 ```
 
+Netgear
+```
+['0x1e888', 'sub_1E740', 'acosNvramConfig_set', 'wan_netmask']
+['0x1f5ec', 'sub_1F5A8', 'sub_155AC', 'wan_netmask']
+['0x1f728', 'sub_1F5A8', 'acosNvramConfig_set', 'wan_netmask']
+['0x26934', 'sub_267CC', 'strcmp', 'wan_netmask']
+['0x27240', 'sub_271D8', 'strcmp', 'wan_netmask']
+['0x27300', 'sub_27298', 'strcmp', 'wan_netmask']
+['0x3bc48', 'sub_3BBB8', 'sub_155AC', 'wan_netmask']
+['0x3bd44', 'sub_3BBB8', 'acosNvramConfig_set', 'wan_netmask']
+['0x52710', 'sub_5263C', 'acosNvramConfig_set', 'wan_netmask']
+['0x26854', 'sub_267CC', 'strcmp', 'wan_proto']
+['0x26870', 'sub_267CC', 'acosNvramConfig_read', 'wan_proto']
+['0x30008', 'sub_2FF2C', 'acosNvramConfig_read', 'wan_proto']
+[ERROR] error in caller func cf list index out of range
+[ERROR] error in caller func cf list index out of range
+['0x6ae90', 'sub_6AE7C', 'strcmp', 'wan_proto']
+['0x23188', 'sub_22F4C', 'strcmp', 'warning']
+['0x4c92c', 'sub_4C3D0', 'sub_155AC', 'wds_enable_an']
+['0x43130', 'sub_41B80', 'sub_155AC', 'wifi_2g_sche_onoff']
+['0x43180', 'sub_41B80', 'sub_155AC', 'wifi_5g_sche_onoff']
+['0x4ffb8', 'sub_4FD40', 'sub_155AC', 'wmm_enable']
+['0x622a0', 'sub_61B0C', 'sub_155AC', 'workGroup']
+['0x5ad74', 'sub_5A9B8', 'strcmp', 'write_access']
+['0x60134', 'sub_5FFC8', 'sub_155AC', 'write_access']
+['0x60294', 'sub_5FFC8', 'sub_155AC', 'write_access']
+['0x603b4', 'sub_5FFC8', 'sub_155AC', 'write_access']
+['0x6063c', 'sub_5FFC8', 'sub_155AC', 'write_access']
+{'sub_155AC': 435, 'strcmp': 86, 'strstr': 4, 'stristr': 1, 'acosNvramConfig_set': 86, 'acosNvramConfig_read': 4, 'acosNvramConfig_match': 36}
+```
+
+![](images/Pasted%20image%2020231121160048.png)
 ## end
