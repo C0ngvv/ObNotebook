@@ -189,7 +189,7 @@ print(sorted(func_hit_count_record.items(), key=lambda x: x[1], reverse=True))
 ![](images/Pasted%20image%2020231120221155.png)
 
 ### 代码
-```
+```python
 
 records = []
 # {table_head:}
