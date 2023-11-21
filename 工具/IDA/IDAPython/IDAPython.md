@@ -659,6 +659,27 @@ table_records
 已实现：
 - 从文件中读取参数字符串
 - 从二进制中寻找参数字符串可能位置和其交叉引用
-- 
+
+
+部分执行结果：
+```
+['0x9c24c', 'sub_9C490', 'wpsEn']
+['0xa3058', 'sub_41328', 'wpsEn']
+['0xa4504', 'sub_41328', 'wpsEn']
+['0x9076c', 'sub_41328', 'wrlEn']
+['0x90ec8', 'sub_2B794', 'wrlEn']
+['0x907ac', 'sub_41328', 'wrlEn_5g']
+['0x90f7c', 'sub_2B794', 'wrlEn_5g']
+['0x65704', 'sub_41328', 'wrlPassword']
+['0x66988', 'sub_2B794', 'wrlPassword']
+['0x90114', 'sub_9C3D0', 'wrlPwd']
+['0x90500', 'sub_9C490', 'wrlPwd']
+['0x90f58', 'sub_2B794', 'wrlPwd']
+['0x8f98c', 'sub_9C3D0', 'wrlPwd_5g']
+['0x8fd78', 'sub_9C490', 'wrlPwd_5g']
+['0x9100c', 'sub_2B794', 'wrlPwd_5g']
+['0x8afd8', 'sub_2B794', 'year']
+{'sub_2B794': 200, 'sub_41328': 270, 'sub_9C3D0': 33, 'sub_9C490': 15, 'sub_BB0D8': 2, 'strcmp': 23, 'strncmp': 1, 'GetIniFileValue': 8, 'sub_6CD40': 28, 'sub_700E8': 4, 'sub_9DD34': 4, 'vos_get_value_from_file': 1, 'sprintf': 1, 'sub_28260': 1, 'doSystemCmd': 1}
+```
 
 ## end
