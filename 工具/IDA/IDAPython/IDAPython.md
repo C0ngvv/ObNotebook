@@ -642,4 +642,10 @@ table_records
 0xd2c98 0xd30e4 125
 ```
 
+## SaTC前端参数字符串提取
+
+![](images/Pasted%20image%2020231121095935.png)
+
+
+
 ## end

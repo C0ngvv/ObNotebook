@@ -8,12 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3a66dfcd4738e637",
+            "id": "61d8ed6bdf485771",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "工具/IDA/IDAPython/IDAPython.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c31cd428a3b280d5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "262225d95a5afd5a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -182,8 +206,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3a66dfcd4738e637",
+  "active": "61d8ed6bdf485771",
   "lastOpenFiles": [
+    "工具/IDA/IDAPython/images/Pasted image 20231121095935.png",
+    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+    "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
+    "工具/IDA/IDAPython/IDAPython.md",
     "工具/IDA/IDAPython/images/Pasted image 20231120221155.png",
     "工具/IDA/IDAPython/images",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
@@ -198,8 +226,6 @@
     "Pwn/HWS/pwn3-inverse",
     "Pwn/HWS",
     "Pwn/ROP实验/ROP实验.md",
-    "工具/IDA/IDAPython/IDAPython.md",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "工具/IDA/IDAPython",
     "工具/IDA",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116162042.png",
@@ -209,7 +235,6 @@
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116160610.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116160203.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116152552.png",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116151814.png",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images",
@@ -228,7 +253,6 @@
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
     "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
-    "Paper/firmae/FirmAE.md",
-    "Paper/firmadyne/firmadyne.md"
+    "Paper/firmae/FirmAE.md"
   ]
 }
