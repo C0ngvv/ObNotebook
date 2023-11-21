@@ -43,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -126,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md",
+                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md",
+                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython.md"
+                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md"
               }
             }
           },
@@ -206,13 +207,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "61d8ed6bdf485771",
+  "active": "c31cd428a3b280d5",
   "lastOpenFiles": [
+    "工具/IDA/IDAPython/IDAPython.md",
     "工具/IDA/IDAPython/images/Pasted image 20231121100946.png",
     "工具/IDA/IDAPython/images/Pasted image 20231121095935.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
-    "工具/IDA/IDAPython/IDAPython.md",
     "工具/IDA/IDAPython/images/Pasted image 20231120221155.png",
     "工具/IDA/IDAPython/images",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
@@ -234,7 +235,6 @@
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161648.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161208.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116160610.png",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116160203.png",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/images",

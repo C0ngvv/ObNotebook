@@ -659,9 +659,104 @@ table_records
 已实现：
 - 从文件中读取参数字符串
 - 从二进制中寻找参数字符串可能位置和其交叉引用
+### 代码
+```python
+import FIDL.decompiler_utils as du
 
+params_file = r'E:\学术\实验\static_analysis\Demo\Tenda_AC6\satc_param_simple.result'
 
-部分执行结果：
+hasAccessList = set()
+hit_func_records = {}
+
+#str_to_find = "pptpStatus"
+
+# load param list
+params_list = []
+with open(params_file, 'r') as fr:
+    for line in fr:    
+        params_list.append(line.strip())
+print("load", len(params_list), "param items")
+
+start_ea = idc.MinEA()
+
+for str_to_find in params_list:
+    str_addr = start_ea
+    while str_addr != idc.BADADDR:
+        str_addr = find_binary(str_addr, SEARCH_DOWN|SEARCH_NEXT|SEARCH_CASE, f'"{str_to_find}"')
+        if idc.get_wide_byte(str_addr + len(str_to_find)) != 0x0:
+            continue
+        # skip no xref position
+        refs = DataRefsTo(str_addr)
+        if not refs:
+            continue
+        #print(hex(str_addr))
+        for ref in refs:
+            seg_type = idc.SegName(ref)
+            if seg_type != ".text":
+                continue
+            mnemonic = idc.GetMnem(ref)
+            if not mnemonic:
+                continue
+            #print(hex(ref))
+            #print(mnemonic)
+    
+            # find bl addr within 15 step
+            step = 0
+            find_bl_flag = False
+            ref = NextHead(ref)
+            while step < 15:
+                mnemonic = idc.GetMnem(ref)
+                #print(mnemonic)
+                if mnemonic in call_ins_list:
+                    #print("hit call ins!!", hex(ref))
+                    find_bl_flag = True
+                    break
+                ref = NextHead(ref)
+                step += 1
+                pass
+            if not find_bl_flag:
+                continue
+    
+            # is taken as a func param?
+            if hex(ref) in hasAccessList:
+                continue
+            caller_func = idaapi.get_func(ref)
+            caller_func_name = idc.get_func_name(caller_func)
+            try:
+                cf = du.controlFlowinator(ea=caller_func.start_ea, fast=False)
+            except Exception as ex:
+                print("[ERROR] error in caller func cf", ex)
+                continue
+            for cf_call in cf.calls:
+                if cf_call.ea != ref:
+                    continue
+                hit = False
+                hasVarParam = False
+                params = cf_call.args
+                for param in params.values():
+                    if param.type == 'var':
+                        hasVarParam = True
+                    elif param.type == 'string' and param.val == str_to_find:
+                        hit = True
+                if not hit:
+                    break
+                if not hasVarParam:
+                    break
+                # hit!!
+                #print(cf_call)
+                # [addr, caller_name, call func name, str]
+                print([hex(cf_call.ea), caller_func_name, cf_call.name, str_to_find])
+                hasAccessList.add(hex(cf_call.ea))
+                if cf_call.name not in hit_func_records:
+                    hit_func_records[cf_call.name] = 1
+                else:
+                    hit_func_records[cf_call.name] += 1
+            
+print(hit_func_records)
+
+```
+
+### 执行结果
 ```
 ['0x9c24c', 'sub_9C490', 'wpsEn']
 ['0xa3058', 'sub_41328', 'wpsEn']
