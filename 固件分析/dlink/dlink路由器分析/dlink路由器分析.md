@@ -62,4 +62,11 @@ Cookie: uid=m0hsAU1zNU
 </soap:Envelope>
 ```
 
-后来发现
+后来发现在`etc/services/HTTP/httpcfg.php`文件中设置了`HNAP1`，可以看到它实际是由`/usr/sbin/hnap`处理。
+
+![](images/Pasted%20image%2020231122213357.png)
+
+而`/usr/sbin/hnap`实际上是`htdocs/cgibin`程序的软连接，即所有的http请求由cgibin处理。
+
+![](images/Pasted%20image%2020231122213647.png)
+
