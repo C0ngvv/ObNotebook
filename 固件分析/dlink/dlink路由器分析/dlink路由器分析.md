@@ -1,5 +1,5 @@
+通过FirmAE对路由器进行仿真，然后使用burpsuite进行抓包，发现dlink的请求都为/HNAP1，而请求数据为xml格式。
 
-请求抓包，请求数据为xml格式
 ```xml
 POST /HNAP1/ HTTP/1.1
 Host: 192.168.0.1
@@ -61,3 +61,5 @@ Cookie: uid=m0hsAU1zNU
 	</soap:Body>
 </soap:Envelope>
 ```
+
+后来发现

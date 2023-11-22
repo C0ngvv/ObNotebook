@@ -4,71 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "2ef199706debd526",
+        "id": "309b1e90131d9fe0",
         "type": "tabs",
         "children": [
           {
-            "id": "61d8ed6bdf485771",
+            "id": "84a2c18ab6fff571",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "91f705a010a3bead",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "10cae790fb66a2ec",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Pwn/MIPS/mips汇编/mips汇编.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ef38ff1e69de3271",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0dd82f26361ff0ed",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
+                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -151,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
+                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
+                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md"
+                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md"
               }
             }
           },
@@ -231,29 +182,33 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0dd82f26361ff0ed",
+  "active": "84a2c18ab6fff571",
   "lastOpenFiles": [
-    "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
     "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
+    "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+    "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122211354.png",
+    "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122211145.png",
+    "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122210239.png",
+    "固件分析/dlink/dir815漏洞复现/images",
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "Pwn/MIPS/mips汇编/mips汇编.md",
+    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
+    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
+    "环境配置/软件安装/ubuntu常用软件安装.md",
     "固件分析/dlink/dir815漏洞复现",
     "环境配置/疑难杂症/疑难杂症.md",
     "固件分析/dlink/dlink路由器分析",
     "固件分析/dlink",
-    "环境配置/软件安装/ubuntu常用软件安装.md",
     "环境配置/Download网络问题.md",
     "环境配置/linux/linux.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
-    "Pwn/MIPS/mips汇编/mips汇编.md",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
     "Pwn/MIPS/mips汇编",
     "Pwn/MIPS",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
-    "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "工具/IDA/IDAPython/IDAPython.md",
     "工具/IDA/IDAPython/images/Pasted image 20231121160048.png",
-    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "工具/IDA/IDAPython/images/Pasted image 20231121100946.png",
     "工具/IDA/IDAPython/images/Pasted image 20231121095935.png",
@@ -271,13 +226,8 @@
     "Pwn/HWS/pwn3-inverse",
     "Pwn/HWS",
     "Pwn/ROP实验/ROP实验.md",
-    "工具/IDA/IDAPython",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116162042.png",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161706.png",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161648.png",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161208.png",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
-    "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md",
-    "工具/Pyppeteer/Pyppeteer.md"
+    "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md"
   ]
 }
