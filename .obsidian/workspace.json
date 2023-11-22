@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
                 "mode": "source",
                 "source": false
               }
@@ -151,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md"
+                "file": "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md"
               }
             }
           },
@@ -233,8 +233,10 @@
   },
   "active": "0dd82f26361ff0ed",
   "lastOpenFiles": [
-    "环境配置/疑难杂症/疑难杂症.md",
     "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+    "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
+    "固件分析/dlink/dir815漏洞复现",
+    "环境配置/疑难杂症/疑难杂症.md",
     "固件分析/dlink/dlink路由器分析",
     "固件分析/dlink",
     "环境配置/软件安装/ubuntu常用软件安装.md",
@@ -270,14 +272,12 @@
     "Pwn/HWS",
     "Pwn/ROP实验/ROP实验.md",
     "工具/IDA/IDAPython",
-    "工具/IDA",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116162042.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161706.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161648.png",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/images/Pasted image 20231116161208.png",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md",
-    "工具/Pyppeteer/Pyppeteer.md",
-    "Paper/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHORouter Devices to Discover Multi-Type Vulnerabilities/SRFuzzer-An Automatic Fuzzing Framework for Physical SOHO Router Devices to Discover Multi-Type Vulnerabilities.md"
+    "工具/Pyppeteer/Pyppeteer.md"
   ]
 }
