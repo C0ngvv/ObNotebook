@@ -82,5 +82,5 @@ Cookie: uid=m0hsAU1zNU
 
 ![](images/Pasted%20image%2020231123233357.png)
 
-经查找发现存在/usr/sbin/xmldb程序，将其拖入IDA进行分析。
+经查找发现存在/usr/sbin/xmldb程序，将其拖入IDA进行分析。拖进来后没分析出什么结果，也有跟上面一样的代码。
 
