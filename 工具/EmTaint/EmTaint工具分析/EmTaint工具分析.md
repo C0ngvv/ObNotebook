@@ -27,9 +27,9 @@ workon EmTaint
 python main.py -f {binary} -n {name} -v {version} -t
 ```
 
-如：
+即：
 ```
-python main.py -f ./firmware-binaries/rv130_v44/httpd -n rv130 -v 1_0_3_44 -t
+python main.py -f ./binaries/dir815-v1.01/cgibin -n dir815 -v v1.01 -t
 ```
 
 主要用法参数
@@ -120,6 +120,79 @@ Result-statistics-path: /work/dataflow/data/basic_alias_result_new.json
 ## 问题分析
 后来发现应该是IDA Pro脚本分析的时候，分析结果有问题，我在其分析结果中没有找到getenv。
 
+看的时候遇到一个问题，对于下面这个指令，使用`GetOpnd(ea, 0)`和`GetDisasm(ea)`得到的结果不同，`GetOpnd(ea, 0)`按理应该得到`$t9`，可实际却得到`$ra`，很奇怪。因为这个原因，所以没找到getenv或者说函数调用。
+```
+jalr $t9 ; getenv
+
+GetOpnd(ea, 0) ：$ra
+GetDisasm(ea)：jalr    $t9 ; fopen
+```
+
+修改代码如下（get_block_info_mips函数 375行）：
+```python
+while ea != BADADDR and ea < block_end:
+        # print("Analysis: 0x%x" % (ea))
+        mnem = GetMnem(ea)
+        opnd0_name = GetOpnd(ea, 0)
+        ins = GetDisasm(ea)
+        call_mnems = ['jalr', 'jr', 'j', 'jal']
+        # if mnem in call_mnems and opnd0_name == '$t9':
+        if mnem in call_mnems and opnd0_name in ['$t9', '$ra']:
+            # print("Call: 0x%x %s" % (ea, ins))
+            # ins_list = ins.split(" ;")
+            ins_list = list(filter(None, re.split(r'[; \s]\s*', ins)))
+            # print(ins_list)
+            # if len(ins_list) >= 3 and ins_list[1] == opnd0_name:
+            if len(ins_list) >= 3 and ins_list[1] == '$t9':
+                func_name = ins_list[2]
+```
+
+这样生成出来的cfg.json就有getenv调用信息了。但是在执行的时候又遇到错误了。
+```bash
+4221768
+4220212
+{4221768: <Block 0x406b48 (0x406b48)>, 4221769: <Block 0x406b49->0x40614c (0x406b48)>, 4219212: <Block 0x40614c (0x406b48)>, 4219284: <Block 0x406194 (0x406b48)>, 4219308: <Block 0x4061ac (0x406b48)>, 4219276: <Block 0x40618c->0x40f560 (0x406b48)>, 4219300: <Block 0x4061a4->0x40f560 (0x406b48)>, 4221688: <Block 0x406af8->0x404b00 (0x406b48)>, 4221636: <Block 0x406ac4->free (0x406b48)>, 4221612: <Block 0x406aac->free (0x406b48)>, 4221584: <Block 0x406a90->free (0x406b48)>, 4221528: <Block 0x406a58->0x40e724 (0x406b48)>, 4221500: <Block 0x406a3c->0x40e724 (0x406b48)>, 4221472: <Block 0x406a20->free (0x406b48)>, 4219336: <Block 0x4061c8->getenv (0x406b48)>, 4219384: <Block 0x4061f8->strcasecmp (0x406b48)>, 4219740: <Block 0x40635c->0x40362c (0x406b48)>, 4219416: <Block 0x406218->0x403204 (0x406b48)>, 4219764: <Block 0x406374->0x405550 (0x406b48)>, 4219812: <Block 0x4063a4->0x405550 (0x406b48)>, 4220100: <Block 0x4064c4->getenv (0x406b48)>, 4220140: <Block 0x4064ec->0x405550 (0x406b48)>, 4220192: <Block 0x406520->0x4088d4 (0x406b48)>, 4220264: <Block 0x406568->0x408754 (0x406b48)>, 4220292: <Block 0x406584->fopen (0x406b48)>, 4221432: <Block 0x4069f8->free (0x406b48)>, 4220328: <Block 0x4065a8->fgets (0x406b48)>, 4220416: <Block 0x406600->fclose (0x406b48)>, 4220440: <Block 0x406618->0x402768 (0x406b48)>, 4220636: <Block 0x4066dc->stat (0x406b48)>, 4220992: <Block 0x406840->0x406024 (0x406b48)>, 4221016: <Block 0x406858->0x40e1cc (0x406b48)>, 4221060: <Block 0x406884->0x4048b8 (0x406b48)>, 4220668: <Block 0x4066fc->open (0x406b48)>, 4220700: <Block 0x40671c->lockf (0x406b48)>, 4220944: <Block 0x406810->close (0x406b48)>, 4220972: <Block 0x40682c->unlink (0x406b48)>, 4220728: <Block 0x406738->0x40e6b8 (0x406b48)>, 4220740: <Block 0x406744->0x4055f8 (0x406b48)>, 4220752: <Block 0x406750->0x406024 (0x406b48)>, 4220796: <Block 0x40677c->0x40e1cc (0x406b48)>, 4220820: <Block 0x406794->0x40e1cc (0x406b48)>, 4220856: <Block 0x4067b8->0x4048b8 (0x406b48)>, 4220896: <Block 0x4067e0->sprintf (0x406b48)>, 4220920: <Block 0x4067f8->0x40d6d0 (0x406b48)>, 4221084: <Block 0x40689c->0x40e6b8 (0x406b48)>, 4221108: <Block 0x4068b4->system (0x406b48)>, 4221132: <Block 0x4068cc->fopen (0x406b48)>, 4221192: <Block 0x406908->0x40362c (0x406b48)>, 4221400: <Block 0x4069d8->fclose (0x406b48)>, 4221160: <Block 0x4068e8->stat (0x406b48)>, 4221228: <Block 0x40692c->puts (0x406b48)>, 4221252: <Block 0x406944->puts (0x406b48)>, 4221280: <Block 0x406960->printf (0x406b48)>, 4221304: <Block 0x406978->printf (0x406b48)>, 4221332: <Block 0x406994->fgetc (0x406b48)>, 4221356: <Block 0x4069ac->fputc (0x406b48)>, 4220492: <Block 0x40664c->0x40e6b8 (0x406b48)>, 4220504: <Block 0x406658->0x4055f8 (0x406b48)>, 4220516: <Block 0x406664->0x406024 (0x406b48)>, 4220560: <Block 0x406690->0x40e1cc (0x406b48)>, 4220584: <Block 0x4066a8->0x40e1cc (0x406b48)>, 4220388: <Block 0x4065e4->0x4048b8 (0x406b48)>, 4220168: <Block 0x406508->atoi (0x406b48)>, 4219844: <Block 0x4063c4->0x40e8f0 (0x406b48)>, 4219868: <Block 0x4063dc->getenv (0x406b48)>, 4219892: <Block 0x4063f4->0x40e8f0 (0x406b48)>, 4219916: <Block 0x40640c->getenv (0x406b48)>, 4219940: <Block 0x406424->strcasecmp (0x406b48)>, 4220040: <Block 0x406488->0x40eb08 (0x406b48)>, 4220064: <Block 0x4064a0->0x40e8f0 (0x406b48)>, 4219968: <Block 0x406440->0x40eb08 (0x406b48)>, 4219992: <Block 0x406458->getenv (0x406b48)>, 4220016: <Block 0x406470->0x40e8f0 (0x406b48)>, 4219796: <Block 0x406394->strcasecmp (0x406b48)>, 4219708: <Block 0x40633c->0x40362c (0x406b48)>, 4219452: <Block 0x40623c->0x405550 (0x406b48)>, 4219580: <Block 0x4062bc->getenv (0x406b48)>, 4219604: <Block 0x4062d4->atoi (0x406b48)>, 4219632: <Block 0x4062f0->sprintf (0x406b48)>, 4219660: <Block 0x40630c->sprintf (0x406b48)>, 4219472: <Block 0x406250->0x406024 (0x406b48)>, 4219496: <Block 0x406268->0x40e1cc (0x406b48)>, 4219540: <Block 0x406294->0x4048b8 (0x406b48)>}
+Traceback (most recent call last):
+  File "main.py", line 811, in <module>
+    main()
+  File "main.py", line 797, in main
+    perform_analysis(args.binary_file,
+  File "main.py", line 692, in perform_analysis
+    FastSearch(proj, binary_parser, ida_object, accurate_dataflow, fast_dataflow, collector,
+  File "/work/EmTaint/dataflow/data_trace.py", line 159, in __init__
+    self._analyze()
+  File "/work/EmTaint/dataflow/data_trace.py", line 396, in _analyze
+    self._analyze_binary(do_recursive_call=True)
+  File "/work/EmTaint/dataflow/data_trace.py", line 524, in _analyze_binary
+    self._execute_function(function, execute_flag=0x1)
+  File "/work/EmTaint/dataflow/data_trace.py", line 620, in _execute_function
+    self._push_callee_exprs_to_callsite(function)
+  File "/work/EmTaint/dataflow/data_trace.py", line 2344, in _push_callee_exprs_to_callsite
+    self._push_callee_arg_exprs_to_callsite(function)
+  File "/work/EmTaint/dataflow/data_trace.py", line 2371, in _push_callee_arg_exprs_to_callsite
+    self._pre_process_function(pre_function)
+  File "/work/EmTaint/dataflow/data_trace.py", line 3567, in _pre_process_function
+    self._pre_process_function_vex(function)
+  File "/work/EmTaint/dataflow/data_trace.py", line 741, in _pre_process_function_vex
+    backward_trace_variable_type(function, block)
+  File "/work/EmTaint/dataflow/variable_type.py", line 545, in backward_trace_variable_type
+    curr_block = cfg.get_node_by_addr(def_loc.block_addr) if def_loc.block_addr != block.addr else block
+  File "/work/EmTaint/dataflow/generate_cfg.py", line 35, in get_node_by_addr
+    return self._nodes[addr]
+KeyError: 4220212
+
+```
+
+1.cfg如何定义的（self.\_nodes）
+2.调用的地址如何获取的？
+
+cfg生成位于/work/EmTaint/dataflow/data_trace.py:3541
+```python
+cfg = FunctionCFG(funcea, self._ida_object, self.proj)
+cfg.generate_function_cfg(function, start_ida_blocks)
+function.cfg = cfg
+```
+
 ## IDA Pro脚本分析
 脚本main函数主要调用四个函数：
 ```python
@@ -138,8 +211,6 @@ recognise_functions_v2(functions)是通过遍历.text节来恢复函数。
 get_cfg_block_info()用于解析二进制并或偶去每个函数的cfg和块信息。
 
 ### get_cfg_block_info()
-
-
 
 
 
