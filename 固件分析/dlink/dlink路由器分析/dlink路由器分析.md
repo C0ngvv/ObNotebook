@@ -84,3 +84,10 @@ Cookie: uid=m0hsAU1zNU
 
 经查找发现存在/usr/sbin/xmldb程序，将其拖入IDA进行分析。拖进来后没分析出什么结果，也有跟上面一样的代码。
 
+发现出了上面的程序外还有/usr/sbin/xmldbc程序，而该程序是上面xmldb程序的软连接。
+
+
+
+## 启动分析
+首先etc/init.d/rcS，该脚本依次执行init.d目录下脚本，最终执行etc/init0.d/rcS脚本。init0.d/rcS主要执行/etc/scripts/dbload.sh脚本从数据库中加载配置信息，然后遍历/etc/init0.d/S??下脚本，依次执行start命令。
+
