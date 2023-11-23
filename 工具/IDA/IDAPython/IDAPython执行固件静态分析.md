@@ -809,4 +809,15 @@ Netgear
 ```
 
 ![](images/Pasted%20image%2020231121160048.png)
+
+## 基于某函数提取相关的字符串
+类似于`getenv("REQUEST_METHOD")`，某个handle函数内，getenv()函数获取的变量值的字符串"REQUEST_METHOD"。
+
+```
+
+```
+
+
+
+
 ## end

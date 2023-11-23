@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "41ad7924ef4ca9fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md"
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md"
               }
             }
           },
@@ -182,8 +195,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "84a2c18ab6fff571",
+  "active": "41ad7924ef4ca9fa",
   "lastOpenFiles": [
+    "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
     "工具/EmTaint/EmTaint工具分析/images/Pasted image 20231123105157.png",
     "工具/EmTaint/EmTaint工具分析/images",
     "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
@@ -212,7 +226,7 @@
     "Pwn/MIPS/mips汇编",
     "Pwn/MIPS",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
-    "工具/IDA/IDAPython/IDAPython.md",
+    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "工具/IDA/IDAPython/images/Pasted image 20231121160048.png",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "工具/IDA/IDAPython/images/Pasted image 20231121100946.png",
@@ -224,7 +238,6 @@
     "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
     "Pwn/HWS/pwn3-inverse/inverse writeup.md",
-    "Pwn/HWS/pwn3-inverse/images/Pasted image 20231118155900.png",
     "Pwn/HWS/pwn3-inverse/images",
     "Pwn/x64栈溢出/x64栈溢出.md",
     "Pwn/ROP实验/ROP实验.md",
