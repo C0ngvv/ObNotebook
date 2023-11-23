@@ -294,3 +294,13 @@ get_cfg_block_info()用于解析二进制并或偶去每个函数的cfg和块信
 	}
 }
 ```
+
+
+## 漏洞分析
+在web目录下建立cgibin的软连接soap.cgi
+```
+ln -s /htdocs/cgibin soap.cgi
+```
+
+创建var/run目录
+
