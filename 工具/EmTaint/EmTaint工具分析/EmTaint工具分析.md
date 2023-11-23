@@ -131,6 +131,15 @@ Result-statistics-path: /work/dataflow/data/basic_alias_result_new.json
 
 get_all_functions()主要是遍历所有段并分析其中的函数，加入funcs集合中。
 
+recognise_functions(functions)是通过交叉引用读取.data节恢复函数。
+
+recognise_functions_v2(functions)是通过遍历.text节来恢复函数。
+
+get_cfg_block_info()用于解析二进制并或偶去每个函数的cfg和块信息。
+
+### get_cfg_block_info()
+
+
 
 
 
