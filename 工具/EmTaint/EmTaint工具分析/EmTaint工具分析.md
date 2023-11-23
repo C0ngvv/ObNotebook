@@ -10,7 +10,11 @@ cd /work
 workon EmTaint
 ```
 
+### 使用
+运行一个新的固件方法。
 
+1.使用binwalk从固件中提取分析的二进制文件
+2.使用IDA pro脚本提取二进制信息
 
 
 ## /data/ida_data/router/文件分析
