@@ -1,3 +1,4 @@
+## 页面请求分析
 通过FirmAE对路由器进行仿真，然后使用burpsuite进行抓包，发现dlink的请求都为/HNAP1，而请求数据为xml格式。
 
 ```xml
@@ -69,4 +70,17 @@ Cookie: uid=m0hsAU1zNU
 而`/usr/sbin/hnap`实际上是`htdocs/cgibin`程序的软连接，即所有的http请求由cgibin处理。
 
 ![](images/Pasted%20image%2020231122213647.png)
+
+在dir815路由器中，GET页面请求的为php文件，POST页面请求的为/hedwig.cgi。
+
+## xmldb分析
+在dlink路由器中，有很多xmldbc操作。“`xmldbc` 是一种基于 XML 的数据格式，用于描述和存储设备的配置信息和操作指令。”
+
+![](images/Pasted%20image%2020231123232858.png)
+
+在xmldbc_set中，有如下操作。会建立unix套接字，连接/var/run/xmldb_sock，然后通过send等方法发送数据。
+
+![](images/Pasted%20image%2020231123233357.png)
+
+经查找发现存在/usr/sbin/xmldb程序，将其拖入IDA进行分析。
 

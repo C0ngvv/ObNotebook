@@ -55,7 +55,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -138,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
+                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -155,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
+                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md"
+                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md"
               }
             }
           },
@@ -218,11 +219,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "84a2c18ab6fff571",
+  "active": "133c93feb3e2f90f",
   "lastOpenFiles": [
+    "固件分析/dlink/dlink路由器分析/images/Pasted image 20231123233357.png",
+    "固件分析/dlink/dlink路由器分析/images/Pasted image 20231123232858.png",
+    "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
     "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
     "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
-    "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "工具/EmTaint/EmTaint工具分析/images/Pasted image 20231123105157.png",
     "工具/EmTaint/EmTaint工具分析/images",
@@ -254,7 +257,6 @@
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "工具/IDA/IDAPython/images/Pasted image 20231121100946.png",
     "工具/IDA/IDAPython/images/Pasted image 20231121095935.png",
-    "工具/IDA/IDAPython/images/Pasted image 20231120221155.png",
     "工具/IDA/IDAPython/images",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
     "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
@@ -264,7 +266,6 @@
     "Pwn/HWS/pwn3-inverse/images",
     "Pwn/x64栈溢出/x64栈溢出.md",
     "Pwn/ROP实验/ROP实验.md",
-    "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
-    "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md"
+    "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md"
   ]
 }
