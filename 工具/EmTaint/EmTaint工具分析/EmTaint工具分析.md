@@ -82,7 +82,7 @@ Start-filter-fake-source
 Result-statistics-path: /work/dataflow/data/basic_alias_result_new.json
 ```
 
-最后的结果生成/work/data/result_data/dir815_v1.01.json和/work/dataflow/data/basic_alias_result_new.json两个文件，但分析的这个它似乎没有分析出来任何结果，不知道是不是因为没有recv()。
+最后的结果生成/work/data/result_data/dir815_v1.01.json和/work/dataflow/data/basic_alias_result_new.json两个文件，但分析的这个它似乎没有分析出来任何结果。
 ```
 {
     "taint_1": {
@@ -116,6 +116,22 @@ Result-statistics-path: /work/dataflow/data/basic_alias_result_new.json
     "param_cons": {}
 }
 ```
+
+## 问题分析
+后来发现应该是IDA Pro脚本分析的时候，分析结果有问题，我在其分析结果中没有找到getenv。
+
+## IDA Pro脚本分析
+脚本main函数主要调用四个函数：
+```python
+    functions = get_all_functions()
+    recognise_functions(functions)
+    recognise_functions_v2(functions)
+    get_cfg_block_info()
+```
+
+get_all_functions()主要是遍历所有段并分析其中的函数，加入funcs集合中。
+
+
 
 
 ## /data/ida_data/router/文件分析

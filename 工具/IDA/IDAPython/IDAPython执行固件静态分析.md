@@ -813,11 +813,42 @@ Netgear
 ## 基于某函数提取相关的字符串
 类似于`getenv("REQUEST_METHOD")`，某个handle函数内，getenv()函数获取的变量值的字符串"REQUEST_METHOD"。
 
+下面提取getenv()的所有参数字符串，和strcmp-like的字符串。
+
+```python
+import FIDL.decompiler_utils as du
+
+func_addr = 0x409480
+strcmp_func_list = ['sobj_strcmp', 'strcasecmp']
+
+env_records = set()
+has_analyze_func = set()
+str_records = set()
+
+def extract_in_func(func_addr):
+    has_analyze_func.add(hex(func_addr))
+    # func_name = idc.get_func_name(func_addr)
+    # print("analysis on func {}".format(func_name))
+    cf = du.controlFlowinator(ea=func_addr, fast=False)
+    for cf_call in cf.calls:
+        if cf_call.name == 'getenv':
+            env_records.add(cf_call.args[0].val)
+            # print(cf_call)
+            continue
+        if idc.SegName(cf_call.call_ea) == '.text' and hex(cf_call.call_ea) not in has_analyze_func:
+            extract_in_func(cf_call.call_ea)
+        if cf_call.name in strcmp_func_list:
+            str_records.add(cf_call.args[1].val)
+
+extract_in_func(func_addr)
+print(env_records)    
+print(str_records)
 ```
 
 ```
-
-
+{'REQUEST_METHOD', 'HTTP_COOKIE', 'REMOTE_ADDR', 'CONTENT_LENGTH', 'REQUEST_URI', 'CONTENT_TYPE'}
+{'POST', 'uid'}
+```
 
 
 ## end
