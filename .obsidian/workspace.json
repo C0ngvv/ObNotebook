@@ -20,6 +20,30 @@
             }
           },
           {
+            "id": "133c93feb3e2f90f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8f82168c4fa137fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "41ad7924ef4ca9fa",
             "type": "leaf",
             "state": {
@@ -196,15 +220,15 @@
   },
   "active": "84a2c18ab6fff571",
   "lastOpenFiles": [
-    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+    "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
+    "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
     "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
+    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "工具/EmTaint/EmTaint工具分析/images/Pasted image 20231123105157.png",
     "工具/EmTaint/EmTaint工具分析/images",
-    "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231122213647.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231122213357.png",
     "固件分析/dlink/dlink路由器分析/images",
-    "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
     "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122211354.png",
     "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122211145.png",
     "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122210239.png",
