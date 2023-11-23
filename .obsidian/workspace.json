@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md"
+                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md"
               }
             }
           },
@@ -184,11 +184,11 @@
   },
   "active": "84a2c18ab6fff571",
   "lastOpenFiles": [
+    "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231122213647.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231122213357.png",
     "固件分析/dlink/dlink路由器分析/images",
     "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
-    "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
     "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122211354.png",
     "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122211145.png",
     "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122210239.png",
@@ -223,7 +223,6 @@
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
     "Pwn/HWS/pwn3-inverse/inverse writeup.md",
     "Pwn/HWS/pwn3-inverse/images/Pasted image 20231118155900.png",
-    "Pwn/HWS/pwn3-inverse/images/Pasted image 20231118153422.png",
     "Pwn/HWS/pwn3-inverse/images",
     "Pwn/x64栈溢出/x64栈溢出.md",
     "Pwn/HWS/pwn3-inverse",

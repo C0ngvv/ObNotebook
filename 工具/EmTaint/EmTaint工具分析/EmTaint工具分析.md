@@ -1,3 +1,17 @@
+## 使用方法
+### 环境安装
+其中EmTaint.tar.gz位于其上传的谷歌云中。
+```
+docker pull doneme123/emtaint:v1.1
+tar -zxvf EmTaint.tar.gz
+cd EmTaint
+docker run -ti --rm -v `pwd`:/work doneme123/emtaint:v1.1
+cd /work
+workon EmTaint
+```
+
+
+
 
 ## /data/ida_data/router/文件分析
 ### httpd_block_info.json
