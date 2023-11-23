@@ -184,6 +184,8 @@
   },
   "active": "84a2c18ab6fff571",
   "lastOpenFiles": [
+    "工具/EmTaint/EmTaint工具分析/images/Pasted image 20231123105157.png",
+    "工具/EmTaint/EmTaint工具分析/images",
     "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231122213647.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231122213357.png",
@@ -225,7 +227,6 @@
     "Pwn/HWS/pwn3-inverse/images/Pasted image 20231118155900.png",
     "Pwn/HWS/pwn3-inverse/images",
     "Pwn/x64栈溢出/x64栈溢出.md",
-    "Pwn/HWS/pwn3-inverse",
     "Pwn/ROP实验/ROP实验.md",
     "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md",
     "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md"
