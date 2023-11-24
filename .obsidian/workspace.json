@@ -4,71 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "309b1e90131d9fe0",
+        "id": "4720adfd5ca84c15",
         "type": "tabs",
         "children": [
           {
-            "id": "84a2c18ab6fff571",
+            "id": "f1576ae18c0f9478",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "133c93feb3e2f90f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "610d74e6b0fd4f67",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8f82168c4fa137fa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "41ad7924ef4ca9fa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -151,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -190,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md"
-              }
+              "state": {}
             }
           },
           {
@@ -231,15 +174,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "610d74e6b0fd4f67",
+  "active": "f1576ae18c0f9478",
   "lastOpenFiles": [
+    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+    "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
+    "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+    "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
     "固件分析/dlink/dir815命令注入分析/images/Pasted image 20231124155348.png",
     "固件分析/dlink/dir815命令注入分析/images/Pasted image 20231124153919.png",
     "固件分析/dlink/dir815命令注入分析/images/Pasted image 20231124152759.png",
     "固件分析/dlink/dir815命令注入分析/images",
-    "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
-    "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
-    "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
     "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
     "固件分析/dlink/dir815命令注入分析/未命名",
     "固件分析/dlink/dir815命令注入分析",
@@ -255,8 +199,6 @@
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124085349.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231123233357.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231123232858.png",
-    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
-    "工具/EmTaint/EmTaint工具分析/images/Pasted image 20231123105157.png",
     "工具/EmTaint/EmTaint工具分析/images",
     "固件分析/dlink/dlink路由器分析/images",
     "固件分析/dlink/dir815漏洞复现/images",
