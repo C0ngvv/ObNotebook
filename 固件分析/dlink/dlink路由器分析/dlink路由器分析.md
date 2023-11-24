@@ -88,10 +88,15 @@ Cookie: uid=m0hsAU1zNU
 
 ![](images/Pasted%20image%2020231124085349.png) 
 
-进入后进行一些设置操作，然后
+进入后进行一些设置操作，然后最主要的是调用了sub_4023A0()。
 
 ![](images/Pasted%20image%2020231124090021.png)
 
+在sub_4023A0()中的主要代码如下，这段代码主要就是创建套接字监听。其中name为全局遍历，表示/var/run/xmldb_sock，首先创建这个文件，然后建立unix类型socket，bind绑定该文件，然后开启listen。
+
+Unix socket不经过网络传输，用于同一主机不同进程间通信，其与网络socket使用上无区别，只是在绑定服务器标识时，网络socket使用IP和端口号，而Unix socket使用文件路径名标识，即/var/run/xmldb_sock。
+
+![](images/Pasted%20image%2020231124091017.png)
 
 
 ## 启动分析
