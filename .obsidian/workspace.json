@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "固件分析/网络编程操作/网络编程操作/网络编程操作.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "固件分析/网络编程操作/网络编程操作/网络编程操作.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "固件分析/网络编程操作/网络编程操作/网络编程操作.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md"
+                "file": "固件分析/网络编程操作/网络编程操作/网络编程操作.md"
               }
             }
           },
@@ -221,6 +221,11 @@
   },
   "active": "133c93feb3e2f90f",
   "lastOpenFiles": [
+    "固件分析/串口连接/串口连接.md",
+    "固件分析/网络编程操作/网络编程操作/网络编程操作.md",
+    "固件分析/网络编程操作/网络编程操作",
+    "固件分析/网络编程操作",
+    "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124093113.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124091017.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124090021.png",
@@ -229,7 +234,6 @@
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231123232858.png",
     "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
     "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
-    "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "工具/EmTaint/EmTaint工具分析/images/Pasted image 20231123105157.png",
     "工具/EmTaint/EmTaint工具分析/images",
@@ -237,7 +241,6 @@
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231122213357.png",
     "固件分析/dlink/dlink路由器分析/images",
     "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122211354.png",
-    "固件分析/dlink/dir815漏洞复现/images/Pasted image 20231122211145.png",
     "固件分析/dlink/dir815漏洞复现/images",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "Pwn/MIPS/mips汇编/mips汇编.md",
@@ -257,15 +260,12 @@
     "Pwn/MIPS",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
-    "工具/IDA/IDAPython/images",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
     "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
     "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
     "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
     "Pwn/HWS/pwn3-inverse/inverse writeup.md",
-    "Pwn/HWS/pwn3-inverse/images",
     "Pwn/x64栈溢出/x64栈溢出.md",
-    "Pwn/ROP实验/ROP实验.md",
-    "文章阅读/Fuzzing socket-Apache Http/Fuzzing socket-Apache Http.md"
+    "Pwn/ROP实验/ROP实验.md"
   ]
 }
