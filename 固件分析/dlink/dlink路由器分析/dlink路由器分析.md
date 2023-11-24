@@ -84,7 +84,7 @@ Cookie: uid=m0hsAU1zNU
 
 经查找发现存在/usr/sbin/xmldb程序，将其拖入IDA进行分析。拖进来后没分析出什么结果，也有跟上面一样的代码。
 
-发现出了上面的程序外还有/usr/sbin/xmldbc程序，而该程序是上面xmldb程序的软连接。
+发现出了上面的程序外还有/usr/sbin/xmldbc程序，而该程序是上面xmldb程序的软连接。但是还是没搞懂/xmldb_sock是怎么弄的。
 
 
 
