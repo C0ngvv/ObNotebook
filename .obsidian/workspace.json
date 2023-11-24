@@ -32,12 +32,24 @@
             }
           },
           {
+            "id": "610d74e6b0fd4f67",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "8f82168c4fa137fa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
+                "file": "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -139,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+                "file": "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/dlink/dlink路由器分析/dlink路由器分析.md"
+                "file": "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md"
               }
             }
           },
@@ -219,10 +231,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "187d4ecd31b81bf7",
+  "active": "610d74e6b0fd4f67",
   "lastOpenFiles": [
-    "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
+    "固件分析/dlink/dir815命令注入分析/images/Pasted image 20231124153919.png",
+    "固件分析/dlink/dir815命令注入分析/images/Pasted image 20231124152759.png",
+    "固件分析/dlink/dir815命令注入分析/images",
+    "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
+    "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
     "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
+    "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
+    "固件分析/dlink/dir815命令注入分析/未命名",
+    "固件分析/dlink/dir815命令注入分析",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124105022.png",
     "固件分析/网络编程操作/网络编程操作/网络编程操作.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
@@ -235,12 +254,10 @@
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124085349.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231123233357.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231123232858.png",
-    "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "工具/EmTaint/EmTaint工具分析/images/Pasted image 20231123105157.png",
     "工具/EmTaint/EmTaint工具分析/images",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231122213647.png",
-    "固件分析/dlink/dlink路由器分析/images/Pasted image 20231122213357.png",
     "固件分析/dlink/dlink路由器分析/images",
     "固件分析/dlink/dir815漏洞复现/images",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
@@ -251,20 +268,16 @@
     "固件分析/dlink/dir815漏洞复现",
     "环境配置/疑难杂症/疑难杂症.md",
     "固件分析/dlink/dlink路由器分析",
-    "固件分析/dlink",
     "环境配置/Download网络问题.md",
     "环境配置/linux/linux.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
-    "Pwn/MIPS/mips汇编",
-    "Pwn/MIPS",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
     "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
     "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
     "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
-    "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
-    "Pwn/HWS/pwn3-inverse/inverse writeup.md"
+    "工具/Qiling/Qiling fuzz/Qiling Fuzz.md"
   ]
 }
