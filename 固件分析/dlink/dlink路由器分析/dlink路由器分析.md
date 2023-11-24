@@ -102,6 +102,11 @@ Unix socket不经过网络传输，用于同一主机不同进程间通信，其
 
 ![](images/Pasted%20image%2020231124093113.png)
 
+grep寻找启动命令
+```
+./etc/init.d/S20init.sh:xmldb -n $image_sign -t > /dev/console &
+```
+
 
 ## 启动分析
 首先etc/init.d/rcS，该脚本依次执行init.d目录下脚本，最终执行etc/init0.d/rcS脚本。init0.d/rcS主要执行/etc/scripts/dbload.sh脚本从数据库中加载配置信息，然后遍历/etc/init0.d/S??下脚本，依次执行start命令。
