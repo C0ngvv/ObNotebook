@@ -82,9 +82,15 @@ Cookie: uid=m0hsAU1zNU
 
 ![](images/Pasted%20image%2020231123233357.png)
 
-经查找发现存在/usr/sbin/xmldb程序，将其拖入IDA进行分析。拖进来后没分析出什么结果，也有跟上面一样的代码。
+经查找发现存在/usr/sbin/xmldb程序，还有/usr/sbin/xmldbc程序，而该程序是上面xmldb程序的软连接。将其拖入IDA进行分析。
 
-发现出了上面的程序外还有/usr/sbin/xmldbc程序，而该程序是上面xmldb程序的软连接。但是还是没搞懂/xmldb_sock是怎么弄的。
+在main方法中，根据调用的程序名有两个处理，当文件名为xmldbc时调用xmldbc_main，而当文件名为xmldb时调用xmldb_main。而关于/var/run/xmldb_sock的启动就在xmldb_main中。
+
+![](images/Pasted%20image%2020231124085349.png) 
+
+进入后进行一些设置操作，然后
+
+![](images/Pasted%20image%2020231124090021.png)
 
 
 
