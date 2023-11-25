@@ -11,8 +11,12 @@
             "id": "f1576ae18c0f9478",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "环境配置/Download网络问题.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -98,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "环境配置/Download网络问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "环境配置/Download网络问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +141,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "环境配置/Download网络问题.md"
+              }
             }
           },
           {
@@ -176,6 +184,14 @@
   },
   "active": "f1576ae18c0f9478",
   "lastOpenFiles": [
+    "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
+    "杂项/hexo静态博客搭建简记/images/Pasted image 20231125204400.png",
+    "杂项/hexo静态博客搭建简记/images",
+    "环境配置/Download网络问题.md",
+    "杂项/hexo静态博客搭建简记",
+    "杂项",
+    "随笔/20230918/20230919.md",
+    "随笔/20230922/20230922.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
     "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
@@ -198,28 +214,20 @@
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124090021.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124085349.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231123233357.png",
-    "固件分析/dlink/dlink路由器分析/images/Pasted image 20231123232858.png",
     "工具/EmTaint/EmTaint工具分析/images",
     "固件分析/dlink/dlink路由器分析/images",
-    "固件分析/dlink/dir815漏洞复现/images",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "Pwn/MIPS/mips汇编/mips汇编.md",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
-    "固件分析/dlink/dir815漏洞复现",
     "环境配置/疑难杂症/疑难杂症.md",
-    "固件分析/dlink/dlink路由器分析",
-    "环境配置/Download网络问题.md",
     "环境配置/linux/linux.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
     "Paper/Jetset-Targeted Firmware Rehosting for Embedded Systems/Jetset-Targeted Firmware Rehosting for Embedded Systems.md",
     "工具/Greenhouse/Greenhouse源码分析/Greenhouse源码分析.md",
-    "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md",
-    "工具/Pyppeteer/pyppeteer安装和使用/pyppeteer安装和使用.md",
-    "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
-    "工具/Qiling/Qiling fuzz/Qiling Fuzz.md"
+    "工具/Pyppeteer/pyppeteer爬取路由器请求/Pyppeteer.md"
   ]
 }
