@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
+                "file": "环境配置/Download网络问题.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
+                "file": "环境配置/Download网络问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
+                "file": "环境配置/Download网络问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md"
+                "file": "环境配置/Download网络问题.md"
               }
             }
           },
@@ -184,9 +184,9 @@
   },
   "active": "f1576ae18c0f9478",
   "lastOpenFiles": [
+    "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
     "Templates/博客模板.md",
     "Templates/未命名.md",
-    "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
     "Templates",
     "随笔/模板",
     "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记/image-20231125211206775.png",

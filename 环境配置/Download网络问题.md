@@ -111,3 +111,13 @@ RUN sed -i 's/security.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 
 参考：[如何在dockerfile中将apt-get源更换为中国国内源](https://www.cnblogs.com/chentiao/p/17352748.html)
 
+## hexo d部署问题
+hexo d进行部署时报无法访问错误，需要设置代理：
+```
+# set proxy
+git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy https://127.0.0.1:7890
+# unset proxy
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
