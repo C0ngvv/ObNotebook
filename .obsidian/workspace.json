@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "环境配置/Download网络问题.md",
+                "file": "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "环境配置/Download网络问题.md",
+                "file": "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "环境配置/Download网络问题.md",
+                "file": "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "环境配置/Download网络问题.md"
+                "file": "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md"
               }
             }
           },
@@ -185,9 +185,12 @@
   "active": "f1576ae18c0f9478",
   "lastOpenFiles": [
     "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
+    "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记/image-20231125211206775.png",
+    "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记/image-20231125210814360.png",
+    "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记",
     "杂项/hexo静态博客搭建简记/images/Pasted image 20231125204400.png",
-    "杂项/hexo静态博客搭建简记/images",
     "环境配置/Download网络问题.md",
+    "杂项/hexo静态博客搭建简记/images",
     "杂项/hexo静态博客搭建简记",
     "杂项",
     "随笔/20230918/20230919.md",
@@ -212,10 +215,7 @@
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124093113.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124091017.png",
     "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124090021.png",
-    "固件分析/dlink/dlink路由器分析/images/Pasted image 20231124085349.png",
-    "固件分析/dlink/dlink路由器分析/images/Pasted image 20231123233357.png",
     "工具/EmTaint/EmTaint工具分析/images",
-    "固件分析/dlink/dlink路由器分析/images",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "Pwn/MIPS/mips汇编/mips汇编.md",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
