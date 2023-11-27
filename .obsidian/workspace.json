@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "4720adfd5ca84c15",
+        "id": "f6097f4a01182b47",
         "type": "tabs",
         "children": [
           {
-            "id": "f1576ae18c0f9478",
+            "id": "defed32fa101c21e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "环境配置/Download网络问题.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -102,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "环境配置/Download网络问题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "环境配置/Download网络问题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "环境配置/Download网络问题.md"
-              }
+              "state": {}
             }
           },
           {
@@ -182,8 +174,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f1576ae18c0f9478",
+  "active": "defed32fa101c21e",
   "lastOpenFiles": [
+    "环境配置/Download网络问题.md",
     "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
     "Templates/博客模板.md",
     "Templates/未命名.md",
@@ -193,7 +186,6 @@
     "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记/image-20231125210814360.png",
     "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记",
     "杂项/hexo静态博客搭建简记/images/Pasted image 20231125204400.png",
-    "环境配置/Download网络问题.md",
     "杂项/hexo静态博客搭建简记/images",
     "杂项/hexo静态博客搭建简记",
     "杂项",
