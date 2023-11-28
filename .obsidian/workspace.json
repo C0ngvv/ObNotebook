@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f6097f4a01182b47",
+        "id": "b4229c25b3e092dc",
         "type": "tabs",
         "children": [
           {
-            "id": "defed32fa101c21e",
+            "id": "accf28f0c2c89856",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -102,7 +98,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +114,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -141,9 +135,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces.md"
-              }
+              "state": {}
             }
           },
           {
@@ -182,8 +174,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "defed32fa101c21e",
+  "active": "accf28f0c2c89856",
   "lastOpenFiles": [
+    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces.md",
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231128093341585.png",
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231128093009402.png",
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231128092504692.png",
@@ -194,10 +187,8 @@
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231127205108210.png",
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231127151507843.png",
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231127150916538.png",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231127150817020.png",
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces",
     "Templates/博客模板.md",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces.md",
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces",
     "环境配置/Download网络问题.md",
     "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
