@@ -1,7 +1,16 @@
-Workshop on NDSS Binary Analysis Research (BAR) 2018
+---
+title: "论文：Avatar2: A Multi-target Orchestration Platform"
+date: 2023/9/18
+categories:
+  - 论文
+tags:
+  - 论文翻译
+---
+# Avatar2: A Multi-target Orchestration Platform
+发表于：Workshop on NDSS Binary Analysis Research (BAR) 2018
 
 一个框架用于将不同的二进制分析框架整合在一起协调工作，方便复现其他工作，基于Python
-# 翻译
+
 ## 摘要
 动态二进制分析技术在研究软件系统的安全性和检测各种设备和应用程序中的漏洞方面发挥着核心作用。在过去的十年中，各种不同的技术已经发布，通常伴随着原型工具的发布来证明它们的有效性。不幸的是，大多数这些技术的实现都与它们的动态分析框架紧密耦合在一起，并且不容易集成到其他框架中。这些框架的设计目的不是向其他组件公开其内部状态或结果。这使得分析人员无法将不同的工具组合在一起，利用它们的优势来解决需要结合复杂技术的复杂问题。碎片化和隔离是两个重要的问题，它们经常导致重复的工作，或者对同一个问题产生多个等效的解决方案——每个解决方案都基于不同的编程语言、抽象模型或执行环境。
 
@@ -68,7 +77,7 @@ Avatar[29]是一个用于嵌入式设备的动态二进制分析框架。本质�
 
 在抽象层次上，avatar2由四个不同的元素组成，如图1所示。avatar2的核心、目标和协议是python库(可在https://github.com/avatartwo/ avatar2上以开源形式获得)，而端点是由avatar2控制和连接的第三方软件(如其他分析框架、模拟器或与物理设备通信的解决方案)。
 
-![](images/Pasted%20image%2020230808093200.png)
+![](Avatar2-A%20Multi-target%20Orchestration%20Platform/Pasted%20image%2020230808093200.png)
 
 avatar2核心有三个目的:i)作为使用框架的分析人员的主要接口，ii)执行实际的编排和控制所有底层元素，以及iii)在与各自的端点通信时捕获、调度和响应由各种协议生成的事件。
 
@@ -125,9 +134,9 @@ HARVEY rootkit被设计为插入到Allen Bradley PLC的固件中。它修改了�
 
 虽然我们使用的PLC版本与原始版本略有不同，但我们能够使用avatar2和大约30行python(清单1)重现HARVEY的基本概念实现证明。图2显示了被HARVEY感染后的PLC:两个橙色led表示端口1和2上存在输入信号，尽管没有输入连接到PLC。
 
-![](images/Pasted%20image%2020230808100804.png)
+![](Avatar2-A%20Multi-target%20Orchestration%20Platform/Pasted%20image%2020230808100804.png)
 
-![](images/Pasted%20image%2020230808101131.png)
+![](Avatar2-A%20Multi-target%20Orchestration%20Platform/Pasted%20image%2020230808101131.png)
 
 这个例子提供了关于avatar2框架的一些有趣的见解。第12行加载汇编器插件，它添加了汇编和将代码注入内存的功能，如第24-28行所做的那样。然后配置目标器(L. 14-17)，并将其初始化为独立目标器(L. 18)。但是，HARVEY的挂钩不能立即插入，因为次要固件代码必须首先加载到SRAM中。因此，我们在这些初始化函数(L. 20)之后插入一个断点，在开始执行(L.21)之前，等待断点被命中(L. 22)。然后插入钩子(L. 24至L.28)并继续执行(L. 30)。
 
@@ -160,7 +169,7 @@ HARVEY rootkit被设计为插入到Allen Bradley PLC的固件中。它修改了�
 
 相应的avatar2脚本如清单2所示，它有两个值得注意的地方。第3-12行负责avatar2和目标的常规设置。请注意，这次加载了编排插件，它允许以不同的方式控制目标的执行，如前面的示例所示。第14-18行定义了一个显式内存布局，包括由固件支持的ROM内存和内存映射I/O (MMIO)，它将使用avatar2的远程内存功能转发到物理设备。
 
-![](images/Pasted%20image%2020230808111942.png)
+![](Avatar2-A%20Multi-target%20Orchestration%20Platform/Pasted%20image%2020230808111942.png)
 
 在定义内存之后，将初始化目标(第20行)，并设置实际的业务流程:第22行定义将首先使用哪个目标执行。第23行添加了转换，其中avatar2将执行从一个目标切换到另一个目标，同时同步synced_ranges参数指定的寄存器和内存范围。在这种情况下，只需要同步RAM范围，因为在此分析中，RAM范围是唯一一个位于多个目标的动态内存。最后一个参数stop指示avatar2在此转换之后停止业务流程。这种状态转移的原因在于希望在设备本身上执行物理设备的初始化功能，因为它们对主固件的分析不感兴趣。
 
@@ -198,4 +207,7 @@ HARVEY rootkit被设计为插入到Allen Bradley PLC的固件中。它修改了�
 总而言之，我们相信avatar2可以极大地提高动态二进制分析的技术水平，因为现在不同工具的优势可以组合到单个分析场景中。
 
 ## Appendix A
-![](images/Pasted%20image%2020230808113812.png)
+![](Avatar2-A%20Multi-target%20Orchestration%20Platform/Pasted%20image%2020230808113812.png)
+
+![](Avatar2-A%20Multi-target%20Orchestration%20Platform/image-20231129102013905.png)
+

@@ -13,9 +13,21 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
+                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "a3a496c9e962d154",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Templates/博客模板.md",
+                "mode": "source",
+                "source": true
               }
             }
           }
@@ -102,7 +114,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
+                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +131,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
+                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +154,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md"
+                "file": "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md"
               }
             }
           },
@@ -184,22 +196,30 @@
   },
   "active": "accf28f0c2c89856",
   "lastOpenFiles": [
+    "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
+    "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md",
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols.md",
+    "Templates/博客模板.md",
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform/Pasted image 20230808113812.png",
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform/Pasted image 20230808111942.png",
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform/Pasted image 20230808101131.png",
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform/Pasted image 20230808100804.png",
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform/Pasted image 20230808093200.png",
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform/image-20231129102013905.png",
+    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform",
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols/Pasted image 20230920213828.png",
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols/Pasted image 20230920212942.png",
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols/Pasted image 20230920203709.png",
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols/Pasted image 20230920202559.png",
+    "AFLNET_A Greybox Fuzzer for Network Protocols/Pasted image 20230920212942.png.md",
+    "AFLNET_A Greybox Fuzzer for Network Protocols",
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/AFLNET_A Greybox Fuzzer for Network Protocols",
     "Paper/AFL++/AFL++.md",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces.md",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231128093341585.png",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231128093009402.png",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231128092504692.png",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231128091927330.png",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231128090947291.png",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231128085643321.png",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231127205118738.png",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231127205108210.png",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231127151507843.png",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces/image-20231127150916538.png",
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces/Fuzzing Embedded Systems Using Debug Interfaces",
-    "Templates/博客模板.md",
     "Paper/Fuzzing Embedded Systems Using Debug Interfaces",
     "环境配置/Download网络问题.md",
     "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记.md",
@@ -209,26 +229,18 @@
     "杂项/hexo静态博客搭建简记/Hexo静态博客搭建简记",
     "杂项/hexo静态博客搭建简记/images",
     "杂项/hexo静态博客搭建简记",
-    "杂项",
     "随笔/20230918/20230919.md",
     "随笔/20230922/20230922.md",
     "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
     "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
     "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
-    "固件分析/dlink/dir815命令注入分析/images",
     "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md",
-    "固件分析/dlink/dir815命令注入分析/未命名",
     "固件分析/网络编程操作/网络编程操作/网络编程操作.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
     "固件分析/串口连接/串口连接.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "Pwn/MIPS/mips汇编/mips汇编.md",
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
-    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
-    "环境配置/软件安装/ubuntu常用软件安装.md",
-    "环境配置/疑难杂症/疑难杂症.md",
-    "环境配置/linux/linux.md",
-    "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
-    "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md"
+    "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md"
   ]
 }

@@ -1,9 +1,15 @@
-# AFLNET: A Greybox Fuzzer for Network Protocols
-![](images/Pasted%20image%2020230920215612.png)
+---
+title: "论文：AFLNET: A Greybox Fuzzer for Network Protocols"
+date: 2023/9/20
+categories:
+  - 论文
+tags:
+  - 论文翻译
+---
+# 论文：AFLNET: A Greybox Fuzzer for Network Protocols
+发表于2020 IEEE 13th International Conference on Software Testing, Validation and Verification (ICST)
+![](AFLNET_A%20Greybox%20Fuzzer%20for%20Network%20Protocols/Pasted%20image%2020230920215612.png)
 
-2020 IEEE 13th International Conference on Software Testing, Validation and Verification (ICST)
-
-# 翻译
 ## 摘要
 服务器模糊测试很困难。与简单的命令行工具不同，服务器具有巨大的状态空间，只有使用定义良好的输入消息序列才能有效地遍历该状态空间。有效的序列在协议中指定。在本文中，我们提出了AFLNET，这是第一个用于协议实现的灰盒模糊器。与现有的协议模糊器不同，AFLNET采用突变方法并使用状态反馈来指导模糊过程。AFLNET以服务器和实际客户端之间记录的消息交换语料库作为种子，不需要协议规范或消息语法。AFLNET充当客户机，重播发送到服务器的原始消息序列的变体，并保留那些有效地增加代码或状态空间覆盖的变体。为了标识由消息序列执行的服务器状态，AFLNET使用服务器的响应代码。从这个反馈中，AFLNET识别状态空间中的渐进区域，并系统地转向这些区域。用AFLNET对两种流行的协议实现进行的案例研究表明，与最先进的技术相比，AFLNET的性能有了实质性的提升。AFLNET发现了两个新的CVE，它们被归类为临界(CVSS得分为Critical 9.8)。
 
@@ -16,7 +22,7 @@
 
 处理连接的文件会导致查找bug的效率低下和无效。首先，对于每次模糊迭代，需要对整个选定的种子文件进行突变。给定一个文件f，该文件是通过连接从m1到mn的消息序列构建的，CGF会变异整个文件f，并平等地对待所有消息。假设消息mi是最有趣的消息(例如，探索它会导致更高的代码覆盖率和潜在的错误)，CGF在处理mi之前重复将无兴趣的消息m1突变为mi-1，并且它没有关注mi的知识。其次，由于缺乏状态转换信息，CGF可能会产生许多无效的消息序列，这些消息序列很可能被SUT拒绝。事实上，AFL的用户非常清楚这些限制，因此他们向其开发者组发送了几个请求和问题[8]。图1显示了AFL用户请求有状态模糊测试支持的两个请求。
 
-![](images/Pasted%20image%2020230920200434.png)
+![](AFLNET_A%20Greybox%20Fuzzer%20for%20Network%20Protocols/Pasted%20image%2020230920200434.png)
 
 由于前面提到的CGF在有状态服务器模糊测试上的局限性，最流行的技术仍然是有状态黑盒模糊测试(SBF)。学术界(如Sulley、BooFuzz[4]、[9])和工业界(如Peach、beSTORM[3]、[10])都开发了一些SBF工具。这些工具以有限状态机或图的形式遍历给定的协议模型，并利用在这些状态上接受的消息的数据模型/语法来生成(语法上有效的)消息序列并对SUT进行压力测试。然而，它们的有效性在很大程度上取决于给定状态模型和数据模型的完整性，这些模型通常是基于开发人员对协议规范的理解和客户端与服务器之间捕获的网络流量样本手动编写的。这些手动提供的模型可能无法正确捕获SUT内部实现的协议。协议规范包含数百页的proseform文本。实现的开发人员可能会误解现有的状态或添加新的状态或转换。此外，像其他黑盒方法一样，SBF没有为进一步的模糊测试保留有趣的测试用例。更具体地说，即使SBF可以产生导致新的有趣状态的测试用例，这些状态还没有在它的状态模型中定义，SBF也不会为进一步的探索保留这些有价值的测试用例。它也不会在运行时更新状态模型。
 
@@ -31,18 +37,18 @@
 
 清单1显示了客户机和LightFTP[11]之间根据文件传输协议(FTP)进行的消息交换，LightFTP是一个实现FTP的服务器，也是我们评估的目标之一。从客户机发送的消息序列用红色突出显示。FTP指定客户端必须首先在服务器上验证自己，只有认证通过后，客户端才能发出其他命令(即传输参数命令和服务命令)。对于来自客户端的每个请求消息，FTP服务器用包含状态码的响应消息进行应答(例如，230\[login successful\] 或430\[invalid user/pass\])。响应中的状态码确保客户端请求得到确认，并通知客户端当前的服务器状态。
 
-![](images/Pasted%20image%2020230920202057.png)
+![](AFLNET_A%20Greybox%20Fuzzer%20for%20Network%20Protocols/Pasted%20image%2020230920202057.png)
 
 ## 3.工具设计与实现
 我们实现了我们的工具AFLNET作为流行和成功的灰盒模糊器AFL的扩展[1]，[12]。AFLNET的体系结构如图2所示。为了方便与服务器的通信，我们首先启用了套接字网络通信，这是普通AFL不支持的。AFLNET支持两个通道，一个用于发送，一个用于接收来自被测服务器的消息/响应。响应接收通道除了在所有CGF方法中实现的代码覆盖率反馈通道之外，还形成了状态反馈通道。AFLNET使用标准的C Socket API(即connect;poll;send和recv) 来实现此功能。为了确保AFLNET和测试服务器之间的适当同步，我们在请求之间添加了延迟。否则，有些服务器实现在发送和确认响应之前接收到新消息会断开连接。
 
-![](images/Pasted%20image%2020230920202559.png)
+![](AFLNET_A%20Greybox%20Fuzzer%20for%20Network%20Protocols/Pasted%20image%2020230920202559.png)
 
 AFLNET的输入是包含捕获的网络流量的pcap文件(例如，清单1所示的FTP客户机和FTP服务器之间的请求和响应)。要在pcap文件中记录客户机和服务器之间真实的消息交换，可以使用网络嗅探器(例如tcpdump)。可以使用包分析器提取相关的消息交换。例如，我们使用包分析器Wireshark自动提取FTP请求的序列。
 
 AFLNET使用它的请求序列解析器(Request Sequence Parser)组件来生成消息序列的初始语料库。AFLNET使用特定于协议的消息结构信息，以正确的顺序从捕获的网络流量中提取单个请求。它首先从pcap文件中过滤出响应，以获得客户机请求的trace。然后，它解析过滤的trace，以识别跟踪中每个消息的开始和结束。我们实现了一个轻量级方法，该方法查找给定协议中指定的消息的报头和结束符。例如，每个FTP消息都以一个有效的FTP命令(例如，USER、PASS)开始，并以后跟换行字符(例如，0x0D0A)的回车符结束。此外，SCGF与序列中的每个消息关联相应的服务器状态转换(参见图3)这是通过逐个发送消息和解析响应来完成的。
 
-![](images/Pasted%20image%2020230920203709.png)
+![](AFLNET_A%20Greybox%20Fuzzer%20for%20Network%20Protocols/Pasted%20image%2020230920203709.png)
 
 状态机学习器(State Machine Learner)接受服务器响应，并用新观察到的状态和转换增强已实现的协议状态机(IPSM)。AFLNET将服务器响应读入字节缓冲区，提取协议中指定的状态码，并确定执行状态(转换)。如果服务器响应中有新的状态码，则添加一个表示新状态的新图节点。
 
@@ -60,30 +66,30 @@ AFLNET提供了几个协议感知的突变操作符来修改候选子序列。�
 
 现在我们将演示AFLNET的所有这些组件如何协同工作来对LightFTP服务器模糊测试。假设AFLNET启动时只有一个包含网络流量的pcap文件，如清单1所示。首先，请求序列解析器解析pcap文件生成单个序列(如图3所示)，并将其保存到语料库C中。同时，状态机学习(State Machine Learning)根据响应代码构建初始IPSM;这个初始IPSM包含图4中的黑节点和转换。假设目标状态选择器选择状态331 (USER foo OK)作为目标状态，那么序列选择器将从序列语料库C中随机选择一个序列，此时该语料库只包含一个序列。之后，Sequence Mutators识别序列前缀(“USER foo”请求)、候选子序列(“PASS foo”请求)和剩余子序列作为后缀。通过使用堆叠的mutators改变候选子序列，Sequence mutators可能会产生一个错误的密码请求(“PASS bar”)，导致错误状态(530 Not logged in)。在这个错误的密码之后，它会重放后缀(例如，“MKD demo”，“CWD demo”)，导致状态530的循环，因为在成功的身份验证之前不允许所有这些命令。最后，发送“QUIT”请求，服务器退出。由于生成的测试序列(如图5所示)涵盖了新的状态和状态转换(如图4中突出显示的红色部分)，因此它被添加到语料库C和IPSM中。
 
-![](images/Pasted%20image%2020230920212942.png)
+![](AFLNET_A%20Greybox%20Fuzzer%20for%20Network%20Protocols/Pasted%20image%2020230920212942.png)
 
 ## 4.案例研究
 我们通过对比两种基线方法来评估AFLNET的有效性，一种是有状态黑盒模糊器(BOOFUZZ)，另一种是无状态覆盖率引导模糊器(AFLNWE)，后者是我们对AFL的网络支持扩展。具体地说，我们在两个协议实现上比较了平均分支覆盖率、状态覆盖率和24小时模糊测试活动中暴露的bug数量，如图6所示，这两种协议很流行。虽然FTP被广泛用于文件传输，而RTSP是实时视频流最常见的协议，它已经在像YouTube这样的大型现实世界框架中实现。我们在实验中选择的RTSP服务器Live555已安装在IP摄像机等隐私和安全关键设备上。
 
-![](images/Pasted%20image%2020230920213828.png)
+![](AFLNET_A%20Greybox%20Fuzzer%20for%20Network%20Protocols/Pasted%20image%2020230920213828.png)
 
 当AFLNET和AFLNWE开始于最常见使用场景(例如，上传文件，开始流媒体源)的记录消息序列的初始种子语料库时，BOOFUZZ开始于协议的详细模型，包括消息模板和状态机。
 
 ### A.代码覆盖率和状态覆盖率
 图7显示，AFLNET在所有有效性度量上都优于最先进的有状态黑盒模糊器BOOFUZZ，具有较大的效应大小(Vargha-Delaney ^A12 > 0:71)。分支覆盖率、语句覆盖率和状态覆盖率的平均增长分别为60%、56%和67%。我们用AFLNET变异真实消息序列和进化消息序列语料库的能力来解释这种性能提升，这些消息序列被观察到可以增加服务器代码的覆盖率。
 
-![](images/Pasted%20image%2020230920214207.png)
+![](AFLNET_A%20Greybox%20Fuzzer%20for%20Network%20Protocols/Pasted%20image%2020230920214207.png)
 
 AFLNET也明显优于AFLNWE，特别是在LightFTP方面。分支覆盖率、语句覆盖率和状态覆盖率分别增加了121%、79%和85%。要理解为什么AFLNWE和AFLNET与Live555平手，我们必须看一下实现的协议状态机(IPSM)。首先，Live555 IPSM的深度比LightFTP IPSM小，即有效序列中的消息数更小。其次，功能状态的数量较少，即大多数状态(未被初始序列发现)是错误状态。
 
 ### B.漏洞发现
 图8显示了AFLNET、BOOFUZZ和AFLNWE的Bug发现能力的结果。对于所有的fuzzers，我们计算了发现的漏洞数量，并测量了他们暴露这些漏洞所花费的时间。AFLNET在所有错误上都优于这两种模糊器。AFLNET总共发现了四个漏洞，其中两个漏洞(CVE2018-4013和CVE-2019-7733)是已知的，其余两个漏洞(CVE-2019-7314和CVE-2019-15232)是零日漏洞。CVE-2019-7314和CVE-2019-15232的CVSS评分为CRITICAL 9.8。鉴于这些漏洞的严重程度，Live555的维护者迅速应用了补丁，并在漏洞报告发送后仅两天就承认了我们的发现。BOOFUZZ和AFLNWE都无法发现CVE-2019-7314。
 
-![](images/Pasted%20image%2020230920214441.png)
+![](AFLNET_A%20Greybox%20Fuzzer%20for%20Network%20Protocols/Pasted%20image%2020230920214441.png)
 
 我们进一步分析了CVE-2019-7314的根本原因，发现当Setup消息包含RANGE值时，INIT和PLAY状态之间存在未指定的快捷方式(如图9中红色所示)。虽然快捷方式本身是无害的，但它提供了一个只有我们的技术才能发现的漏洞。AFLNET生成了一个随机消息序列，该序列发现了这种转换，保留了该序列，并系统地对其进行进化，以找到零日漏洞。要利用该漏洞，攻击者需要发送两条消息的序列。第一个是带有RANGE值的SETUP消息。第二种是长度大于20,000字节的任意消息。攻击者最多可以读取8字节的空闲内存。由于标准RTSP规范中没有记录转换，BooFuzz[4]不能在Live555中执行未指定的快捷方式。
 
-![](images/Pasted%20image%2020230920214610.png)
+![](AFLNET_A%20Greybox%20Fuzzer%20for%20Network%20Protocols/Pasted%20image%2020230920214610.png)
 
 ## 5.相关工作
 ### A.基于覆盖率的灰盒模糊测试
