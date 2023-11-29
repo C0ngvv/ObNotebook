@@ -1,20 +1,18 @@
 ---
-title: 论文：Fuzzing Embedded Systems Using Debug Interfaces
+title: 论文(2023ISSTA)：Fuzzing Embedded Systems Using Debug Interfaces
 date: 2023/11/27
 categories:
   - 论文
 tags:
   - 论文翻译
 ---
-# 论文：Fuzzing Embedded Systems Using Debug Interfaces
+# 论文(2023ISSTA)：Fuzzing Embedded Systems Using Debug Interfaces
 ## 信息
 发布于2023 ISSTA
 
 论文地址：[Fuzzing Embedded Systems using Debug Interfaces (acm.org)](https://dl.acm.org/doi/pdf/10.1145/3597926.3598115)
 
-题目：使用调试接口模糊化嵌入式系统
-
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127144025910.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127144025910.png)
 
 ## 摘要
 对嵌入式系统进行模糊测试是困难的。它们的关键组件——微控制器——是高度多样化的，不容易虚拟化;他们的软件不能被更改或检测。然而，我们观察到，许多(如果不是大多数的话)微控制器都具有调试接口，调试探针(通常通过GNU调试器GDB进行控制)可以通过该接口设置有限数量的硬件断点。使用这些，我们提取部分覆盖反馈，甚至对于未插桩的二进制代码;从而能够通过通用的、广泛的机制对嵌入式系统进行有效的模糊测试。在四种不同的微控制器板上进行评估时，我们的原型实现GDBFuzz快速达到高代码覆盖率并检测已知和新的漏洞。因为它可以应用于GDB可以调试的任何程序和系统，所以GDBFuzz是要求最低和最通用的覆盖引导的fuzzers之一。
@@ -30,11 +28,11 @@ tags:
 
 本文的关键思想是，通过基于程序的控制流图系统地在代码中设置断点，并通过检查哪些输入触发哪些断点，我们可以检索覆盖率信息，从而为反馈驱动的模糊测试策略提供必要的指导。由于微控制器内硬件断点的数量有限，我们将它们仅设置为程序代码块的子集，并定期重新设置它们。由于许多调试探针都可以通过GNU调试器(GDB)寻址，因此我们在名为GDBFuzz的模糊器中实现了上述策略，它可以利用任何系统中的GDB接口，系统地生成由覆盖率指导的测试输入。所需的设置如图1所示。
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127150817020.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127150817020.png)
 
 图2总结了GDBFuzz操作。基于目标程序的CFG, GDBFuzz将可用的硬件断点设置为从CFG中随机选择的尚未到达的节点。然后GDBFuzz重复生成输入，将其发送到目标设备，并检查它是否触发了指示新代码覆盖的断点，或者是否使目标系统崩溃。
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127150916538.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127150916538.png)
 
 在我们的实验中，GDBFuzz显示很容易适用于许多微控制器板甚至普通用户应用程序。它实现了比黑盒模糊测试和基于虚拟化的解决方案更高的覆盖率，并且还检测了许多已知的和新的错误。总而言之，据我们所知，GDBFuzz是第一个基于硬件的、与架构无关的、源代码独立的、非侵入性的、易于应用的方法，用于覆盖引导的嵌入式系统模糊测试，我们很高兴向任何想要系统地测试嵌入式系统健壮性的人推荐它。
 
@@ -46,7 +44,7 @@ tags:
 
 考虑清单1中process_data函数的代码，当输入的前四个字符匹配“bug!”且长度大于20时，该函数会导致堆栈溢出。当黑盒模糊器需要一次从28 * 4 = 2 32个组合中正确猜出前四个字符时，覆盖引导的模糊器可以在每个比较步骤中分别与28个可能的组合进行比较，从而增加了在模糊测试期间产生触发堆栈溢出的输入的总体概率。
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127151507843.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127151507843.png)
 
 典型的用户程序是通过利用源代码工具进行模糊测试的，这样代码覆盖率就会通过额外插入的代码反馈给模糊测试器。另外，当没有源代码时，模拟器用于获取代码覆盖率反馈，因此在编译时没有可用的代码插装。
 
@@ -95,7 +93,7 @@ tags:
 ## 4.设计
 如图2所示，GDBFuzz利用目标程序的控制流图将可用的硬件断点设置为随机选择的尚未到达的基本块。然后，它通过对语料库中随机选择的输入应用突变来重复地生成测试用例，并将测试用例发送到目标输入接口。如果调试探针发出命中断点的信号，GDBFuzz将相应节点及其主导节点标记为已到达，并将负责的测试用例添加到语料库中。导致崩溃或超时的测试用例被单独保存。如果在预定义数量的运行测试用例之后没有发生断点中断，GDBFuzz将硬件断点重新定位到新选择的节点。每次重新定位之后，GDBFuzz首先再次测试语料库中的所有输入，以检查它们是否已经到达了新的目标基本块。与使用完整代码插装的覆盖引导模糊测试一样，进化算法使输入语料库随着时间的推移而增长，输入到达不同的代码区域。
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127150916538.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127150916538.png)
 
 本节的其余部分将介绍如何提取CFG，如何在目标应用程序中找到模糊测试入口点，以及如何在执行期间检测和处理错误。
 
@@ -169,11 +167,11 @@ GDBFuzz由以下组件组成:
 
 （1）对于基于硬件的设置，我们选择了各种常见的开发板，如表1所示，以及它们相应的体系结构、利用的调试探测和可用硬件断点的数量。在每个开发板上，我们部署四种不同类型的应用程序，如表2所示，具有初始给定的种子。Buggy程序将清单1中的buggy函数公开给串行输入接口，并作为基本事实。每个板的特定应用程序都来自开发板附带的示例，或者兼容的工具链。HTTP和USB应用程序类需要在目标板上存在适当的接口。
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127205108210.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127205108210.png)
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127205118738.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127205118738.png)
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127151507843.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231127151507843.png)
 
 (2)基于应用程序的设置采用来自Google的Fuzzer Test Suite[24]中的16个程序，编译为x86 linux应用程序，提供可扩展且可独立测量的评估环境。GDBFuzz既可以在QEMU实例中执行应用程序，支持实时测量已达到的代码覆盖率，也可以直接使用GDB执行应用程序，支持低开销和无限量的断点。我们使用编译器优化(-O3)编译应用程序，并在具有4个Intel Xeon Gold 6144 CPU和1.48TB RAM的服务器上执行相应的实验。
 
@@ -184,7 +182,7 @@ RQ1: GDBFuzz与嵌入式系统上的黑盒模糊测试相比如何?
 
 图3显示了所有电路板和应用程序类组合的覆盖率随时间变化的图。每个实验重复2次，累计实验时间为56天。无一例外，GDBFuzz在所有运行中实现了比黑盒模糊测试更高的代码覆盖率，并且表明它可以从通过硬件断点检索的部分覆盖率信息中获得极大的好处。特别是对于Buggy程序，黑盒模糊测试几乎没有机会满足触发所包含的堆栈溢出错误的所有条件，如2.1节中理论上描述的那样。在这个应用类中，GDBFuzz在功能强大的CY8CKIT板上实现了每秒近100次迭代，而在性能较低的MSP430板上只能达到每秒约1.5次迭代。这就解释了为什么GDBFuzz需要更长的时间来解决后者的输入约束，我们也可以看到吞吐量对于模糊测试是多么重要。尽管如此，GDBFuzz在我们所有的开发板上都表现良好，在所有情况下都能找到错误，并正确报告导致的崩溃。
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128085643321.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128085643321.png)
 
 > ==>在嵌入式系统中，具有有限断点的覆盖引导模糊测试是有效的，并且优于黑盒模糊测试。
 
@@ -205,7 +203,7 @@ RQ2: GDBFuzz与现有的嵌入式模糊测试方法相比如何?
 
 表3列出了使用Fuzzware和GDBFuzz达到的基本块的绝对数量和相对数量。虽然它提供了更强大的计算能力，但Fuzzware在8个应用程序中有6个没有达到任何基本阻塞，而GDBFuzz覆盖了其中的大部分。在剩下的两个应用程序中，GDBFuzz比Fuzzware达到了更多的基本块。STM32板上的USB控制器通过直接内存访问(DMA)传输数据，这是Fuzzware不支持的，但需要执行应用程序。从我们的经验来看，DMA是一种广泛用于与硬件外设交互的机制，而Fuzzware缺乏DMA支持是一个主要缺点。STM32板上的WiFi和传输控制协议(TCP)协议处理在通过串行外设接口(SPI)连接到微控制器的单独芯片中进行。为了触发HTTP解析器的执行，Fuzzware需要正确地建模芯片间通信协议，但它没有。
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128090947291.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128090947291.png)
 
 在CY8CKIT板上，Fuzzware不能执行任何应用程序，因为CY8CKIT开发板的启动阶段需要两个包含的处理器之间的交互，这是Fuzzware无法建模的。
 
@@ -239,7 +237,7 @@ RQ4: GDBFuzz与最先进的fuzzer afl++相比如何？
 
 图4显示了GDBFuzz和afl++的覆盖率随时间的变化图。显然，随着时间的推移，afl++比GDBFuzz覆盖了更多的代码。afl++正是为这些类型的应用程序设计和优化的，并且可以从其详尽的代码插装中受益。然而，我们认为仅使用8个断点的GDBFuzz并不太遥远。在某些应用程序上，GDBFuzz甚至可以达到类似数量的基本块。我们还强调，在无法进行仿真和插桩的情况下，afl++会退回到黑盒模糊测试——这也是GDBFuzz的优势所在。
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128091927330.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128091927330.png)
 
 > ==>如果能以很少的成本部署AFL，那就使用它;否则，将GDBFuzz视为潜在的要求较低的替代方案。
 
@@ -252,7 +250,7 @@ RQ5: GDBFuzz从支配关系中获益多少?
 
 在我们所有的实验中，每个断点中断平均导致3.15个标记的基本块，这意味着探测的基本块的数量减少了68.25%。这一比例优于[56]中高效代码插装算法的实验，作者在实验中仅将插装点的数量减少了34%至49%。GDBfuzz可能会进一步减少开销，因为我们额外使用了后优势关系和所描述的半程序间CFG。
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128092504692.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128092504692.png)
 
 正如我们在“Precision”一栏中看到的，绝大多数主导基本块的标记都是正确的。错误标记的基本块可能源于错误的逆向工程控制流程。由于覆盖率引导模糊是一个随机过程，不依赖于100%正确的覆盖率数据，因此达到的精度大多超过99%就足够了。流行的模糊测试工具，如afl++，在哈希图中存储覆盖数据，并且在模糊测试期间由于哈希冲突而丢失一些覆盖。
 
@@ -274,7 +272,7 @@ RQ7:可用断点的数量如何影响模糊测试性能?
 
 为了评估不同数量的断点对模糊测试性能的影响，我们直接使用GDB执行应用程序，并使用普通的软件断点进行反馈，因为随着断点数量的增加，QEMU不能很好地扩展。通过这种方式，我们可以在不影响执行时间的情况下获得任意数量的断点，并且可以估计它们的数量如何随时间影响已实现的覆盖率。为了回答RQ7，我们在基于应用程序的设置中执行GDBFuzz，使用从1到65536的指数增长的虚拟断点数量。具有代表性的是，图5显示了四个应用程序随着时间的推移所达到的基本块，平均为2次运行。
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128093009402.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128093009402.png)
 
 不出所料，每次使用的断点越多，覆盖的代码块就越多。在我们的实验中，似乎将断点的数量增加一倍会产生模糊性能的线性改进。努力和收益之间的指数相关性在模糊测试研究领域很常见[6]。同样，我们的实验观察表明，随着时间的推移，利用的断点数量和覆盖率之间呈指数相关性。
 
@@ -289,7 +287,7 @@ RQ8:在基于应用程序的设置上，GDBFuzz与黑盒模糊测试相比如何
 
 图6显示了黑盒模糊、GDBFuzz和精简版本(GDBFuzzSimple)随时间变化的测量覆盖率，该版本没有使用第3节中描述的支配关系。这个带有独立代码覆盖率测量的更大规模基准测试证实了开发板的结果:
 
-![](Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128093341585.png)
+![](2023-ISSTA-Fuzzing%20Embedded%20Systems%20Using%20Debug%20Interfaces/image-20231128093341585.png)
 
 GDBFuzz在所有实验中都优于黑盒模糊。此外，我们可以看到，使用支配关系来获得传递性知识，可以在大多数目标应用程序上实现更多更快的代码覆盖。然而，即使是GDBFuzzSimple在所有实验中也大大优于黑盒模糊。
 

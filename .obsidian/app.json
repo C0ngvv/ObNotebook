@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking",
+  "attachmentFolderPath": "./2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
