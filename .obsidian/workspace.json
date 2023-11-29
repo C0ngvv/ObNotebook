@@ -184,6 +184,8 @@
   },
   "active": "6d41044156b4e599",
   "lastOpenFiles": [
+    "固件分析/根源定位/根源定位/image-20231129210544640.png",
+    "固件分析/根源定位/根源定位",
     "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
     "固件分析/根源定位/根源定位.md",
     "固件分析/根源定位",
@@ -216,7 +218,6 @@
     "Paper/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking/EM-Fuzz--Augmented Firmware Fuzzing via Memory Checking.md",
     "Paper/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis/Detecting Vulnerabilities in Linux-Based Embedded Firmware with SSE-Based On-Demand Alias Analysis.md",
     "Paper/CarpetFuz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing/CarpetFuzz-Automatic Program Option Constraint Extraction from Documentation for Fuzzing.md",
-    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform",
     "AFLNET_A Greybox Fuzzer for Network Protocols/Pasted image 20230920212942.png.md",
     "Paper/AFL++/AFL++.md",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
@@ -228,7 +229,6 @@
     "随笔/20230922/20230922.md",
     "工具/EmTaint/EmTaint工具分析/EmTaint工具分析.md",
     "固件分析/dlink/dlink路由器分析/dlink路由器分析.md",
-    "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md",
-    "固件分析/dlink/dir815漏洞复现/dir815漏洞复现.md"
+    "固件分析/dlink/dir815命令注入分析/dir815命令注入分析.md"
   ]
 }
