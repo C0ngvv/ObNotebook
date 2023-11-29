@@ -11,8 +11,12 @@
             "id": "accf28f0c2c89856",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -98,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,6 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +141,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md"
+              }
             }
           },
           {

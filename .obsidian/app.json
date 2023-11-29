@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./Fuzzing Embedded Systems Using Debug Interfaces",
+  "attachmentFolderPath": "./IDAPython执行固件静态分析",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
