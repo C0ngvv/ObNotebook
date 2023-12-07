@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router",
+  "attachmentFolderPath": "./2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
