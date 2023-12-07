@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./gh3fuzz源码分析",
+  "attachmentFolderPath": "./Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
