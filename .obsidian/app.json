@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./问题",
+  "attachmentFolderPath": "./根源定位",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
