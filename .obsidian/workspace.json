@@ -18,8 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b970799feaa7a05a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/根源定位/根源定位/根源定位.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fad1cf0321010b2b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -102,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md"
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md"
               }
             }
           },
@@ -182,10 +207,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "74ee89e47e6aeee1",
+  "active": "fad1cf0321010b2b",
   "lastOpenFiles": [
-    "固件分析/根源定位/根源定位2/根源定位2.md",
     "固件分析/根源定位/根源定位/根源定位.md",
+    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+    "固件分析/根源定位/根源定位2/根源定位2.md",
     "固件分析/根源定位/根源定位2",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231211105358246.png",
@@ -212,7 +238,6 @@
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "工具/AFLplusplus/Grammar Mutator/Grammar Mutator.md",
     "工具/AFL/AFL源码阅读/afl-fuzz源码阅读.md",
-    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "工具/IDA/在Ubuntu上搭建IDA运行环境/在Ubuntu上搭建IDA运行环境.md",
     "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "工具/IDA/在Ubuntu上搭建IDA运行环境",
