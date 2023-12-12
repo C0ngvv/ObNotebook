@@ -851,4 +851,27 @@ print(str_records)
 ```
 
 
+## FIDL源码分析
+其使用的也是基于decompile()的对象，关于变量主要用到的操作如下
+```python
+from idaapi import *
+import ida_hexrays
+
+ea = 0x24BD0
+cf = decompile(ea=ea, flags=ida_hexrays.DECOMP_NO_WAIT | ida_hexrays.DECOMP_NO_CACHE)
+cf.refresh_func_ctext()
+arg_vars = [x for x in cf.lvars if x.is_arg_var and x.name]
+ordered_vars = list(cf.lvars)
+for i, j in enumerate(cf.argidx):
+    ordered_vars[i] = arg_vars[j]
+for idx, v in enumerate(ordered_vars):
+    print(v.is_arg_var, v.name, v.type(), v.type().get_size())
+# print(dir(ordered_vars[6]))
+```
+
+
+
+
+
+
 ## end

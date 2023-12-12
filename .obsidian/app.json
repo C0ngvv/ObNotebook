@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./根源定位2",
+  "attachmentFolderPath": "./IDAPython执行固件静态分析",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
