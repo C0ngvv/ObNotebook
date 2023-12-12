@@ -869,7 +869,33 @@ for idx, v in enumerate(ordered_vars):
 # print(dir(ordered_vars[6]))
 ```
 
+几种参数类型
+```python
+        for i, raw_arg in enumerate(self.ida_args):
+            # To be sure. Idempotent.
+            arg = decast(raw_arg)
 
+            if is_number(arg):
+                rep = Rep(type='number', val=num_value(arg))
+            elif is_string(arg):
+                rep = Rep(type='string', val=string_value(arg))
+            elif is_var(arg):
+                # :class:`var_ref_t` -> :class:`lvar_t` -> :class:`my_var_t`
+                lv = ref2var(arg, c=self.c)
+                rep = Rep(type='var', val=my_var_t(lv))
+            elif is_global_var(arg):
+                rep = Rep(type='global', val=value_of_global(arg))
+            elif is_ref(arg):
+                # &v1
+                rep = Rep(type='ref', val=ref_to(arg))
+            elif is_ptr(arg):
+                # *v1
+                rep = Rep(type='ptr', val=points_to(arg))
+            else:
+                rep = Rep(type='unk', val=arg)
+
+            self.args[i] = rep
+```
 
 
 
