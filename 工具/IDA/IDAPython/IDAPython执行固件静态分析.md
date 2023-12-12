@@ -896,7 +896,107 @@ for idx, v in enumerate(ordered_vars):
 
             self.args[i] = rep
 ```
-
+### ida对象属性功能说明
+```
+is_expr()：判断当前表达式是否是一个表达式。
+is_id()：判断当前表达式是否是一个变量。
+id.name：获取变量的名称。
+get_cstr()：获取当前表达式的字符串形式。
+type：获取当前表达式的类型。
+v：获取当前表达式的值。
+is_const_value()：判断当前表达式是否是一个常量值。
+is_cstr()：判断当前表达式是否是一个字符串常量。
+is_undef_val()：判断当前表达式是否是一个未定义值。
+is_zero_const()：判断当前表达式是否是一个零常量。
+is_non_zero_const()：判断当前表达式是否是一个非零常量。
+is_negative_const()：判断当前表达式是否是一个负常量。
+is_non_negative_const()：判断当前表达式是否是一个非负常量。
+is_odd_lvalue()：判断当前表达式是否是一个奇数常量。
+is_type_signed()：判断当前表达式的类型是否是有符号的。
+is_type_unsigned()：判断当前表达式的类型是否是无符号的。
+is_fpop()：判断当前表达式是否是一个浮点操作。
+is_jumpout()：判断当前表达式是否是一个跳转操作。
+is_call_arg_of()：判断当前表达式是否是一个函数调用的参数。
+is_call_object_of()：判断当前表达式是否是一个函数调用的对象。
+is_child_of()：判断当前表达式是否是另一个表达式的子表达式。
+is_nice_expr()：判断当前表达式是否是一个简单的表达式。
+is_nice_cond()：判断当前表达式是否是一个简单的条件表达式。
+is_vftable()：判断当前表达式是否是一个虚函数表。
+is_ptr_or_array()：判断当前表达式是否是一个指针或数组。
+is_type_sign()：获取当前表达式的类型的符号。
+get_const_value()：获取当前表达式的常量值。
+get_low_nbit_bound()：获取当前表达式的低位边界。
+get_high_nbit_bound()：获取当前表达式的高位边界。
+get_ptr_or_array()：获取当前表达式的指针或数组。
+get_type_sign()：获取当前表达式的类型的符号。
+get_v()：获取当前表达式的值。
+get_vftable()：获取当前表达式的虚函数表。
+set_v()：设置当前表达式的值。
+set_vftable()：设置当前表达式的虚函数表。
+print1()：打印当前表达式的字符串形式。
+put_number()：将当前表达式的值转换为字符串形式。
+replace_by()：将当前表达式替换为另一个表达式。
+swap()：交换当前表达式的左右子表达式。
+to_specific_type()：将当前表达式转换为指定类型的表达式。
+requires_lvalue()：判断当前表达式是否需要左值。
+contains_expr()：判断当前表达式是否包含表达式。
+contains_insn()：判断当前表达式是否包含指令。
+contains_insn_or_label()：判断当前表达式是否包含指令或标签。
+contains_label()：判断当前表达式是否包含标签。
+contains_operator()：判断当前表达式是否包含操作符。
+contains_comma()：判断当前表达式是否包含逗号。
+contains_comma_or_insn_or_label()：判断当前表达式是否包含逗号、指令或标签。
+find_num_op()：查找当前表达式中的数值操作数。
+find_op()：查找当前表达式中的操作符。
+find_parent_of()：查找当前表达式的父表达式。
+find_closest_addr()：查找当前表达式的最近地址。
+get_1num_op()：获取当前表达式中的第一个数值操作数。
+index：获取当前表达式在父表达式中的索引。
+ea：获取当前表达式的地址。
+x：获取当前表达式的左子表达式。
+y：获取当前表达式的右子表达式。
+z：获取当前表达式的第三个子表达式。
+n：获取当前表达式的操作数数量。
+m：获取当前表达式的操作符。
+obj_id：获取当前表达式的对象 ID。
+obj_ea：获取当前表达式的对象地址。
+label_num：获取当前表达式的标签数量。
+operands：获取当前表达式的所有操作数。
+opname：获取当前表达式的操作符名称。
+op_to_typename()：将当前表达式的操作符转换为类型名称。
+refwidth：获取当前表达式的引用宽度。
+ptrsize：获取当前表达式的指针大小。
+string：获取当前表达式的字符串形式。
+theother()：获取当前表达式的另一个子表达式。
+this：获取当前表达式的指针。
+thisown：获取当前表达式的所有权。
+helper：获取当前表达式的辅助对象。
+exflags：获取当前表达式的扩展标志。
+fpc：获取当前表达式的浮点控制字节。
+cpadone：获取当前表达式的 CPad 状态。
+cinsn：获取当前表达式的 C 指令。
+cexpr：获取当前表达式的 C 表达式。
+assign：获取当前表达式的赋值操作符。
+compare：获取当前表达式的比较操作符。
+contains_comma：判断当前表达式是否包含逗号。
+contains_comma_or_insn_or_label：判断当前表达式是否包含逗号、指令或标签。
+contains_expr：判断当前表达式是否包含表达式。
+contains_insn：判断当前表达式是否包含指令。
+contains_insn_or_label：判断当前表达式是否包含指令或标签。
+contains_label：判断当前表达式是否包含标签。
+contains_operator：判断当前表达式是否包含操作符。
+cpadone：获取当前表达式的 CPad 状态。
+ea：获取当前表达式的地址。
+equal_effect：判断当前表达式和另一个表达式是否具有相同的效果。
+find_closest_addr：查找当前表达式的最近地址。
+find_num_op：查找当前表达式中的数值操作数。
+find_op：查找当前表达式中的操作符。
+find_parent_of：查找当前表达式的父表达式。
+get_1num_op：获取当前表达式中的第一个数值操作数。
+get_const_value：获取当前表达式的常量值。
+get_high_nbit_bound：获取当前表达式的高位边界。
+get_low_nbit_bound：获取当前表达式的低位边界。
+```
 
 
 
