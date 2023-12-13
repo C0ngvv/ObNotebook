@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+                "file": "工具/IDA/vulfi插件分析/vulfi插件分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+                "file": "工具/IDA/vulfi插件分析/vulfi插件分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +143,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+                "file": "工具/IDA/vulfi插件分析/vulfi插件分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +166,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md"
+                "file": "工具/IDA/vulfi插件分析/vulfi插件分析.md"
               }
             }
           },
@@ -210,7 +210,9 @@
   "lastOpenFiles": [
     "固件分析/根源定位/根源定位/根源定位.md",
     "固件分析/根源定位/根源定位2/根源定位2.md",
+    "工具/IDA/vulfi插件分析/vulfi插件分析.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+    "工具/IDA/vulfi插件分析",
     "固件分析/根源定位/根源定位2/根源定位2/image-20231212194757042.png",
     "固件分析/根源定位/根源定位2/根源定位2/image-20231212194641728.png",
     "固件分析/根源定位/根源定位2/根源定位2",
@@ -243,7 +245,6 @@
     "工具/IDA/在Ubuntu上搭建IDA运行环境/在Ubuntu上搭建IDA运行环境.md",
     "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "工具/IDA/在Ubuntu上搭建IDA运行环境",
-    "固件分析/根源定位/根源定位/根源定位",
     "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
     "固件分析/TODO List.md",
     "Paper/2020-ICST-AFLNET_A Greybox Fuzzer for Network Protocols/2020-ICST-AFLNET_A Greybox Fuzzer for Network Protocols.md",

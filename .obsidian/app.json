@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./IDAPython执行固件静态分析",
+  "attachmentFolderPath": "./vulfi插件分析",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
