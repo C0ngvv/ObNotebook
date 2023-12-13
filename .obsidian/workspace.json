@@ -43,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -126,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/IDA/vulfi插件分析/vulfi插件分析.md",
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/IDA/vulfi插件分析/vulfi插件分析.md",
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/IDA/vulfi插件分析/vulfi插件分析.md"
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md"
               }
             }
           },
@@ -206,11 +207,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "74ee89e47e6aeee1",
+  "active": "fad1cf0321010b2b",
   "lastOpenFiles": [
+    "工具/IDA/vulfi插件分析/vulfi插件分析.md",
     "固件分析/根源定位/根源定位/根源定位.md",
     "固件分析/根源定位/根源定位2/根源定位2.md",
-    "工具/IDA/vulfi插件分析/vulfi插件分析.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "工具/IDA/vulfi插件分析",
     "固件分析/根源定位/根源定位2/根源定位2/image-20231212194757042.png",
