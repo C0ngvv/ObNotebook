@@ -209,6 +209,7 @@
   },
   "active": "fad1cf0321010b2b",
   "lastOpenFiles": [
+    "固件分析/根源定位/根源定位2/根源定位2/image-20231213152310660.png",
     "工具/IDA/vulfi插件分析/vulfi插件分析.md",
     "固件分析/根源定位/根源定位/根源定位.md",
     "固件分析/根源定位/根源定位2/根源定位2.md",
@@ -253,7 +254,6 @@
     "Paper/2018-NDSSBAR-Avatar2-A Multi-target Orchestration Platform/2018-NDSSBAR-Avatar2-A Multi-target Orchestration Platform.md",
     "Paper/2018-Avatar2-A Multi-target Orchestration Platform/2018-NDSSBAR-Avatar2-A Multi-target Orchestration Platform.md",
     "Templates/博客模板.md",
-    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/2020-ICST-AFLNET_A Greybox Fuzzer for Network Protocols.md",
-    "Paper/Avatar2-A Multi-target Orchestration Platform/Avatar2-A Multi-target Orchestration Platform.md"
+    "Paper/AFLNET_A Greybox Fuzzer for Network Protocols/2020-ICST-AFLNET_A Greybox Fuzzer for Network Protocols.md"
   ]
 }
