@@ -31,7 +31,7 @@ idc.get_strlit_contents(char_obj_x.obj_ea) # 获取字符串值
 .y    获取索引对象
 ```
 
-#### cot_num
+#### 61 cot_num
 ```
 .n._value    # 获取数值
 .n.getvalue(num_x.type)    # 也是获取数值
@@ -46,6 +46,11 @@ idc.get_strlit_contents(char_obj_x.obj_ea) # 获取字符串值
 ```
 .type  # 强制转换的类型
 .x  # 转换的目标
+```
+#### 57 cot_call
+```
+.cexpr.x.obj_ea  # 函数调用地址
+.a  # 参数列表
 ```
 #### 71 cit_block
 ```
@@ -65,9 +70,11 @@ idc.get_strlit_contents(char_obj_x.obj_ea) # 获取字符串值
 .ithen  # then分支
 .ielse  # else分支
 ```
-#### cit_return
+#### 80 cit_return
 ```
-.creturn
+.creturn  # 获取creturn_t对象
+# creturn_t
+.expr  # 获取return表达式
 ```
 ### ida_hexray ctype_t
 ```c
