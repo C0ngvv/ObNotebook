@@ -18,8 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4fa5592f9b678111",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工具/IDA/IDA decompiler接口查询/IDA decompiler接口查询.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "44358ae1d71d8e92",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
+                "file": "工具/IDA/IDA decompiler接口查询/IDA decompiler接口查询.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
+                "file": "工具/IDA/IDA decompiler接口查询/IDA decompiler接口查询.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md"
+                "file": "工具/IDA/IDA decompiler接口查询/IDA decompiler接口查询.md"
               }
             }
           },
@@ -182,8 +207,12 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fad1cf0321010b2b",
+  "active": "4fa5592f9b678111",
   "lastOpenFiles": [
+    "固件分析/根源定位/根源定位2/根源定位2.md",
+    "工具/IDA/IDA decompiler接口查询/IDA decompiler接口查询.md",
+    "工具/IDA/IDA decompiler接口查询",
+    "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214102834507.png",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214102132850.png",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214102000385.png",
@@ -193,8 +222,6 @@
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214101359628.png",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214101017799.png",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试",
-    "固件分析/根源定位/根源定位2/根源定位2.md",
-    "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
     "工具/IDA/IDA脚本动态调试",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
@@ -206,14 +233,12 @@
     "固件分析/根源定位/根源定位2/根源定位2/image-20231213152310660.png",
     "工具/IDA/vulfi插件分析",
     "固件分析/根源定位/根源定位2/根源定位2/image-20231212194757042.png",
-    "固件分析/根源定位/根源定位2/根源定位2/image-20231212194641728.png",
     "固件分析/根源定位/根源定位2/根源定位2",
     "固件分析/根源定位/根源定位2",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware",
     "固件分析/根源定位/根源定位",
     "固件分析/根源定位/问题",
-    "Paper/2021-Automatic Inference of Taint Sourcesto Discover Vulnerabilities in SOHORouter Firmware/2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",

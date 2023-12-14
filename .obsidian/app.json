@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./IDA脚本动态调试",
+  "attachmentFolderPath": "./IDA decompiler接口查询",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
