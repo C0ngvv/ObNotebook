@@ -57,7 +57,7 @@ idc.get_strlit_contents(char_obj_x.obj_ea) # 获取字符串值
 ```
 .cexpr  # 获取cexpr_t对象
 ```
-#### cit_if
+#### 73 cit_if
 ```
 .cif  # 获取 `cif_t` 实例
 # cif_t
