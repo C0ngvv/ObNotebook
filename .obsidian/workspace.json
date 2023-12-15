@@ -170,8 +170,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5,
-    "collapsed": true
+    "width": 266.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -186,6 +185,9 @@
   },
   "active": "414b22cfa555efab",
   "lastOpenFiles": [
+    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215201228883.png",
+    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215194939343.png",
+    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215193408384.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215185954179.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215164038033.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
@@ -207,9 +209,6 @@
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214102834507.png",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214102132850.png",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214102000385.png",
-    "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214101819404.png",
-    "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214101537669.png",
-    "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214101514904.png",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试",
     "工具/IDA/IDA脚本动态调试",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
