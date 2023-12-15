@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
+  "attachmentFolderPath": "./SaTC污点分析算法分析",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
