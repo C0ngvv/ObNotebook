@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities.md",
+                "file": "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities.md",
+                "file": "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities.md",
+                "file": "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities.md"
+                "file": "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities.md"
               }
             }
           },
@@ -183,14 +183,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "187d4ecd31b81bf7",
+  "active": "414b22cfa555efab",
   "lastOpenFiles": [
+    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215164038033.png",
+    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
+    "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities.md",
+    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities.md",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/image-20231215161729838.png",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/image-20231215153458525.png",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
     "Templates/博客模板.md",
-    "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities.md",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
     "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
     "固件分析/根源定位/根源定位2/根源定位2.md",
@@ -217,8 +220,6 @@
     "工具/IDA/vulfi插件分析",
     "固件分析/根源定位/根源定位2/根源定位2",
     "固件分析/根源定位/根源定位2",
-    "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf",
-    "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
@@ -229,7 +230,6 @@
     "工具/IDA/在Ubuntu上搭建IDA运行环境/在Ubuntu上搭建IDA运行环境.md",
     "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "固件分析/TODO List.md",
-    "Paper/2020-ICST-AFLNET_A Greybox Fuzzer for Network Protocols/2020-ICST-AFLNET_A Greybox Fuzzer for Network Protocols.md",
-    "Paper/Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md"
+    "Paper/2020-ICST-AFLNET_A Greybox Fuzzer for Network Protocols/2020-ICST-AFLNET_A Greybox Fuzzer for Network Protocols.md"
   ]
 }
