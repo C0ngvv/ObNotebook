@@ -169,7 +169,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 266.5
+    "width": 266.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,8 +183,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "414b22cfa555efab",
+  "active": "187d4ecd31b81bf7",
   "lastOpenFiles": [
+    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
+    "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/image-20231215161729838.png",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/image-20231215153458525.png",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
     "Templates/博客模板.md",
@@ -203,7 +206,6 @@
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214101537669.png",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214101514904.png",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214101359628.png",
-    "工具/IDA/IDA脚本动态调试/IDA脚本动态调试/image-20231214101017799.png",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试",
     "工具/IDA/IDA脚本动态调试",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
@@ -212,7 +214,6 @@
     "工具/IDA/vulfi插件分析/vulfi插件分析.md",
     "固件分析/根源定位/根源定位/根源定位.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
-    "固件分析/根源定位/根源定位2/根源定位2/image-20231213152310660.png",
     "工具/IDA/vulfi插件分析",
     "固件分析/根源定位/根源定位2/根源定位2",
     "固件分析/根源定位/根源定位2",
