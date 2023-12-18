@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
+  "attachmentFolderPath": "./json",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
