@@ -61,13 +61,23 @@ def __init__(self, var, dec_list):
         param_def_str = getParamDefine(self)
         stack_off = extractBpOff(dec_list, param_def_str)
         if stack_off:
-            self.spOff = stack_off[0]
-            self.has_spOff = True
-            self.bpOff = stack_off[1]
-            self.has_bpOff = True
+            self.sp_off = stack_off[0]
+            self.has_sp_off = True
+            self.bp_off = stack_off[1]
+            self.has_bp_off = True
 ```
 
-修改__repr__()打印的方法：
+修改__repr__()打印的方法，添加下面语句：
 ```python
+		if self.sp_off:
+            print("  sp off: {}".format(self.sp_off))
+        if self.bp_off:
+            print("  bp off: {}".format(self.bp_off))
+```
+
+修改callObj中的部分方法。
+
+修改_populate_args()中的部分
+```
 
 ```
