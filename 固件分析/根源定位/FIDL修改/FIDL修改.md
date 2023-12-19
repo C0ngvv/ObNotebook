@@ -46,12 +46,15 @@ my_var_t(v, self.decompile_str_list)
 
 添加my_var_t类构造方法
 ```python
-def __init__(self, var, dec_list):
-        self.__init__(var)
-        self.has_spOff = False
-        self.has_bpOff = False
-        self.spOff = None
-        self.boOff = None
+	def _init(self, var):
+		...
+	
+    def __init__(self, var, dec_list):
+        self._init(var)
+        self.has_sp_off = False
+        self.has_bp_off = False
+        self.sp_off = None
+        self.bo_off = None
         self._getStackOff(dec_list)
 ```
 
@@ -69,9 +72,9 @@ def __init__(self, var, dec_list):
 
 修改__repr__()打印的方法，添加下面语句：
 ```python
-		if self.sp_off:
+        if self.has_sp_off:
             print("  sp off: {}".format(self.sp_off))
-        if self.bp_off:
+        if self.has_bp_off:
             print("  bp off: {}".format(self.bp_off))
 ```
 
