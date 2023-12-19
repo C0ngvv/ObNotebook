@@ -75,9 +75,25 @@ def __init__(self, var, dec_list):
             print("  bp off: {}".format(self.bp_off))
 ```
 
+修改get_function_vars()方法
+```python
+	if only_args:
+        return OrderedDict({idx: my_var_t(v, c.decompile_str_list) for idx, v in enumerate(ordered_vars)
+                            if v.is_arg_var and v.name})
+    elif only_locals:
+        return OrderedDict({idx: my_var_t(v, c.decompile_str_list) for idx, v in enumerate(ordered_vars)
+                            if not v.is_arg_var and v.name})
+    else:
+        return OrderedDict({idx: my_var_t(v, c.decompile_str_list) for idx, v in enumerate(ordered_vars)})
+```
+
+
 修改callObj中的部分方法。
 
 修改_populate_args()中的部分
-```
-
+```python
+            elif is_var(arg):
+                # :class:`var_ref_t` -> :class:`lvar_t` -> :class:`my_var_t`
+                lv = ref2var(arg, c=self.c)
+                rep = Rep(type='var', val=my_var_t(lv, self.c.decompile_str_list))
 ```
