@@ -18,11 +18,6 @@ tags:
 .obj_ea  获取地址
 idc.get_strlit_contents(char_obj_x.obj_ea) # 获取字符串值
 ```
-#### cot_var
-```
-.type  # 类型，如char *
-.v.getv().name  # 获取变量名
-```
 
 #### cot_idx
 类型v32\[4]或v32\[v2]类型。
@@ -36,7 +31,11 @@ idc.get_strlit_contents(char_obj_x.obj_ea) # 获取字符串值
 .n._value    # 获取数值
 .n.getvalue(num_x.type)    # 也是获取数值
 ```
-
+#### 65 cot_var
+```
+.type  # 类型，如char *
+.v.getv().name  # 获取变量名
+```
 #### cot_ref
 ```
 .x  引用对象
