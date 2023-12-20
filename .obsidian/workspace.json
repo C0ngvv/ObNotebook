@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "7bab6a4af3b023ef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "6fca3d008f296bce",
             "type": "leaf",
             "state": {
@@ -56,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -139,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/根源定位/FIDL修改/FIDL修改.md",
+                "file": "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/根源定位/FIDL修改/FIDL修改.md",
+                "file": "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/根源定位/FIDL修改/FIDL修改.md"
+                "file": "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md"
               }
             }
           },
@@ -219,17 +231,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d4702cde406a55a7",
+  "active": "7bab6a4af3b023ef",
   "lastOpenFiles": [
-    "固件分析/根源定位/根源定位2/根源定位2.md",
-    "固件分析/根源定位/FIDL修改/FIDL修改.md",
-    "固件分析/根源定位/FIDL修改",
-    "固件分析/根源定位/根源定位/根源定位.md",
-    "固件分析/根源定位/问题/问题.md",
+    "固件分析/根源定位/过滤策略/过滤策略.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+    "固件分析/根源定位/根源定位/根源定位.md",
+    "固件分析/根源定位/FIDL修改/FIDL修改.md",
+    "固件分析/根源定位/根源定位2/根源定位2.md",
+    "固件分析/根源定位/FIDL修改",
+    "固件分析/根源定位/问题/问题.md",
     "工具/IDA/vulfi插件分析/vulfi插件分析.md",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
-    "固件分析/根源定位/过滤策略/过滤策略.md",
     "工具/IDA/IDA decompiler接口查询/IDA decompiler接口查询.md",
     "固件分析/根源定位/过滤策略",
     "Python/json/json.md",
