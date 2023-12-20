@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "c3de4c4456444a38",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "a9f0c88b87d238d8",
             "type": "leaf",
             "state": {
@@ -79,7 +91,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -162,7 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/根源定位/过滤策略/过滤策略.md",
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +192,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/根源定位/过滤策略/过滤策略.md",
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -202,7 +215,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/根源定位/过滤策略/过滤策略.md"
+                "file": "固件分析/根源定位/根源定位2/根源定位2.md"
               }
             }
           },
@@ -242,13 +255,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "606346d9c24e034e",
+  "active": "c3de4c4456444a38",
   "lastOpenFiles": [
+    "固件分析/根源定位/过滤策略/过滤策略.md",
     "工具/IDA/IDA decompiler接口查询/IDA decompiler接口查询.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
     "固件分析/根源定位/根源定位/根源定位.md",
-    "固件分析/根源定位/过滤策略/过滤策略.md",
     "固件分析/根源定位/FIDL修改/FIDL修改.md",
     "固件分析/根源定位/根源定位2/根源定位2.md",
     "固件分析/根源定位/FIDL修改",
