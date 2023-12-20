@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./FIDL修改",
+  "attachmentFolderPath": "./过滤策略",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
