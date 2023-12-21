@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./过滤策略",
+  "attachmentFolderPath": "./2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
