@@ -75,7 +75,7 @@ tags:
 
 定义1（Predomination）。一个节点$u\in G$ 前向支配（predominates）另一个节点$v \in G$，表示为$u \xrightarrow{pre} v$，如果每一条从入口节点（entry note）到$v$的路径都包含$u$。
 
-定义2（Postdomination）。一个节点$w \in G$ 后向支配（postdominates）另一个节点$v \in G$，表示为$w \xrightarrow{post} v$，如果每一条从$v$到退出节点（exit note）的的路径都包含$u$。
+定义2（Postdomination）。一个节点$w \in G$ 后向支配（postdominates）另一个节点$v \in G$，表示为$w \xrightarrow{post} v$，如果每一条从$v$到退出节点（exit note）的的路径都包含$w$。
 
 支配子关系可以表示为支配子树，并且对于函数可以有效地计算[9]。后支配树等于反向控制流图[1]中的前支配树。从任意前、后支配子树，我们可以得到关于其他节点的传递知识:
 
