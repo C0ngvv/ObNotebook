@@ -30,8 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "07de96a5276b734e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -114,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md"
+                "file": "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md"
               }
             }
           },
@@ -195,10 +208,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c3de4c4456444a38",
+  "active": "07de96a5276b734e",
   "lastOpenFiles": [
     "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
+    "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231226092607251.png",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231225213326205.png",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
@@ -229,7 +243,6 @@
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/image-20231215161729838.png",
-    "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/image-20231215153458525.png",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
     "Templates/博客模板.md",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
