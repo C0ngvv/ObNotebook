@@ -6,6 +6,24 @@ tags:
 ---
 
 # SaTC污点分析算法分析
+## 前面分析结果分析
+经过前面的分析步骤，会得到-alter2的结果。该文件每三行分为一组，每行代表的含义如下
+```text
+# taint_addr
+0x000e3314 0x00062e78  # "list"地址； "list"引用地址
+# func_addr
+0x00062ea4  
+# sinkTarget
+0x0007e278 0x0007e0b8  # 到达的sink危险函数如strcpy调用点的地址列表
+
+# taint_addr [0]
+0x000e2530 0x000581e8  # "wanLinkType"地址和引用处地址
+# func_addr  list # 应该是到达sink所途径的函数调用点
+0x000405f4 0x00040908 0x000582c4 0x000408f0
+# sinkTarget list
+0x00040df8 0x00041698 0x000416fc
+```
+
 污点分析基于angr来做。
 
 初始化。建立一个空白状态，设置地址为分析的函数地址，然后设置.bss段数据为带"bss"标识的符号值。
