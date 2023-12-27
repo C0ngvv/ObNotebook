@@ -93,8 +93,8 @@ check_path_fun(current_path, guards_info, current_depth, **kwargs)
 # collect and prepare the successors to be analyzed
 将sat和unsat的后继状态合并到一起，并依次进行后续操作进行分析。
 
-
-
+一些污点传播策略
+当当前调用的函数不在到sink路径上的调用函数时，不进入函数内部进行分析，只将返回值进行污点设置。
 
 
 
