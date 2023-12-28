@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./SaTC污点分析算法分析",
+  "attachmentFolderPath": "./angr使用杂记",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {

@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
+                "file": "工具/angr/angr使用杂记/angr使用杂记.md",
                 "mode": "source",
                 "source": false
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
+                "file": "工具/angr/angr使用杂记/angr使用杂记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
+                "file": "工具/angr/angr使用杂记/angr使用杂记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md"
+                "file": "工具/angr/angr使用杂记/angr使用杂记.md"
               }
             }
           },
@@ -197,10 +197,13 @@
   },
   "active": "08759449c29fc3ea",
   "lastOpenFiles": [
+    "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
+    "工具/angr/angr使用杂记/angr使用杂记.md",
+    "工具/angr/angr使用杂记",
+    "工具/angr",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
-    "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231226092607251.png",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231225213326205.png",
     "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
@@ -234,14 +237,11 @@
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
     "Templates/博客模板.md",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
-    "工具/IDA/IDA decompiler接口查询",
-    "工具/IDA/IDA脚本动态调试/IDA脚本动态调试",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "Paper/2021-Automatic Inference of Taint Sourcesto Discover Vulnerabilities in SOHORouter Firmware/2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware.md",
     "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
     "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
     "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
-    "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md",
-    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md"
+    "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md"
   ]
 }
