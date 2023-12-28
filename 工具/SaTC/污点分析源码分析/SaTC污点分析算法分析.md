@@ -69,6 +69,7 @@ tags:
 	- 污点传播
 	- sink判断
 
+`_check_sink`
 ```
 获取当前path和next_path
 
@@ -76,7 +77,9 @@ tags:
 
 如果还没有设置污点，则apply_taint，将字符串参数位置设置了污点符号值 <BV32 Reverse(taint_buf_r1__0_32)>
 
-判断当前基本块是否包含sink调用并使用污点数据：跳转地址是否为sink且地址在当前地址在sinkList中，则获取对应sink的进一步判断处理函数进行判段处理。若满足则报告。
+_is_sink_and_tainted判断当前基本块是否包含sink调用并使用污点数据：跳转地址是否为sink且地址在当前地址在sinkList中，则获取对应sink的进一步判断处理函数进行判段处理。若满足则报告。
+
+
 
 污染所有调用地址和参数..
 
