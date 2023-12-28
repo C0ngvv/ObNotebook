@@ -84,7 +84,10 @@ eventually if we are in a loop guarded by a tainted variable
 
 ```
 
+`_flat_explore`
 ```
+检测sat state
+
 # check whether we reached a sink
 check_path_fun(current_path, guards_info, current_depth, **kwargs)
 
