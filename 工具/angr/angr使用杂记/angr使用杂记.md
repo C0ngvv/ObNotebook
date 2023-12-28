@@ -6,6 +6,8 @@ tags:
 ---
 # angr使用杂记
 ## IR
+相关介绍：[angr中的中间语言表示VEX - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/349182248)
+
 `block.vex.jumpkind`表示当前IR（Intermediate Representation）指令的跳转类型。
 
 - `"Ijk_Boring"`：普通的跳转类型，表示顺序执行下一条指令。
