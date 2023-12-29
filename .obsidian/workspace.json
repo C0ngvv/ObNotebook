@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
+                "file": "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,13 +25,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/angr/angr使用杂记/angr使用杂记.md",
+                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,17 +195,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c3de4c4456444a38",
+  "active": "08759449c29fc3ea",
   "lastOpenFiles": [
-    "固件分析/根源定位/FIDL修改/FIDL修改.md",
-    "固件分析/根源定位/问题/问题.md",
-    "固件分析/根源定位/过滤策略/过滤策略.md",
+    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+    "固件分析/根源定位/根源定位/根源定位.md",
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
+    "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
     "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
     "固件分析/根源定位/根源定位2/根源定位2.md",
-    "固件分析/根源定位/根源定位/根源定位.md",
-    "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
-    "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
+    "固件分析/根源定位/FIDL修改/FIDL修改.md",
+    "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
+    "工具/IDA/IDA decompiler接口查询/IDA decompiler接口查询.md",
+    "工具/IDA/在Ubuntu上搭建IDA运行环境/在Ubuntu上搭建IDA运行环境.md",
+    "固件分析/根源定位/问题/问题.md",
+    "固件分析/根源定位/过滤策略/过滤策略.md",
     "工具/angr/angr使用杂记/angr使用杂记.md",
+    "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
     "工具/angr/angr使用杂记",
     "工具/angr",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
@@ -212,12 +219,9 @@
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231226092607251.png",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231225213326205.png",
     "固件分析/根源定位/根源定位3-案例",
-    "工具/IDA/IDA decompiler接口查询/IDA decompiler接口查询.md",
-    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
     "固件分析/根源定位/FIDL修改",
     "工具/IDA/vulfi插件分析/vulfi插件分析.md",
-    "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
     "固件分析/根源定位/过滤策略",
     "Python/json/json.md",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities.md",
@@ -238,9 +242,6 @@
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
     "Paper/2021-Automatic Inference of Taint Sourcesto Discover Vulnerabilities in SOHORouter Firmware/2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware.md",
-    "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md",
-    "Paper/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis/Understanding and Securing Device Vulnerabilities through Automated Bug Report Analysis.md",
-    "Paper/Hoedur-Embedded Firmware Fuzzing using Multi-Stream Inputs/HOEDUR-Embedded Firmware Fuzzing using Multi-Stream Inputs.md",
-    "Paper/Fuzzing IoT Firmware via Multi-stage Message Generation/Fuzzing IoT Firmware via Multi-stage Message Generation.md"
+    "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md"
   ]
 }
