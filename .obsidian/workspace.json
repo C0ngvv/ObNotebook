@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
+                "file": "固件Fuzz/随记/随记.md",
                 "mode": "source",
                 "source": false
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
+                "file": "固件Fuzz/随记/随记.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
+                "file": "固件Fuzz/随记/随记.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md"
+                "file": "固件Fuzz/随记/随记.md"
               }
             }
           },
@@ -197,12 +197,16 @@
   },
   "active": "08759449c29fc3ea",
   "lastOpenFiles": [
+    "环境配置/软件安装/ubuntu常用软件安装.md",
+    "固件Fuzz/随记/随记.md",
+    "固件Fuzz/随记",
+    "固件Fuzz",
+    "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "固件分析/根源定位/根源定位/根源定位.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
-    "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
     "固件分析/根源定位/根源定位2/根源定位2.md",
     "固件分析/根源定位/FIDL修改/FIDL修改.md",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
@@ -215,7 +219,6 @@
     "工具/angr/angr使用杂记",
     "工具/angr",
     "工具/SaTC/SaTC测试与分析/SaTC测试与分析.md",
-    "环境配置/软件安装/ubuntu常用软件安装.md",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231226092607251.png",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231225213326205.png",
     "固件分析/根源定位/根源定位3-案例",
@@ -237,11 +240,8 @@
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/image-20231215161729838.png",
-    "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
     "Templates/博客模板.md",
-    "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities",
     "Paper/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router/Static analyzing firmware to generate under-constrained seedfor fuzzing SOHO router.md",
-    "Paper/2021-Automatic Inference of Taint Sourcesto Discover Vulnerabilities in SOHORouter Firmware/2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware.md",
-    "Paper/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports/Towards the Detection of Inconsistencies in Public Security Vulnerability Reports.md"
+    "Paper/2021-Automatic Inference of Taint Sourcesto Discover Vulnerabilities in SOHORouter Firmware/2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware.md"
   ]
 }
