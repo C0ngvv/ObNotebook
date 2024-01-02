@@ -44,16 +44,6 @@
             }
           },
           {
-            "id": "6a3371b76f51ec02",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.3"
-              }
-            }
-          },
-          {
             "id": "116d2ede02a60369",
             "type": "leaf",
             "state": {
@@ -66,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -231,7 +221,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "6a3371b76f51ec02",
+  "active": "cc971c06b241ae53",
   "lastOpenFiles": [
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
