@@ -32,24 +32,12 @@
             }
           },
           {
-            "id": "cc971c06b241ae53",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "116d2ede02a60369",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "固件Fuzz/暴力测试/暴力测试.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +127,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
+                "file": "固件Fuzz/暴力测试/暴力测试.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +144,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
+                "file": "固件Fuzz/暴力测试/暴力测试.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +167,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md"
+                "file": "固件Fuzz/暴力测试/暴力测试.md"
               }
             }
           },
@@ -221,22 +209,26 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "cc971c06b241ae53",
+  "active": "116d2ede02a60369",
   "lastOpenFiles": [
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "固件Fuzz/暴力测试/暴力测试.md",
+    "固件Fuzz/暴力测试",
+    "固件Fuzz/随记/随记.md",
+    "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
+    "Python/json/json.md",
+    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+    "固件分析/固件论文研究脉络/固件论文研究脉络.md",
     "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
     "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
     "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
     "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
-    "固件Fuzz/随记/随记.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "固件Fuzz/随记",
     "固件Fuzz",
-    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "固件分析/根源定位/根源定位/根源定位.md",
-    "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
     "固件分析/根源定位/根源定位2/根源定位2.md",
     "固件分析/根源定位/FIDL修改/FIDL修改.md",
@@ -253,11 +245,8 @@
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231226092607251.png",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231225213326205.png",
     "固件分析/根源定位/根源定位3-案例",
-    "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
     "固件分析/根源定位/FIDL修改",
-    "工具/IDA/vulfi插件分析/vulfi插件分析.md",
     "固件分析/根源定位/过滤策略",
-    "Python/json/json.md",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231217214030547.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231217212608263.png",
     "工具/SaTC/污点分析源码分析",
@@ -267,7 +256,6 @@
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215185954179.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215164038033.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
-    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities",
     "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/image-20231215161729838.png"
   ]
 }
