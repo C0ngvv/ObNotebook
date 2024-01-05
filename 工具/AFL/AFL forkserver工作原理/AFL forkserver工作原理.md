@@ -1,0 +1,354 @@
+---
+title: AFL forkserver工作原理
+date: 2024/01/05
+categories: 
+tags:
+---
+# AFL forkserver工作原理
+
+![](AFL%20forkserver工作原理/image-20240105222658806.png)
+
+## init_forkserver
+`init_forkserver`为forkserver代码，首先它们通过管道进行通信，在afl-fuzz中通过fork出一个子进程，该子进程进行一些设置后启动测试的目标程序，其中测试的目标程序经过AFL插桩，主要插桩代码在`_afl_maybe_log`。
+```c
+EXP_ST void init_forkserver(char** argv) {
+  // 初始化状态管道和控制管道
+  static struct itimerval it;
+  int st_pipe[2], ctl_pipe[2];
+  int status;
+  s32 rlen;
+
+  ACTF("Spinning up the fork server...");
+
+  if (pipe(st_pipe) || pipe(ctl_pipe)) PFATAL("pipe() failed");
+
+  // unix编程,操作系统提供的系统调用,子进程为forkserver()
+  forksrv_pid = fork();
+
+  if (forksrv_pid < 0) PFATAL("fork() failed");
+  
+  // 子进程的初始化
+  if (!forksrv_pid) {
+
+    struct rlimit r;
+
+    /* Umpf. On OpenBSD, the default fd limit for root users is set to
+       soft 128. Let's try to fix that... */
+
+    if (!getrlimit(RLIMIT_NOFILE, &r) && r.rlim_cur < FORKSRV_FD + 2) {
+
+      r.rlim_cur = FORKSRV_FD + 2;
+      setrlimit(RLIMIT_NOFILE, &r); /* Ignore errors */
+
+    }
+
+    if (mem_limit) {
+
+      r.rlim_max = r.rlim_cur = ((rlim_t)mem_limit) << 20;
+
+#ifdef RLIMIT_AS
+
+      setrlimit(RLIMIT_AS, &r); /* Ignore errors */
+
+#else
+
+      /* This takes care of OpenBSD, which doesn't have RLIMIT_AS, but
+         according to reliable sources, RLIMIT_DATA covers anonymous
+         maps - so we should be getting good protection against OOM bugs. */
+
+      setrlimit(RLIMIT_DATA, &r); /* Ignore errors */
+
+#endif /* ^RLIMIT_AS */
+
+
+    }
+
+    /* Dumping cores is slow and can lead to anomalies if SIGKILL is delivered
+       before the dump is complete. */
+
+    r.rlim_max = r.rlim_cur = 0;
+
+    setrlimit(RLIMIT_CORE, &r); /* Ignore errors */
+
+    /* Isolate the process and configure standard descriptors. If out_file is
+       specified, stdin is /dev/null; otherwise, out_fd is cloned instead. */
+
+    setsid();
+
+    dup2(dev_null_fd, 1);
+    dup2(dev_null_fd, 2);
+
+    if (out_file) {
+
+      dup2(dev_null_fd, 0);
+
+    } else {
+
+      dup2(out_fd, 0);
+      close(out_fd);
+
+    }
+
+    /* Set up control and status pipes, close the unneeded original fds. */
+
+    if (dup2(ctl_pipe[0], FORKSRV_FD) < 0) PFATAL("dup2() failed");
+    if (dup2(st_pipe[1], FORKSRV_FD + 1) < 0) PFATAL("dup2() failed");
+
+    close(ctl_pipe[0]);
+    close(ctl_pipe[1]);
+    close(st_pipe[0]);
+    close(st_pipe[1]);
+
+    close(out_dir_fd);
+    close(dev_null_fd);
+    close(dev_urandom_fd);
+    close(fileno(plot_file));
+
+    /* This should improve performance a bit, since it stops the linker from
+       doing extra work post-fork(). */
+
+    if (!getenv("LD_BIND_LAZY")) setenv("LD_BIND_NOW", "1", 0);
+
+    /* Set sane defaults for ASAN if nothing else specified. */
+
+    setenv("ASAN_OPTIONS", "abort_on_error=1:"
+                           "detect_leaks=0:"
+                           "symbolize=0:"
+                           "allocator_may_return_null=1", 0);
+
+    /* MSAN is tricky, because it doesn't support abort_on_error=1 at this
+       point. So, we do this in a very hacky way. */
+
+    setenv("MSAN_OPTIONS", "exit_code=" STRINGIFY(MSAN_ERROR) ":"
+                           "symbolize=0:"
+                           "abort_on_error=1:"
+                           "allocator_may_return_null=1:"
+                           "msan_track_origins=0", 0);
+
+    execv(target_path, argv);
+
+    /* Use a distinctive bitmap signature to tell the parent about execv()
+       falling through. */
+       
+	// 如果执行失败主进程将通过trace_bits = EXEC_FAIL_SIG（位于bitmap）获得信息
+    *(u32*)trace_bits = EXEC_FAIL_SIG;
+    exit(0);
+
+  }
+
+  /* Close the unneeded endpoints. */
+
+  close(ctl_pipe[0]);
+  close(st_pipe[1]);
+
+  // 主进程的pipe为fsrv_ctl_fd = ctl_pipe[1]用于写;
+  // fsrv_st_fd = st_pipe[0]用于读; 
+  fsrv_ctl_fd = ctl_pipe[1];
+  fsrv_st_fd  = st_pipe[0];
+
+  /* Wait for the fork server to come up, but don't wait too long. */
+
+  it.it_value.tv_sec = ((exec_tmout * FORK_WAIT_MULT) / 1000);
+  it.it_value.tv_usec = ((exec_tmout * FORK_WAIT_MULT) % 1000) * 1000;
+
+  setitimer(ITIMER_REAL, &it, NULL);
+  
+  // 如果长度刚好是4位,一切正常,可以直接返回
+  rlen = read(fsrv_st_fd, &status, 4);
+
+  it.it_value.tv_sec = 0;
+  it.it_value.tv_usec = 0;
+
+  setitimer(ITIMER_REAL, &it, NULL);
+
+  /* If we have a four-byte "hello" message from the server, we're all set.
+     Otherwise, try to figure out what went wrong. */
+
+  if (rlen == 4) {
+    OKF("All right - fork server is up.");
+    return;
+  }
+
+  if (child_timed_out)
+    FATAL("Timeout while initializing fork server (adjusting -t may help)");
+
+  if (waitpid(forksrv_pid, &status, 0) <= 0)
+    PFATAL("waitpid() failed");
+
+  if (WIFSIGNALED(status)) {
+
+    if (mem_limit && mem_limit < 500 && uses_asan) {
+
+      SAYF("\n" cLRD "[-] " cRST
+           "Whoops, the target binary crashed suddenly, before receiving any input\n"
+           "    from the fuzzer! Since it seems to be built with ASAN and you have a\n"
+           "    restrictive memory limit configured, this is expected; please read\n"
+           "    %s/notes_for_asan.txt for help.\n", doc_path);
+
+    } else if (!mem_limit) {
+
+      SAYF("\n" cLRD "[-] " cRST
+           "Whoops, the target binary crashed suddenly, before receiving any input\n"
+           "    from the fuzzer! There are several probable explanations:\n\n"
+
+           "    - The binary is just buggy and explodes entirely on its own. If so, you\n"
+           "      need to fix the underlying problem or find a better replacement.\n\n"
+
+#ifdef __APPLE__
+
+           "    - On MacOS X, the semantics of fork() syscalls are non-standard and may\n"
+           "      break afl-fuzz performance optimizations when running platform-specific\n"
+           "      targets. To fix this, set AFL_NO_FORKSRV=1 in the environment.\n\n"
+
+#endif /* __APPLE__ */
+
+           "    - Less likely, there is a horrible bug in the fuzzer. If other options\n"
+           "      fail, poke <lcamtuf@coredump.cx> for troubleshooting tips.\n");
+
+    } else {
+
+      SAYF("\n" cLRD "[-] " cRST
+           "Whoops, the target binary crashed suddenly, before receiving any input\n"
+           "    from the fuzzer! There are several probable explanations:\n\n"
+
+           "    - The current memory limit (%s) is too restrictive, causing the\n"
+           "      target to hit an OOM condition in the dynamic linker. Try bumping up\n"
+           "      the limit with the -m setting in the command line. A simple way confirm\n"
+           "      this diagnosis would be:\n\n"
+
+#ifdef RLIMIT_AS
+           "      ( ulimit -Sv $[%llu << 10]; /path/to/fuzzed_app )\n\n"
+#else
+           "      ( ulimit -Sd $[%llu << 10]; /path/to/fuzzed_app )\n\n"
+#endif /* ^RLIMIT_AS */
+
+           "      Tip: you can use http://jwilk.net/software/recidivm to quickly\n"
+           "      estimate the required amount of virtual memory for the binary.\n\n"
+
+           "    - The binary is just buggy and explodes entirely on its own. If so, you\n"
+           "      need to fix the underlying problem or find a better replacement.\n\n"
+
+#ifdef __APPLE__
+
+           "    - On MacOS X, the semantics of fork() syscalls are non-standard and may\n"
+           "      break afl-fuzz performance optimizations when running platform-specific\n"
+           "      targets. To fix this, set AFL_NO_FORKSRV=1 in the environment.\n\n"
+
+#endif /* __APPLE__ */
+
+           "    - Less likely, there is a horrible bug in the fuzzer. If other options\n"
+           "      fail, poke <lcamtuf@coredump.cx> for troubleshooting tips.\n",
+           DMS(mem_limit << 20), mem_limit - 1);
+
+    }
+
+    FATAL("Fork server crashed with signal %d", WTERMSIG(status));
+
+  }
+
+  if (*(u32*)trace_bits == EXEC_FAIL_SIG)
+    FATAL("Unable to execute target application ('%s')", argv[0]);
+
+  if (mem_limit && mem_limit < 500 && uses_asan) {
+
+    SAYF("\n" cLRD "[-] " cRST
+           "Hmm, looks like the target binary terminated before we could complete a\n"
+           "    handshake with the injected code. Since it seems to be built with ASAN and\n"
+           "    you have a restrictive memory limit configured, this is expected; please\n"
+           "    read %s/notes_for_asan.txt for help.\n", doc_path);
+
+  } else if (!mem_limit) {
+
+    SAYF("\n" cLRD "[-] " cRST
+         "Hmm, looks like the target binary terminated before we could complete a\n"
+         "    handshake with the injected code. Perhaps there is a horrible bug in the\n"
+         "    fuzzer. Poke <lcamtuf@coredump.cx> for troubleshooting tips.\n");
+
+  } else {
+
+    SAYF("\n" cLRD "[-] " cRST
+         "Hmm, looks like the target binary terminated before we could complete a\n"
+         "    handshake with the injected code. There are %s probable explanations:\n\n"
+
+         "%s"
+         "    - The current memory limit (%s) is too restrictive, causing an OOM\n"
+         "      fault in the dynamic linker. This can be fixed with the -m option. A\n"
+         "      simple way to confirm the diagnosis may be:\n\n"
+
+#ifdef RLIMIT_AS
+         "      ( ulimit -Sv $[%llu << 10]; /path/to/fuzzed_app )\n\n"
+#else
+         "      ( ulimit -Sd $[%llu << 10]; /path/to/fuzzed_app )\n\n"
+#endif /* ^RLIMIT_AS */
+
+         "      Tip: you can use http://jwilk.net/software/recidivm to quickly\n"
+         "      estimate the required amount of virtual memory for the binary.\n\n"
+
+         "    - Less likely, there is a horrible bug in the fuzzer. If other options\n"
+         "      fail, poke <lcamtuf@coredump.cx> for troubleshooting tips.\n",
+         getenv(DEFER_ENV_VAR) ? "three" : "two",
+         getenv(DEFER_ENV_VAR) ?
+         "    - You are using deferred forkserver, but __AFL_INIT() is never\n"
+         "      reached before the program terminates.\n\n" : "",
+         DMS(mem_limit << 20), mem_limit - 1);
+
+  }
+
+  FATAL("Fork server handshake failed");
+
+}
+```
+
+## \_afl_maybe_log
+`_afl_maybe_log`是插桩在目标程序中的汇编代码，下面是C伪代码，在forkserver创建并启动目标程序后就执行到了`_afl_maybe_log`，第一次的话它会进行初始化，然后向父进程写入4字节表示初始化完成，然后进入while循环，等待父进程发送指令（接收4字节）表示要进行新的测试。当forkserver接收到指令后，就对当前进程进行fork，得到当前进程和当前进程的子进程。当前进程即forkserver会向父进程发送4字节表示子进程启动成功，然后通过waitpid()等待子进程执行完，而子进程则执行收集覆盖率，当forkserver等子进程执行完后再向父进程发送4字节表示子进程执行完。
+
+```c
+// 与 fuzzer 通用的 pipe (1)
+#define READ_PIPE_FD 198
+#define WRITE_PIPE_FD 199
+
+char _afl_maybe_log(__int64 a1, __int64 a2, __int64 a3, __int64 bbid)
+{
+    // 是否需要初始化 (2)
+    if ( !_afl_area_ptr )
+    {
+        // 取得 shared memory (3)
+        shmid_str = getenv("__AFL_SHM_ID");
+        shmid_int = atoi(shmid_str);
+        shm = shmat(shmid_int, NULL, 0);
+        _afl_area_ptr = shm;
+
+        // handshake (4)
+        if ( write(WRITE_PIPE_FD, &_afl_temp, 4) == 4 )
+        {
+            // --------------- fork server (5) ---------------
+            while ( 1 )
+            {
+                if ( read(READ_PIPE_FD, &_afl_temp, 4) != 4 ) // (6)
+                    break;
+                pid = fork();
+                if ( !pid )
+                    goto __afl_fork_resume;
+
+                write(WRITE_PIPE_FD, &pid, 4);
+                waitpid(pid, &_afl_temp, 0); // (7)
+                write(WRITE_PIPE_FD, &_afl_temp, 4);
+            }
+            _exit(0);
+        }
+    }
+    __afl_fork_resume: // (8)
+    // 收集 coverage
+    edge = _afl_prev_loc ^ bbid;
+    _afl_prev_loc = (_afl_prev_loc ^ edge) >> 1;
+    ++*(_afl_area_ptr + edge);
+}
+```
+
+
+
+
+
+
+## 参考链接
+
