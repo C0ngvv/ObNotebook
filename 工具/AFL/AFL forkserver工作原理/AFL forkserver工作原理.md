@@ -345,7 +345,10 @@ char _afl_maybe_log(__int64 a1, __int64 a2, __int64 a3, __int64 bbid)
 }
 ```
 
+## 如何将变异数据发送给fork的目标程序
+在init_forkserver中，forkserver执行了`execv(target_path, argv);`，即目标程序和其执行参数，奇怪的是那么每次启动目标程序其参数不是就固定了吗(`argv`)，如何为目标程序指定每次变异的测试用例呢？
 
+实际上目标程序每次执行都是读取的相同的文件：`out_dir/.cur_input`内容，只是每次测试时该文件里面的内容会被写入不同的测试用例。
 
 
 
