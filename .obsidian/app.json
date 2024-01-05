@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./解析函数分析",
+  "attachmentFolderPath": "./2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {

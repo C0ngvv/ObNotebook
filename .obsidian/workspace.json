@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c3de4c4456444a38",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "08759449c29fc3ea",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件Fuzz/解析函数分析/解析函数分析.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "116d2ede02a60369",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "环境配置/软件安装/ubuntu常用软件安装.md",
+                "file": "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,8 +86,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 202.5,
-    "collapsed": true
+    "width": 202.5
   },
   "right": {
     "id": "392f1528b5d51e68",
@@ -128,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件Fuzz/解析函数分析/解析函数分析.md",
+                "file": "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件Fuzz/解析函数分析/解析函数分析.md",
+                "file": "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件Fuzz/解析函数分析/解析函数分析.md"
+                "file": "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md"
               }
             }
           },
@@ -213,8 +187,14 @@
   },
   "active": "08759449c29fc3ea",
   "lastOpenFiles": [
-    "固件Fuzz/随记/随记.md",
+    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing/image-20240105160648249.png",
+    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing/image-20240105160157807.png",
+    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing/image-20240105154735387.png",
+    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing",
     "固件Fuzz/解析函数分析/解析函数分析.md",
+    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
+    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing",
+    "固件Fuzz/随记/随记.md",
     "固件Fuzz/解析函数分析",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
@@ -241,23 +221,17 @@
     "工具/IDA/在Ubuntu上搭建IDA运行环境/在Ubuntu上搭建IDA运行环境.md",
     "固件分析/根源定位/问题/问题.md",
     "固件分析/根源定位/过滤策略/过滤策略.md",
-    "工具/angr/angr使用杂记/angr使用杂记.md",
-    "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
     "工具/angr/angr使用杂记",
     "工具/angr",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231226092607251.png",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231225213326205.png",
     "固件分析/根源定位/根源定位3-案例",
     "固件分析/根源定位/FIDL修改",
-    "固件分析/根源定位/过滤策略",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231217214030547.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231217212608263.png",
-    "工具/SaTC/污点分析源码分析",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215201228883.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215194939343.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215193408384.png",
-    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215185954179.png",
-    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215164038033.png",
-    "Paper/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/2024-USENIX-Atropos-Effective Fuzzing of Web Applications for Server-Side Vulnerabilities/image-20231215161729838.png"
+    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215185954179.png"
   ]
 }
