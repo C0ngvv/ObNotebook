@@ -354,4 +354,14 @@ char _afl_maybe_log(__int64 a1, __int64 a2, __int64 a3, __int64 bbid)
 
 
 ## 参考链接
+[2. AFL fuzz one函数 (yuque.com)](https://www.yuque.com/alipayxsmb67d6yg/qgmue5/odlo4wwyty4snnh2?singleDoc#KHCtP)
 
+[AFL插桩机理 (yuque.com)](https://www.yuque.com/alipayxsmb67d6yg/qgmue5/lfglap3tkveqz4bx?singleDoc#iWrJa)
+
+[AFL命令行中“@@“的作用以及AFL的两种数据传递方式_afl 测试@@-CSDN博客](https://blog.csdn.net/weixin_50972562/article/details/125536878)
+
+[基于qemu和unicorn的Fuzz技术分析-腾讯云开发者社区-腾讯云 (tencent.com)](https://cloud.tencent.com/developer/article/1987935)
+
+[AFL-Unicorn中的fork server机制详解_forkserver-CSDN博客](https://blog.csdn.net/Little_Bro/article/details/122694054)
+
+[进程间的通信方式——pipe（管道）-CSDN博客](https://blog.csdn.net/skyroben/article/details/71513385)
