@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
+                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
+                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
+                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md"
+                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md"
               }
             }
           },
@@ -186,10 +186,10 @@
   },
   "active": "08759449c29fc3ea",
   "lastOpenFiles": [
+    "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
     "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理/image-20240105222658806.png",
     "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理",
     "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
-    "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
     "工具/AFL/AFL forkserver工作原理",
     "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing/image-20240105160648249.png",
     "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing/image-20240105160157807.png",
@@ -230,7 +230,6 @@
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231217214030547.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231217212608263.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215201228883.png",
-    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215194939343.png",
-    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215193408384.png"
+    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215194939343.png"
   ]
 }

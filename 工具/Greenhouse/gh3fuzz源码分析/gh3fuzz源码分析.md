@@ -433,11 +433,7 @@ sudo chroot . ./greenhouse/busybox sh
 ### 尝试在docker上运行
 使用正常gh3fuzz创建的docker环境启动后会自动运行fuzz.sh脚本开始模糊测试，当出现异常时就会停止环境。为了持续稳定的进入docker shell内进行分析，创建Docker image的时候不让它运行fuzz.sh脚本，删除最后一行`CMD /fuzz.sh`。
 
-在
-
-
-
-向docker中加入语法变异库so后，不断递归提示缺少库。这个库一直找不到应该放在哪儿，里面放了这个库还是提示这个错误。
+在向docker中加入语法变异库so后，不断递归提示缺少库。这个库一直找不到应该放在哪儿，里面放了这个库还是提示这个错误。
 
 ![](images/Pasted%20image%2020231113165031.png)
 

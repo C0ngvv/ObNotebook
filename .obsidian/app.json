@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./AFL forkserver工作原理",
+  "attachmentFolderPath": "./gh3fuzz源码分析",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
