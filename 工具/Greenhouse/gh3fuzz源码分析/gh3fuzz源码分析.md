@@ -367,6 +367,19 @@ POS /shareswwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 
 除此之外，还对do_poll(), do_select()等进行了hook，以及对qemu进行的修改也在这里进行了，如do_openat()等。
 
+AFL进行模糊测试时，每次程序处理完输入数据需要结束程序。这里应该是对write进行hook，在每次write执行完后就exit(0)退出程序。
+```diff
+@@ -8330,6 +8794,11 @@ static abi_long do_syscall1(void *cpu_env, int num, abi_long arg1,
+         }
+         return ret;
+     case TARGET_NR_write:
++        fd = arg1;
++        if(hookhack && conn_fd != -1 && fd == conn_fd && hookhack_recved) {
++            fputs("[HOOK] done in write!\n", bk_stdout);
++            exit(0);
++        }
+```
+
 ## 融入Grammar Mutator
 
 ### 尝试在主机上chroot运行
