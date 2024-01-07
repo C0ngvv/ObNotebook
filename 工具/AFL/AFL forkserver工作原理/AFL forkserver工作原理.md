@@ -372,6 +372,7 @@ AFL的变异代码位于fuzz_one中，
     ...
 ```
 
+### common_fuzz_stuff()
 `common_fuzz_stuff()`用于执行一次测试。它首先调用`write_to_testcase()`来将本次测试输入写入每次模糊测试过程中二进程读取的指定的outfile中。然后`run_target()`会执行一次目标程序，其具体流程为：先给forkserver发送4字节表示开始一次新的测试，当forkserver启动新的二进制程序后会向父程序（本程序）发送新程序的pid值，随后会等待forkserver发送4字节数据表示子程序执行完，后面就是计算覆盖率了。执行完`run_target()`后面就是对这次执行进行一些判断，看看当前测试用例是否interesting而保留，更新显示状态。
 ```c
 EXP_ST u8 common_fuzz_stuff(char** argv, u8* out_buf, u32 len) {
@@ -422,6 +423,50 @@ EXP_ST u8 common_fuzz_stuff(char** argv, u8* out_buf, u32 len) {
 
 }
 ```
+  
+### AFL++的变异
+AFL++的变异应该也位于fuzz_one中，这里它进行了条件判断，根据不同的条件执行不同的变异策略，其中`fuzz_one_original()`应该就是代表原始的AFL的变异，此外它还有`pilot_fuzzing()`和`core_fuzzing()`等。
+```c
+/* The entry point for the mutator, choosing the default mutator, and/or MOpt
+   depending on the configuration. */
+
+u8 fuzz_one(afl_state_t *afl) {
+  int key_val_lv_1 = -1, key_val_lv_2 = -1;
+  /*
+     -L command line paramter => limit_time_sig value
+       limit_time_sig == 0 then run the default mutator
+       limit_time_sig  > 0 then run MOpt
+       limit_time_sig  < 0 both are run
+  */
+
+  if (afl->limit_time_sig <= 0) { key_val_lv_1 = fuzz_one_original(afl); }
+
+  if (afl->limit_time_sig != 0) {
+
+    if (afl->key_module == 0) {
+
+      key_val_lv_2 = pilot_fuzzing(afl);
+
+    } else if (afl->key_module == 1) {
+
+      key_val_lv_2 = core_fuzzing(afl);
+
+    } else if (afl->key_module == 2) {
+
+      pso_updating(afl);
+
+    }
+
+  }
+
+  if (unlikely(key_val_lv_1 == -1)) { key_val_lv_1 = 0; }
+  if (likely(key_val_lv_2 == -1)) { key_val_lv_2 = 0; }
+
+  return (key_val_lv_1 | key_val_lv_2);
+
+}
+```
+
 ## 参考链接
 [2. AFL fuzz one函数 (yuque.com)](https://www.yuque.com/alipayxsmb67d6yg/qgmue5/odlo4wwyty4snnh2?singleDoc#KHCtP)
 
