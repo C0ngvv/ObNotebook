@@ -350,9 +350,78 @@ char _afl_maybe_log(__int64 a1, __int64 a2, __int64 a3, __int64 bbid)
 
 实际上目标程序每次执行都是读取的相同的文件：`out_dir/.cur_input`内容，只是每次测试时该文件里面的内容会被写入不同的测试用例。
 
+## 变异
+AFL的变异代码位于fuzz_one中，
 
+以位反转为例，AFL通过宏来定义位反转操作
+```c
+#define FLIP_BIT(_ar, _b) do { \
+    u8* _arf = (u8*)(_ar); \
+    u32 _bf = (_b); \
+    _arf[(_bf) >> 3] ^= (128 >> ((_bf) & 7)); \
+  } while (0)
+```
 
+通过for循环来遍历每一位依次调用`FLIP_BIT`对当前测试用例`out_buf`进行位反转，然后调用`common_fuzz_stuff`用于对当前测试用例`out_buf`执行依次测试，执行完后再调用依次`FLIP_BIT`来还原原始测试用例，从而下一次只对下一位进行反转。
+```c
+  for (stage_cur = 0; stage_cur < stage_max; stage_cur++) {
+    stage_cur_byte = stage_cur >> 3;
+    FLIP_BIT(out_buf, stage_cur);
+    if (common_fuzz_stuff(argv, out_buf, len)) goto abandon_entry;
+    FLIP_BIT(out_buf, stage_cur);
+    ...
+```
 
+`common_fuzz_stuff()`用于执行一次测试。它首先调用`write_to_testcase()`来将本次测试输入写入每次模糊测试过程中二进程读取的指定的outfile中。然后`run_target()`会执行一次目标程序，其具体流程为：先给forkserver发送4字节表示开始一次新的测试，当forkserver启动新的二进制程序后会向父程序（本程序）发送新程序的pid值，随后会等待forkserver发送4字节数据表示子程序执行完，后面就是计算覆盖率了。执行完`run_target()`后面就是对这次执行进行一些判断，看看当前测试用例是否interesting而保留，更新显示状态。
+```c
+EXP_ST u8 common_fuzz_stuff(char** argv, u8* out_buf, u32 len) {
+
+  u8 fault;
+
+  if (post_handler) {
+
+    out_buf = post_handler(out_buf, &len);
+    if (!out_buf || !len) return 0;
+
+  }
+
+  write_to_testcase(out_buf, len);
+
+  fault = run_target(argv, exec_tmout);
+
+  if (stop_soon) return 1;
+
+  if (fault == FAULT_TMOUT) {
+
+    if (subseq_tmouts++ > TMOUT_LIMIT) {
+      cur_skipped_paths++;
+      return 1;
+    }
+
+  } else subseq_tmouts = 0;
+
+  /* Users can hit us with SIGUSR1 to request the current input
+     to be abandoned. */
+
+  if (skip_requested) {
+
+     skip_requested = 0;
+     cur_skipped_paths++;
+     return 1;
+
+  }
+
+  /* This handles FAULT_ERROR for us: */
+
+  queued_discovered += save_if_interesting(argv, out_buf, len, fault);
+
+  if (!(stage_cur % stats_update_freq) || stage_cur + 1 == stage_max)
+    show_stats();
+
+  return 0;
+
+}
+```
 ## 参考链接
 [2. AFL fuzz one函数 (yuque.com)](https://www.yuque.com/alipayxsmb67d6yg/qgmue5/odlo4wwyty4snnh2?singleDoc#KHCtP)
 
