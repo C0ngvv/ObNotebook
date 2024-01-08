@@ -459,3 +459,10 @@ sudo chroot . ./greenhouse/busybox sh
 ![](images/Pasted%20image%2020231114092544.png)
 
 failed...
+
+20240108记
+
+![](gh3fuzz源码分析/image-20240108202835973.png)
+
+怀疑是不是因为AFL++的版本太低了，还不支持libgrammarmutaor?
+
