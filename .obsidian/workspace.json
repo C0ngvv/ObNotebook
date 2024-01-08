@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -114,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
+                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
+                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/根源定位/根源定位2/根源定位2.md"
+                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md"
               }
             }
           },
@@ -196,10 +197,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "4b2c4ae4a5e65da8",
+  "active": "29b53c7c13365d92",
   "lastOpenFiles": [
-    "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
     "固件分析/根源定位/根源定位2/根源定位2.md",
+    "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
     "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
     "工具/AFL/分支覆盖率/分支覆盖率.md",
     "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
