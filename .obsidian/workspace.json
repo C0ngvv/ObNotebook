@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
+                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
+                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
+                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md"
+                "file": "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md"
               }
             }
           },
