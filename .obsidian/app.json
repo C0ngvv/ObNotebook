@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./gh3fuzz源码分析",
+  "attachmentFolderPath": "./2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
