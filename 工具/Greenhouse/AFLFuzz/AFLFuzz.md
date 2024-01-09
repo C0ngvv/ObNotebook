@@ -1,4 +1,4 @@
-
+## make distrib
 ```bash
 git clone https://github.com/AFLplusplus/AFLplusplus.git
 ```
@@ -13,7 +13,7 @@ greenhouse/gh3fuzz的afl-common.c与原始的区别就在于更改了get_qemu_ar
 STATIC=1 make distrib
 ```
 
-随后遇到as问题
+随后遇到`as`问题
 ```bash
 [+] Instrumented 665 locations (64-bit, non-hardened mode, ratio 100%).
 afl-as++4.10a by Michal Zalewski
@@ -56,3 +56,11 @@ sudo apt-get install -y lld-14 llvm-14 llvm-14-dev clang-14 || sudo apt-get inst
 sudo apt-get install -y gcc-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-plugin-dev libstdc++-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-dev
 sudo apt-get install -y ninja-build # for QEMU mode
 ```
+
+最后就装好了。
+![](AFLFuzz/image-20240109094010111.png)
+
+![](AFLFuzz/image-20240109094040683.png)
+
+最后再刚才改名的`aflas`还原为`as`。
+
