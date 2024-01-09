@@ -46,3 +46,13 @@ ubuntu@ubuntu22:~/Desktop/firmafl/AFLplusplus$ mv as aflas
 ubuntu@ubuntu22:~/Desktop/firmafl/AFLplusplus$ ls -l aflas
 lrwxrwxrwx 1 ubuntu ubuntu 6  1月  9 09:15 aflas -> afl-as
 ```
+
+后面出现一些报错是因为没有装好环境
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential python3-dev automake cmake git flex bison libglib2.0-dev libpixman-1-dev python3-setuptools cargo libgtk-3-dev
+# try to install llvm 14 and install the distro default if that fails
+sudo apt-get install -y lld-14 llvm-14 llvm-14-dev clang-14 || sudo apt-get install -y lld llvm llvm-dev clang
+sudo apt-get install -y gcc-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-plugin-dev libstdc++-$(gcc --version|head -n1|sed 's/\..*//'|sed 's/.* //')-dev
+sudo apt-get install -y ninja-build # for QEMU mode
+```
