@@ -495,3 +495,10 @@ ubuntu@ubuntu22:~/Desktop/firmafl/ghnfuzz$ sudo python3 build_fuzz_img.py
 0
 ```
 
+我把AFL版本更换为4.10a来跑Grammar Mutator还是不行。
+
+![](gh3fuzz源码分析/image-20240109160057259.png)
+
+不加Grammar Mutator结果如下
+![](gh3fuzz源码分析/image-20240109160307524.png)
+
