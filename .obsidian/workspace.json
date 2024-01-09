@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
+                "file": "工具/Greenhouse/AFLFuzz/AFLFuzz.md",
                 "mode": "source",
                 "source": false
               }
@@ -115,7 +115,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
+                "file": "工具/Greenhouse/AFLFuzz/AFLFuzz.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +132,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
+                "file": "工具/Greenhouse/AFLFuzz/AFLFuzz.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md"
+                "file": "工具/Greenhouse/AFLFuzz/AFLFuzz.md"
               }
             }
           },
@@ -199,6 +199,9 @@
   },
   "active": "29b53c7c13365d92",
   "lastOpenFiles": [
+    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
+    "工具/Greenhouse/AFLFuzz/AFLFuzz.md",
+    "工具/Greenhouse/AFLFuzz",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析/image-20240108202835973.png",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析",
     "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
@@ -206,7 +209,6 @@
     "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
     "工具/AFL/分支覆盖率/分支覆盖率.md",
     "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
-    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
     "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理/image-20240105222658806.png",
     "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理",
     "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
@@ -238,12 +240,10 @@
     "固件分析/根源定位/根源定位/根源定位.md",
     "工具/Greenhouse/Netgear R7000P重托管测试/Netgear R7000P重托管测试.md",
     "固件分析/根源定位/FIDL修改/FIDL修改.md",
-    "工具/angr/angr使用杂记",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231226092607251.png",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf/image-20231225213326205.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231217214030547.png",
     "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231217212608263.png",
-    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215201228883.png",
-    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215194939343.png"
+    "Paper/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/2024-USENIX-Your Firmware Has Arrived-A Study of Firmware Update Vulnerabilities/image-20231215201228883.png"
   ]
 }

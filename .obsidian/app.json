@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./gh3fuzz源码分析",
+  "attachmentFolderPath": "./AFLFuzz",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
