@@ -466,3 +466,32 @@ failed...
 
 怀疑是不是因为AFL++的版本太低了，还不支持libgrammarmutaor?
 
+## 20240109
+```
+ubuntu@ubuntu22:~/Desktop/firmafl/ghnfuzz$ sudo python3 build_fuzz_img.py 
+/tmp/gh-5bymwyiw/*/config.json
+[+] Building 1.9s (15/15) FINISHED                                              
+ => [internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 507B                                       0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load build context                                          0.8s
+ => => transferring context: 125.03MB                                      0.8s
+ => CACHED [ 1/11] ADD fs /                                                0.0s
+ => CACHED [ 2/11] COPY config.json /config.json                           0.0s
+ => [ 3/11] COPY fuzz_bins /fuzz_bins                                      0.4s
+ => [ 4/11] COPY seeds /fuzz/seeds                                         0.0s
+ => [ 5/11] COPY dictionary /fuzz/dictionary                               0.0s
+ => [ 6/11] COPY fuzz.sh /fuzz.sh                                          0.0s
+ => [ 7/11] COPY postauth_fuzz.sh /postauth_fuzz.sh                        0.0s
+ => [ 8/11] COPY finish.sh /finish.sh                                      0.0s
+ => [ 9/11] COPY minify.sh /minify.sh                                      0.0s
+ => [10/11] RUN ["/fuzz_bins/utils/cp", "/fuzz_bins/qemu/afl-qemu-trace-a  0.4s
+ => [11/11] WORKDIR /scratch                                               0.0s
+ => exporting to image                                                     0.2s
+ => => exporting layers                                                    0.2s
+ => => writing image sha256:8444434ff9952a161faa653022d92d7ccbca57fbbce2a  0.0s
+ => => naming to docker.io/library/myac1450fuzz                            0.0s
+0
+```
+
