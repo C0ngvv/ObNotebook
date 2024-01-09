@@ -502,3 +502,145 @@ ubuntu@ubuntu22:~/Desktop/firmafl/ghnfuzz$ sudo python3 build_fuzz_img.py
 不加Grammar Mutator结果如下
 ![](gh3fuzz源码分析/image-20240109160307524.png)
 
+## 自定义变异库可行
+尝试使用自定义变异库结果是可以跑的。
+
+根据案例[example.c](https://github.com/AFLplusplus/AFLplusplus/blob/stable/custom_mutators/examples/example.c)写出下面的自定义变异代码。
+```c
+#include "afl-fuzz.h"
+
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+#define DATA_SIZE (100)
+
+static const char *commands[] = {
+
+    "GET",
+    "PUT",
+    "DEL",
+
+};
+
+typedef struct my_mutator {
+
+  afl_state_t *afl;
+
+  // any additional data here!
+  size_t trim_size_current;
+  int    trimmming_steps;
+  int    cur_step;
+
+  u8 *mutated_out, *post_process_buf, *trim_buf;
+
+} my_mutator_t;
+
+my_mutator_t *afl_custom_init(afl_state_t *afl, unsigned int seed) {
+
+  srand(seed);  // needed also by surgical_havoc_mutate()
+
+  my_mutator_t *data = calloc(1, sizeof(my_mutator_t));
+  if (!data) {
+
+    perror("afl_custom_init alloc");
+    return NULL;
+
+  }
+
+  if ((data->mutated_out = (u8 *)malloc(MAX_FILE)) == NULL) {
+
+    perror("afl_custom_init malloc");
+    return NULL;
+
+  }
+
+  if ((data->post_process_buf = (u8 *)malloc(MAX_FILE)) == NULL) {
+
+    perror("afl_custom_init malloc");
+    return NULL;
+
+  }
+
+  if ((data->trim_buf = (u8 *)malloc(MAX_FILE)) == NULL) {
+
+    perror("afl_custom_init malloc");
+    return NULL;
+
+  }
+
+  data->afl = afl;
+
+  return data;
+
+}
+
+size_t afl_custom_fuzz(my_mutator_t *data, uint8_t *buf, size_t buf_size,
+                       u8 **out_buf, uint8_t *add_buf,
+                       size_t add_buf_size,  // add_buf can be NULL
+                       size_t max_size) {
+
+  // Make sure that the packet size does not exceed the maximum size expected by
+  // the fuzzer
+  size_t mutated_size = DATA_SIZE <= max_size ? DATA_SIZE : max_size;
+
+  memcpy(data->mutated_out, buf, buf_size);
+
+  // Randomly select a command string to add as a header to the packet
+  memcpy(data->mutated_out, commands[rand() % 3], 3);
+
+  if (mutated_size > max_size) { mutated_size = max_size; }
+
+  *out_buf = data->mutated_out;
+  return mutated_size;
+
+}
+
+size_t afl_custom_post_process(my_mutator_t *data, uint8_t *buf,
+                               size_t buf_size, uint8_t **out_buf) {
+
+  if (buf_size + 5 > MAX_FILE) { buf_size = MAX_FILE - 5; }
+
+  memcpy(data->post_process_buf + 5, buf, buf_size);
+  data->post_process_buf[0] = 'A';
+  data->post_process_buf[1] = 'F';
+  data->post_process_buf[2] = 'L';
+  data->post_process_buf[3] = '+';
+  data->post_process_buf[4] = '+';
+
+  *out_buf = data->post_process_buf;
+
+  return buf_size + 5;
+
+}
+
+void afl_custom_deinit(my_mutator_t *data) {
+
+  free(data->post_process_buf);
+  free(data->mutated_out);
+  free(data->trim_buf);
+  free(data);
+
+}
+```
+
+编译
+```bash
+gcc -shared -Wall -O3 example.c -o example.so
+```
+
+执行
+```bash
+export AFL_CUSTOM_MUTATOR_LIBRARY="/example.so"
+export AFL_CUSTOM_MUTATOR_ONLY=1
+afl-fuzz /path/to/program
+```
+
+如图
+![](gh3fuzz源码分析/image-20240109163233633.png)
+
+查看了几个当前测试案例，应该是起作用了，上面有"DEL, PUT"等关键字。
+
+![](gh3fuzz源码分析/image-20240109163340317.png)
+
