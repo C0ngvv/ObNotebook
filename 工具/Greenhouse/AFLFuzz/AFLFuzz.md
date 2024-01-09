@@ -64,3 +64,54 @@ sudo apt-get install -y ninja-build # for QEMU mode
 
 最后再刚才改名的`aflas`还原为`as`。
 
+## qemuafl
+syscall.c
+![](AFLFuzz/image-20240109104417226.png)
+
+```c
+
+
+#ifdef HAVE_SYS_MOUNT_FSCONFIG
+/*
+ * glibc >= 2.36 linux/mount.h conflicts with sys/mount.h,
+ * which in turn prevents use of linux/fs.h. So we have to
+ * define the constants ourselves for now.
+ */
+#define FS_IOC_GETFLAGS                _IOR('f', 1, long)
+#define FS_IOC_SETFLAGS                _IOW('f', 2, long)
+#define FS_IOC_GETVERSION              _IOR('v', 1, long)
+#define FS_IOC_SETVERSION              _IOW('v', 2, long)
+#define FS_IOC_FIEMAP                  _IOWR('f', 11, struct fiemap)
+#define FS_IOC32_GETFLAGS              _IOR('f', 1, int)
+#define FS_IOC32_SETFLAGS              _IOW('f', 2, int)
+#define FS_IOC32_GETVERSION            _IOR('v', 1, int)
+#define FS_IOC32_SETVERSION            _IOW('v', 2, int)
+#else
+#include <linux/fs.h>
+#endif
+```
+
+```bash
+ubuntu@ubuntu22:~/Desktop/firmafl/AFLplusplus$ diff qemu_mode/qemuafl/linux-user/syscall.c ../AFLplusplus-4.02c/qemu_mode/qemuafl/linux-user/syscall.c 
+98,114d97
+< 
+< #ifdef HAVE_SYS_MOUNT_FSCONFIG
+< /*
+<  * glibc >= 2.36 linux/mount.h conflicts with sys/mount.h,
+<  * which in turn prevents use of linux/fs.h. So we have to
+<  * define the constants ourselves for now.
+<  */
+< #define FS_IOC_GETFLAGS                _IOR('f', 1, long)
+< #define FS_IOC_SETFLAGS                _IOW('f', 2, long)
+< #define FS_IOC_GETVERSION              _IOR('v', 1, long)
+< #define FS_IOC_SETVERSION              _IOW('v', 2, long)
+< #define FS_IOC_FIEMAP                  _IOWR('f', 11, struct fiemap)
+< #define FS_IOC32_GETFLAGS              _IOR('f', 1, int)
+< #define FS_IOC32_SETFLAGS              _IOW('f', 2, int)
+< #define FS_IOC32_GETVERSION            _IOR('v', 1, int)
+< #define FS_IOC32_SETVERSION            _IOW('v', 2, int)
+< #else
+116d98
+< #endif
+
+```
