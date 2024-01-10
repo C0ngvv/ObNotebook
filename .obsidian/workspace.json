@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b4b394c465d4f6d4",
+        "id": "1e365d7137cc6991",
         "type": "tabs",
         "children": [
           {
-            "id": "bedfce54c562c716",
+            "id": "56cf5d467888440e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars.md",
+                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars.md",
+                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars.md",
+                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +142,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars.md"
+                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md"
               }
             }
           },
@@ -184,24 +184,28 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "bedfce54c562c716",
+  "active": "56cf5d467888440e",
   "lastOpenFiles": [
-    "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/image-20240109204257913.png",
-    "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/image-20240109203928024.png",
-    "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/image-20240109203751411.png",
-    "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/image-20240109203740612.png",
-    "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/image-20240109203643100.png",
-    "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112951647.png",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112738625.png",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112717738.png",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112517051.png",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110111705777.png",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110111317908.png",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110111049905.png",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110110919415.png",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110110721017.png",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/image-20240110110605420.png",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
+    "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer",
     "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars.md",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI",
+    "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/image-20240109204257913.png",
+    "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars",
     "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
-    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析/image-20240109163340317.png",
-    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析/image-20240109163233633.png",
-    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析/image-20240109160307524.png",
-    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析/image-20240109160057259.png",
     "工具/Greenhouse/AFLFuzz/AFLFuzz.md",
-    "工具/Greenhouse/AFLFuzz/AFLFuzz/image-20240109104417226.png",
-    "工具/Greenhouse/AFLFuzz/AFLFuzz/image-20240109094040683.png",
     "工具/Greenhouse/AFLFuzz/AFLFuzz",
     "工具/Greenhouse/AFLFuzz",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析",
@@ -215,9 +219,7 @@
     "工具/AFL/AFL forkserver工作原理",
     "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing",
     "固件Fuzz/解析函数分析/解析函数分析.md",
-    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing",
     "固件Fuzz/随记/随记.md",
-    "固件Fuzz/解析函数分析",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
@@ -229,8 +231,6 @@
     "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
     "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
     "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md",
-    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md",
-    "固件分析/华硕RT-AC68U/华硕RT-AC68U.md",
-    "固件分析/根源定位/根源定位/根源定位.md"
+    "固件分析/Netgear R6250固件分析/Netgear R6250固件分析.md"
   ]
 }
