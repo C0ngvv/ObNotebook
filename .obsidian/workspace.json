@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/2021-Automatic Inference of Taint Sourcesto Discover Vulnerabilities in SOHORouter Firmware/2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware.md",
+                "file": "固件Fuzz/PoC逼近生成技术/PoC逼近.md",
                 "mode": "source",
                 "source": false
               }
@@ -42,8 +42,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8e54f2e6472b907f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "928f0404070c46ad",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -126,7 +151,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
+                "file": "固件Fuzz/PoC逼近生成技术/PoC逼近.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +168,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
+                "file": "固件Fuzz/PoC逼近生成技术/PoC逼近.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -166,7 +191,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md"
+                "file": "固件Fuzz/PoC逼近生成技术/PoC逼近.md"
               }
             }
           },
@@ -208,12 +233,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "187d4ecd31b81bf7",
+  "active": "f0dd5277ddb80cdd",
   "lastOpenFiles": [
+    "固件Fuzz/随记/随记.md",
+    "固件Fuzz/PoC逼近生成技术/PoC逼近.md",
+    "固件Fuzz/PoC逼近生成技术",
+    "固件Fuzz/解析函数分析/解析函数分析.md",
+    "固件Fuzz/暴力测试/暴力测试.md",
     "Paper/2021-Automatic Inference of Taint Sourcesto Discover Vulnerabilities in SOHORouter Firmware/2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware.md",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
+    "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
+    "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
     "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
-    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112951647.png",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112738625.png",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112717738.png",
@@ -224,7 +256,6 @@
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110110919415.png",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110110721017.png",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/image-20240110110605420.png",
-    "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer",
     "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars.md",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI",
@@ -242,19 +273,13 @@
     "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
     "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理",
     "工具/AFL/AFL forkserver工作原理",
-    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing",
-    "固件Fuzz/解析函数分析/解析函数分析.md",
-    "固件Fuzz/随记/随记.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
-    "固件Fuzz/暴力测试/暴力测试.md",
     "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "Python/json/json.md",
     "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
     "固件分析/固件论文研究脉络/固件论文研究脉络.md",
-    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md",
-    "漏洞分析/Netgear R6220 认证绕过漏洞分析/CVE-2019-17137-Netgear R6220认证绕过漏洞分析.md",
-    "固件分析/Netgear固件漏洞分析/Nettgear固件漏洞分析.md"
+    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md"
   ]
 }

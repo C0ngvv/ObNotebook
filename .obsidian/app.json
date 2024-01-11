@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./2023-CCS-Firmulti Fuzzer",
+  "attachmentFolderPath": "./PoC逼近",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
