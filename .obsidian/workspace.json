@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+                "file": "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md"
+                "file": "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md"
               }
             }
           },
@@ -223,6 +223,11 @@
   },
   "active": "8e54f2e6472b907f",
   "lastOpenFiles": [
+    "环境配置/软件安装/ubuntu常用软件安装.md",
+    "环境配置/更换镜像源/更换镜像源.md",
+    "静态分析/Joern/Joern.md",
+    "文章阅读/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
     "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
     "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
@@ -261,13 +266,8 @@
     "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
     "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理",
     "工具/AFL/AFL forkserver工作原理",
-    "环境配置/软件安装/ubuntu常用软件安装.md",
     "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md",
     "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
-    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
-    "Python/json/json.md",
-    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
-    "固件分析/固件论文研究脉络/固件论文研究脉络.md",
-    "漏洞分析/Netgear R7000漏洞分析/Netgear R7000漏洞分析.md"
+    "Python/json/json.md"
   ]
 }
