@@ -25,19 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件Fuzz/暴力测试/暴力测试.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "057a2e470a76340e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
+                "file": "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
+                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -68,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -151,7 +139,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件Fuzz/暴力测试/暴力测试.md",
+                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -168,7 +156,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件Fuzz/暴力测试/暴力测试.md",
+                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件Fuzz/暴力测试/暴力测试.md"
+                "file": "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md"
               }
             }
           },
@@ -233,20 +221,20 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f0dd5277ddb80cdd",
+  "active": "8e54f2e6472b907f",
   "lastOpenFiles": [
+    "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
+    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
+    "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
+    "固件Fuzz/PoC逼近生成技术/PoC逼近.md",
+    "固件Fuzz/暴力测试/暴力测试.md",
     "固件Fuzz/解析函数分析/解析函数分析.md",
     "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
     "固件分析/根源定位/根源定位2/根源定位2.md",
-    "固件Fuzz/PoC逼近生成技术/PoC逼近.md",
     "固件Fuzz/随记/随记.md",
     "固件Fuzz/PoC逼近生成技术",
-    "固件Fuzz/暴力测试/暴力测试.md",
     "Paper/2021-Automatic Inference of Taint Sourcesto Discover Vulnerabilities in SOHORouter Firmware/2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware.md",
-    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
-    "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
-    "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
-    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
     "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112951647.png",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112738625.png",

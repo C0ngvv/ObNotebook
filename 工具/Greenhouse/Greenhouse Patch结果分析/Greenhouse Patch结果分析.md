@@ -202,27 +202,7 @@ sudo chroot . ./qemu-arm-static -hackbind -hackproc -hacksysinfo -execve "/qemu-
 
 ![](images/Pasted%20image%2020231014221423.png)
 
-这一系列参数的作用是什么，询问ChatGPT得到答案如下：
-```
--qemu-arm-static：这是一个模拟ARM环境的静态二进制文件，它会在其后面跟随的命令中执行，并以模拟ARM环境的方式运行命令。
-
--hackbind：该选项将宿主机的目录和模拟环境的目录进行绑定，以便在ARM程序中访问宿主机上的文件。
-
--hackproc：该选项用于模拟ARM环境中进程的创建情况，避免因不同架构带来的兼容性问题。
-
--hacksysinfo：该选项用于模拟ARM环境中的系统信息，使得ARM程序可以正常地访问和查询系统相关信息。
-
--execve：该选项用于替代默认的execve系统调用，以支持特殊的环境变量和选项设置。
-
--E LD_PRELOAD="libnvram-faker.so"：该选项设置了一个名为LD_PRELOAD的环境变量，并将值设置为"libnvram-faker.so"，这个环境变量会告诉执行的程序在执行时需要加载指定的共享库。
-```
-
-我的理解是，-hackbin、-hackproc、-hacksyinfo设置目录、proc和系统信息等，使其更好的仿真，-evecve将execve替换为"/qemu-arm-static -hackbind -hackproc -hacksysinfo"，后面就是正常的仿真参数。
-```
-sudo chroot . ./qemu-arm-static -hackbind -hackproc -hacksysinfo -execve "/qemu-arm-static -hackbind -hackproc -hacksysinfo" -E LD_PRELOAD="libnvram-faker.so" /usr/sbin/httpd  -S -E /usr/sbin/ca.pem /usr/sbin/httpsd.pem
-```
-
-看起来这几个参数很厉害，加上去之后之前仿真不起来的也能直接仿真起来，但是之前从来都没见过有人这么用。经过查阅发现，这应该不是原来qemu-arm-static里面的参数，而是作者patch后的。项目位于：[SEFCOM/GHQEMU5 (github.com)](https://github.com/sefcom/ghqemu5)
+这一系列参数的作用是什么，经过查阅发现，这应该不是原来qemu-arm-static里面的参数，而是作者patch后的。项目位于：[SEFCOM/GHQEMU5 (github.com)](https://github.com/sefcom/ghqemu5)
 
 这几个参数的准确作用如下：
 - hackproc，复制/dev和/proc的内容，hack openat()系统调用来从那读
