@@ -2,7 +2,7 @@
   "newLinkFormat": "relative",
   "newFileLocation": "root",
   "useMarkdownLinks": true,
-  "attachmentFolderPath": "./PoC逼近",
+  "attachmentFolderPath": "./暴力测试",
   "trashOption": "none",
   "promptDelete": false,
   "pdfExportSettings": {
