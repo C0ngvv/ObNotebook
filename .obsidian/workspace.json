@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
                 "mode": "source",
                 "source": false
               }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
+                "file": "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,14 +49,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
+                "file": "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -139,7 +138,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +155,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "固件分析/根源定位/根源定位2/根源定位2.md",
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +178,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "固件分析/根源定位/根源定位2/根源定位2.md"
+                "file": "工具/IDA/IDAPython/IDAPython执行固件静态分析.md"
               }
             }
           },
@@ -221,28 +220,35 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "187d4ecd31b81bf7",
+  "active": "56cf5d467888440e",
   "lastOpenFiles": [
+    "工具/IDA/IDA decompiler接口查询/IDA decompiler接口查询.md",
+    "工具/IDA/IDA脚本动态调试/IDA脚本动态调试.md",
+    "工具/IDA/vulfi插件分析/vulfi插件分析.md",
+    "工具/IDA/IDAPython/IDAPython执行固件静态分析.md",
+    "工具/Qiling/Qiling fuzz/Qiling Fuzz.md",
+    "工具/Qiling/Qiling使用指南/Qiling框架使用指南.md",
+    "固件Fuzz/PoC逼近生成技术/PoC逼近.md",
+    "固件Fuzz/随记/随记.md",
+    "固件Fuzz/解析函数分析/解析函数分析.md",
+    "固件Fuzz/暴力测试/暴力测试.md",
+    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
+    "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
+    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
+    "工具/Greenhouse/AFLFuzz/AFLFuzz.md",
+    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
+    "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
+    "Paper/2021-Automatic Inference of Taint Sourcesto Discover Vulnerabilities in SOHORouter Firmware/2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware.md",
+    "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
+    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
+    "固件分析/根源定位/根源定位2/根源定位2.md",
     "固件分析/根源定位/根源定位3-案例/根源定位3-案例.md",
     "固件分析/根源定位/过滤策略/过滤策略.md",
     "工具/Fuzztruction/基本使用/Fuzztruction基本使用.md",
     "环境配置/软件安装/ubuntu常用软件安装.md",
     "环境配置/更换镜像源/更换镜像源.md",
     "静态分析/Joern/Joern.md",
-    "文章阅读/AFL-QEMU语法感知模糊测试/AFL-QEMU语法感知模糊测试.md",
-    "工具/Greenhouse/Greenhouse Patch结果分析/Greenhouse Patch结果分析.md",
-    "Paper/2023-USENIX-Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation/Greenhouse_Single-Service Rehosting of Linux-Based Firmware Binaries in User-Space Emulation.md",
-    "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer.md",
-    "Paper/2023-CCS-Combining Fuzzing with Concolic Exection for IoT Frimware Testing/2023-CCS-Poster_Combining Fuzzing with Concolic Exection for IoT Frimware Testing.md",
-    "Paper/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces/2023-ISSTA-Fuzzing Embedded Systems Using Debug Interfaces.md",
-    "固件Fuzz/PoC逼近生成技术/PoC逼近.md",
-    "固件Fuzz/暴力测试/暴力测试.md",
-    "固件Fuzz/解析函数分析/解析函数分析.md",
-    "固件分析/根源定位/根源定位2/根源定位2.md",
-    "固件Fuzz/随记/随记.md",
     "固件Fuzz/PoC逼近生成技术",
-    "Paper/2021-Automatic Inference of Taint Sourcesto Discover Vulnerabilities in SOHORouter Firmware/2021-Automatic Inference of Taint Sources to Discover Vulnerabilities in SOHO Router Firmware.md",
-    "Paper/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware/2020-SP-KARONTE-Detecting Insecure Multi-binary Interactions in Embedded Firmware.pdf.md",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112951647.png",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112738625.png",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110112717738.png",
@@ -254,20 +260,13 @@
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer/image-20240110110721017.png",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/image-20240110110605420.png",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI/2023-CCS-Firmulti Fuzzer",
-    "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars.md",
     "Paper/2023-CCS-Firmulti Fuzzer_Discovering Multi-process Vulnerabilities in IoT Devices with Full System Emulation and VMI",
     "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars",
     "Paper/2019-NDSS-NAUTILUS_Fishing for Deep Bugs with Grammars",
-    "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析.md",
-    "工具/Greenhouse/AFLFuzz/AFLFuzz.md",
     "工具/Greenhouse/AFLFuzz/AFLFuzz",
     "工具/Greenhouse/AFLFuzz",
     "工具/Greenhouse/gh3fuzz源码分析/gh3fuzz源码分析",
-    "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理.md",
-    "工具/AFL/分支覆盖率/分支覆盖率.md",
-    "工具/AFLplusplus/afl-fuzz源码阅读/afl-fuzz源码阅读.md",
     "工具/AFL/AFL forkserver工作原理/AFL forkserver工作原理",
-    "工具/AFL/AFL forkserver工作原理",
-    "工具/SaTC/污点分析源码分析/SaTC污点分析算法分析.md"
+    "工具/AFL/AFL forkserver工作原理"
   ]
 }

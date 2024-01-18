@@ -998,6 +998,11 @@ get_high_nbit_bound：获取当前表达式的高位边界。
 get_low_nbit_bound：获取当前表达式的低位边界。
 ```
 
-
+## 寻找汇编地址对应的反编译代码位置
+```
+cfunc = ida_hexrays.decompile(ea)
+item = cfunc.body.find_closest_addr(ea)
+coord = cfunc.find_item_coords(item)
+```
 
 ## end
